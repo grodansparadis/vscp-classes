@@ -1,15 +1,14 @@
 
 <class id="0" 
-    name="VSCP Protocol Functionality" 
+    name="VSCP Protocol Functionality." 
     token="CLASS1.PROTOCOL">
 
-
 <type id="0" 
-    name="Undefined" 
+    name="Undefined." 
     token="" />
 
 <type id="1" 
-    name="Segment Controller Heartbeat" 
+    name="Segment Controller Heartbeat." 
     token="" />
 
 <type id="2" 
@@ -81,11 +80,11 @@
     token="" />
 
 <type id="19" 
-    name="Program data block" 
+    name="Program data block." 
     token="" />
 
 <type id="20" 
-    name="ACK program data block" 
+    name="ACK program data block." 
     token="" />
 
 <type id="21" 
@@ -105,7 +104,7 @@
     token="" />
 
 <type id="25" 
-    name="Page write" 
+    name="Page write." 
     token="" />
 
 <type id="26" 
@@ -113,19 +112,19 @@
     token="" />
 
 <type id="27" 
-    name="High end server/service probe"
+    name="High end server/service probe."
     type="" />
 
 <type id="28" 
-    name="High end server/service response" 
+    name="High end server/service response." 
     token="" />
 
 <type id="29" 
-    name="Increment register" 
+    name="Increment register." 
     token="" />
 
 <type id="30" 
-    name="Decrement register" 
+    name="Decrement register." 
     token="" />
 
 <type id="31" 
@@ -133,15 +132,15 @@
     token="" />
 
 <type id="32" 
-    name="Who is there response" 
+    name="Who is there response." 
     token="" />
 
 <type id="33" 
-    name="Get decision matrix info" 
+    name="Get decision matrix info." 
     token="" />
 
 <type id="34" 
-    name="Decision matrix info response" 
+    name="Decision matrix info response." 
     token="" />
 
 <type id="35" 
@@ -161,15 +160,15 @@
     token="" />
 
 <type id="39" 
-    name="Extended page read/write response" 
+    name="Extended page read/write response." 
     token="" />
 
 <type id="40" 
-    name="Get event interest" 
+    name="Get event interest." 
     token="" /> 
 
 <type id="41" 
-    name="Get event interest response" 
+    name="Get event interest response." 
     token="" />
 
 <type id="48" 
@@ -177,7 +176,7 @@
     token="" />
 
 <type id="49" 
-    name="Activate new image NACK" 
+    name="Activate new image NACK." 
     token="" />.
 
 <type id="50" 
