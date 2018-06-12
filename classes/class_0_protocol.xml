@@ -1,0 +1,191 @@
+
+<class id="0" 
+    name="VSCP Protocol Functionality" 
+    token="CLASS1.PROTOCOL">
+
+
+<type id="0" 
+    name="Undefined" 
+    token="" />
+
+<type id="1" 
+    name="Segment Controller Heartbeat" 
+    token="" />
+
+<type id="2" 
+    name="New node on line / Probe." 
+    token="" />
+
+<type id="3" 
+    name="Probe ACK." 
+    token="" />
+
+<type id="4" 
+    name="Reserved for future use." 
+    token="" />
+
+<type id="5"
+    name="Reserved for future use."
+    token="" />
+
+<type id="6"
+    name="Set nickname-ID for node." 
+    token="" />
+
+<type id="7"
+    name="Nickname-ID accepted."
+    token="" />
+
+<type id="8" 
+    name="Drop nickname-ID / Reset Device." 
+    token="" />
+
+<type id="9" 
+    name="Read register." 
+    token=""/>
+
+<type id="10" 
+    name="Read/Write response." 
+    token="" />
+
+<type id="11" 
+    name="Write register." 
+    token="" />
+
+<type id="12"
+    name="Enter boot loader mode." 
+    token="" />
+
+<type id="13" 
+    name="ACK boot loader mode." 
+    token="">
+
+<type id="14" 
+    name="NACK boot loader mode." 
+    token="" />
+
+<type id="15" 
+    name="Start block data transfer." 
+    token="" />
+
+<type id="16" 
+    name="Block data." 
+    token="" />
+
+<type id="17" 
+    name="ACK data block." 
+    token="" >
+
+<type id="18" 
+    name="NACK data block." 
+    token="" />
+
+<type id="19" 
+    name="Program data block" 
+    token="" />
+
+<type id="20" 
+    name="ACK program data block" 
+    token="" />
+
+<type id="21" 
+    name="NACK program data block." 
+    token="" />
+
+<type id="22" 
+    name="Activate new image." 
+    token="" />
+
+<type id="23" 
+    name="GUID drop nickname-ID / reset device." 
+    token="" />
+
+<type id="24" 
+    name="Page read." 
+    token="" />
+
+<type id="25" 
+    name="Page write" 
+    token="" />
+
+<type id="26" 
+    name="Read/Write page response." 
+    token="" />
+
+<type id="27" 
+    name="High end server/service probe"
+    type="" />
+
+<type id="28" 
+    name="High end server/service response" 
+    token="" />
+
+<type id="29" 
+    name="Increment register" 
+    token="" />
+
+<type id="30" 
+    name="Decrement register" 
+    token="" />
+
+<type id="31" 
+    name="Who is there?" 
+    token="" />
+
+<type id="32" 
+    name="Who is there response" 
+    token="" />
+
+<type id="33" 
+    name="Get decision matrix info" 
+    token="" />
+
+<type id="34" 
+    name="Decision matrix info response" 
+    token="" />
+
+<type id="35" 
+    name="Get embedded MDF." 
+    token="" />
+
+<type id="36" 
+    name="Embedded MDF response." 
+    token="" />
+
+<type id="37" 
+    name="Extended page read register." 
+    token="" />
+
+<type id="38" 
+    name="Extended page write register." 
+    token="" />
+
+<type id="39" 
+    name="Extended page read/write response" 
+    token="" />
+
+<type id="40" 
+    name="Get event interest" 
+    token="" /> 
+
+<type id="41" 
+    name="Get event interest response" 
+    token="" />
+
+<type id="48" 
+    name="Activate new image ACK." 
+    token="" />
+
+<type id="49" 
+    name="Activate new image NACK" 
+    token="" />.
+
+<type id="50" 
+    name="Block data transfer ACK." 
+    token="" />
+
+<type id="51" 
+    name="Block data transfer NACK." 
+    token="" />
+
+</class>
