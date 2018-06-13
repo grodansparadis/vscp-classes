@@ -1,0 +1,39 @@
+<class id="15" 
+    name="Data" 
+    token="CLASS1.DATA" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1" 
+    name="I/O – value"
+    token="" />
+
+<type id="2" 
+    name="A/D value"
+    token="" />
+
+<type id="3" 
+    name="D/A value"
+    token="" />
+
+<type id="4" 
+    name="Relative strength"
+    token="" />
+
+<type id="5" 
+    name="Signal Level"
+    token="" />
+
+<type id="6"
+    name="Signal Quality"
+    token="" />
+
+
+<type id="7" 
+    name="Count value"
+    token="" />
+
+
+</class>

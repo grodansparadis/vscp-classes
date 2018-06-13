@@ -3,7 +3,7 @@
     token="CLASS1.MEASUREMENT" >
 
 <type id="0" 
-    name="Undefined"
+    name="General event"
     token="" /> 
 
 <type id="1" 
