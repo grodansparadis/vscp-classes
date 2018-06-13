@@ -1,0 +1,317 @@
+<class id="20" 
+    name="Information" 
+    token="CLASS1.INFORMATION" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1" 
+    name="Button"
+    token="" />
+
+<type id="2"
+    name="Mouse"
+    token="" />
+
+<type id="3"
+    name="On"
+    token="" />
+
+<type id="4"
+    name="Off"
+    token="" />
+
+<type id="5"
+    name="Alive"
+    token="" />
+
+<type id="6" 
+    name="Terminating"
+    token="" />
+
+<type id="7" 
+    name="Opened"
+    token="" />
+
+<type id="8" 
+    name="Closed"
+    token="" />
+
+<type id="9"
+    name="Node Heartbeat"
+    token="" />
+
+<type id="10" 
+    name="Below limit"
+    token="" />
+
+<type id="11" 
+    name="Above limit"
+    token="" />
+
+<type id="12" 
+    name="Pulse"
+    token="" />
+
+<type id="13" 
+    name="Error"
+    token="" />
+
+<type id="14" 
+    name="Resumed"
+    token="" />
+
+<type id="15" 
+    name="Paused"
+    token="" />
+
+<type id="16" 
+    name="Sleeping"
+    token="" />
+
+<type id="17" 
+    name="Good morning"
+    token="" />
+
+<type id="18" 
+    name="Good day"
+    token="" />
+
+<type id="19" 
+    name="Good afternoon"
+    token="" />
+
+<type id="20" 
+    name="Good evening"
+    token="" />
+
+<type id="21" 
+    name="Good night"
+    token="" />
+
+<type id="22" 
+    name="See you soon"
+    token="" />
+
+<type id="23" 
+    name="Goodbye"
+    token="" />
+
+<type id="24" 
+    name="Stop"
+    token="" />
+
+<type id="25" 
+    name="Start"
+    token="" />
+
+<type id="26" 
+    name="ResetCompleted"
+    token="" />
+
+<type id="27" 
+    name="Interrupted"
+    token="" />
+
+<type id="28" 
+    name="PreparingToSleep"
+    token="" />
+
+<type id="29" 
+    name="WokenUp"
+    token="" />
+
+<type id="30" 
+    name="Dusk"
+    token="" />
+
+<type id="31" 
+    name="Dawn"
+    token="" />
+
+<type id="32" 
+    name="Active"
+    token="" />
+
+<type id="33" 
+    name="Inactive"
+    token="" />
+
+<type id="34" 
+    name="Busy"
+    token="" />
+
+<type id="35" 
+    name="Idle"
+    token="" />
+
+<type id="36"
+    name="Stream Data"
+    token="" />
+
+<type id="37" 
+    name="Token Activity"
+    token="" />
+                                                                                         
+<type id="38" 
+    name="Stream Data with zone"
+    token="" />
+
+<type id="39" 
+    name="Confirm"
+    token="" />
+
+<type id="40" 
+    name="Level Changed"
+    token="" />
+
+<type id="41" 
+    name="Warning"
+    token="" />
+
+<type id="42" 
+    name="State"
+    token="" />
+
+<type id="43" 
+    name="Action Trigger"
+    token="" />
+
+<type id="44" 
+    name="Sunrise"
+    token="" />
+
+<type id="45" 
+    name="Sunset"
+    token="" />
+
+<type id="46" 
+    name="Start of record"
+    token="" />
+
+<type id="47" 
+    name="End of record"
+    token="" />
+
+<type id="48" 
+    name="Pre-set active"
+    token="" />
+
+<type id="49" 
+    name="Detect"
+    token="" />
+
+<type id="50" 
+    name="Overflow"
+    token="" />
+
+<type id="51" 
+    name="Big level changed"
+    token="" />
+
+<type id="52" 
+    name="Civil sunrise twilight time"
+    token="" />
+
+<type id="53" 
+    name="Civil sunset twilight time"
+    token="" />
+
+<type id="54"
+    name="Nautical sunrise twilight time"
+    token="" />
+
+<type id="55" 
+    name="Nautical sunset twilight time"
+    token="" />
+
+<type id="56" 
+    name="Astronomical sunrise twilight time"
+    token="" />
+
+<type id="57"
+    name="Astronomical sunset twilight time"
+    token="" />
+
+<type id="58" 
+    name="Calculated Noon"
+    token="" />
+
+<type id="59" 
+    name="Shutter up"
+    token="" />
+
+<type id="60" 
+    name="Shutter down"
+    token="" />
+
+<type id="61"
+    name="Shutter left"
+    token="" />
+
+<type id="62" 
+    name="Shutter right"
+    token="" />
+
+<type id="63" 
+    name="Shutter reached top end"
+    token="" />
+
+<type id="64" 
+    name="Shutter reached bottom end"
+    token="" />
+
+<type id="65"
+    name="Shutter reached middle end"
+    token="" />
+
+<type id="66" 
+    name="Shutter reached preset end"
+    token="" />
+
+<type id="67" 
+    name="Shutter reached preset left"
+    token="" />
+
+<type id="68" 
+    name="Shutter reached preset right"
+    token="" />
+
+<type id="69" 
+    name="Long click"
+    token="" />
+
+<type id="70" 
+    name="Single click"
+    token="" />
+
+<type id="71" 
+    name="Double click"
+    token="" />
+
+<type id="72" 
+    name="Date"
+    token="" />
+
+<type id="73" 
+    name="Time"
+    token="" />
+
+<type id="74" 
+    name="Weekday"
+    token="" />
+
+<type id="75" 
+    name="Lock"
+    token="" />
+
+<type id="76"
+    name="Unlock"
+    token="" />
+
+<type id="77"
+    name="DateTime"
+    token="" />
+
+</class>

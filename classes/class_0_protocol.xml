@@ -1,7 +1,7 @@
 
 <class id="0" 
     name="VSCP Protocol Functionality" 
-    token="CLASS1.PROTOCOL">
+    token="CLASS1.PROTOCOL" >
 
 <type id="0" 
     name="Undefined." 
@@ -57,7 +57,7 @@
 
 <type id="13" 
     name="ACK boot loader mode." 
-    token="">
+    token="" />
 
 <type id="14" 
     name="NACK boot loader mode." 
@@ -73,7 +73,7 @@
 
 <type id="17" 
     name="ACK data block." 
-    token="" >
+    token="" />
 
 <type id="18" 
     name="NACK data block." 
@@ -177,7 +177,7 @@
 
 <type id="49" 
     name="Activate new image NACK." 
-    token="" />.
+    token="" />
 
 <type id="50" 
     name="Block data transfer ACK." 
