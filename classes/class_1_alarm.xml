@@ -1,0 +1,53 @@
+<class id="0" 
+    name="Alarm functionality." 
+    token="CLASS1.ALARM" >
+
+<type id="0" 
+    name="Undefined"
+    token="" />
+
+<type id="1" 
+    name="Warning" 
+    token="" />
+
+<type id="2" 
+    name="Alarm occurred"
+    token="" />
+
+<type id="3" 
+    name="Alarm sound on/off"
+    token="" />
+
+<type id="4" 
+    name="Alarm light on/off"
+    token="" />
+
+<type id="5" 
+    name="Power on/off"
+    token="" />
+
+<type id="6" 
+    name="Emergency Stop"
+    token="" />
+
+<type id="7" 
+    name="Emergency Pause"
+    token="" />
+
+<type id="8" 
+    name="Emergency Reset"
+    token="" />
+
+<type id="9" 
+    name="Emergency Resume"
+    token="" />
+
+<type id="10"
+    name="Arm"
+    token="" />
+
+<type id="11" 
+    name="Disarm"
+    token="" />
+
+</class>
