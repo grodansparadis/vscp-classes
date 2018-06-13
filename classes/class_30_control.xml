@@ -1,0 +1,181 @@
+<class id="30" 
+    name="Control" 
+    token="CLASS1.CONTROL" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type  id="1" 
+    name="Mute on/off"
+    token="" />
+
+<type  id="2" 
+    name ="(All) Lamp(s) on/off"
+    token="" />
+
+<type  id="3" 
+    name="Open"
+    token="" />
+
+<type  id="4"
+    name="Close"
+    token="" />
+
+<type  id="5"
+    name="TurnOn"
+    token="" />
+
+<type  id="6"
+    name="TurnOff"
+    token="" />
+
+<type  id="7" 
+    name="Start"
+    token="" />
+
+<type  id="8" 
+    name="Stop"
+    token="" />
+
+<type  id="9"
+    name="Reset"
+    token="" />
+
+<type  id="10" 
+    name="Interrupt"
+    token="" />
+
+<type  id="11" 
+    name="Sleep"
+    token="" />
+
+<type  id="12" 
+    name="Wakeup"
+    token="" />
+
+<type  id="13" 
+    name="Resume"
+    token="" />
+
+<type  id="14" 
+    name="Pause"
+    token="" />
+
+<type  id="15" 
+    name="Activate"
+    token="" />
+
+<type  id="16" 
+    name="Deactivate"
+    token="" />
+
+<type  id="17" 
+    name="Reserved for future use"
+    token="" />
+
+<type  id="18" 
+    name="Reserved for future use"
+    token="" />
+
+<type  id="19" 
+    name="Reserved for future use"
+    token="" />
+
+<type  id="20"
+    name="Dim lamp(s)"
+    token="" />
+
+<type  id="21" 
+    name="Change Channel"
+    token="" />
+
+<type  id="22" 
+    name="Change Level"
+    token="" />
+
+<type  id="23" 
+    name="Relative Change Level"
+    token="" />
+
+<type  id="24"
+    name="Measurement Request"
+    token="" />
+
+<type  id="25" 
+    name="Stream Data"
+    token="" />
+
+<type  id="26"
+    name="Sync"
+    token="" />
+
+<type  id="27" 
+    name="Zoned Stream Data"
+    token="" />
+
+<type  id="28"
+    name="Set Pre-set"
+    token="" />
+
+<type  id="29"
+    name="Toggle state"
+    token="" />
+
+<type  id="30"
+    name="Timed pulse on"
+    token="" />
+
+<type  id="31"
+    name="Timed pulse off"
+    token="" />
+
+<type  id="32"
+    name="Set country/language"
+    token="" />
+
+<type  id="33"
+    name="Big Change level"
+    token="" />
+
+<type  id="34"
+    name="Move shutter up"
+    token="" />
+
+<type  id="35"
+    name="Move shutter down"
+    token="" />
+
+<type  id="36"
+    name="Move shutter left"
+    token="" /> 
+
+<type  id="37"
+    name="Move shutter right"
+    token="" />
+
+<type  id="38"
+    name="Move shutter to middle position"
+    token="" />
+
+<type  id="39"
+    name="Move shutter to preset position"
+    token="" />
+
+<type  id="40"
+    name="(All) Lamp(s) on"
+    token="" />
+
+<type  id="41"
+    name="(All) Lamp(s) off"
+    token="" />
+
+<type  id="42"
+    name="Lock"
+    token="" />
+
+<type  id="43" 
+    name="Unlock"
+    token="" />
+
+</class>

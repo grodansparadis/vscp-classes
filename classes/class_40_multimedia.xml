@@ -1,0 +1,165 @@
+<class id="40" 
+    name="Multimedia" 
+    token="CLASS1.MULTIMEDIA" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1"
+    name="Playback"
+    token="" />
+
+<type id="2"
+    name="NavigatorKey English"
+    token="" />
+
+<type id="3"
+    name="Adjust Contrast"
+    token="" />
+
+<type id="4"
+    name="Adjust Focus"
+    token="" />
+
+<type id="5"
+    name="Adjust Tint"
+    token="" />
+
+<type id="6"
+    name="Adjust Color Balance"
+    token="" />
+
+<type id="7"
+    name="Adjust Brightness"
+    token="" />
+
+<type id="8"
+    name="Adjust Hue"
+    token="" />
+
+<type id="9"
+    name="Adjust Bass"
+    token="" />
+
+<type id="10"
+    name="Adjust Treble"
+    token="" />
+
+<type id="11"
+    name="Adjust Master Volume"
+    token="" />
+
+<type id="12"
+    name="Adjust Front Volume"
+    token="" />
+
+<type id="13"
+    name="Adjust Center Volume"
+    token="" />
+
+<type id="14"
+    name="Adjust Rear Volume"
+    token="" />
+
+<type id="15"
+    name="Adjust Side Volume"
+    token="" />
+
+<type id="16"
+    name="Reserved"
+    token="" /> 
+
+<type id="17"
+    name="Reserved"
+    token="" /> 
+
+ <type id="18"
+    name="Reserved"
+    token="" /> 
+
+ <type id="19"
+    name="Reserved"
+    token="" />       
+
+<type id="20"
+    name="Select Disk"
+    token="" />
+
+<type id="21"
+    name="Select Track"
+    token="" />
+
+<type id="22"
+    name="Select Album/Play list"
+    token="" />
+
+<type id="23"
+    name="Select Channel"
+    token="" />
+
+<type id="24"
+    name="Select Page"
+    token="" />
+
+<type id="25"
+    name="Select Chapter"
+    token="" />
+
+<type id="26" 
+    name="Select Screen Format"
+    token="" />
+
+<type id="27"
+    name="Select Input Source"
+    token="" />
+
+<type id="28"
+    name="Select Output"
+    token="" />
+
+<type id="29"
+    name="Record"
+    token="" />
+
+<type id="30"
+    name="Set Recording Volume"
+    token="" />
+
+<type id="40"
+    name="Tivo Function"
+    token="" />
+
+<type id="50"
+    name="Get Current Title"
+    token="" />
+
+<type id="51"
+    name="Set media position in milliseconds"
+    token="" />
+
+<type id="52"
+    name="Get media information"
+    token="" />
+
+<type id="53"
+    name="Remove Item from Album"
+    token="" />
+
+<type id="54"
+    name="Remove all Items from Album"
+    token="" />
+
+<type id="55"
+    name="Save Album/Play list"
+    token="" />
+
+<type id="60"
+    name="Multimedia Control"
+    token="" />
+
+<type id="61"
+    name="Multimedia Control response"
+    token="" />
+
+</class>
