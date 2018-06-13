@@ -1,0 +1,250 @@
+<class id="10" 
+    name="Measurement" 
+    token="CLASS1.MEASUREMENT" >
+
+<type id="0" 
+    name="Undefined"
+    token="" /> 
+
+<type id="1" 
+    name="Count"
+    token="" />
+
+<type id="2" 
+    name="Length/Distance"
+    token="" />
+
+<type id="3" 
+    name="Mass"
+    token="" />
+
+<type id="4" 
+    name="Time"
+    token="" />
+
+<type id="5" 
+    name="Electric Current"
+    token="" />
+
+<type id="6" 
+    name="Temperature"
+    token="" />
+
+<type id="7" 
+    name="Amount of substance"
+    token="" />
+
+<type id="8" 
+    name="Luminous Intensity (Intensity of light)"
+    token="" />
+
+<type id="9" 
+    name="Frequency"
+    token="" />
+
+<type id="10" 
+    name="Radioactivity and other random events"
+    token="" />
+
+<type id="11" 
+    name="Force"
+    token="" />
+
+<type id="12" 
+    name="Pressure"
+    token="" />
+
+<type id="13" 
+    name="Energy"
+    token="" />
+
+<type id="14"
+    name="Power"
+    token="" />
+
+<type id="15" 
+    name="Electrical Charge"
+    token="" />
+
+<type id="16" 
+    name="Electrical Potential (Voltage)"
+    token="" />
+
+<type id="17" 
+    name="Electrical Capacitance"
+    token="" />
+
+<type id="18" 
+    name="Electrical Resistance"
+    token="" />
+
+<type id="19" 
+    name="Electrical Conductance"
+    token="" />
+
+<type id="20" 
+    name="Magnetic Field Strength"
+    token="" />
+
+<type id="21" 
+    name="Magnetic Flux"
+    token="" />
+
+<type id="22" 
+    name="Magnetic Flux Density"
+    token="" />
+
+<type id="23" 
+    name="Inductance"
+    token="" />
+
+<type id="24" 
+    name="Luminous Flux"
+    token="" />
+
+<type id="25" 
+    name="Illuminance"
+    token="" />
+
+<type id="26" 
+    name="Radiation dose"
+    token="" />
+
+<type id="27" 
+    name="Catalytic activity"
+    token="" />
+
+<type id="28" 
+    name="Volume"
+    token="" />
+
+<type id="29" 
+    name="Sound intensity"
+    token="" />
+
+<type id="30" 
+    name="Angle"
+    token="" />
+
+<type id="31" 
+    name="Position WGS 84"
+    token="" />
+
+<type id="32" 
+    name="Speed"
+    token="" />
+
+<type id="33" 
+    name="Acceleration"
+    token="" />
+
+<type id="34" 
+    name="Tension"
+    token="" />
+
+<type id="35" 
+    name="Damp/moist (Hygrometer reading)"
+    token="" />
+
+<type id="36" 
+    name="Flow"
+    token="" />
+
+<type id="37" 
+    name="Thermal resistance"
+    token="" />
+
+<type id="38" 
+    name="Refractive (optical) power"
+    token="" />
+
+<type id="39" 
+    name="Dynamic viscosity"
+    token="" />
+
+<type id="40" 
+    name="Sound impedance"
+    token="" />
+
+<type id="41" 
+    name="Sound resistance"
+    token="" />
+
+<type id="42" 
+    name="Electric elastance"
+    token="" />
+
+<type id="43" 
+    name="Luminous energy"
+    token="" />
+
+<type id="44" 
+    name="Luminance"
+    token="" />
+
+<type id="45" 
+    name="Chemical concentration"
+    token="" />
+
+<type id="46" 
+    name="Reserved"
+    token="" />
+
+<type id="47" 
+    name="Dose equivalent"
+    token="" />
+
+<type id="48" 
+    name="Reserved"
+    token="" />
+
+<type id="49" 
+    name="Dew Point"
+    token="" />
+
+<type id="50" 
+    name="Relative Level"
+    token="" />
+
+<type id="51" 
+    name="Altitude"
+    token="" />
+
+<type id="52" 
+    name="Area"
+    token="" />
+
+<type id="53" 
+    name="Radiant intensity"
+    token="" />
+
+<type id="54" 
+    name="Radiance"
+    token="" />
+
+<type id="55" 
+    name="Irradiance, Exitance, Radiosity"
+    token="" />
+
+<type id="56" 
+    name="Spectral radiance"
+    token="" />
+
+<type id="57" 
+    name="Spectral irradiance"
+    token="" />
+
+<type id="58" 
+    name="Sound pressure (acoustic pressure)"
+    token="" />
+
+<type id="59" 
+    name="Sound energy density"
+    token="" />
+
+<type id="60" 
+    name="Sound level"
+    token="" />
+
+</class>
+

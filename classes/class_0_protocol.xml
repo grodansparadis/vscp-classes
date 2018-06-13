@@ -1,6 +1,6 @@
 
 <class id="0" 
-    name="VSCP Protocol Functionality." 
+    name="VSCP Protocol Functionality" 
     token="CLASS1.PROTOCOL">
 
 <type id="0" 
