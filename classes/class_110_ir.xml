@@ -1,0 +1,29 @@
+<class id="110" 
+    name="IR Remote I/f" 
+    token="CLASS1.IR" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1" 
+    name="RC5 Send/Receive"
+    token="" />
+
+<type id="3"
+    name="SONY 12-bit Send/Receive"
+    token="" />
+
+<type id="32"
+    name="LIRC (Linux Infrared Remote Control)"
+    token="" />
+
+<type id="48"
+    name="VSCP Abstract Remote Format"
+    token="" />
+
+<type id="49"
+    name="MAPito Remote Format"
+    token="" />
+
+</class>
