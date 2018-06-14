@@ -1,0 +1,327 @@
+<class id="506" 
+    name="Diagnostic" 
+    token="CLASS1.DIAGNOSTIC" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+
+<type id="1"
+    name="Overvoltage"
+    token="" />
+
+<type id="2"
+    name="Undervoltage"
+    token="" />
+
+<type id="3"
+    name="USB VBUS low"
+    token="" /> 
+
+<type id="4" 
+    name="Battery voltage low"
+    token="" />
+
+<type id="5" 
+    name="Battery full voltage"
+    token="" />
+
+<type id="6" 
+    name="Battery error"
+    token="" />
+
+<type id="7" 
+    name="Battery OK"
+    token="" />
+
+<type id="8" 
+    name="Over current"
+    token="" />
+
+<type id="9" 
+    name="Circuit error"
+    token="" />
+
+<type id="10" 
+    name="Short circuit"
+    token="" />
+
+<type id="11" 
+    name="Open Circuit"
+    token="" />
+
+<type id="12" 
+    name="Moist"
+    token="" />
+
+<type id="13" 
+    name="Wire failure"
+    token="" />
+
+<type id="14"
+    name="Wireless faliure"
+    token="" />
+
+<type id="15"
+    name="IR failure"
+    token="" />
+
+<type id="16" 
+    name="1-wire failure"
+    token="" />
+
+<type id="17"
+    name="RS-222 failure"
+    token="" />
+
+<type id="18"
+    name="RS-232 failure"
+    token="" />
+
+<type id="19" 
+    name="RS-423 failure"
+    token="" />
+
+<type id="20" 
+    name="RS-485 failure"
+    token="" />
+
+<type id="21" 
+    name="CAN failure"
+    token="" />
+
+<type id="22" 
+    name="LAN failure"
+    token="" />
+
+<type id="23" 
+    name="USB failure"
+    token="" />
+
+<type id="24" 
+    name="Wifi failure"
+    token="" />
+
+<type id="25" 
+    name="NFC/RFID failure"
+    token="" />
+
+<type id="26"
+    name="Low signal"
+    token="" />
+
+<type id="27" 
+    name="High signal"
+    token="" />
+
+<type id="28" 
+    name="ADC failure"
+    token="" />
+
+<type id="29" 
+    name="ALU failure"
+    token="" />
+
+<type id="30" 
+    name="Assert"
+    token="" />
+
+<type id="31" 
+    name="DAC failure"
+    token="" />
+
+<type id="32" 
+    name="DMA failure"
+    token="" />
+
+<type id="33" 
+    name="Ethernet failure"
+    token="" />
+
+<type id="34" 
+    name="Exception"
+    token="" />
+
+<type id="35" 
+    name="FPU failure"
+    token="" />
+
+<type id="36" 
+    name="GPIO failure"
+    token="" />
+
+<type id="37" 
+    name="I2C failure"
+    token="" />
+
+<type id="38" 
+    name="I2S failure"
+    token="" />
+
+<type id="39" 
+    name="Invalid configuration"
+    token="" />
+
+<type id="40"
+    name="MMU failure"
+    token="" />
+
+<type id="41" 
+    name="NMI failure"
+    token="" />
+
+<type id="42" 
+    name="Overheat"
+    token="" />
+
+<type id="43" 
+    name="PLL fail"
+    token="" />
+
+<type id="44"
+    name="POR failure"
+    token="" />
+
+<type id="45" 
+    name="PWM failure"
+    token="" />
+
+<type id="46" 
+    name="RAM failure"
+    token="" />
+
+<type id="47"
+    name="ROM failure"
+    token="" />
+
+<type id="48"
+    name="SPI failure"
+    token="" />
+
+<type id="49" 
+    name="Stack failure"
+    token="" />
+
+<type id="50" 
+    name="LIN bus failure"
+    token="" />
+
+<type id="51" 
+    name="UART failure"
+    token="" />
+
+<type id="52" 
+    name="Unhandled interrupt"
+    token="" />
+
+<type id="53" 
+    name="Memory failure"
+    token="" />
+
+<type id="54" 
+    name="Variable range failure"
+    token="" />
+
+<type id="55" 
+    name="WDT failure"
+    token="" />
+
+<type id="56" 
+    name="EEPROM failure"
+    token="" />
+
+<type id="57" 
+    name="Encryption failure"
+    token="" />
+
+<type id="58"
+    name="Bad user input failure"
+    token="" />
+
+<type id="59"
+    name="Decryption failure"
+    token="" />
+
+<type id="60" 
+    name="Noise"
+    token="" />
+
+<type id="61" 
+    name="Boot loader failure"
+    token="" />
+
+<type id="62" 
+    name="Program flow failure"
+    token="" />
+
+<type id="63"
+    name="RTC faiure"
+    token="" />
+
+<type id="64" 
+    name="System test failure"
+    token="" />
+
+<type id="65" 
+    name="Sensor failure"
+    token="" />
+
+<type id="66" 
+    name="Safe state entered"
+    token="" />
+
+<type id="67" 
+    name="Signal implausible"
+    token="" />
+
+<type id="68" 
+    name="Storage fail"
+    token="" />
+
+<type id="69" 
+    name="Self test OK"
+    token="" />
+
+
+<type id="70" 
+    name="ESD/EMC/EMI failure"
+    token="" />
+
+<type id="71" 
+    name="Timeout"
+    token="" />
+
+<type id="72" 
+    name="LCD failure"
+    token="" />
+
+<type id="73" 
+    name="Touch panel failure"
+    token="" />
+
+<type id="74" 
+    name="No load"
+    token="" />
+
+<type id="75" 
+    name="Cooling failure"
+    token="" />
+
+<type id="76"
+    name="Heating failure"
+    token="" />
+
+<type id="77" 
+    name="Transmission failure"
+    token="" />
+
+<type id="78" 
+    name="Receiption failure"
+    token="" />
+
+<type id="79" 
+    name="External IC failure"
+    token="" />
+
+</class>
+

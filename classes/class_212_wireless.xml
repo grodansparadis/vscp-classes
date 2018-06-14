@@ -1,0 +1,13 @@
+<class id="212" 
+    name="Wireless" 
+    token="CLASS1.WIRELESS" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+     
+<type id="1"
+    name="GSM Cell"
+    token="" />
+
+</class>

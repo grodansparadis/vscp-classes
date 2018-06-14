@@ -6,14 +6,20 @@ The folder **classes** holds class definitions as xml files with the following s
 ```xml
 <class id="0" 
     name="VSCP Protocol Functionality" 
-    token="CLASS1.PROTOCOL">
-
+    token="CLASS1.PROTOCOL"
+    alternative-token="other token" 
+    events="n">
+    
 <type id="12"
     name="Enter boot loader mode." 
     token="" />
 
 </class>
 ```
+
+**\<events\>** used when this class have the same events as anoter class n.
+
+**\<alternative-token\>** used to set an alternative token.
 
 0.md hoilds class description in Markdown format
 0.n.md holds desription for types of this class.

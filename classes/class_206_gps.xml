@@ -1,0 +1,18 @@
+<class id="206" 
+    name="Position (GNSS)" 
+    token="CLASS1.GNSS"
+    alternative-token="CLASS1.GPS" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1"
+    name="Position"
+    token="" />
+
+<type id="2"
+    name="Satellites"
+    token="" />
+
+</class>
