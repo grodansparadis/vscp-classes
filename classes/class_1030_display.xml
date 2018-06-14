@@ -1,0 +1,10 @@
+<class id="1030" 
+    name="Level II Display" 
+    token="CLASS2.DISPLAY" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+
+</class>
+

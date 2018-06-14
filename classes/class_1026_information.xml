@@ -1,0 +1,26 @@
+<class id="1026" 
+    name="Level II Information" 
+    token="CLASS1.INFORMATION" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+
+<type id="1" 
+    name="Token Activity"
+    token="" />
+
+<type id="2" 
+    name="Level II Node Heartbeat"
+    token="" />
+
+<type id="3"
+    name="Level II Proxy Node Heartbeat"
+    token="" />
+
+<type id="4" 
+    name="Level II Multicast channel announce"
+    token="" />
+
+</class>
+

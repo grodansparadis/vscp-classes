@@ -1,0 +1,9 @@
+<class id="510" 
+    name="Laboratory use" 
+    token="CLASS1.LABORATORY" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+
+</class>

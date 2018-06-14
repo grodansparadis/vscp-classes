@@ -1,0 +1,14 @@
+<class id="1027" 
+    name="Text to speech" 
+    token="CLASS1.TEXT2SPEECH" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+
+<type id="1" 
+    name="Talk"
+    token="" />
+ 
+</class>
+

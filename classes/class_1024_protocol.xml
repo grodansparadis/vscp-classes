@@ -1,0 +1,30 @@
+<class id="1024" 
+    name="Level II Protocol Functionality" 
+    token="CLASS2.PROTOCOL" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1" 
+    name="Read Register"
+    token="" />
+
+<type id="2" 
+    name="Write Register"
+    token="" /> 
+
+<type id="3" 
+    name="Read Write Response"
+    token="" />
+
+<type id="20" 
+    name="High end server/service capabilities"
+    token="" />
+
+<type id="32" 
+    name="Level II who is there response"
+    token="" />
+
+</class>
+

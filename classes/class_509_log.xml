@@ -1,0 +1,25 @@
+<class id="509" 
+    name="Logging" 
+    token="CLASS1.LOG" >
+
+<type id="0" 
+    name="General event"
+    token="" />
+ 
+<type id="1" 
+    name="Log event"
+    token="" /> 
+
+<type id="2"
+    name="Log Start"
+    token="" />
+
+<type id="3" 
+    name="Log Stop"
+    token="" />
+
+<type id="4"
+    name="Log Level"
+    token="" />
+
+</class>
