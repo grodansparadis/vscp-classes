@@ -1,0 +1,50 @@
+<class id="100" 
+    name="Phone" 
+    token="CLASS1.PHONE" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1"
+    name="Incoming call"
+    token="" /> 
+
+
+<type id="2" 
+    name="Outgoing call"
+    token="" /> 
+
+
+<type id="3" 
+    name="Ring"
+    token="" /> 
+
+
+<type id="4" 
+    name="Answer"
+    token="" /> 
+
+
+<type id="5"
+    name="Hangup"
+    token="" /> 
+
+
+<type id="6" 
+    name="Giveup"
+    token="" /> 
+
+
+<type id="7" 
+    name="Transfer"
+    token="" /> 
+
+
+<type id="8" 
+    name="Database Info"
+    token="" /> 
+
+
+
+</class>

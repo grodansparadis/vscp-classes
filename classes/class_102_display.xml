@@ -1,0 +1,45 @@
+<class id="102" 
+    name="Display" 
+    token="CLASS1.DISPLAY" >
+
+<type id="0" 
+    name="General event"
+    token="" /> 
+
+<type id="1"
+    name="Clear Display"
+    token="" />
+
+<type id="2"
+    name="Position cursor"
+    token="" />
+
+<type id="3"
+    name="Write Display"
+    token="" />
+
+<type id="4"
+    name="Write Display buffer"
+    token="" />
+
+<type id="5"
+    name="Show Display Buffer"
+    token="" />
+
+<type id="6"
+    name="Set Display Buffer Parameter"
+    token="" />
+
+<type id="32"
+    name="Show Text"
+    token="" />
+
+<type id="48"
+    name="Set LED"
+    token="" />
+
+<type id="49"
+    name="Set RGB Color"
+    token="" />
+
+</class>
