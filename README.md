@@ -32,6 +32,6 @@ Links to other classes should be have format
 
 ## Folders
 
-**classes** - VSCP class and type definitions.
-**cheaders** - templates for c-headers
+* **classes** - VSCP class and type definitions.
+* **cheaders** - templates for c-headers
 
