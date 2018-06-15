@@ -28,5 +28,10 @@ Links to other classes should be have format
 
     [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](https://grodansparadis.gitbooks.io/the-vscp-specification/class1.information.html#type9)
 
->Note **#type9** bookmark tag
+----
+
+## Folders
+
+**classes** - VSCP class and type definitions.
+**cheaders** - templates for c-headers
 
