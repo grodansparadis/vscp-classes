@@ -33,5 +33,9 @@ Links to other classes should be have format
 ## Folders
 
 * **classes** - VSCP class and type definitions.
-* **cheaders** - templates for c-headers
+* **cheaders** - templates for c-headers.
+* **python** - Templates for Python.
+* **javascript** - Templates for JavaScript.
+* **db** - Templates for VSCP database.
+* **json** -- Templates for JSON file.
 

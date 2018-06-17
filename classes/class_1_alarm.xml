@@ -4,50 +4,50 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP_TYPE_ALARM_GENERAL" />
 
 <type id="1" 
     name="Warning" 
-    token="" />
+    token="VSCP_TYPE_ALARM_WARNING" />
 
 <type id="2" 
     name="Alarm occurred"
-    token="" />
+    token="VSCP_TYPE_ALARM_ALARM " />
 
 <type id="3" 
     name="Alarm sound on/off"
-    token="" />
+    token="VSCP_TYPE_ALARM_SOUND" />
 
 <type id="4" 
     name="Alarm light on/off"
-    token="" />
+    token="VSCP_TYPE_ALARM_LIGHT" />
 
 <type id="5" 
     name="Power on/off"
-    token="" />
+    token="VSCP_TYPE_ALARM_POWER " />
 
 <type id="6" 
     name="Emergency Stop"
-    token="" />
+    token="VSCP_TYPE_ALARM_EMERGENCY_STOP" />
 
 <type id="7" 
     name="Emergency Pause"
-    token="" />
+    token="VSCP_TYPE_ALARM_EMERGENCY_PAUSE" />
 
 <type id="8" 
     name="Emergency Reset"
-    token="" />
+    token="VSCP_TYPE_ALARM_EMERGENCY_RESET" />
 
 <type id="9" 
     name="Emergency Resume"
-    token="" />
+    token="VSCP_TYPE_ALARM_EMERGENCY_RESUME" />
 
 <type id="10"
     name="Arm"
-    token="" />
+    token="VSCP_TYPE_ALARM_ARM " />
 
 <type id="11" 
     name="Disarm"
-    token="" />
+    token="VSCP_TYPE_ALARM_DISARM" />
 
 </class>

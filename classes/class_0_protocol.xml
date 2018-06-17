@@ -4,132 +4,132 @@
     token="CLASS1.PROTOCOL" >
 
 <type id="0" 
-    name="Undefined." 
-    token="" />
+    name="General event." 
+    token="VSCP_TYPE_PROTOCOL_GENERAL" />
 
 <type id="1" 
     name="Segment Controller Heartbeat." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_SEGCTRL_HEARTBEAT" />
 
 <type id="2" 
     name="New node on line / Probe." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_NEW_NODE_ONLINE" />
 
 <type id="3" 
     name="Probe ACK." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PROBE_ACK" />
 
 <type id="4" 
     name="Reserved for future use." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_RESERVED4" />
 
 <type id="5"
     name="Reserved for future use."
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_RESERVED5" />
 
 <type id="6"
     name="Set nickname-ID for node." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_SET_NICKNAME" />
 
 <type id="7"
     name="Nickname-ID accepted."
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_NICKNAME_ACCEPTED" />
 
 <type id="8" 
     name="Drop nickname-ID / Reset Device." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_DROP_NICKNAME" />
 
 <type id="9" 
     name="Read register." 
-    token=""/>
+    token="VSCP_TYPE_PROTOCOL_READ_REGISTER"/>
 
 <type id="10" 
     name="Read/Write response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_RW_RESPONSE" />
 
 <type id="11" 
     name="Write register." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_WRITE_REGISTER" />
 
 <type id="12"
     name="Enter boot loader mode." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_ENTER_BOOT_LOADER" />
 
 <type id="13" 
     name="ACK boot loader mode." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_ACK_BOOT_LOADER" />
 
 <type id="14" 
     name="NACK boot loader mode." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_NACK_BOOT_LOADER" />
 
 <type id="15" 
     name="Start block data transfer." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_START_BLOCK" />
 
 <type id="16" 
     name="Block data." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_BLOCK_DATA" />
 
 <type id="17" 
     name="ACK data block." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_ACK" />
 
 <type id="18" 
     name="NACK data block." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_NACK" />
 
 <type id="19" 
     name="Program data block." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA" />
 
 <type id="20" 
     name="ACK program data block." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_ACK" />
 
 <type id="21" 
     name="NACK program data block." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_NACK" />
 
 <type id="22" 
     name="Activate new image." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE" />
 
 <type id="23" 
     name="GUID drop nickname-ID / reset device." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_RESET_DEVICE" />
 
 <type id="24" 
     name="Page read." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PAGE_READ" />
 
 <type id="25" 
     name="Page write." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_PAGE_WRITE" />
 
 <type id="26" 
     name="Read/Write page response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_RW_PAGE_RESPONSE" />
 
 <type id="27" 
     name="High end server/service probe."
-    type="" />
+    type="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_PROBE" />
 
 <type id="28" 
     name="High end server/service response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_RESPONSE" />
 
 <type id="29" 
     name="Increment register." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_INCREMENT_REGISTER" />
 
 <type id="30" 
     name="Decrement register." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_DECREMENT_REGISTER" />
 
 <type id="31" 
     name="Who is there?" 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE" />
 
 <type id="32" 
     name="Who is there response." 
@@ -137,54 +137,54 @@
 
 <type id="33" 
     name="Get decision matrix info." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
 
 <type id="34" 
     name="Decision matrix info response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO_RESPONSE" />
 
 <type id="35" 
     name="Get embedded MDF." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF" />
 
 <type id="36" 
     name="Embedded MDF response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" />
 
 <type id="37" 
     name="Extended page read register." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_READ" />
 
 <type id="38" 
     name="Extended page write register." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_WRITE" />
 
 <type id="39" 
     name="Extended page read/write response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_RESPONSE" />
 
 <type id="40" 
     name="Get event interest." 
-    token="" /> 
+    token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" /> 
 
 <type id="41" 
     name="Get event interest response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST_RESPONSE" />
 
 <type id="48" 
     name="Activate new image ACK." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_ACK" />
 
 <type id="49" 
     name="Activate new image NACK." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_NACK" />
 
 <type id="50" 
     name="Block data transfer ACK." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK" />
 
 <type id="51" 
     name="Block data transfer NACK." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" />
 
 </class>

@@ -5,14 +5,14 @@
 
 <type id="0" 
     name="General event"
-    token="" /> 
+    token="VSCP_TYPE_GNSS_GENERAL" /> 
 
 <type id="1"
     name="Position"
-    token="" />
+    token="VSCP_TYPE_GNSS_POSITION" />
 
 <type id="2"
     name="Satellites"
-    token="" />
+    token="VSCP_TYPE_GNSS_SATELLITES" />
 
 </class>

@@ -4,26 +4,26 @@
 
 <type id="0" 
     name="General event"
-    token="" /> 
+    token="VSCP_TYPE_REMOTE_GENERAL" /> 
 
 <type id="1" 
     name="RC5 Send/Receive"
-    token="" />
+    token="VSCP_TYPE_REMOTE_RC5" />
 
 <type id="3"
     name="SONY 12-bit Send/Receive"
-    token="" />
+    token="VSCP_TYPE_REMOTE_SONY12" />
 
 <type id="32"
     name="LIRC (Linux Infrared Remote Control)"
-    token="" />
+    token="VSCP_TYPE_REMOTE_LIRC" />
 
 <type id="48"
     name="VSCP Abstract Remote Format"
-    token="" />
+    token="VSCP_TYPE_REMOTE_VSCP" />
 
 <type id="49"
     name="MAPito Remote Format"
-    token="" />
+    token="VSCP_TYPE_REMOTE_MAPITO" />
 
 </class>

@@ -4,162 +4,162 @@
 
 <type id="0" 
     name="General event"
-    token="" /> 
+    token="VSCP_TYPE_MULTIMEDIA_GENERAL" /> 
 
 <type id="1"
     name="Playback"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_PLAYBACK" />
 
 <type id="2"
     name="NavigatorKey English"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_NAVIGATOR_KEY_ENG" />
 
 <type id="3"
     name="Adjust Contrast"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_CONTRAST" />
 
 <type id="4"
     name="Adjust Focus"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_FOCUS" />
 
 <type id="5"
     name="Adjust Tint"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_TINT" />
 
 <type id="6"
     name="Adjust Color Balance"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_COLOUR_BALANCE" />
 
 <type id="7"
     name="Adjust Brightness"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_BRIGHTNESS" />
 
 <type id="8"
     name="Adjust Hue"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_HUE" />
 
 <type id="9"
     name="Adjust Bass"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_BASS" />
 
 <type id="10"
     name="Adjust Treble"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_TREBLE" />
 
 <type id="11"
     name="Adjust Master Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_MASTER_VOLUME" />
 
 <type id="12"
     name="Adjust Front Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_FRONT_VOLUME" />
 
 <type id="13"
     name="Adjust Center Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_CENTRE_VOLUME" />
 
 <type id="14"
     name="Adjust Rear Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_REAR_VOLUME" />
 
 <type id="15"
     name="Adjust Side Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SIDE_VOLUME" />
 
 <type id="16"
     name="Reserved"
-    token="" /> 
+    token="VSCP_TYPE_MULTIMEDIA_RESERVED16" /> 
 
 <type id="17"
     name="Reserved"
-    token="" /> 
+    token="VSCP_TYPE_MULTIMEDIA_RESERVED17" /> 
 
  <type id="18"
     name="Reserved"
-    token="" /> 
+    token="VSCP_TYPE_MULTIMEDIA_RESERVED18" /> 
 
  <type id="19"
     name="Reserved"
-    token="" />       
+    token="VSCP_TYPE_MULTIMEDIA_RESERVED19" />       
 
 <type id="20"
     name="Select Disk"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_DISK" />
 
 <type id="21"
     name="Select Track"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_TRACK" />
 
 <type id="22"
     name="Select Album/Play list"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_ALBUM" />
 
 <type id="23"
     name="Select Channel"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHANNEL" />
 
 <type id="24"
     name="Select Page"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_PAGE" />
 
 <type id="25"
     name="Select Chapter"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHAPTER" />
 
 <type id="26" 
     name="Select Screen Format"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_SCREEN_FORMAT" />
 
 <type id="27"
     name="Select Input Source"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_INPUT_SOURCE" />
 
 <type id="28"
     name="Select Output"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_OUTPUT" />
 
 <type id="29"
     name="Record"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_RECORD" />
 
 <type id="30"
     name="Set Recording Volume"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_SET_RECORDING_VOLUME" />
 
 <type id="40"
     name="Tivo Function"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_TIVO_FUNCTION" />
 
 <type id="50"
     name="Get Current Title"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_GET_CURRENT_TITLE" />
 
 <type id="51"
     name="Set media position in milliseconds"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_SET_POSITION" />
 
 <type id="52"
     name="Get media information"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_GET_MEDIA_INFO" />
 
 <type id="53"
     name="Remove Item from Album"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_REMOVE_ITEM" />
 
 <type id="54"
     name="Remove all Items from Album"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_REMOVE_ALL_ITEMS" />
 
 <type id="55"
     name="Save Album/Play list"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_SAVE_ALBUM" />
 
 <type id="60"
     name="Multimedia Control"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_CONTROL" />
 
 <type id="61"
     name="Multimedia Control response"
-    token="" />
+    token="VSCP_TYPE_MULTIMEDIA_CONTROL_RESPONSE" />
 
 </class>

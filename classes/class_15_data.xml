@@ -4,36 +4,35 @@
 
 <type id="0" 
     name="General event"
-    token="" /> 
+    token="VSCP_TYPE_DATA_GENERAL" /> 
 
 <type id="1" 
     name="I/O – value"
-    token="" />
+    token="VSCP_TYPE_DATA_IO" />
 
 <type id="2" 
     name="A/D value"
-    token="" />
+    token="VSCP_TYPE_DATA_AD" />
 
 <type id="3" 
     name="D/A value"
-    token="" />
+    token="VSCP_TYPE_DATA_DA" />
 
 <type id="4" 
     name="Relative strength"
-    token="" />
+    token="VSCP_TYPE_DATA_RELATIVE_STRENGTH" />
 
 <type id="5" 
     name="Signal Level"
-    token="" />
+    token="VSCP_TYPE_DATA_SIGNAL_LEVEL" />
 
 <type id="6"
     name="Signal Quality"
-    token="" />
-
+    token="VSCP_TYPE_DATA_SIGNAL_QUALITY" />
 
 <type id="7" 
     name="Count value"
-    token="" />
+    token="VSCP_TYPE_DATA_COUNT" />
 
 
 </class>

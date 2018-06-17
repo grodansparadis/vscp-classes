@@ -4,10 +4,10 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP_TYPE_WIRELESS_GENERAL" />
      
 <type id="1"
     name="GSM Cell"
-    token="" />
+    token="VSCP_TYPE_WIRELESS_GSM_CELL" />
 
 </class>

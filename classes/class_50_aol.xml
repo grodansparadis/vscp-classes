@@ -4,70 +4,70 @@
 
 <type id="0" 
     name="General event"
-    token="" /> 
+    token="VSCP_TYPE_AOL_GENERAL" /> 
 
 <type id="1"
     name="System unplugged from power source"
-    token="" />
+    token="VSCP_TYPE_AOL_UNPLUGGED_POWER" />
 
 <type id="2"
     name="System unplugged from network"
-    token="" />
+    token="VSCP_TYPE_AOL_UNPLUGGED_LAN" />
 
 <type id="3"
     name="Chassis intrusion"
-    token="" />
+    token="VSCP_TYPE_AOL_CHASSIS_INTRUSION" />
 
 <type id="4"
     name="Processor removal"
-    token="" />
+    token="VSCP_TYPE_AOL_PROCESSOR_REMOVAL" />
 
 <type id="5"
     name="System environmental errors"
-    token="" />
+    token="VSCP_TYPE_AOL_ENVIRONMENT_ERROR" />
 
 <type id="6"
     name="High temperature"
-    token="" />
+    token="VSCP_TYPE_AOL_HIGH_TEMPERATURE" />
 
 <type id="7"
     name="Fan speed problem"
-    token="" />
+    token="VSCP_TYPE_AOL_FAN_SPEED" />
 
 <type id="8"
     name="Voltage fluctuations"
-    token="" />
+    token="VSCP_TYPE_AOL_VOLTAGE_FLUCTUATIONS" />
 
 <type id="9"
     name="Operating system errors"
-    token="" />
+    token="VSCP_TYPE_AOL_OS_ERROR" />
 
 <type id="10"
-    name="System power-on errors"
-    token="" />
+    name="System power-on error"
+    token="VSCP_TYPE_AOL_POWER_ON_ERROR" />
 
 <type id="11"
     name="System is hung"
-    token="" />
+    token="VSCP_TYPE_AOL_SYSTEM_HUNG" />
 
 <type id="12"
     name="Component failure"
-    token="" />
+    token="VSCP_TYPE_AOL_COMPONENT_FAILURE" />
 
 <type id="13"
     name="Remote system reboot upon report of a critical failure"
-    token="" />
+    token="VSCP_TYPE_AOL_REBOOT_UPON_FAILURE" />
 
 <type id="14"
     name="Repair Operating System"
-    token="" />
+    token="VSCP_TYPE_AOL_REPAIR_OPERATING_SYSTEM" />
 
 <type id="15"
     name="Update BIOS image"
-    token="" />
+    token="VSCP_TYPE_AOL_UPDATE_BIOS_IMAGE" />
 
 <type id="16"
     name="Update Perform other diagnostic procedures"
-    token="" />
+    token="VSCP_TYPE_AOL_UPDATE_DIAGNOSTIC_PROCEDURE" />
 
 </class>
