@@ -4,11 +4,11 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP2_TYPE_TEXT2SPEECH_GENERAL" />
 
 <type id="1" 
     name="Talk"
-    token="" />
+    token="VSCP2_TYPE_TEXT2SPEECH_TALK" />
  
 </class>
 

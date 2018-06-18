@@ -4,22 +4,22 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP_TYPE_LOG_GENERAL" />
  
 <type id="1" 
     name="Log event"
-    token="" /> 
+    token="VSCP_TYPE_LOG_MESSAGE" /> 
 
 <type id="2"
     name="Log Start"
-    token="" />
+    token="VSCP_TYPE_LOG_START" />
 
 <type id="3" 
     name="Log Stop"
-    token="" />
+    token="VSCP_TYPE_LOG_STOP" />
 
 <type id="4"
     name="Log Level"
-    token="" />
+    token="VSCP_TYPE_LOG_LEVEL" />
 
 </class>

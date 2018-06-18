@@ -4,6 +4,6 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP2_TYPE_CONTROL_GENERAL" />
 
 </class>

@@ -4,142 +4,142 @@
 
 <type id="0" 
     name="Success"
-    token="" />
+    token=VSCP_TYPE_ERROR_SUCCESS"" />
 
 <type id="1"
     name="Error"
-    token="" />
+    token="VSCP_TYPE_ERROR_ERROR" />
 
 <type id="7" 
     name="Channel error"
-    token="" />
+    token="VSCP_TYPE_ERROR_CHANNEL" />
 
 <type id="8"
     name="Fifo empty error"
-    token="" />
+    token="VSCP_TYPE_ERROR_FIFO_EMPTY" />
 
 <type id="9"
     name="Fifo full error"
-    token="" />
+    token="VSCP_TYPE_ERROR_FIFO_FULL" />
 
 <type id="10" 
     name="Fifo size error"
-    token="" />
+    token="VSCP_TYPE_ERROR_FIFO_SIZE" />
 
 <type id="11" 
     name="Fifo wait error"
-    token="" />
+    token="VSCP_TYPE_ERROR_FIFO_WAIT" />
 
 <type id="12"
     name="Generic error"
-    token="" />
+    token="VSCP_TYPE_ERROR_GENERIC" />
 
 <type id="13" 
     name="Hardware error"
-    token="" />
+    token="VSCP_TYPE_ERROR_HARDWARE" />
 
 <type id="14" 
     name="initialization error"
-    token="" />
+    token="VSCP_TYPE_ERROR_INIT_FAIL" />
 
 <type id="15"
     name="Missing initialization error"
-    token="" />
+    token="VSCP_TYPE_ERROR_INIT_MISSING" />
 
 <type id="16" 
     name="Initialization ready"
-    token="" />
+    token="VSCP_TYPE_ERROR_INIT_READY" />
 
 <type id="17" 
     name="Not supported"
-    token="" />
+    token="VSCP_TYPE_ERROR_NOT_SUPPORTED" />
 
 <type id="18"
     name="Overrun error"
-    token="" />
+    token="VSCP_TYPE_ERROR_OVERRUN" />
 
 <type id="19" 
     name="Receiver empty error"
-    token="" />
+    token="VSCP_TYPE_ERROR_RCV_EMPTY" />
 
 <type id="20" 
     name="Register error"
-    token="" />
+    token="VSCP_TYPE_ERROR_REGISTER" />
 
 <type id="21" 
     name="Transmitter full error"
-    token="" />
+    token="VSCP_TYPE_ERROR_TRM_FULL" />
 
 <type id="28" 
     name="Library error"
-    token="" />
+    token="VSCP_TYPE_ERROR_LIBRARY" />
 
 <type id="29" 
     name="Procedural address error"
-    token="" />
+    token="VSCP_TYPE_ERROR_PROCADDRESS" />
 
 <type id="30" 
     name="Only one instance error"
-    token="" />
+    token="VSCP_TYPE_ERROR_ONLY_ONE_INSTANCE" />
 
 <type id="31"
     name="Sub driver error"
-    token="" />
+    token="VSCP_TYPE_ERROR_SUB_DRIVER" />
 
 <type id="32"
     name="Timeout error"
-    token="" />
+    token="VSCP_TYPE_ERROR_TIMEOUT" />
 
 <type id="33" 
     name="Not open error"
-    token="" />
+    token="VSCP_TYPE_ERROR_NOT_OPEN" />
 
 <type id="34" 
     name="Parameter error"
-    token="" />
+    token="VSCP_TYPE_ERROR_PARAMETER" />
 
 <type id="35" 
     name="Memory error"
-    token="" />
+    token="VSCP_TYPE_ERROR_MEMORY" />
 
 <type id="36" 
     name="Internal error"
-    token="" />
+    token="VSCP_TYPE_ERROR_INTERNAL" />
 
 <type id="37" 
     name="Communication error"
-    token="" />
+    token="VSCP_TYPE_ERROR_COMMUNICATION" />
 
 <type id="38" 
     name="User error"
-    token="" />
+    token="VSCP_TYPE_ERROR_USER" />
 
 <type id="39"
     name="Password error"
-    token="" />
+    token="VSCP_TYPE_ERROR_PASSWORD" />
 
 <type id="40" 
     name="Connection error"
-    token="" />
+    token="VSCP_TYPE_ERROR_CONNECTION" />
 
 <type id="41"
     name="Invalid handle error"
-    token="" />
+    token="VSCP_TYPE_ERROR_INVALID_HANDLE" />
 
 <type id="42" 
     name="Operation failed error"
-    token="" />
+    token="VSCP_TYPE_ERROR_OPERATION_FAILED" />
 
 <type id="43" 
     name="Supplied buffer is to small to fit content"
-    token="" />
+    token="VSCP_TYPE_ERROR_BUFFER_SMALL" />
 
 <type id="44" 
     name="Requested item is unknown"
-    token="" />
+    token="VSCP_TYPE_ERROR_ITEM_UNKNOWN" />
 
 <type id="45" 
     name="Name is already in use"
-    token="" />
+    token="VSCP_TYPE_ERROR_NAME_USED" />
 
 </class>

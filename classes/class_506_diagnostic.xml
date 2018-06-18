@@ -4,324 +4,323 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_GENERAL" />
 
 <type id="1"
     name="Overvoltage"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_OVERVOLTAGE" />
 
 <type id="2"
     name="Undervoltage"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_UNDERVOLTAGE" />
 
 <type id="3"
     name="USB VBUS low"
-    token="" /> 
+    token="VSCP_TYPE_DIAGNOSTIC_VBUS_LOW" /> 
 
 <type id="4" 
     name="Battery voltage low"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BATTERY_LOW" />
 
 <type id="5" 
     name="Battery full voltage"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BATTERY_FULL" />
 
 <type id="6" 
     name="Battery error"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BATTERY_ERROR" />
 
 <type id="7" 
     name="Battery OK"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BATTERY_OK" />
 
 <type id="8" 
     name="Over current"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_OVERCURRENT" />
 
 <type id="9" 
     name="Circuit error"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_CIRCUIT_ERROR" />
 
 <type id="10" 
     name="Short circuit"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SHORT_CIRCUIT" />
 
 <type id="11" 
     name="Open Circuit"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_OPEN_CIRCUIT" />
 
 <type id="12" 
     name="Moist"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_MOIST" />
 
 <type id="13" 
     name="Wire failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_WIRE_FAIL" />
 
 <type id="14"
     name="Wireless faliure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_WIRELESS_FAIL" />
 
 <type id="15"
     name="IR failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_IR_FAIL" />
 
 <type id="16" 
     name="1-wire failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_1WIRE_FAIL" />
 
 <type id="17"
     name="RS-222 failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RS222_FAIL" />
 
 <type id="18"
     name="RS-232 failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RS232_FAIL" />
 
 <type id="19" 
     name="RS-423 failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RS423_FAIL" />
 
 <type id="20" 
     name="RS-485 failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RS485_FAIL" />
 
 <type id="21" 
     name="CAN failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_CAN_FAIL" />
 
 <type id="22" 
     name="LAN failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_LAN_FAIL" />
 
 <type id="23" 
     name="USB failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_USB_FAIL" />
 
 <type id="24" 
     name="Wifi failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_WIFI_FAIL" />
 
 <type id="25" 
     name="NFC/RFID failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_NFC_RFID_FAIL" />
 
 <type id="26"
     name="Low signal"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_LOW_SIGNAL" />
 
 <type id="27" 
     name="High signal"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_HIGH_SIGNAL" />
 
 <type id="28" 
     name="ADC failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ADC_FAIL" />
 
 <type id="29" 
     name="ALU failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ALU_FAIL" />
 
 <type id="30" 
     name="Assert"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ASSERT" />
 
 <type id="31" 
     name="DAC failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_DAC_FAIL" />
 
 <type id="32" 
     name="DMA failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_DMA_FAIL" />
 
 <type id="33" 
     name="Ethernet failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ETH_FAIL" />
 
 <type id="34" 
     name="Exception"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_EXCEPTION" />
 
 <type id="35" 
     name="FPU failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_FPU_FAIL" />
 
 <type id="36" 
     name="GPIO failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_GPIO_FAIL" />
 
 <type id="37" 
     name="I2C failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_I2C_FAIL" />
 
 <type id="38" 
     name="I2S failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_I2S_FAIL" />
 
 <type id="39" 
     name="Invalid configuration"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_INVALID_CONFIG" />
 
 <type id="40"
     name="MMU failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_MMU_FAIL" />
 
 <type id="41" 
     name="NMI failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_NMI" />
 
 <type id="42" 
     name="Overheat"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_OVERHEAT" />
 
 <type id="43" 
     name="PLL fail"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_PLL_FAIL" />
 
 <type id="44"
     name="POR failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_POR_FAIL" />
 
 <type id="45" 
     name="PWM failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_PWM_FAIL" />
 
 <type id="46" 
     name="RAM failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RAM_FAIL" />
 
 <type id="47"
     name="ROM failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ROM_FAIL" />
 
 <type id="48"
     name="SPI failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SPI_FAIL" />
 
 <type id="49" 
     name="Stack failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_STACK_FAIL" />
 
 <type id="50" 
     name="LIN bus failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_LIN_FAIL" />
 
 <type id="51" 
     name="UART failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_UART_FAIL" />
 
 <type id="52" 
     name="Unhandled interrupt"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_UNHANDLED_INT" />
 
 <type id="53" 
     name="Memory failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_MEMORY_FAIL" />
 
 <type id="54" 
     name="Variable range failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_VARIABLE_RANGE" />
 
 <type id="55" 
     name="WDT failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_WDT" />
 
 <type id="56" 
     name="EEPROM failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_EEPROM_FAIL" />
 
 <type id="57" 
     name="Encryption failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ENCRYPTION_FAIL" />
 
 <type id="58"
     name="Bad user input failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BAD_USER_INPUT" />
 
 <type id="59"
     name="Decryption failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_DECRYPTION_FAIL" />
 
 <type id="60" 
     name="Noise"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_NOISE" />
 
 <type id="61" 
     name="Boot loader failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_BOOTLOADER_FAIL" />
 
 <type id="62" 
     name="Program flow failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_PROGRAMFLOW_FAIL" />
 
 <type id="63"
     name="RTC faiure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RTC_FAIL" />
 
 <type id="64" 
     name="System test failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SYSTEM_TEST_FAIL" />
 
 <type id="65" 
     name="Sensor failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SENSOR_FAIL" />
 
 <type id="66" 
     name="Safe state entered"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SAFESTATE" />
 
 <type id="67" 
     name="Signal implausible"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_SIGNAL_IMPLAUSIBLE" />
 
 <type id="68" 
     name="Storage fail"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_STORAGE_FAIL" />
 
 <type id="69" 
     name="Self test OK"
-    token="" />
-
+    token="VSCP_TYPE_DIAGNOSTIC_SELFTEST_FAIL" />
 
 <type id="70" 
     name="ESD/EMC/EMI failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_ESD_EMC_EMI" />
 
 <type id="71" 
     name="Timeout"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_TIMEOUT" />
 
 <type id="72" 
     name="LCD failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_LCD_FAIL" />
 
 <type id="73" 
     name="Touch panel failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_TOUCHPANEL_FAIL" />
 
 <type id="74" 
     name="No load"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_NOLOAD" />
 
 <type id="75" 
     name="Cooling failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_COOLING_FAIL" />
 
 <type id="76"
     name="Heating failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_HEATING_FAIL" />
 
 <type id="77" 
     name="Transmission failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_TX_FAIL" />
 
 <type id="78" 
     name="Receiption failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_RX_FAIL" />
 
 <type id="79" 
     name="External IC failure"
-    token="" />
+    token="VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL" />
 
 </class>
 

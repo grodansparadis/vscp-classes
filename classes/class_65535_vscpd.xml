@@ -4,119 +4,119 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_GENERAL" />
 
 <type id="1" 
     name="Loop"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_LOOP" />
 
 <type id="3"
     name="Pause"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_PAUSE" />
 
 <type id="4"
     name="Activate"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_ACTIVATE" />
 
 <type id="5"
     name="Second"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_SECOND" />
 
 <type id="6"
     name="Minute"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_MINUTE" />
 
 <type id="7" 
     name="Hour"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_HOUR" />
 
 <type id="8"
     name="Noon"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_NOON" />
 
 <type id="9" 
     name="Midnight"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_MIDNIGHT" />
 
 <type id="11" 
     name="Week"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_WEEK" />
 
 <type id="12"
     name="Month"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_MONTH" />
 
 <type id="13"
     name="Quarter"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_QUARTER" />
 
 <type id="14"
     name="Year"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_YEAR" />
 
 <type id="15"
     name="Random-minute"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_MINUTE" />
 
 <type id="16"
     name="Random-hour"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_HOUR" />
 
 <type id="17"
     name="Random-day"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_DAY" />
 
 <type id="18" 
     name="Random-week"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_WEEK" />
 
 <type id="19" 
     name="Random-month"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_MONTH" />
 
 <type id="20" 
     name="Random-year"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_RANDOM_YEAR" />
 
 <type id="21" 
     name="Dusk"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_DUSK" />
 
 <type id="22" 
     name="Dawn"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_DAWN" />
 
 <type id="23" 
     name="Starting up"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_STARTING_UP" />
 
 <type id="24" 
     name="Shutting down"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_SHUTTING_DOWN" />
 
 <type id="25" 
     name="Timer started"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_TIMER_STARTED" />
 
 <type id="26" 
     name="Timer paused"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_TIMER_PAUSED" />
 
 <type id="27" 
     name="Timer resumed"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_TIMER_RESUMED" />
 
 <type id="28" 
     name="Timer stopped"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_TIMER_STOPPED" />
 
 <type id="29" 
     name="Timer Elapsed"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_TIMER_ELLAPSED" />
 
 <type id="30" 
     name="New Calculations"
-    token="" />
+    token="VSCP2_TYPE_VSCPD_NEW_CALCULATION" />
 
 </class>
 

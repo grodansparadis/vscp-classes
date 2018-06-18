@@ -4,6 +4,6 @@
 
 <type id="0" 
     name="General event"
-    token="" />
+    token="VSCP_TYPE_LABORATORY_GENERAL" />
 
 </class>
