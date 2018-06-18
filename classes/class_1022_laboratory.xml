@@ -1,4 +1,4 @@
 <class id="1022" 
     name="Class2 Level I Laboratory" 
     token="CLASS2.LEVEL1.LABORATORY" 
-    events="510" />
+    events="class_510_laboratory.xml" />

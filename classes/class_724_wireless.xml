@@ -1,4 +1,4 @@
 <class id="724" 
     name="Class2 Level I Wireless" 
     token="CLASS2.LEVEL1.WIRELESS" 
-    events="212" />
+    events="class_212_wireless.xml" />

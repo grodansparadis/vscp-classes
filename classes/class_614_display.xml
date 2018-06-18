@@ -1,4 +1,4 @@
 <class id="614" 
     name="Class2 Level I Display" 
     token="CLASS2.LEVEL1.DISPLAY" 
-    events="102" />
+    events="class_102_display.xml" />

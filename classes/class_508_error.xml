@@ -4,7 +4,7 @@
 
 <type id="0" 
     name="Success"
-    token=VSCP_TYPE_ERROR_SUCCESS"" />
+    token="VSCP_TYPE_ERROR_SUCCESS" />
 
 <type id="1"
     name="Error"

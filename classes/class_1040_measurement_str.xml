@@ -1,7 +1,7 @@
 <class id="1040" 
     name="Measurement string" 
     token="CLASS2.MEASUREMENT_STR" 
-    events="10" >
+    events="class_10_measurement.xml" >
 </class>
 
 

@@ -45,7 +45,7 @@
     <item name="class_607_weather_forecast.xml" /> 
     <item name="class_612_phone.xml" />
     <item name="class_614_display.xml" />
-    <item name="class_622_ir.xml" />
+    <item name="class_622_remote.xml" />
     <item name="class_718_gnss.xml" />
     <item name="class_724_wireless.xml" />
     <item name="class_1018_diagnostic.xml" />

@@ -1,4 +1,4 @@
 <class id="607" 
     name="Class2 Level I Weather Forecast" 
     token="CLASS2.LEVEL1.WEATHERFORECAST" 
-    events="95" />
+    events="class_90_weather.xml" />

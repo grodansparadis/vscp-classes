@@ -113,7 +113,7 @@
 
 <type id="27" 
     name="High end server/service probe."
-    type="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_PROBE" />
+    token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_PROBE" />
 
 <type id="28" 
     name="High end server/service response." 

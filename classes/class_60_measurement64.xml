@@ -1,7 +1,7 @@
 <class id="60" 
     name="Double precision floating point measurement" 
     token="CLASS1.MEASUREMENT64" 
-    events="10" >
+    events="class_0_protocol.xml" >
 </class>
  
 

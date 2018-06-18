@@ -1,4 +1,4 @@
 <class id="514" 
     name="Class2 Level I Security" 
     token="CLASS2.LEVEL1.SECURITY" 
-    events="2" />
+    events="class_2_security.xml" />

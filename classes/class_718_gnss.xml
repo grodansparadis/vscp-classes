@@ -2,4 +2,4 @@
     name="Class2 Level I GNSS" 
     token="CLASS2.LEVEL1.GNSS" 
     alternative-token="CLASS2.LEVEL1.GPS"
-    events="0" />
+    events="class_206_gnss.xml" />

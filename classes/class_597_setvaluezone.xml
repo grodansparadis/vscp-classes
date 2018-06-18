@@ -1,4 +1,4 @@
 <class id="597" 
     name="Class2 Level I SetValueZone" 
     token="CLASS2.LEVEL1.SETVALUEZONE" 
-    events="85" />
+    events="class_10_measurement.xml" />

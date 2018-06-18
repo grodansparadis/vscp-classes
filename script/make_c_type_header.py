@@ -52,10 +52,36 @@ print
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
-    print fname
+    #print "\\\\ " + fname
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print "type root tag: ", type_root.tag, type_root.attrib["id"],type_root.attrib["token"],type_root.attrib["name"]
+    print "\\\\ ", type_root.attrib["token"],"=",type_root.attrib["id"]," - ",type_root.attrib["name"]
+    events = ""
+    try:
+        events = type_root.attrib["events"]
+    except:
+        for child in type_root.iter('type'):
+            #child.append( xclass )
+            #print( child.tag, child.attrib )
+            outstr = "#define " + child.attrib["token"] + " "
+        
+            while len(outstr)<52:
+                outstr += " "
+        
+            outstr = outstr + child.attrib["id"] + " "
+        
+            while len(outstr)<56:
+                outstr += " "  
+        
+            outstr = outstr + "\\\\ " +  child.attrib["name"]    
+            print outstr
+    else:    
+        fname = '../classes/' + events
+        #print "\\\\ " + fname
+        type_tree = ET.parse(fname)
+        type_root = type_tree.getroot()
+        #print "\\\\ ", type_root.attrib["token"],"=",type_root.attrib["id"]," - ",type_root.attrib["name"]
+    
     #print "\\\\",type_root.attrib["class"]["token"]," ",type_root.attrib["class"]["name"]
     #outstr = "#define " + type_root.attrib["token"]
     #outstr = outstr.replace(".","_")
@@ -67,10 +93,9 @@ for vscp_class in order_list:
     #outstr = outstr + "\\\\ " + type_root.attrib["name"]
     #print outstr
     #xclass['classid'] = type_root.attrib['id']
-    for child in type_root.iter('type'):
-        #child.append( xclass )
-        print( child.tag, child.attrib )
-    print "-----------------------------------"    
+    
+
+    print    
 # dir
 #mylist = [f for f in glob.glob("../classes/*.xml")]
 #print mylist
@@ -79,3 +104,4 @@ for vscp_class in order_list:
 #print mylist
 print 
 print "#endif"
+print

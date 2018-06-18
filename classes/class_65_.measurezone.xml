@@ -1,7 +1,7 @@
 <class id="65" 
     name="Measurement with zone" 
     token="CLASS1.MEASUREZONE" 
-    events="10" >
+    events="class_0_protocol.xml" >
 </class>
 
 

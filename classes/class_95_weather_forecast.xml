@@ -1,7 +1,7 @@
 <class id="95" 
     name="Weather forecast" 
     token="CLASS1.WEATHER_FORECAST"
-    events="90" />
+    events="class_90_weather.xml" />
     
 
 

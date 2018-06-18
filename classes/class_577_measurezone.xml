@@ -1,4 +1,4 @@
 <class id="577" 
     name="Class2 Level I Measurementzone" 
     token="CLASS2.LEVEL1.MEASUREMENTZONE" 
-    events="65" />
+    events="class_10_measurement.xml" />
