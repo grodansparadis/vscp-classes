@@ -1,0 +1,2 @@
+-- Create the VSCP type table
+CREATE TABLE "vscp_type" ( `idxtype` INTEGER PRIMARY KEY AUTOINCREMENT, `type` INTEGER NOT NULL, `link_to_class` INTEGER NOT NULL, `token` TEXT NOT NULL, `description` TEXT );

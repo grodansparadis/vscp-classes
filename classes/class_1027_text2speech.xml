@@ -1,6 +1,6 @@
 <class id="1027" 
     name="Text to speech" 
-    token="CLASS1.TEXT2SPEECH" >
+    token="CLASS2.TEXT2SPEECH" >
 
 <type id="0" 
     name="General event"
