@@ -6,7 +6,7 @@
 #
 # Copyright (c) 2000-2018 Ake Hedman, Grodans Paradis AB <info@grodansparadis.com>
 #
-# Make c header for VSCP class definitions
+# Make c header for VSCP class definitions "vscp/src/vscp/common/vscp_class.h"
 #
 
 import sys
@@ -62,7 +62,7 @@ for vscp_class in order_list:
     outstr = outstr + type_root.attrib["id"]
     while len(outstr)<50:
         outstr += " "
-    outstr = outstr + "\\\\ " + type_root.attrib["name"]
+    outstr = outstr + "// " + type_root.attrib["name"]
     print outstr
     #xclass['classid'] = type_root.attrib['id']
     #for child in type_root.iter('type'):

@@ -1,5 +1,5 @@
 
-This is the original class and type specification for VSCP. Documents and source files are generated from this info.
+This is the original class and type specification for VSCP. Documents and source files are generated from this info. The 'scripts' folder holds scripts to generate different output.
 
 The folder **classes** holds class definitions as xml files with the following structure
 
@@ -33,6 +33,10 @@ Links to other classes should be have format
 ## Folders
 
 * **classes** - VSCP class and type definitions.
+    * make_c_class_header.py - Make vscp_class.h header file.
+    * make_c_type_header.py - Make vscp_tyoe.h header file.
+    * make_vscphelper_hashclass.py - Make m_hashclass definitions for vscphelper.cpp.
+    * make_vscphelper_hashtype.py - Make m_hashtype definitions for vscphelper.cpp.
 * **cheaders** - templates for c-headers.
 * **python** - Templates for Python.
 * **javascript** - Templates for JavaScript.
