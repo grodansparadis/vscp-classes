@@ -19,26 +19,19 @@ order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
 
-#f = open('../classes/list_class.xml', 'r')
-#f.close()
-
-#with open('../classes/list_class.xml', 'r') as myfile:
-#  data = myfile.read()
-#print data
+with open('../classes/list_class.xml', 'r') as myfile:
+  data = myfile.read()
+print data
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
 class_root = class_tree.getroot()
 for child in class_root.iter('item'):
-#    print( child.tag, child.attrib['name'] )
-    #print( child.attrib['name'] )
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
     print "No classes defined in class list!"
-    sys.exit()
-#else:
-#    print len(order_list), "classes defined."  
+    sys.exit() 
 
 # Get copyright header
 with open('../cheaders/prefix_type.txt', 'r') as myfile:
@@ -52,17 +45,16 @@ print
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
-    #print "\\\\ " + fname
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print "\\\\ ", type_root.attrib["token"],"=",type_root.attrib["id"]," - ",type_root.attrib["name"]
+    print "\\\\ ", type_root.attrib["token"],\
+        "=",type_root.attrib["id"],\
+        " - ",type_root.attrib["name"]
     events = ""
     try:
         events = type_root.attrib["events"]
     except:
         for child in type_root.iter('type'):
-            #child.append( xclass )
-            #print( child.tag, child.attrib )
             outstr = "#define " + child.attrib["token"] + " "
         
             while len(outstr)<52:
@@ -77,31 +69,11 @@ for vscp_class in order_list:
             print outstr
     else:    
         fname = '../classes/' + events
-        #print "\\\\ " + fname
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
-        #print "\\\\ ", type_root.attrib["token"],"=",type_root.attrib["id"]," - ",type_root.attrib["name"]
-    
-    #print "\\\\",type_root.attrib["class"]["token"]," ",type_root.attrib["class"]["name"]
-    #outstr = "#define " + type_root.attrib["token"]
-    #outstr = outstr.replace(".","_")
-    #while len(outstr)<40:
-    #    outstr += " "
-    #outstr = outstr + type_root.attrib["id"]
-    #while len(outstr)<50:
-    #    outstr += " "
-    #outstr = outstr + "\\\\ " + type_root.attrib["name"]
-    #print outstr
-    #xclass['classid'] = type_root.attrib['id']
-    
-
-    print    
-# dir
-#mylist = [f for f in glob.glob("../classes/*.xml")]
-#print mylist
-#print "----------------------------------------------------\n"
-#mylist.sort()
-#print mylist
+        print "\\\\ \tEvent types is the same as ", \
+                type_root.attrib["token"],"=",type_root.attrib["id"], \
+                " - ",type_root.attrib["name"]
 print 
 print "#endif"
 print
