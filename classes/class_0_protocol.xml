@@ -133,7 +133,7 @@
 
 <type id="32" 
     name="Who is there response." 
-    token="" />
+    token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
 
 <type id="33" 
     name="Get decision matrix info." 

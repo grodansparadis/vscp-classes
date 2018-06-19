@@ -41,7 +41,7 @@ for vscp_class in order_list:
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print "// ", type_root.attrib["token"],\
+    print "\n\t// ", type_root.attrib["token"],\
         "=",type_root.attrib["id"],\
         " - ",type_root.attrib["name"]
     events = ""
@@ -50,25 +50,44 @@ for vscp_class in order_list:
     except:
         # 'events' tag does not exist
         for child in type_root.iter('type'):
-            outstr = "#define " + child.attrib["token"] + " "
-        
-            while len(outstr)<52:
-                outstr += " "
-        
-            outstr = outstr + child.attrib["id"] + " "
-        
-            while len(outstr)<56:
-                outstr += " "  
-        
-            outstr = outstr + "// " +  child.attrib["name"]    
+
+            outstr = "\tm_hashType[ MAKE_CLASSTYPE_LONG(" + \
+                type_root.attrib["id"] + "," + \
+                child.attrib["id"] + \
+                ") ] = _(\"" + \
+                child.attrib["token"] + \
+                "\");"
+            outstr = outstr.replace(".","_")
             print outstr
+            #outstr = "#define " + child.attrib["token"] + " "
+        
+            #while len(outstr)<52:
+            #    outstr += " "
+        
+            #outstr = outstr + child.attrib["id"] + " "
+        
+            #while len(outstr)<56:
+            #    outstr += " "  
+        
+            # outstr = outstr + "// " +  child.attrib["name"]    
+            #print outstr
     else:    
+        classid = type_root.attrib["id"]
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
-        print "// \tEvent types is the same as ", \
+        print "\t// \tEvent types is the same as ", \
                 type_root.attrib["token"],"=",type_root.attrib["id"], \
                 " - ",type_root.attrib["name"]
-print 
-print "#endif"
+
+        for child in type_root.iter('type'):
+            outstr = "\tm_hashType[ MAKE_CLASSTYPE_LONG(" + \
+                classid + "," + \
+                child.attrib["id"] + \
+                ") ] = _(\"" + \
+                child.attrib["token"] + \
+                "\");"
+            outstr = outstr.replace(".","_")
+            print outstr
+
 print

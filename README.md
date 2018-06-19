@@ -37,6 +37,8 @@ Links to other classes should be have format
     * make_c_type_header.py - Make vscp_tyoe.h header file.
     * make_vscphelper_hashclass.py - Make m_hashclass definitions for vscphelper.cpp.
     * make_vscphelper_hashtype.py - Make m_hashtype definitions for vscphelper.cpp.
+    * make_sqlite_db.py - Generate sql for creation of sqlite db.
+    * make_mysql_db.py - Generate sql for creation of mysql db.
 * **cheaders** - templates for c-headers.
 * **python** - Templates for Python.
 * **javascript** - Templates for JavaScript.
