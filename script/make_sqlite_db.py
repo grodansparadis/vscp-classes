@@ -64,6 +64,9 @@ for vscp_class in order_list:
     with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
         description = myfile.read()
         description = description.replace("'","''")
+        description = description.replace("\n","\\n")
+        description = description.replace("\r","\\r")
+        description = description.replace("\t","\\t")
     
     outstr += ",'" + description + "');"
 
@@ -93,6 +96,9 @@ for vscp_class in order_list:
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
                 description = description.replace("'","''")
+                description = description.replace("\n","\\n")
+                description = description.replace("\r","\\r")
+                description = description.replace("\t","\\t")
     
             outstr += ",'" + description + "');"    
             print outstr
@@ -114,6 +120,9 @@ for vscp_class in order_list:
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
                 description = description.replace("'","''")
+                description = description.replace("\n","\\n")
+                description = description.replace("\r","\\r")
+                description = description.replace("\t","\\t")
     
             outstr += ",'" + description + "');"
             print outstr
