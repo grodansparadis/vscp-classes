@@ -4,7 +4,8 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2000-2018 Ake Hedman, Grodans Paradis AB <info@grodansparadis.com>
+# Copyright (c) 2000-2018 Ake Hedman, 
+# Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make records for the sqlite3 database 
 #

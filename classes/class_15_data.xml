@@ -2,15 +2,15 @@
     name="Data" 
     token="CLASS1.DATA" >
 
-<type id="0" 
+<type id="0"
     name="General event"
-    token="VSCP_TYPE_DATA_GENERAL" /> 
+    token="VSCP_TYPE_DATA_GENERAL" />
 
-<type id="1" 
-    name="I/O – value"
+<type id="1"
+    name="I/O value"
     token="VSCP_TYPE_DATA_IO" />
 
-<type id="2" 
+<type id="2"
     name="A/D value"
     token="VSCP_TYPE_DATA_AD" />
 
