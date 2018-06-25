@@ -39,7 +39,7 @@ Links to other classes should be have format
     * make_vscphelper_hashtype.py - Make m_hashtype definitions for vscphelper.cpp.
     * make_sqlite_db.py - Generate sql for creation of sqlite db.
     * make_mysql_db.py - Generate sql for creation of mysql db.
-    * make_json.py - Make JSON data.
+    * make_json.py - Make JSON/JSONP data. Use arg "jsonp" for JSONP.
     * make_xml.py - Make XML data.
 * **cheaders** - templates for c-headers.
 * **python** - Templates for Python.

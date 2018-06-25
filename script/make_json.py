@@ -24,6 +24,11 @@ type_list = []  # List with type attributes
 args = sys.argv[1:]
 nargs = len(args)
 
+# JSONP
+if ( 1 == nargs ):
+    if ( args[0] == "jsonp"):
+        print "myFunc("
+
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
 class_root = class_tree.getroot()
@@ -133,3 +138,7 @@ for vscp_class in order_list:
 
 print "]"
 
+# JSONP
+if ( 1 == nargs ):
+    if ( args[0] == "jsonp"):
+        print ");"
