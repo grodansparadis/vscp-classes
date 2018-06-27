@@ -41,6 +41,8 @@ Links to other classes should be have format
     * make_mysql_db.py - Generate sql for creation of mysql db.
     * make_json.py - Make JSON/JSONP data. Use arg "jsonp" for JSONP.
     * make_xml.py - Make XML data.
+    * make_doc_left.py - Make sidebar content for specification document.
+    * make_docs.py - Generate documentation for specification document.
 * **cheaders** - templates for c-headers.
 * **python** - Templates for Python.
 * **javascript** - Templates for JavaScript.
