@@ -48,11 +48,15 @@ Make the vscp_class.h header file.
 #### Usage
     make_c_class_header.py >path/vscp_class.h
 
+
+
 ### make_c_type_header.py
 Make vscp_type.h header file.
 
 #### Usage
     make_c_type_header.py >path/vscp_ctype.h
+
+
 
 ### make_vscphelper_hashclass.py
 Make m_hashclass definitions for vscphelper.cpp.
@@ -60,23 +64,31 @@ Make m_hashclass definitions for vscphelper.cpp.
 #### Usage
      make_vscphelper_hashclass.py >path/vscp_ctype.h
 
+
+
 ### make_vscphelper_hashtype.py
 Make m_hashtype definitions for vscphelper.cpp.
 
 #### Usage
     make_vscphelper_hashtype.py path/vscp_hash_type.h
-    
+
+
+
 ### make_sqlite_db.py
 Generate sql for creation of sqlite db.
 
 #### Usage
     make_sqlite_db.py path/dbfile.sql
 
+
+
 ### make_mysql_db.py
 Generate sql for creation of mysql db.
 
 #### Usage
     make_mysql_db.py path/dbfile.sql
+
+
 
 ### make_json.py
 Make JSON/JSONP data. Use arg "jsonp" for JSONP.
@@ -85,7 +97,9 @@ Make JSON/JSONP data. Use arg "jsonp" for JSONP.
     make_json.py >path/events.json
     or 
     make_json.py jsonp >path/events.jsonp
-   
+
+
+
 
 ### make_xml.py
 Make XML data.
@@ -93,11 +107,15 @@ Make XML data.
 #### Usage
      make_xml.py >path/events.xml
 
+
+
 ### make_docs_sidebar.py
 Make sidebar content for specification document.
 
 #### Usage
      make_docs_sidebar.py >path/sidebar.md
+
+
 
 ### make_docs.py
 Generate documentation for specification document.
@@ -109,3 +127,17 @@ Generate documentation for specification document.
     -v/--verbose - Print output also to screen.
     -o/--outdir  - Folder to write output files to.
                    defaults to current folder.
+
+### make_js_class_constants.py
+Make class constants for the Javascript library.
+
+#### Usage
+make_js_class_constants.py >path/output
+
+
+
+### make_js_type_constants.py
+Make type constants for the Javascript library.
+
+#### Usage
+make_js_type_constants.py >path/output
