@@ -76,10 +76,6 @@ for vscp_class in order_list:
         type_root.attrib["id"] + " (" + hex(id) + ")](" + \
         type_root.attrib["token"].lower() + ".md)"
 
-    #    "id=\"" + type_root.attrib["id"] + "\" " + \
-    #    "name=\"" + type_root.attrib["name"] + "\" " + \
-    #    "token=\"" + type_root.attrib["token"] + "\" " + \
-    #    "description=\"" + description + "\" >\n"
     print outstr 
 
     # Types
@@ -104,19 +100,11 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
 
             typeid = int(child.attrib["id"])
-            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + "), " + \
+            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
             print outstr
-
-            #    "token=\"" + child.attrib["token"] + "\" " + \
-            #    "name=\"" + child.attrib["name"] + "\" " + \
-            #    "description=\"" + description + "\" " + \
-            #    "/>\n"
-        
-        #print outstr
-        #print "</class>"
 
     else:
         classid = type_root.attrib["id"]
@@ -141,14 +129,11 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
 
             typeid = int(child.attrib["id"])
-            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + "), " + \
+            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
             print outstr   
-
-        #print outstr
-        #print "</class>"
 
 print 
 

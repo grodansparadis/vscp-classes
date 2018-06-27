@@ -7,24 +7,62 @@
 # Copyright (c) 2000-2018 Ake Hedman, 
 # Grodans Paradis AB <info@grodansparadis.com>
 #
-# Make XML data from VSCP class & type 
-# definitions
+# Make event docs. for VSCP specification document
 #
 
 import sys
+import getopt
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
+
+# Convert decimal number on string form
+# to formated hex number (0x.....)
+def fmthex(snum):
+    if int(snum)<256:
+        return str.format('0x{:02X}', int(snum, 10))
+    elif int(snum)<65536:
+        return str.format('0x{:04X}', int(snum, 10))
+    else:    
+        return str.format('0x{:08X}', int(snum, 10))
+
+def usage():
+    print "usage: make_docs.py -v -o <output-folder> -h "
+    print "---------------------------------------------"
+    print "-h/--help    - This text."
+    print "-v/--verbose - Print output also to screen."
+    print "-o/--outdir  - Folder to write output files to."
+    print "               defaults to current folder."
 
 xclass = {}
 order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
 
+# -v --verbose - Show output
+# -o --output - Set output folder (current is default).
+# -h --help - Show this text
 args = sys.argv[1:]
 nargs = len(args)
 
+outdir = "./"
+bverbose = False
 
+try:
+    opts, args = getopt.getopt(args,"hvo:",["help","verbose","outdir="])
+except getopt.GetoptError:
+    print "unrecognized format!"
+    usage()
+    sys.exit(2)
+for opt, arg in opts:
+    if opt in ("-h", "--help"):
+        print "HELP"
+        usage()
+        sys.exit()
+    elif opt in ("-v", "--verbose"):
+        bverbose = True
+    elif opt in ("-o", "--outdir"):
+        outdir = arg
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -36,35 +74,31 @@ if len(order_list) == 0:
     print "No classes defined in class list!"
     sys.exit() 
 
-print "<vscpevents>"
-
 # Fill class table with data 
-cnt = 0
 for vscp_class in order_list:  
 
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
 
+    classid = int( type_root.attrib["id"] )
+
+    # Page header
+    outstr = "# Class=" + type_root.attrib["id"] + " (" + \
+        fmthex( type_root.attrib["id"] ) + ") - " + \
+        type_root.attrib["name"] + "\n\n"
+
+    # Print token
+    outstr += "    " + type_root.attrib["token"] + "\n\n"
+
     # Get description
     description = ""
     with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
-        description = myfile.read()
-        description = description.replace("\"","&quot;")
-        description = description.replace("'","&apos;")
-        description = description.replace("&","&amp;")
-        description = description.replace("<","&lt;")
-        description = description.replace(">","&gt;")
-        description = description.replace("\n","\\n")
-        description = description.replace("\r","\\r")
-        description = description.replace("\t","\\t")
 
-    outstr = "<class " + \
-        "id=\"" + type_root.attrib["id"] + "\" " + \
-        "name=\"" + type_root.attrib["name"] + "\" " + \
-        "token=\"" + type_root.attrib["token"] + "\" " + \
-        "description=\"" + description + "\" >\n"
-    print outstr    
+        description = myfile.read()
+        outstr += description
+
+    filename = type_root.attrib["token"].lower() + ".md"
 
     # Types
     events = ""
@@ -72,61 +106,64 @@ for vscp_class in order_list:
         events = type_root.attrib["events"]
     except:
         # 'events' tag does not exist
-        outstr = ""
         for child in type_root.iter('type'):            
+
+            typeid = int(child.attrib["id"])
+
+            outstr += "\n"
+            outstr += "## Type=" + child.attrib["id"] +\
+                " (" + fmthex(child.attrib["id"]) +\
+                ") - " + child.attrib["name"]
+            outstr += "\n" 
+            outstr += "    " + child.attrib["token"]
+            outstr += "\n"
+
             # Get description
             description = ""
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+                outstr += description
 
-            outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
-                "token=\"" + child.attrib["token"] + "\" " + \
-                "name=\"" + child.attrib["name"] + "\" " + \
-                "description=\"" + description + "\" " + \
-                "/>\n"
-        
-        print outstr
-        print "</class>"
+            typeid = int(child.attrib["id"])
 
+            outstr += "\n" 
+            outstr += "----"
+            outstr += "\n"
     else:
         classid = type_root.attrib["id"]
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
 
-        outstr = ""
         for child in type_root.iter('type'):
 
+            typeid = int(child.attrib["id"])
+
+            outstr += "\n"
+            outstr += "## Type=" + child.attrib["id"] +\
+                " (" + fmthex(child.attrib["id"]) +\
+                ") - " + child.attrib["name"]
+            outstr += "\n" 
+            outstr += "    " + child.attrib["token"]
+            
             # Get description
             description = ""
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+                outstr += description
 
-            outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
-                "token=\"" + child.attrib["token"] + "\" " + \
-                "name=\"" + child.attrib["name"] + "\" " + \
-                "description=\"" + description + "\" " + \
-                "/>\n"
+            typeid = int(child.attrib["id"])
+    
+            outstr += "\n" 
+            outstr += "----"
+            outstr += "\n"
 
+    outstr += "\n" + "{% include \"./bottom_copyright.md\" %}"
+    if bverbose:
         print outstr
-        print "</class>"
-
-print "</vscpevents>"
+    # Write the file
+    file = open(outdir + "/" + filename,"w")
+    file.write(outstr)
+    file.close
 
 
