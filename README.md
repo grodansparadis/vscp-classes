@@ -59,6 +59,22 @@ Make vscp_type.h header file.
 
 ----
 
+### make_python_class_header.py
+Make the vscp_class.py header file.
+
+#### Usage
+    make_python_class_header.py >path/vscp_class.py
+
+----
+
+
+### make_python_type_header.py
+Make vscp_type.py header file.
+
+#### Usage
+    make_python_type_header.py >path/vscp_type.py
+
+----
 
 ### make_vscphelper_hashclass.py
 Make m_hashclass definitions for vscphelper.cpp.
