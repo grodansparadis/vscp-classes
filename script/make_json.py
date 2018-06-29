@@ -15,6 +15,8 @@ import sys
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
+import time
+import datetime
 
 xclass = {}
 order_list = [] # class list order
@@ -39,7 +41,9 @@ if len(order_list) == 0:
     print "No classes defined in class list!"
     sys.exit() 
 
-print "["
+print "{"
+print "\"Generated\" : \"", datetime.datetime.now(), "\","
+print "\"events\": ["
 
 # Fill class table with data 
 cnt = 0
@@ -136,7 +140,7 @@ for vscp_class in order_list:
         
     cnt += 1
 
-print "]"
+print "]}"
 
 # JSONP
 if ( 1 == nargs ):

@@ -13,6 +13,8 @@ import sys
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
+import time
+import datetime
 
 xclass = {}
 order_list = [] # class list order
@@ -34,6 +36,13 @@ with open('../cheaders/prefix_class.txt', 'r') as myfile:
   data = myfile.read()
 print data
 
+print "/*"
+print "            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
+print "                           This file is auto-generated"
+print "                see https://github.com/grodansparadis/vscp-classes"
+print "                        Generated:", datetime.datetime.now()
+print "*/"
+
 print
 print "#ifndef VSCP_CLASS_H"
 print "#define VSCP_CLASS_H"
@@ -51,8 +60,9 @@ for vscp_class in order_list:
     outstr = outstr + type_root.attrib["id"]
     while len(outstr)<50:
         outstr += " "
-    outstr = outstr + "// " + type_root.attrib["name"]
+    outstr = outstr + "/* " + type_root.attrib["name"] + " */"
     print outstr
 
 print 
 print "#endif"
+print

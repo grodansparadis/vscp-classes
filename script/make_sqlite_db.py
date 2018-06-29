@@ -14,11 +14,20 @@ import sys
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
+import time
+import datetime
 
 xclass = {}
 order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
+
+print 
+print "--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
+print "--                           This file is auto-generated"
+print "--                see https://github.com/grodansparadis/vscp-classes"
+print "--                        Generated:", datetime.datetime.now()
+print 
 
 # Create class table
 with open('../sqlite/create_class_table.sql', 'r') as myfile:
