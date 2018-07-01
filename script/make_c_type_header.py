@@ -32,34 +32,34 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
 # Get copyright header
 with open('../cheaders/prefix_type.txt', 'r') as myfile:
   data = myfile.read()
-  print data
+  print(data)
 
-print "/*"
-print "            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
-print "                           This file is auto-generated"
-print "                see https://github.com/grodansparadis/vscp-classes"
-print "                        Generated:", datetime.datetime.now()
-print "*/"
+print("/*")
+print("            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("                           This file is auto-generated")
+print("                see https://github.com/grodansparadis/vscp-classes")
+print("                        Generated:", datetime.datetime.now())
+print("*/")
 
-print
-print "#ifndef VSCP_TYPE_H"
-print "#define VSCP_TYPE_H"
-print
-print "#define VSCP_TYPE_UNDEFINED                         0"
+print()
+print("#ifndef VSCP_TYPE_H")
+print("#define VSCP_TYPE_H")
+print()
+print("#define VSCP_TYPE_UNDEFINED                         0")
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print "\n/* ", type_root.attrib["token"],\
+    print("\n/* ", type_root.attrib["token"],\
         "=",type_root.attrib["id"],\
-        " - ",type_root.attrib["name"] + " */"
+        " - ",type_root.attrib["name"] + " */")
     events = ""
     try:
         events = type_root.attrib["events"]
@@ -76,14 +76,14 @@ for vscp_class in order_list:
                 outstr += " "  
         
             outstr = outstr + "/* " +  child.attrib["name"] + " */"
-            print outstr
+            print(outstr)
     else:    
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
-        print "/* \tEvent types is the same as ", \
+        print("/* \tEvent types is the same as ", \
                 type_root.attrib["token"],"=",type_root.attrib["id"], \
-                " - ",type_root.attrib["name"] + " */"
-print 
-print "#endif"
-print
+                " - ",type_root.attrib["name"] + " */")
+print() 
+print("#endif")
+print()

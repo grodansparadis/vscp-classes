@@ -29,7 +29,7 @@ nargs = len(args)
 # JSONP
 if ( 1 == nargs ):
     if ( args[0] == "jsonp"):
-        print "myFunc("
+        print("myFunc(")
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -38,12 +38,12 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
-print "{"
-print "\"Generated\" : \"", datetime.datetime.now(), "\","
-print "\"events\": ["
+print("{")
+print("\"Generated\" : \"", datetime.datetime.now(), "\",")
+print("\"events\": [")
 
 # Fill class table with data 
 cnt = 0
@@ -70,7 +70,7 @@ for vscp_class in order_list:
         "\t\"description\": \"" + description + "\",\n" + \
         "\t\"types\": ["
 
-    print outstr    
+    print(outstr)    
 
     # Types
     events = ""
@@ -97,13 +97,13 @@ for vscp_class in order_list:
                 "\t},\n"
 
         if len(outstr) > 2:    
-            print outstr[:len(outstr)-2]
-        print "\t]"
+            print(outstr[:len(outstr)-2])
+        print("\t]")
 
         if cnt<(len(order_list)-1):
-            print "},"
+            print("},")
         else:    
-            print "}"
+            print("}")
 
     else:
         classid = type_root.attrib["id"]
@@ -130,19 +130,19 @@ for vscp_class in order_list:
                 "\t\t\"description\": \"" + description + "\"\n" + \
                 "\t},\n"
 
-        print outstr[:len(outstr)-2]
-        print "\t]"
+        print(outstr[:len(outstr)-2])
+        print("\t]")
         
         if cnt<(len(order_list)-1):
-            print "},"
+            print("},")
         else:    
-            print "}"
+            print("}")
         
     cnt += 1
 
-print "]}"
+print("]}")
 
 # JSONP
 if ( 1 == nargs ):
     if ( args[0] == "jsonp"):
-        print ");"
+        print(");")

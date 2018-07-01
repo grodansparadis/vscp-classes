@@ -35,17 +35,17 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
-print "<!--"
-print "--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
-print "--                           This file is auto-generated"
-print "--                see https://github.com/grodansparadis/vscp-classes"
-print "--                        Generated:", datetime.datetime.now()
-print "-->"    
+print("<!--")
+print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("--                           This file is auto-generated")
+print("--                see https://github.com/grodansparadis/vscp-classes")
+print("--                        Generated:", datetime.datetime.now())
+print("-->")    
 
-print "<vscpevents>"
+print("<vscpevents>")
 
 # Fill class table with data 
 cnt = 0
@@ -73,7 +73,7 @@ for vscp_class in order_list:
         "name=\"" + type_root.attrib["name"] + "\" " + \
         "token=\"" + type_root.attrib["token"] + "\" " + \
         "description=\"" + description + "\" >\n"
-    print outstr    
+    print(outstr)    
 
     # Types
     events = ""
@@ -102,8 +102,8 @@ for vscp_class in order_list:
                 "description=\"" + description + "\" " + \
                 "/>\n"
         
-        print outstr
-        print "</class>"
+        print(outstr)
+        print("</class>")
 
     else:
         classid = type_root.attrib["id"]
@@ -133,9 +133,9 @@ for vscp_class in order_list:
                 "description=\"" + description + "\" " + \
                 "/>\n"
 
-        print outstr
-        print "</class>"
+        print(outstr)
+        print("</class>")
 
-print "</vscpevents>"
+print("</vscpevents>")
 
 
