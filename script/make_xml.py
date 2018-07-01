@@ -57,7 +57,7 @@ for vscp_class in order_list:
 
     # Get description
     description = ""
-    with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
+    with open('../classes/' + type_root.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
         description = myfile.read()
         description = description.replace("\"","&quot;")
         description = description.replace("'","&apos;")
@@ -85,7 +85,7 @@ for vscp_class in order_list:
         for child in type_root.iter('type'):            
             # Get description
             description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
                 description = myfile.read()
                 description = description.replace("\"","&quot;")
                 description = description.replace("'","&apos;")
@@ -116,7 +116,7 @@ for vscp_class in order_list:
 
             # Get description
             description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
                 description = myfile.read()
                 description = description.replace("\"","&quot;")
                 description = description.replace("'","&apos;")
