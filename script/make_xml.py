@@ -38,6 +38,7 @@ if len(order_list) == 0:
     print("No classes defined in class list!")
     sys.exit() 
 
+print("<?xml version=\"1.0\" encoding=\"utf-8\"?>")
 print("<!--")
 print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
 print("--                           This file is auto-generated")
