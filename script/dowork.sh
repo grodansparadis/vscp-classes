@@ -69,7 +69,7 @@ curl -T /tmp/vscp_events.jsonp ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.jsonp
 
 # Generate and upload XML 
-python make_xml.py jsonp >/tmp/vscp_events.xml
+python3 make_xml.py jsonp >/tmp/vscp_events.xml
 echo "uploading vscp_events.xml"
 curl -T /tmp/vscp_events.xml ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.xml

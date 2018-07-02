@@ -18,6 +18,17 @@ import xml.etree.ElementTree as ET
 import time
 import datetime
 
+def replace_specials(str):
+    str = str.replace("\"","&quot;")
+    str = str.replace("'","&apos;")
+    str = str.replace("&","&amp;")
+    str = str.replace("<","&lt;")
+    str = str.replace(">","&gt;")
+    str = str.replace("\n","\\n")
+    str = str.replace("\r","\\r")
+    str = str.replace("\t","\\t")
+    return str
+
 xclass = {}
 order_list = [] # class list order
 class_list = [] # List with class attributes
@@ -25,8 +36,6 @@ type_list = []  # List with type attributes
 
 args = sys.argv[1:]
 nargs = len(args)
-
-
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -58,16 +67,14 @@ for vscp_class in order_list:
 
     # Get description
     description = ""
-    with open('../classes/' + type_root.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
-        description = myfile.read()
-        description = description.replace("\"","&quot;")
-        description = description.replace("'","&apos;")
-        description = description.replace("&","&amp;")
-        description = description.replace("<","&lt;")
-        description = description.replace(">","&gt;")
-        description = description.replace("\n","\\n")
-        description = description.replace("\r","\\r")
-        description = description.replace("\t","\\t")
+    if sys.version_info[0] < 3:
+        with open('../classes/' + type_root.attrib["id"] + '.md', 'r' ) as myfile:
+            description = myfile.read()
+            description = replace_specials(description)
+    else:    
+        with open('../classes/' + type_root.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
+            description = myfile.read()
+            description = replace_specials(description)
 
     outstr = "<class " + \
         "id=\"" + type_root.attrib["id"] + "\" " + \
@@ -86,16 +93,14 @@ for vscp_class in order_list:
         for child in type_root.iter('type'):            
             # Get description
             description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
-                description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+            if sys.version_info[0] < 3:
+                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r' ) as myfile:
+                    description = myfile.read()
+                    description = replace_specials(description)    
+            else:                    
+                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
+                    description = myfile.read()
+                    description = replace_specials(description) 
 
             outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
                 "token=\"" + child.attrib["token"] + "\" " + \
@@ -117,16 +122,14 @@ for vscp_class in order_list:
 
             # Get description
             description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
-                description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+            if sys.version_info[0] < 3:
+                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+                    description = myfile.read()
+                    description = replace_specials(description)
+            else:                
+                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
+                    description = myfile.read()
+                    description = replace_specials(description)
 
             outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
                 "token=\"" + child.attrib["token"] + "\" " + \
