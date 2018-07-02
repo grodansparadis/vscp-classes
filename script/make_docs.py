@@ -27,12 +27,12 @@ def fmthex(snum):
         return str.format('0x{:08X}', int(snum, 10))
 
 def usage():
-    print "usage: make_docs.py -v -o <output-folder> -h "
-    print "---------------------------------------------"
-    print "-h/--help    - This text."
-    print "-v/--verbose - Print output also to screen."
-    print "-o/--outdir  - Folder to write output files to."
-    print "               defaults to current folder."
+    print("usage: make_docs.py -v -o <output-folder> -h ")
+    print("---------------------------------------------")
+    print("-h/--help    - This text.")
+    print("-v/--verbose - Print output also to screen.")
+    print("-o/--outdir  - Folder to write output files to.")
+    print("               defaults to current folder.")
 
 xclass = {}
 order_list = [] # class list order
@@ -51,12 +51,12 @@ bverbose = False
 try:
     opts, args = getopt.getopt(args,"hvo:",["help","verbose","outdir="])
 except getopt.GetoptError:
-    print "unrecognized format!"
+    print("unrecognized format!")
     usage()
     sys.exit(2)
 for opt, arg in opts:
     if opt in ("-h", "--help"):
-        print "HELP"
+        print("HELP")
         usage()
         sys.exit()
     elif opt in ("-v", "--verbose"):
@@ -71,7 +71,7 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
 # Fill class table with data 
@@ -160,7 +160,7 @@ for vscp_class in order_list:
 
     outstr += "\n" + "{% include \"./bottom_copyright.md\" %}"
     if bverbose:
-        print outstr
+        print(outstr)
     # Write the file
     file = open(outdir + "/" + filename,"w")
     file.write(outstr)

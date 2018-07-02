@@ -22,30 +22,30 @@ order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
 
-print 
-print "--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
-print "--                           This file is auto-generated"
-print "--                see https://github.com/grodansparadis/vscp-classes"
-print "--                        Generated:", datetime.datetime.now()
-print 
+print() 
+print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("--                           This file is auto-generated")
+print("--                see https://github.com/grodansparadis/vscp-classes")
+print("--                        Generated:", datetime.datetime.now())
+print() 
 
 # Create class table
 with open('../sqlite/create_class_table.sql', 'r') as myfile:
   data = myfile.read()
-print data,";"
-print
+print(data,";")
+print()
 
 # Create type table
 with open('../sqlite/create_type_table.sql', 'r') as myfile:
   data = myfile.read()
-print data,";"
-print
+print(data,";")
+print()
 
 # Create unit table
 with open('../sqlite/create_unit_table.sql', 'r') as myfile:
   data = myfile.read()
-print data,";"
-print
+print(data,";")
+print()
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -54,7 +54,7 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
 # Fill class table with data 
@@ -80,7 +80,7 @@ for vscp_class in order_list:
     
     outstr += ",'" + description + "');"
 
-    print outstr    
+    print(outstr)    
 
 # Fill in table data
 
@@ -111,7 +111,7 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
     
             outstr += ",'" + description + "');"    
-            print outstr
+            print(outstr)
     else:    
         classid = type_root.attrib["id"]
         fname = '../classes/' + events
@@ -135,6 +135,6 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
     
             outstr += ",'" + description + "');"
-            print outstr
+            print(outstr)
 
-print
+print()

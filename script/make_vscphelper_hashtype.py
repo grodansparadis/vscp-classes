@@ -31,24 +31,24 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
-print "/*"
-print "            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
-print "                           This file is auto-generated"
-print "                see https://github.com/grodansparadis/vscp-classes"
-print "                        Generated:", datetime.datetime.now()
-print "*/"
-print
+print("/*")
+print("            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("                           This file is auto-generated")
+print("                see https://github.com/grodansparadis/vscp-classes")
+print("                        Generated:", datetime.datetime.now())
+print("*/")
+print()
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print "\n\t// ", type_root.attrib["token"],\
+    print("\n\t// ", type_root.attrib["token"],\
         "=",type_root.attrib["id"],\
-        " - ",type_root.attrib["name"]
+        " - ",type_root.attrib["name"])
     events = ""
     try:
         events = type_root.attrib["events"]
@@ -63,7 +63,7 @@ for vscp_class in order_list:
                 child.attrib["token"] + \
                 "\");"
             outstr = outstr.replace(".","_")
-            print outstr
+            print(outstr)
             #outstr = "#define " + child.attrib["token"] + " "
         
             #while len(outstr)<52:
@@ -81,9 +81,9 @@ for vscp_class in order_list:
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
-        print "\t// \tEvent types is the same as ", \
+        print("\t// \tEvent types is the same as ", \
                 type_root.attrib["token"],"=",type_root.attrib["id"], \
-                " - ",type_root.attrib["name"]
+                " - ",type_root.attrib["name"])
 
         for child in type_root.iter('type'):
             outstr = "\tm_hashType[ MAKE_CLASSTYPE_LONG(" + \
@@ -93,6 +93,6 @@ for vscp_class in order_list:
                 child.attrib["token"] + \
                 "\");"
             outstr = outstr.replace(".","_")
-            print outstr
+            print(outstr)
 
-print
+print()

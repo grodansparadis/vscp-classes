@@ -32,11 +32,11 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
-print "## Level I events"
-print
+print("## Level I events")
+print()
 
 # Fill class table with data 
 cnt = 0
@@ -62,21 +62,21 @@ for vscp_class in order_list:
 
     id = int(type_root.attrib["id"])
     if id == 0:
-        print
-        print "* [Level I Events](level_i_events.md)"
+        print()
+        print("* [Level I Events](level_i_events.md)")
     elif id == 512:
-        print
-        print "* [Level I Events over Level II](level_i_events.md)"
+        print()
+        print("* [Level I Events over Level II](level_i_events.md)")
     elif id == 1024:
-        print
-        print "* [Level II Events](level_ii_events.md)"     
+        print()
+        print("* [Level II Events](level_ii_events.md)")     
 
     outstr = "* [" + \
         type_root.attrib["token"] + " = " + \
         type_root.attrib["id"] + " (" + hex(id) + ")](" + \
         type_root.attrib["token"].lower() + ".md)"
 
-    print outstr 
+    print(outstr) 
 
     # Types
     events = ""
@@ -104,7 +104,7 @@ for vscp_class in order_list:
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
-            print outstr
+            print(outstr)
 
     else:
         classid = type_root.attrib["id"]
@@ -133,8 +133,8 @@ for vscp_class in order_list:
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
-            print outstr   
+            print(outstr)   
 
-print 
+print() 
 
 

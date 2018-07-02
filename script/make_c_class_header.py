@@ -28,25 +28,25 @@ for child in class_root.iter('item'):
     order_list.append( child.attrib['name'] )
 
 if len(order_list) == 0:
-    print "No classes defined in class list!"
+    print("No classes defined in class list!")
     sys.exit() 
 
 # Get copyright header
 with open('../cheaders/prefix_class.txt', 'r') as myfile:
   data = myfile.read()
-print data
+print(data)
 
-print "/*"
-print "            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!"
-print "                           This file is auto-generated"
-print "                see https://github.com/grodansparadis/vscp-classes"
-print "                        Generated:", datetime.datetime.now()
-print "*/"
+print("/*")
+print("            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("                           This file is auto-generated")
+print("                see https://github.com/grodansparadis/vscp-classes")
+print("                        Generated:", datetime.datetime.now())
+print("*/")
 
-print
-print "#ifndef VSCP_CLASS_H"
-print "#define VSCP_CLASS_H"
-print
+print()
+print("#ifndef VSCP_CLASS_H")
+print("#define VSCP_CLASS_H")
+print()
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
@@ -61,8 +61,8 @@ for vscp_class in order_list:
     while len(outstr)<50:
         outstr += " "
     outstr = outstr + "/* " + type_root.attrib["name"] + " */"
-    print outstr
+    print(outstr)
 
-print 
-print "#endif"
-print
+print() 
+print("#endif")
+print()
