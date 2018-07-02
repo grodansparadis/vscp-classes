@@ -43,10 +43,10 @@ print("                see https://github.com/grodansparadis/vscp-classes")
 print("                        Generated:", datetime.datetime.now())
 print("*/")
 
-print()
+print(" ")
 print("#ifndef VSCP_CLASS_H")
 print("#define VSCP_CLASS_H")
-print()
+print(" ")
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
@@ -63,6 +63,6 @@ for vscp_class in order_list:
     outstr = outstr + "/* " + type_root.attrib["name"] + " */"
     print(outstr)
 
-print() 
+print(" ") 
 print("#endif")
-print()
+print(" ")

@@ -40,7 +40,7 @@ print("                           This file is auto-generated")
 print("                see https://github.com/grodansparadis/vscp-classes")
 print("                        Generated:", datetime.datetime.now())
 print("*/")
-print()
+print(" ")
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
@@ -95,4 +95,4 @@ for vscp_class in order_list:
             outstr = outstr.replace(".","_")
             print(outstr)
 
-print()
+print(" ")

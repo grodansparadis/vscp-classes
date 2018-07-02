@@ -62,7 +62,7 @@ for class_index, vscp_class in enumerate(order_list):
         if ((len(order_list) - 1) != class_index):
             print(",")
         else:
-            print("")
+            print(" ")
     else:
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
@@ -70,7 +70,7 @@ for class_index, vscp_class in enumerate(order_list):
         print("// Event types is the same as ", \
                 type_root.attrib["token"],"=",type_root.attrib["id"], \
                 " - ",type_root.attrib["name"])
-    print()
+    print(" ")
 
 print("};")
 

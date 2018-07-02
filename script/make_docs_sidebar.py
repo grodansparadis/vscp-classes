@@ -36,7 +36,7 @@ if len(order_list) == 0:
     sys.exit() 
 
 print("## Level I events")
-print()
+print(" ")
 
 # Fill class table with data 
 cnt = 0
@@ -62,13 +62,13 @@ for vscp_class in order_list:
 
     id = int(type_root.attrib["id"])
     if id == 0:
-        print()
+        print(" ")
         print("* [Level I Events](level_i_events.md)")
     elif id == 512:
-        print()
+        print(" ")
         print("* [Level I Events over Level II](level_i_events.md)")
     elif id == 1024:
-        print()
+        print(" ")
         print("* [Level II Events](level_ii_events.md)")     
 
     outstr = "* [" + \
@@ -135,6 +135,6 @@ for vscp_class in order_list:
                 child.attrib["id"] + ")"
             print(outstr)   
 
-print() 
+print(" ") 
 
 

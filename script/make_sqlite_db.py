@@ -22,30 +22,30 @@ order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
 
-print() 
+print(" ") 
 print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
 print("--                           This file is auto-generated")
 print("--                see https://github.com/grodansparadis/vscp-classes")
 print("--                        Generated:", datetime.datetime.now())
-print() 
+print(" ") 
 
 # Create class table
 with open('../sqlite/create_class_table.sql', 'r') as myfile:
   data = myfile.read()
 print(data,";")
-print()
+print(" ")
 
 # Create type table
 with open('../sqlite/create_type_table.sql', 'r') as myfile:
   data = myfile.read()
 print(data,";")
-print()
+print(" ")
 
 # Create unit table
 with open('../sqlite/create_unit_table.sql', 'r') as myfile:
   data = myfile.read()
 print(data,";")
-print()
+print(" ")
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -137,4 +137,4 @@ for vscp_class in order_list:
             outstr += ",'" + description + "');"
             print(outstr)
 
-print()
+print(" ")

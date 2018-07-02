@@ -47,10 +47,10 @@ print("                see https://github.com/grodansparadis/vscp-classes")
 print("                        Generated:", datetime.datetime.now())
 print("*/")
 
-print()
+print(" ")
 print("#ifndef VSCP_TYPE_H")
 print("#define VSCP_TYPE_H")
-print()
+print(" ")
 print("#define VSCP_TYPE_UNDEFINED                         0")
 
 for vscp_class in order_list:
@@ -84,6 +84,6 @@ for vscp_class in order_list:
         print("/* \tEvent types is the same as ", \
                 type_root.attrib["token"],"=",type_root.attrib["id"], \
                 " - ",type_root.attrib["name"] + " */")
-print() 
+print(" ") 
 print("#endif")
-print()
+print(" ")
