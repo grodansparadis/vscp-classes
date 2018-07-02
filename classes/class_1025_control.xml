@@ -2,7 +2,7 @@
 
 <class id="1025" 
     name="Level II Control" 
-    token="CLASS2.LOCAL" >
+    token="CLASS2.CONTROL" >
 
 <type id="0" 
     name="General event"
