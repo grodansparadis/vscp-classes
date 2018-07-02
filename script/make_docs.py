@@ -111,7 +111,9 @@ for vscp_class in order_list:
             typeid = int(child.attrib["id"])
 
             outstr += "\n"
-            outstr += "## Type=" + child.attrib["id"] +\
+            outstr += "## " + \
+                "<a name=\"type" + child.attrib["id"] + "\"></a>" +\
+                "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
                 ") - " + child.attrib["name"]
             outstr += "\n" 
@@ -140,7 +142,9 @@ for vscp_class in order_list:
             typeid = int(child.attrib["id"])
 
             outstr += "\n"
-            outstr += "## Type=" + child.attrib["id"] +\
+            outstr += "## " + \
+                "<a name=\"type"+ child.attrib["id"] + "\"></a>" +\
+                "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
                 ") - " + child.attrib["name"]
             outstr += "\n" 
