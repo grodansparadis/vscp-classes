@@ -48,7 +48,7 @@ for vscp_class in order_list:
         print("* **[Level I events](./level_i_events.md)**")
     elif id == 512:
         print("    ")
-        print("* **[Level I events over level II](./level_i_events.md)**")
+        print("* **[Level I events over level II](./level_i_events_over_level_ii.md)**")
     elif id == 1024:
         print("    ")
         print("* **[Level II events](./level_ii_events.md)**")
@@ -91,7 +91,7 @@ for vscp_class in order_list:
         print("* **[Level I events](./level_i_events.md)**")
     elif id == 512:
         print("    ")
-        print("* **[Level I events over level II](./level_i_events.md)**")
+        print("* **[Level I events over level II](./level_i_events_over_level_ii.md)**")
     elif id == 1024:
         print("    ")
         print("* **[Level II events](./level_ii_events.md)**")     
