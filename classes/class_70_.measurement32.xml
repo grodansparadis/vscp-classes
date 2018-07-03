@@ -3,7 +3,7 @@
 <class id="70" 
     name="Single precision floating point measurement" 
     token="CLASS1.MEASUREMENT32" 
-    events="class_0_protocol.xml" >
+    events="class_10_measurement.xml" >
 </class>
 
 

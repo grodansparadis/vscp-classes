@@ -3,7 +3,7 @@
 <class id="85" 
     name="Set value with zone" 
     token="CLASS1.SETVALUEZONE" 
-    events="class_0_protocol.xml" >
+    events="class_10_measurement.xml" >
 </class>
 
 

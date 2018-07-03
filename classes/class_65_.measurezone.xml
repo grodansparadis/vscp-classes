@@ -3,7 +3,7 @@
 <class id="65" 
     name="Measurement with zone" 
     token="CLASS1.MEASUREZONE" 
-    events="class_0_protocol.xml" >
+    events="class_10_measurement.xml" >
 </class>
 
 

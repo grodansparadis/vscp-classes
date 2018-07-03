@@ -112,10 +112,10 @@ for vscp_class in order_list:
 
             outstr += "\n"
             outstr += "## " + \
-                "<a name=\"type" + child.attrib["id"] + "\"> </a>" +\
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"]
+                ") - " + child.attrib["name"] +\
+                " {#type" + child.attrib["id"] + "}"
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             outstr += "\n"
@@ -143,10 +143,10 @@ for vscp_class in order_list:
 
             outstr += "\n"
             outstr += "## " + \
-                "<a name=\"type"+ child.attrib["id"] + "\"> </a>" +\
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"]
+                ") - " + child.attrib["name"] +\
+                " {#type" + child.attrib["id"] + "}"
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             

@@ -14,6 +14,8 @@ import sys
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
+import time
+import datetime
 
 xclass = {}
 order_list = [] # class list order
@@ -22,8 +24,6 @@ type_list = []  # List with type attributes
 
 args = sys.argv[1:]
 nargs = len(args)
-
-
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
@@ -35,10 +35,35 @@ if len(order_list) == 0:
     print("No classes defined in class list!")
     sys.exit() 
 
-print("## Level I events")
-print(" ")
+print("## Defined classes") 
+for vscp_class in order_list:
+    
+    fname = '../classes/' + vscp_class
+    type_tree = ET.parse(fname)
+    type_root = type_tree.getroot()
 
-# Fill class table with data 
+    id = int(type_root.attrib["id"])
+    if id == 0:
+        print("    ")
+        print("* **[Level I events](./level_i_events.md)**")
+    elif id == 512:
+        print("    ")
+        print("* **[Level I events over level II](./level_i_events.md)**")
+    elif id == 1024:
+        print("    ")
+        print("* **[Level II events](./level_ii_events.md)**")
+
+    outstr = "   * [" + \
+        type_root.attrib["token"] + " = " + \
+        type_root.attrib["id"] + " (" + hex(id) + ")](./" + \
+        type_root.attrib["token"].lower() + ".md)"
+    print(outstr)  
+
+print "    "
+print("## Defined events")
+print("*Generated: " + str(datetime.datetime.now()) + "*" )
+
+# Show events 
 cnt = 0
 for vscp_class in order_list:  
 
@@ -62,18 +87,18 @@ for vscp_class in order_list:
 
     id = int(type_root.attrib["id"])
     if id == 0:
-        print(" ")
-        print("* [Level I Events](level_i_events.md)")
+        print("    ")
+        print("* **[Level I events](./level_i_events.md)**")
     elif id == 512:
-        print(" ")
-        print("* [Level I Events over Level II](level_i_events.md)")
+        print("    ")
+        print("* **[Level I events over level II](./level_i_events.md)**")
     elif id == 1024:
-        print(" ")
-        print("* [Level II Events](level_ii_events.md)")     
+        print("    ")
+        print("* **[Level II events](./level_ii_events.md)**")     
 
-    outstr = "* [" + \
+    outstr = "   * [" + \
         type_root.attrib["token"] + " = " + \
-        type_root.attrib["id"] + " (" + hex(id) + ")](" + \
+        type_root.attrib["id"] + " (" + hex(id) + ")](./" + \
         type_root.attrib["token"].lower() + ".md)"
 
     print(outstr) 
@@ -100,7 +125,7 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
 
             typeid = int(child.attrib["id"])
-            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
+            outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
@@ -129,7 +154,7 @@ for vscp_class in order_list:
                 description = description.replace("\t","\\t")
 
             typeid = int(child.attrib["id"])
-            outstr = "    * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
+            outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
                 child.attrib["name"] + "](./" + \
                 type_root.attrib["token"].lower() + ".md#type"+ \
                 child.attrib["id"] + ")"
