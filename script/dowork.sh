@@ -7,13 +7,13 @@
 # root public_html folder of this server.
 
 # Version timestamps
-python make_timestamp.py
+pyrhon3 make_timestamp.py
 echo "uploading timestamps"
 curl -T /tmp/version.json ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T /tmp/version.jsonp ftp://"$2:$3"@$1/vscp.org/public_html/events/
 
 # Generate class definition header for C/C++
-python make_c_class_header.py >/tmp/vscp_class.h
+pyrhon3 make_c_class_header.py >/tmp/vscp_class.h
 cp /tmp/vscp_class.h ../../vscp/src/vscp/common/
 cp /tmp/vscp_class.h ../../vscp-firmware/common/vscp/common/
 echo "uploading vscp_class.h"
@@ -21,7 +21,7 @@ curl -T /tmp/vscp_class.h ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.h
 
 # Generate type definition header for C/C++
-python make_c_type_header.py >/tmp/vscp_type.h
+pyrhon3 make_c_type_header.py >/tmp/vscp_type.h
 cp /tmp/vscp_type.h ../../vscp/src/vscp/common/
 cp /tmp/vscp_type.h ../../vscp-firmware/common/vscp/common/
 echo "uploading vscp_type.h"
@@ -29,74 +29,74 @@ curl -T /tmp/vscp_type.h ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.h
 
 # Generate hash class data for vscphelper
-python make_vscphelper_hashclass.py >/tmp/vscp_hashclass.h
+pyrhon3 make_vscphelper_hashclass.py >/tmp/vscp_hashclass.h
 cp /tmp/vscp_hashclass.h ../../vscp/src/vscp/common/
 echo "uploading vscp_hashclass.h"
 curl -T /tmp/vscp_hashclass.h ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_hashclass.h
 
 # Generate hash type data for vscphelper
-python make_vscphelper_hashtype.py >/tmp/vscp_hashtype.h
+pyrhon3 make_vscphelper_hashtype.py >/tmp/vscp_hashtype.h
 cp /tmp/vscp_hashtype.h ../../vscp/src/vscp/common/
 echo "uploading vscp_hashtype.h"
 curl -T /tmp/vscp_hashtype.h ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_hashtype.h
 
-# Generate class definition header for Python
-python make_python_class_header.py >/tmp/vscp_class.py
+# Generate class definition header for pyrhon3
+pyrhon3 make_pyrhon3_class_header.py >/tmp/vscp_class.py
 cp /tmp/vscp_class.py ../../pyvscp/vscp/
 echo "uploading vscp_class.py"
 curl -T /tmp/vscp_class.py ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.py
 
-# Generate class definition header for Python
-python make_python_type_header.py >/tmp/vscp_type.py
+# Generate class definition header for pyrhon3
+pyrhon3 make_pyrhon3_type_header.py >/tmp/vscp_type.py
 cp /tmp/vscp_type.py ../../pyvscp/vscp/
 echo "uploading vscp_type.py"
 curl -T /tmp/vscp_type.py ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.py
 
 # Generate and upload JSON
-python make_json.py >/tmp/vscp_events.json
+pyrhon3 make_json.py >/tmp/vscp_events.json
 echo "uploading vscp_events.json"
 curl -T /tmp/vscp_events.json ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.json
 
 # Generate and upload JSONP
-python make_json.py jsonp >/tmp/vscp_events.jsonp
+pyrhon3 make_json.py jsonp >/tmp/vscp_events.jsonp
 echo "uploading vscp_events.jsonp"
 curl -T /tmp/vscp_events.jsonp ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.jsonp
 
 # Generate and upload XML 
-python3 make_xml.py jsonp >/tmp/vscp_events.xml
+pyrhon33 make_xml.py jsonp >/tmp/vscp_events.xml
 echo "uploading vscp_events.xml"
 curl -T /tmp/vscp_events.xml ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.xml
 
 # Generate and upload SQL
-python make_sqlite_db.py jsonp >/tmp/vscp_events.sql
+pyrhon3 make_sqlite_db.py jsonp >/tmp/vscp_events.sql
 echo "uploading vscp_events.sql"
 curl -T /tmp/vscp_events.sql ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.sql
 
 # Generate and upload js class constants
-python make_js_class_constants.py jsonp >/tmp/vscp_class.js
+pyrhon3 make_js_class_constants.py jsonp >/tmp/vscp_class.js
 echo "uploading vscp_class.js"
 curl -T /tmp/vscp_class.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.js
 
 # Generate and upload js type constants
-python make_js_tyoe_constants.py jsonp >/tmp/vscp_type.js
+pyrhon3 make_js_tyoe_constants.py jsonp >/tmp/vscp_type.js
 echo "uploading vscp_type.js"
 curl -T /tmp/vscp_type.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.js
 
 # Generate and upload documentation
 mkdir -p /tmp/vscp-events
-python make_docs_sidebar.py >/tmp/vscp-events/sidebar.md
+pyrhon3 make_docs_sidebar.py >/tmp/vscp-events/sidebar.md
 cp /tmp/vscp-events/sidebar.md ../../vscp-doc-spec/
-python make_docs.py -o /tmp/vscp-events
+pyrhon3 make_docs.py -o /tmp/vscp-events
 tar -czf /tmp/vscp_docs.tgz -C /tmp/vscp-events/ .
 curl -T /tmp/vscp_docs.tgz ftp://"$2:$3"@$1/vscp.org/public_html/events/docs/
 rm /tmp/vscp_docs.tgz

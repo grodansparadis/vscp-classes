@@ -57,7 +57,8 @@ for vscp_class in order_list:
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
-    print("\n/* ", type_root.attrib["token"],\
+    print("    ")
+    print("/* ", type_root.attrib["token"],\
         "=",type_root.attrib["id"],\
         " - ",type_root.attrib["name"] + " */")
     events = ""
