@@ -138,7 +138,7 @@
 
 <type id="33" 
     name="Get decision matrix info." 
-    token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
+    token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO" />
 
 <type id="34" 
     name="Decision matrix info response." 
