@@ -35,7 +35,7 @@ if len(order_list) == 0:
     sys.exit() 
 
 # Get copyright header
-with open('../jsheaders/prefix_type.txt', 'r') as myfile:
+with open('../javascript/prefix_type.txt', 'r') as myfile:
     data = myfile.read()
 print(data)
 
