@@ -14,7 +14,7 @@
 
 <type id="2" 
     name="Alarm occurred"
-    token="VSCP_TYPE_ALARM_ALARM " />
+    token="VSCP_TYPE_ALARM_ALARM" />
 
 <type id="3" 
     name="Alarm sound on/off"
@@ -26,7 +26,7 @@
 
 <type id="5" 
     name="Power on/off"
-    token="VSCP_TYPE_ALARM_POWER " />
+    token="VSCP_TYPE_ALARM_POWER" />
 
 <type id="6" 
     name="Emergency Stop"
@@ -46,7 +46,7 @@
 
 <type id="10"
     name="Arm"
-    token="VSCP_TYPE_ALARM_ARM " />
+    token="VSCP_TYPE_ALARM_ARM" />
 
 <type id="11" 
     name="Disarm"
