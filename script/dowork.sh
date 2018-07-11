@@ -71,7 +71,7 @@ curl -T /tmp/vscp_events.jsonp ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.jsonp
 
 # Generate and upload XML 
-python33 make_xml.py jsonp >/tmp/vscp_events.xml
+python3 make_xml.py jsonp >/tmp/vscp_events.xml
 echo "uploading vscp_events.xml"
 curl -T /tmp/vscp_events.xml ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.xml
@@ -94,7 +94,7 @@ curl -T /tmp/vscp_class.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.js
 
 # Generate and upload js type constants
-python3 make_js_tyoe_constants.py jsonp >/tmp/vscp_type.js
+python3 make_js_type_constants.py jsonp >/tmp/vscp_type.js
 echo "uploading vscp_type.js"
 curl -T /tmp/vscp_type.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.js
