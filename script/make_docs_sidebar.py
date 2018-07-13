@@ -59,7 +59,7 @@ for vscp_class in order_list:
         type_root.attrib["token"].lower() + ".md)"
     print(outstr)  
 
-print "    "
+print("    ")
 print("## Defined events")
 print("*Generated: " + str(datetime.datetime.now()) + "*" )
 
