@@ -60,7 +60,7 @@ for index, vscp_class in enumerate(order_list):
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
     #print "type root tag",type_root.tag
-    outstr = "    " + type_root.attrib["token"] + ": " + \
+    outstr = "    VSCP_" + type_root.attrib["token"] + ": " + \
                 type_root.attrib["id"]
     if ((len(order_list) - 1) != index):
         outstr += ","
