@@ -316,4 +316,12 @@
     name="DateTime"
     token="VSCP_TYPE_INFORMATION_DATETIME" />
 
+<type id="78" 
+    name="Rising"
+    token="VSCP_TYPE_INFORMATION_RISING" />
+
+<type id="79"
+    name="Falling"
+    token="VSCP_TYPE_INFORMATION_FALLING" />    
+
 </class>

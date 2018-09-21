@@ -5,6 +5,7 @@
 # ftpserver username password
 # and a folder "events" is expected to be available on the
 # root public_html folder of this server.
+# Usage cmd host user password
 
 # Version timestamps
 python3 make_timestamp.py
