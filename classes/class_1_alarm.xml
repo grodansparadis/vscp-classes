@@ -52,4 +52,7 @@
     name="Disarm"
     token="VSCP_TYPE_ALARM_DISARM" />
 
+<type id="12" 
+    name="Watchdog"
+    token="VSCP_TYPE_ALARM_WATCHDOG" />
 </class>
