@@ -322,6 +322,10 @@
 
 <type id="79"
     name="Falling"
-    token="VSCP_TYPE_INFORMATION_FALLING" />    
+    token="VSCP_TYPE_INFORMATION_FALLING" />
+
+<type id="80"
+    name="Updated"
+    token="VSCP_TYPE_INFORMATION_UPDATED" />     
 
 </class>
