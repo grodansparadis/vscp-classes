@@ -1,0 +1,95 @@
+<!-- List units -->
+<vscp-units>
+
+    <element class="10" type="1">
+        <unit id="0" 
+                ascii="" 
+                unicode="" 
+                name="Count" 
+                description="" />
+    </element>
+
+    <element class="10" type="2" symbol="l">
+        <unit id="0" 
+                ascii="m" 
+                unicode="" 
+                name="Meter" 
+                description="SIS unit for length/distance." />
+    </element>
+
+    <element class="10" type="3" symbol="m">
+        <unit id="0" 
+                ascii="kg" 
+                unicode="" 
+                name="Kilogram" 
+                description="SIS unit for mass." />
+    </element>
+
+    <element class="10" type="4" symbol="t">
+        <unit id="0" 
+                ascii="s" 
+                unicode="" 
+                name="Seconds" 
+                description="SI unit for time." />               
+        <unit id="1" 
+                ascii="ms" 
+                unicode="" 
+                name="Milliseconds" 
+                description="Time/1000." />
+        <unit id="2" 
+                ascii="" 
+                unicode="" 
+                name="absolute" 
+                description="Absolute time on y-y-m-d-h-m-s binary format" />
+        <unit id="3" 
+                ascii="" 
+                unicode="" 
+                name="string" 
+                description="Absolute time on HHMMSS string format." />                 
+    </element>    
+
+    <element class="10" type="5" symbol="I,i">
+        <unit id="0" 
+                ascii="A" 
+                unicode="" 
+                name="Ampere" 
+                description="SI unit for electric current." />
+    </element>
+
+    <element class="10" type="6" symbol="T">
+        <unit id="0" 
+                ascii="K" 
+                unicode="" 
+                name="Kelvin" 
+                description="SI unit for temperature." />
+        <unit id="1" 
+                ascii="C" 
+                unicode="\u2103"
+                html="&#x2103;"
+                name="Degrees centigrade" 
+                description="Temperature in degrees centigrade." />
+        <unit id="2" 
+                ascii="F" 
+                unicode="\u2109" 
+                html="&#8457;"
+                name="Degrees Fahrenheit" 
+                description="Temperature in degrees Fahrenheit." />                                
+    </element>
+
+    <element class="10" type="7" symbol="n">
+        <unit id="0" 
+                ascii="mol" 
+                unicode="" 
+                name="Mole" 
+                description="SI unit for amount of substance." />
+    </element>
+
+    <element class="10" type="8" symbol="Iv">
+        <unit id="0" 
+                ascii="cd" 
+                unicode="" 
+                name="Candela" 
+                description="SI unit for luminous intensity." />
+    </element> 
+
+</vscp-units>
