@@ -144,4 +144,15 @@
     name="Name is already in use"
     token="VSCP_TYPE_ERROR_NAME_USED" />
 
+<type id="46" 
+    name="Error when writing data"
+    token="VSCP_TYPE_ERROR_DATA_WRITE" />
+
+ <type id="47" 
+    name="Operation stopped or aborted"
+    token="VSCP_TYPE_ERROR_ABORTED" />
+
+<type id="48" 
+    name="Pointer with invalid value"
+    token="VSCP_TYPE_ERROR_INVALID_POINTER" />       
 </class>

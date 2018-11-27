@@ -155,6 +155,7 @@ for vscp_class in order_list:
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
                 outstr += description
+                outstr += "\n"
 
             typeid = int(child.attrib["id"])
     
