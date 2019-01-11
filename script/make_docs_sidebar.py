@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2000-2018 Ake Hedman, 
+# Copyright (c) 2000-2019 Ake Hedman, 
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make sidebar list for VSCP specification document
