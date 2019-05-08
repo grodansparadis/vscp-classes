@@ -90,12 +90,16 @@ rm /tmp/vscp_events.sqlite3
 
 # Generate and upload js class constants
 python3 make_js_class_constants.py jsonp >/tmp/vscp_class.js
+cp /tmp/vscp_class.js ../../node-vscp-class/
+cp /tmp/vscp_class.js ../../vscp-js/src
 echo "uploading vscp_class.js"
 curl -T /tmp/vscp_class.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.js
 
 # Generate and upload js type constants
 python3 make_js_type_constants.py jsonp >/tmp/vscp_type.js
+cp /tmp/vscp_type.js ../../node-vscp-type/
+cp /tmp/vscp_type.js ../../vscp-js/src
 echo "uploading vscp_type.js"
 curl -T /tmp/vscp_type.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.js
@@ -118,5 +122,11 @@ for f in /tmp/vscp-events/*.md; do
 done
 
 rm -rf /tmp/vscp-events
+
+echo The following projects needs to be updated to GitHub
+echo "Update ../../vscp-js"
+echo "Update ../../node-vscp-class"
+echo "Update ../../node-vscp-type"
+echo "Update ../../vscp-doc-spec"
 
 
