@@ -71,7 +71,7 @@ echo "uploading vscp_events.jsonp"
 curl -T /tmp/vscp_events.jsonp ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_events.jsonp
 
-# Generate and upload XML 
+# Generate and upload XML
 python3 make_xml.py jsonp >/tmp/vscp_events.xml
 echo "uploading vscp_events.xml"
 curl -T /tmp/vscp_events.xml ftp://"$2:$3"@$1/vscp.org/public_html/events/
@@ -96,6 +96,13 @@ echo "uploading vscp_class.js"
 curl -T /tmp/vscp_class.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.js
 
+# Generate and upload node.js class constants
+python3 make_nodejs_class_constants.py jsonp >/tmp/node_vscp_class.js
+cp /tmp/node_vscp_class.js ../../node-vscp-class/vscp_class.js
+echo "uploading node_vscp_class.js"
+curl -T /tmp/node_vscp_class.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
+rm /tmp/node_vscp_class.js
+
 # Generate and upload js type constants
 python3 make_js_type_constants.py jsonp >/tmp/vscp_type.js
 cp /tmp/vscp_type.js ../../node-vscp-type/
@@ -103,6 +110,13 @@ cp /tmp/vscp_type.js ../../vscp-js/src
 echo "uploading vscp_type.js"
 curl -T /tmp/vscp_type.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.js
+
+# Generate and upload node.js type constants
+python3 make_nodejs_type_constants.py jsonp >/tmp/node_vscp_type.js
+cp /tmp/node_vscp_type.js ../../node-vscp-type/vscp_type.js
+echo "uploading node_vscp_type.js"
+curl -T /tmp/node_vscp_type.js ftp://"$2:$3"@$1/vscp.org/public_html/events/
+rm /tmp/node_vscp_type.js
 
 # Generate and upload documentation
 mkdir -p /tmp/vscp-events
@@ -128,5 +142,3 @@ echo "Update ../../vscp-js"
 echo "Update ../../node-vscp-class"
 echo "Update ../../node-vscp-type"
 echo "Update ../../vscp-doc-spec"
-
-
