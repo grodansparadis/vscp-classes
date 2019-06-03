@@ -4,10 +4,10 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2000-2019 Ake Hedman, 
+# Copyright (c) 2000-2019 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
-# Make XML data from VSCP class & type 
+# Make XML data from VSCP class & type
 # definitions
 #
 
@@ -45,21 +45,21 @@ for child in class_root.iter('item'):
 
 if len(order_list) == 0:
     print("No classes defined in class list!")
-    sys.exit() 
+    sys.exit()
 
 print("<?xml version=\"1.0\" encoding=\"utf-8\"?>")
 print("<!--")
-print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
-print("--                           This file is auto-generated")
-print("--                see https://github.com/grodansparadis/vscp-classes")
-print("--                        Generated:", datetime.datetime.now())
-print("-->")    
+print("              !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("                             This file is auto-generated")
+print("                  see https://github.com/grodansparadis/vscp-classes")
+print("                          Generated:", datetime.datetime.now())
+print("-->")
 
 print("<vscpevents>")
 
-# Fill class table with data 
+# Fill class table with data
 cnt = 0
-for vscp_class in order_list:  
+for vscp_class in order_list:
 
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
@@ -71,7 +71,7 @@ for vscp_class in order_list:
         with open('../classes/' + type_root.attrib["id"] + '.md', 'r' ) as myfile:
             description = myfile.read()
             description = replace_specials(description)
-    else:    
+    else:
         with open('../classes/' + type_root.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
             description = myfile.read()
             description = replace_specials(description)
@@ -81,7 +81,7 @@ for vscp_class in order_list:
         "name=\"" + type_root.attrib["name"] + "\" " + \
         "token=\"" + type_root.attrib["token"] + "\" " + \
         "description=\"" + description + "\" >\n"
-    print(outstr)    
+    print(outstr)
 
     # Types
     events = ""
@@ -90,24 +90,24 @@ for vscp_class in order_list:
     except:
         # 'events' tag does not exist
         outstr = ""
-        for child in type_root.iter('type'):            
+        for child in type_root.iter('type'):
             # Get description
             description = ""
             if sys.version_info[0] < 3:
                 with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r' ) as myfile:
                     description = myfile.read()
-                    description = replace_specials(description)    
-            else:                    
+                    description = replace_specials(description)
+            else:
                 with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
                     description = myfile.read()
-                    description = replace_specials(description) 
+                    description = replace_specials(description)
 
             outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
                 "token=\"" + child.attrib["token"] + "\" " + \
                 "name=\"" + child.attrib["name"] + "\" " + \
                 "description=\"" + description + "\" " + \
                 "/>\n"
-        
+
         print(outstr)
         print("</class>")
 
@@ -126,7 +126,7 @@ for vscp_class in order_list:
                 with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                     description = myfile.read()
                     description = replace_specials(description)
-            else:                
+            else:
                 with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r', encoding="utf8") as myfile:
                     description = myfile.read()
                     description = replace_specials(description)
@@ -141,5 +141,3 @@ for vscp_class in order_list:
         print("</class>")
 
 print("</vscpevents>")
-
-
