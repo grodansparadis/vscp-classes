@@ -3,17 +3,17 @@
     <type id="0" name="General event" token="VSCP_TYPE_MEASUREMENT_GENERAL" />
     <type id="1" name="Count" token="VSCP_TYPE_MEASUREMENT_COUNT" >
         <units>
-            <unit id="0" name="Count" description="Count."/>
+            <unit id="0" name="Count" description="Count." conversion="val"/>
         </units>
     </type>
     <type id="2" name="Length/Distance" token="VSCP_TYPE_MEASUREMENT_LENGTH" >
         <units>
-            <unit id="0" name="Meter" description="Meter."/>
+            <unit id="0" name="Meter" description="Meter." conversion="val"/>
         </units>
     </type>
     <type id="3" name="Mass" token="VSCP_TYPE_MEASUREMENT_MASS" >
         <units>
-            <unit id="0" name="Kilogram" description="Kilogram."/>
+            <unit id="0" name="Kilogram" description="Kilogram."  conversion="val"/>
         </units>
     </type>
     <type id="4" name="Time" token="VSCP_TYPE_MEASUREMENT_TIME" >
@@ -31,7 +31,7 @@
     </type>
     <type id="6" name="Temperature" token="VSCP_TYPE_MEASUREMENT_TEMPERATURE" >
         <units>
-            <unit id="0" name="Kelvin" description="Degrees Kelvin."/>
+            <unit id="0" name="Kelvin" description="Degrees Kelvin." conversion="val"/>
             <unit id="1" name="Celsius" description="Degrees Celsius." conversion="val+273.15 "/>
             <unit id="2" name="Fahrenheit" description="Degrees Fahrenheit." conversion="val + 459.67) × 5/9"/>
         </units>
