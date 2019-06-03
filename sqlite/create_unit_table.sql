@@ -1,2 +1,2 @@
 -- Create the VSCP measurement unit table
-CREATE TABLE `vscp_unit` ( `idx_unit` INTEGER NOT NULL UNIQUE, `link_to_type` INTEGER NOT NULL, `nunit` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `conversion` TEXT NOT NULL DEFAULT 'val', PRIMARY KEY(idx_unit) );
+CREATE TABLE `vscp_unit` ( `idx_unit` INTEGER NOT NULL UNIQUE, `link_to_class` INTEGER NOT NULL, `link_to_type` INTEGER NOT NULL, `nunit` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `conversion` TEXT NOT NULL DEFAULT 'val', PRIMARY KEY(idx_unit) );
