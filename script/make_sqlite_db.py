@@ -4,10 +4,10 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2000-2019 Ake Hedman, 
+# Copyright (c) 2000-2019 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
-# Make records for the sqlite3 database 
+# Make records for the sqlite3 database
 #
 
 import sys
@@ -22,12 +22,12 @@ order_list = [] # class list order
 class_list = [] # List with class attributes
 type_list = []  # List with type attributes
 
-print(" ") 
-print("--            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
-print("--                           This file is auto-generated")
-print("--                see https://github.com/grodansparadis/vscp-classes")
-print("--                        Generated:", datetime.datetime.now())
-print(" ") 
+print(" ")
+print("              !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
+print("                             This file is auto-generated")
+print("                  see https://github.com/grodansparadis/vscp-classes")
+print("                          Generated:", datetime.datetime.now())
+print(" ")
 
 # Create class table
 with open('../sqlite/create_class_table.sql', 'r') as myfile:
@@ -55,11 +55,11 @@ for child in class_root.iter('item'):
 
 if len(order_list) == 0:
     print("No classes defined in class list!")
-    sys.exit() 
+    sys.exit()
 
-# Fill class table with data 
+# Fill class table with data
 
-for vscp_class in order_list:        
+for vscp_class in order_list:
     fname = '../classes/' + vscp_class
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
@@ -77,10 +77,10 @@ for vscp_class in order_list:
         description = description.replace("\n","\\n")
         description = description.replace("\r","\\r")
         description = description.replace("\t","\\t")
-    
+
     outstr += ",'" + description + "');"
 
-    print(outstr)    
+    print(outstr)
 
 # Fill in table data
 
@@ -109,10 +109,10 @@ for vscp_class in order_list:
                 description = description.replace("\n","\\n")
                 description = description.replace("\r","\\r")
                 description = description.replace("\t","\\t")
-    
-            outstr += ",'" + description + "');"    
+
+            outstr += ",'" + description + "');"
             print(outstr)
-    else:    
+    else:
         classid = type_root.attrib["id"]
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
@@ -133,7 +133,7 @@ for vscp_class in order_list:
                 description = description.replace("\n","\\n")
                 description = description.replace("\r","\\r")
                 description = description.replace("\t","\\t")
-    
+
             outstr += ",'" + description + "');"
             print(outstr)
 
