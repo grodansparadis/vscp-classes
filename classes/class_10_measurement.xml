@@ -18,10 +18,10 @@
     </type>
     <type id="4" name="Time" token="VSCP_TYPE_MEASUREMENT_TIME" >
         <units>
-            <unit id="0" name="Seconds" description="Degrees Kelvin."/>
-            <unit id="1" name="Milliseconds" description="Degrees Celsius." conversion="val*1000"/>
-            <unit id="2" name="yymdhms" description="Degrees Fahrenheit." conversion="0"/>
-            <unit id="2" name="HHMMSS" description="Degrees Fahrenheit." conversion="0"/>
+            <unit id="0" name="Seconds" description="Time in seconds."/>
+            <unit id="1" name="Milliseconds" description="Time in milliseconds." conversion="val*1000"/>
+            <unit id="2" name="yymdhms" description="Date." conversion="0"/>
+            <unit id="3" name="HHMMSS" description="Time." conversion="0"/>
         </units>
     </type>
     <type id="5" name="Electric Current" token="VSCP_TYPE_MEASUREMENT_ELECTRIC_CURRENT">

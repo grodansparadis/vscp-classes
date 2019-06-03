@@ -90,23 +90,25 @@ for vscp_class in order_list:
 
             unitstr = "["
             if (10 == int(type_root.attrib["id"]) or
-            60 == int(type_root.attrib["id"]) or
-            65 == int(type_root.attrib["id"]) or
-            70 == int(type_root.attrib["id"]) or
-            85 == int(type_root.attrib["id"]) or
-            1040 == int(type_root.attrib["id"]) or
-            1060 == int(type_root.attrib["id"]) ) :
+                60 == int(type_root.attrib["id"]) or
+                65 == int(type_root.attrib["id"]) or
+                70 == int(type_root.attrib["id"]) or
+                85 == int(type_root.attrib["id"]) or
+                1040 == int(type_root.attrib["id"]) or
+                    1060 == int(type_root.attrib["id"])):
                 for unit in child.iter('unit'):
                     unitstr += "{"
-                    unitstr += "\"id\":"  + unit.attrib["id"] + ","
+                    unitstr += "\"id\":" + unit.attrib["id"] + ","
                     unitstr += "\"name\": \"" + unit.attrib["name"] + "\","
-                    unitstr += "\"description\": \"" + unit.attrib["description"] + "\","
+                    unitstr += "\"description\": \"" + \
+                        unit.attrib["description"] + "\","
                     try:
-                        unitstr += "\"conversion\": \"" + unit.attrib["conversion"] + "\""
+                        unitstr += "\"conversion\": \"" + \
+                            unit.attrib["conversion"] + "\""
                     except:
                         unitstr += "\"conversion\": \"val\""
                     unitstr += "},"
-            if (',' == unitstr[len(unitstr)-1]) :
+            if (',' == unitstr[len(unitstr)-1]):
                 unitstr = unitstr[0:len(unitstr)-1]
             unitstr += "]"
 
@@ -146,23 +148,25 @@ for vscp_class in order_list:
 
             unitstr = "["
             if (10 == int(type_root.attrib["id"]) or
-            60 == int(type_root.attrib["id"]) or
-            65 == int(type_root.attrib["id"]) or
-            70 == int(type_root.attrib["id"]) or
-            85 == int(type_root.attrib["id"]) or
-            1040 == int(type_root.attrib["id"]) or
-            1060 == int(type_root.attrib["id"]) ) :
+                60 == int(type_root.attrib["id"]) or
+                65 == int(type_root.attrib["id"]) or
+                70 == int(type_root.attrib["id"]) or
+                85 == int(type_root.attrib["id"]) or
+                1040 == int(type_root.attrib["id"]) or
+                    1060 == int(type_root.attrib["id"])):
                 for unit in child.iter('unit'):
                     unitstr += "{"
-                    unitstr += "\"id\":"  + unit.attrib["id"] + ","
+                    unitstr += "\"id\":" + unit.attrib["id"] + ","
                     unitstr += "\"name\": \"" + unit.attrib["name"] + "\","
-                    unitstr += "\"description\": \"" + unit.attrib["description"] + "\","
+                    unitstr += "\"description\": \"" + \
+                        unit.attrib["description"] + "\","
                     try:
-                        unitstr += "\"conversion\": \"" + unit.attrib["conversion"] + "\""
+                        unitstr += "\"conversion\": \"" + \
+                            unit.attrib["conversion"] + "\""
                     except:
                         unitstr += "\"conversion\": \"val\""
                     unitstr += "},"
-            if (',' == unitstr[len(unitstr)-1]) :
+            if (',' == unitstr[len(unitstr)-1]):
                 unitstr = unitstr[0:len(unitstr)-1]
             unitstr += "]"
 

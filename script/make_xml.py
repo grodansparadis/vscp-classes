@@ -18,20 +18,22 @@ import xml.etree.ElementTree as ET
 import time
 import datetime
 
+
 def replace_specials(str):
-    str = str.replace("\"","&quot;")
-    str = str.replace("'","&apos;")
-    str = str.replace("&","&amp;")
-    str = str.replace("<","&lt;")
-    str = str.replace(">","&gt;")
-    str = str.replace("\n","\\n")
-    str = str.replace("\r","\\r")
-    str = str.replace("\t","\\t")
+    str = str.replace("\"", "&quot;")
+    str = str.replace("'", "&apos;")
+    str = str.replace("&", "&amp;")
+    str = str.replace("<", "&lt;")
+    str = str.replace(">", "&gt;")
+    str = str.replace("\n", "\\n")
+    str = str.replace("\r", "\\r")
+    str = str.replace("\t", "\\t")
     return str
 
+
 xclass = {}
-order_list = [] # class list order
-class_list = [] # List with class attributes
+order_list = []  # class list order
+class_list = []  # List with class attributes
 type_list = []  # List with type attributes
 
 args = sys.argv[1:]
@@ -41,7 +43,7 @@ nargs = len(args)
 class_tree = ET.parse('../classes/list_class.xml')
 class_root = class_tree.getroot()
 for child in class_root.iter('item'):
-    order_list.append( child.attrib['name'] )
+    order_list.append(child.attrib['name'])
 
 if len(order_list) == 0:
     print("No classes defined in class list!")
@@ -68,7 +70,7 @@ for vscp_class in order_list:
     # Get description
     description = ""
     if sys.version_info[0] < 3:
-        with open('../classes/' + type_root.attrib["id"] + '.md', 'r' ) as myfile:
+        with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
             description = myfile.read()
             description = replace_specials(description)
     else:
@@ -80,7 +82,7 @@ for vscp_class in order_list:
         "id=\"" + type_root.attrib["id"] + "\" " + \
         "name=\"" + type_root.attrib["name"] + "\" " + \
         "token=\"" + type_root.attrib["token"] + "\" " + \
-        "description=\"" + description + "\" >\n"
+        "description=\"" + description + "\" >"
     print(outstr)
 
     # Types
@@ -94,7 +96,7 @@ for vscp_class in order_list:
             # Get description
             description = ""
             if sys.version_info[0] < 3:
-                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r' ) as myfile:
+                with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                     description = myfile.read()
                     description = replace_specials(description)
             else:
@@ -102,14 +104,39 @@ for vscp_class in order_list:
                     description = myfile.read()
                     description = replace_specials(description)
 
-            outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
-                "token=\"" + child.attrib["token"] + "\" " + \
-                "name=\"" + child.attrib["name"] + "\" " + \
-                "description=\"" + description + "\" " + \
-                "/>\n"
+            unitstr = ""
+            if (10 == int(type_root.attrib["id"]) or
+                60 == int(type_root.attrib["id"]) or
+                65 == int(type_root.attrib["id"]) or
+                70 == int(type_root.attrib["id"]) or
+                85 == int(type_root.attrib["id"]) or
+                1040 == int(type_root.attrib["id"]) or
+                1060 == int(type_root.attrib["id"])):
+                    unitstr = ""
+                    for unit in child.iter('unit'):
+                        unitstr += "<unit id=\"" + unit.attrib["id"] + "\" "
+                        unitstr += "name=\"" + unit.attrib["name"] + "\" "
+                        unitstr += "description=\"" + unit.attrib["description"] + "\" "
+                        try:
+                            unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
+                        except:
+                            unitstr += "conversion=\"val\" />\n"
 
-        print(outstr)
-        print("</class>")
+            if ( len(unitstr) ) :
+                outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
+                    "token=\"" + child.attrib["token"] + "\" " + \
+                    "name=\"" + child.attrib["name"] + "\" " + \
+                    "description=\"" + description + "\" " + \
+                    ">\n" + "<units>\n" + unitstr + "</units>\n" + "</type>\n"
+            else :
+                outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
+                    "token=\"" + child.attrib["token"] + "\" " + \
+                    "name=\"" + child.attrib["name"] + "\" " + \
+                    "description=\"" + description + "\" " + \
+                    "/>\n"
+
+        #print(outstr)
+        print(outstr + "</class>")
 
     else:
         classid = type_root.attrib["id"]
@@ -131,13 +158,38 @@ for vscp_class in order_list:
                     description = myfile.read()
                     description = replace_specials(description)
 
-            outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
-                "token=\"" + child.attrib["token"] + "\" " + \
-                "name=\"" + child.attrib["name"] + "\" " + \
-                "description=\"" + description + "\" " + \
-                "/>\n"
+            unitstr = ""
+            if (10 == int(type_root.attrib["id"]) or
+                60 == int(type_root.attrib["id"]) or
+                65 == int(type_root.attrib["id"]) or
+                70 == int(type_root.attrib["id"]) or
+                85 == int(type_root.attrib["id"]) or
+                1040 == int(type_root.attrib["id"]) or
+                1060 == int(type_root.attrib["id"])):
+                    unitstr = ""
+                    for unit in child.iter('unit'):
+                        unitstr += "<unit id=\"" + unit.attrib["id"] + "\" "
+                        unitstr += "name=\"" + unit.attrib["name"] + "\" "
+                        unitstr += "description=\"" + unit.attrib["description"] + "\" "
+                        try:
+                            unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
+                        except:
+                            unitstr += "conversion=\"val\" />\n"
 
-        print(outstr)
-        print("</class>")
+            if ( len(unitstr) ) :
+                outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
+                    "token=\"" + child.attrib["token"] + "\" " + \
+                    "name=\"" + child.attrib["name"] + "\" " + \
+                    "description=\"" + description + "\" " + \
+                    ">\n" + "<units>\n" + unitstr + "</units>\n" + "</type>\n"
+            else :
+                outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
+                    "token=\"" + child.attrib["token"] + "\" " + \
+                    "name=\"" + child.attrib["name"] + "\" " + \
+                    "description=\"" + description + "\" " + \
+                    "/>\n"
+
+        #print(outstr)
+        print(outstr + "</class>")
 
 print("</vscpevents>")
