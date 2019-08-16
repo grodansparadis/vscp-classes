@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="90" 
-    name="Weather" 
+<class id="90"
+    name="Weather"
     token="CLASS1.WEATHER" >
 
-<type id="0" 
+<type id="0"
     name="General event"
-    token="VSCP_TYPE_WEATHER_GENERAL" /> 
+    token="VSCP_TYPE_WEATHER_GENERAL" />
 
 <type id="1"
     name="Season winter"
@@ -20,11 +20,11 @@
     name="Season summer"
     token="VSCP_TYPE_WEATHER_SEASONS_SUMMER" />
 
-<type id="4" 
+<type id="4"
     name="Autumn summer"
     token="VSCP_TYPE_WEATHER_SEASONS_AUTUMN" />
 
-<type id="5" 
+<type id="5"
     name="No wind"
     token="VSCP_TYPE_WEATHER_WIND_NONE" />
 
@@ -36,7 +36,7 @@
     name="Medium wind"
     token="VSCP_TYPE_WEATHER_WIND_MEDIUM" />
 
-<type id="8" 
+<type id="8"
     name="High wind"
     token="VSCP_TYPE_WEATHER_WIND_HIGH" />
 
@@ -60,107 +60,107 @@
     name="Air cold"
     token="VSCP_TYPE_WEATHER_AIR_COLD" />
 
-<type id="14" 
+<type id="14"
     name="Air normal"
     token="VSCP_TYPE_WEATHER_AIR_NORMAL" />
 
-<type id="15" 
+<type id="15"
     name="Air hot"
     token="VSCP_TYPE_WEATHER_AIR_HOT" />
 
-<type id="16" 
+<type id="16"
     name="Air very hot"
     token="VSCP_TYPE_WEATHER_AIR_VERY_HOT" />
 
-<type id="17" 
+<type id="17"
     name="Pollution low"
     token="VSCP_TYPE_WEATHER_AIR_POLLUTION_LOW" />
 
-<type id="18" 
+<type id="18"
     name="Pollution medium"
     token="VSCP_TYPE_WEATHER_AIR_POLLUTION_MEDIUM" />
 
-<type id="19" 
+<type id="19"
     name="Pollution high"
     token="VSCP_TYPE_WEATHER_AIR_POLLUTION_HIGH" />
 
-<type id="20" 
+<type id="20"
     name="Air humid"
     token="VSCP_TYPE_WEATHER_AIR_HUMID" />
 
-<type id="21" 
+<type id="21"
     name="Air dry"
     token="VSCP_TYPE_WEATHER_AIR_DRY" />
 
-<type id="22" 
+<type id="22"
     name="Soil humid"
     token="VSCP_TYPE_WEATHER_SOIL_HUMID" />
 
-<type id="23" 
+<type id="23"
     name="Soil dry"
     token="VSCP_TYPE_WEATHER_SOIL_DRY" />
 
-<type id="24" 
+<type id="24"
     name="Rain none"
     token="VSCP_TYPE_WEATHER_RAIN_NONE" />
 
-<type id="25" 
+<type id="25"
     name="Rain light"
     token="VSCP_TYPE_WEATHER_RAIN_LIGHT" />
 
-<type id="26" 
+<type id="26"
     name="Rain heavy"
     token="VSCP_TYPE_WEATHER_RAIN_HEAVY" />
 
-<type id="27" 
+<type id="27"
     name="Rain very heavy"
     token="VSCP_TYPE_WEATHER_RAIN_VERY_HEAVY" />
 
-<type id="28" 
+<type id="28"
     name="Sun none"
     token="VSCP_TYPE_WEATHER_SUN_NONE" />
 
-<type id="29" 
+<type id="29"
     name="Sun light"
     token="VSCP_TYPE_WEATHER_SUN_LIGHT" />
 
-<type id="30" 
+<type id="30"
     name="Sun heavy"
     token="VSCP_TYPE_WEATHER_SUN_HEAVY" />
 
-<type id="31" 
+<type id="31"
     name="Snow none"
     token="VSCP_TYPE_WEATHER_SNOW_NONE" />
 
-<type id="32" 
+<type id="32"
     name="Snow light"
     token="VSCP_TYPE_WEATHER_SNOW_LIGHT" />
 
-<type id="33" 
+<type id="33"
     name="Snow heavy"
     token="VSCP_TYPE_WEATHER_SNOW_HEAVY" />
 
-<type id="34" 
+<type id="34"
     name="Dew point"
     token="VSCP_TYPE_WEATHER_DEW_POINT" />
 
-<type id="35" 
+<type id="35"
     name="Storm"
     token="VSCP_TYPE_WEATHER_STORM" />
 
-<type id="36" 
+<type id="36"
     name="Flood"
     token="VSCP_TYPE_WEATHER_FLOOD" />
 
-<type id="37" 
+<type id="37"
     name="Earthquake"
     token="VSCP_TYPE_WEATHER_EARTHQUAKE" />
 
-<type id="38" 
+<type id="38"
     name="Nuclear disaster"
     token="VSCP_TYPE_WEATHER_NUCLEAR_DISASTER" />
 
-<type id="39" 
+<type id="39"
     name="Fire"
     token="VSCP_TYPE_WEATHER_FIRE" />
 
@@ -168,48 +168,51 @@
     name="Lightning"
     token="VSCP_TYPE_WEATHER_LIGHTNING" />
 
-<type id="41" 
+<type id="41"
     name="UV Radiation low"
     token="VSCP_TYPE_WEATHER_UV_RADIATION_LOW" />
 
-<type id="42" 
+<type id="42"
     name="UV Radiation medium"
     token="VSCP_TYPE_WEATHER_UV_RADIATION_MEDIUM" />
 
-<type id="43" 
+<type id="43"
     name="UV Radiation normal"
     token="VSCP_TYPE_WEATHER_UV_RADIATION_NORMAL" />
 
-<type id="44" 
+<type id="44"
     name="UV Radiation high"
     token="VSCP_TYPE_WEATHER_UV_RADIATION_HIGH" />
 
-<type id="45" 
+<type id="45"
     name="UV Radiation very high"
     token="VSCP_TYPE_WEATHER_UV_RADIATION_VERY_HIGH" />
 
-<type id="46" 
+<type id="46"
     name="Warning level 1"
     token="VSCP_TYPE_WEATHER_WARNING_LEVEL1" />
 
-<type id="47" 
+<type id="47"
     name="Warning level 2"
     token="VSCP_TYPE_WEATHER_WARNING_LEVEL2" />
 
-<type id="48" 
+<type id="48"
     name="Warning level 3"
     token="VSCP_TYPE_WEATHER_WARNING_LEVEL3" />
 
-<type id="49" 
+<type id="49"
     name="Warning level 4"
     token="VSCP_TYPE_WEATHER_WARNING_LEVEL4" />
 
-<type id="50" 
+<type id="50"
     name="Warning level 5"
     token="VSCP_TYPE_WEATHER_WARNING_LEVEL5" />
 
-<type id="51" 
+<type id="51"
     name="Armageddon"
     token="VSCP_TYPE_WEATHER_ARMAGEDON" />
 
+<type id="52"
+    name="UV Index"
+    token="VSCP_TYPE_WEATHER_UV_INDEX" />
 </class>
