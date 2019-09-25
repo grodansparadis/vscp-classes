@@ -215,4 +215,5 @@
 <type id="52"
     name="UV Index"
     token="VSCP_TYPE_WEATHER_UV_INDEX" />
+    
 </class>

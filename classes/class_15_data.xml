@@ -36,11 +36,5 @@
         <unit id="1" name="Integer" description="Integer value." conversion="val"/>
         <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion="val"/>
     </units>
-</type>
-
-<type id="7"
-    name="Count value"
-    token="VSCP_TYPE_DATA_COUNT" />
-
 
 </class>

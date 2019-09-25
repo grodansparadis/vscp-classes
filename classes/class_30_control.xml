@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="30" 
-    name="Control" 
+<class id="30"
+    name="Control"
     token="CLASS1.CONTROL" >
 
-<type id="0" 
+<type id="0"
     name="General event"
-    token="VSCP_TYPE_CONTROL_GENERAL" /> 
+    token="VSCP_TYPE_CONTROL_GENERAL" />
 
-<type  id="1" 
+<type  id="1"
     name="Mute on/off"
     token="VSCP_TYPE_CONTROL_MUTE" />
 
-<type  id="2" 
+<type  id="2"
     name ="(All) Lamp(s) on/off"
     token="VSCP_TYPE_CONTROL_ALL_LAMPS" />
 
-<type  id="3" 
+<type  id="3"
     name="Open"
     token="VSCP_TYPE_CONTROL_OPEN" />
 
@@ -32,11 +32,11 @@
     name="TurnOff"
     token="VSCP_TYPE_CONTROL_TURNOFF" />
 
-<type  id="7" 
+<type  id="7"
     name="Start"
     token="VSCP_TYPE_CONTROL_START" />
 
-<type  id="8" 
+<type  id="8"
     name="Stop"
     token="VSCP_TYPE_CONTROL_STOP" />
 
@@ -44,43 +44,43 @@
     name="Reset"
     token="VSCP_TYPE_CONTROL_RESET" />
 
-<type  id="10" 
+<type  id="10"
     name="Interrupt"
     token="VSCP_TYPE_CONTROL_INTERRUPT" />
 
-<type  id="11" 
+<type  id="11"
     name="Sleep"
     token="VSCP_TYPE_CONTROL_SLEEP" />
 
-<type  id="12" 
+<type  id="12"
     name="Wakeup"
     token="VSCP_TYPE_CONTROL_WAKEUP" />
 
-<type  id="13" 
+<type  id="13"
     name="Resume"
     token="VSCP_TYPE_CONTROL_RESUME" />
 
-<type  id="14" 
+<type  id="14"
     name="Pause"
     token="VSCP_TYPE_CONTROL_PAUSE" />
 
-<type  id="15" 
+<type  id="15"
     name="Activate"
     token="VSCP_TYPE_CONTROL_ACTIVATE" />
 
-<type  id="16" 
+<type  id="16"
     name="Deactivate"
     token="VSCP_TYPE_CONTROL_DEACTIVATE" />
 
-<type  id="17" 
+<type  id="17"
     name="Reserved for future use"
     token="VSCP_TYPE_CONTROL_RESERVED17" />
 
-<type  id="18" 
+<type  id="18"
     name="Reserved for future use"
     token="VSCP_TYPE_CONTROL_RESERVED18" />
 
-<type  id="19" 
+<type  id="19"
     name="Reserved for future use"
     token="VSCP_TYPE_CONTROL_RESERVED19" />
 
@@ -88,15 +88,15 @@
     name="Dim lamp(s)"
     token="VSCP_TYPE_CONTROL_DIM_LAMPS" />
 
-<type  id="21" 
+<type  id="21"
     name="Change Channel"
     token="VSCP_TYPE_CONTROL_CHANGE_CHANNEL" />
 
-<type  id="22" 
+<type  id="22"
     name="Change Level"
     token="VSCP_TYPE_CONTROL_CHANGE_LEVEL" />
 
-<type  id="23" 
+<type  id="23"
     name="Relative Change Level"
     token="VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL" />
 
@@ -104,7 +104,7 @@
     name="Measurement Request"
     token="VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST" />
 
-<type  id="25" 
+<type  id="25"
     name="Stream Data"
     token="VSCP_TYPE_CONTROL_STREAM_DATA" />
 
@@ -112,7 +112,7 @@
     name="Sync"
     token="VSCP_TYPE_CONTROL_SYNC" />
 
-<type  id="27" 
+<type  id="27"
     name="Zoned Stream Data"
     token="VSCP_TYPE_CONTROL_ZONED_STREAM_DATA" />
 
@@ -150,7 +150,7 @@
 
 <type  id="36"
     name="Move shutter left"
-    token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" /> 
+    token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" />
 
 <type  id="37"
     name="Move shutter right"
@@ -176,8 +176,12 @@
     name="Lock"
     token="VSCP_TYPE_CONTROL_LOCK" />
 
-<type  id="43" 
+<type  id="43"
     name="Unlock"
     token="VSCP_TYPE_CONTROL_UNLOCK" />
+
+<type  id="44"
+    name="PWM set"
+    token="VSCP_TYPE_CONTROL_PWM" />
 
 </class>
