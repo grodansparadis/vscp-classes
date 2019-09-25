@@ -36,5 +36,6 @@
         <unit id="1" name="Integer" description="Integer value." conversion="val"/>
         <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion="val"/>
     </units>
+</type>
 
 </class>

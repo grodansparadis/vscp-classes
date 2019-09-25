@@ -29,7 +29,7 @@ for child in class_root.iter('item'):
 
 if len(order_list) == 0:
     print("No classes defined in class list!")
-    sys.exit() 
+    sys.exit()
 
 # Get copyright header
 with open('../cheaders/prefix_class.txt', 'r') as myfile:
@@ -50,6 +50,7 @@ print(" ")
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
+    print('fname='+fname)
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
 
@@ -65,6 +66,6 @@ for vscp_class in order_list:
     outstr = outstr + "/* " + type_root.attrib["name"] + " */"
     print(outstr)
 
-print(" ") 
+print(" ")
 print("#endif")
 print(" ")
