@@ -198,4 +198,5 @@ echo The following projects needs to be updated to GitHub
 echo "Update ../../vscp-js"
 echo "Update ../../node-vscp-class"
 echo "Update ../../node-vscp-type"
+echo "Update ../../pyvscp"
 echo "Update ../../vscp-doc-spec"
