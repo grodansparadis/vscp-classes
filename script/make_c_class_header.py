@@ -50,7 +50,6 @@ print(" ")
 
 for vscp_class in order_list:
     fname = '../classes/' + vscp_class
-    print('fname='+fname)
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
 
