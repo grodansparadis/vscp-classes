@@ -184,4 +184,32 @@
     name="PWM set"
     token="VSCP_TYPE_CONTROL_PWM" />
 
+<type  id="45"
+    name="Lock with token"
+    token="VSCP_TYPE_CONTROL_TOKEN_LOCK" />
+
+<type  id="46"
+    name="Unlock with token"
+    token="VSCP_TYPE_CONTROL_TOKEN_UNLOCK" />
+
+<type  id="47"
+    name="Set security level"
+    token="VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL" />
+
+<type  id="48"
+    name="Set security pin"
+    token="VSCP_TYPE_CONTROL_SET_SECURITY_PIN" />
+
+<type  id="49"
+    name="Set security password"
+    token="VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD" />
+
+<type  id="50"
+    name="Set security token"
+    token="VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN" />
+
+<type  id="51"
+    name="Request new security token"
+    token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" />
+
 </class>

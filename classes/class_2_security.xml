@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="2" 
-    name="Security" 
+<class id="2"
+    name="Security"
     token="CLASS1.SECURITY" >
 
-<type id="0" 
+<type id="0"
     name="General event"
-    token="VSCP_TYPE_SECURITY_GENERAL" /> 
+    token="VSCP_TYPE_SECURITY_GENERAL" />
 
-<type id="1" 
+<type id="1"
     name="Motion Detect"
     token="VSCP_TYPE_SECURITY_MOTION" />
 
@@ -20,7 +20,7 @@
     name="Beam break"
     token="VSCP_TYPE_SECURITY_BEAM_BREAK" />
 
-<type id="4" 
+<type id="4"
     name="Sensor tamper"
     token="VSCP_TYPE_SECURITY_SENSOR_TAMPER" />
 
@@ -28,7 +28,7 @@
     name="Shock sensor"
     token="VSCP_TYPE_SECURITY_SHOCK_SENSOR" />
 
-<type id="6" 
+<type id="6"
     name="Smoke sensor"
     token="VSCP_TYPE_SECURITY_SMOKE_SENSOR" />
 
@@ -44,7 +44,7 @@
     name="Door Contact"
     token="VSCP_TYPE_SECURITY_DOOR_OPEN" />
 
-<type id="10" 
+<type id="10"
     name="Window Contact"
     token="VSCP_TYPE_SECURITY_WINDOW_OPEN" />
 
@@ -52,7 +52,7 @@
     name="CO Sensor"
     token="VSCP_TYPE_SECURITY_CO_SENSOR" />
 
-<type id="12" 
+<type id="12"
     name="Frost detected"
     token="VSCP_TYPE_SECURITY_FROST_DETECTED" />
 
@@ -60,23 +60,23 @@
     name="Flame detected"
     token="VSCP_TYPE_SECURITY_FLAME_DETECTED" />
 
-<type id="14" 
+<type id="14"
     name="Oxygen Low"
     token="VSCP_TYPE_SECURITY_OXYGEN_LOW" />
 
-<type id="15" 
+<type id="15"
     name="Weight detected."
     token="VSCP_TYPE_SECURITY_WEIGHT_DETECTED" />
 
-<type id="16" 
+<type id="16"
     name="Water detected."
     token="VSCP_TYPE_SECURITY_WATER_DETECTED" />
 
-<type id="17" 
+<type id="17"
     name="Condensation detected."
     token="VSCP_TYPE_SECURITY_CONDENSATION_DETECTED" />
 
-<type id="18" 
+<type id="18"
     name="Noise (sound) detected."
     token="VSCP_TYPE_SECURITY_SOUND_DETECTED" />
 
@@ -84,9 +84,60 @@
     name="Harmful sound levels detected."
     token="VSCP_TYPE_SECURITY_HARMFUL_SOUND_LEVEL" />
 
-<type id="20" 
+<type id="20"
     name="Tamper detected."
     token="VSCP_TYPE_SECURITY_TAMPER" />
 
+<type id="21"
+    name="Authenticated"
+    token="VSCP_TYPE_SECURITY_AUTHENTICATED" />
+
+<type id="22"
+    name="Unauthenticated"
+    token="VSCP_TYPE_SECURITY_UNAUTHENTICATED" />
+
+<type id="23"
+    name="Authorized"
+    token="VSCP_TYPE_SECURITY_AUTHORIZED" />
+
+<type id="24"
+    name="Unauthorized"
+    token="VSCP_TYPE_SECURITY_UNAUTHORIZED" />
+
+<type id="25"
+    name="ID check"
+    token="VSCP_TYPE_SECURITY_ID_CHECK" />
+
+<type id="26"
+    name="Valid pin"
+    token="VSCP_TYPE_SECURITY_PIN_OK" />
+
+<type id="27"
+    name="Invalid pin"
+    token="VSCP_TYPE_SECURITY_PIN_FAIL" />
+
+<type id="28"
+    name="Pin warning"
+    token="VSCP_TYPE_SECURITY_PIN_WARNING" />
+
+<type id="29"
+    name="Pin error"
+    token="VSCP_TYPE_SECURITY_PIN_ERROR" />
+
+<type id="30"
+    name="Valid password"
+    token="VSCP_TYPE_SECURITY_PASSWORD_OK" />
+
+<type id="31"
+    name="Invalid password"
+    token="VSCP_TYPE_SECURITY_PASSWORD_FAIL" />
+
+<type id="32"
+    name="Password warning"
+    token="VSCP_TYPE_SECURITY_PASSWORD_WARNING" />
+
+<type id="33"
+    name="Password error"
+    token="VSCP_TYPE_SECURITY_PASSWORD_ERROR" />
 
 </class>
