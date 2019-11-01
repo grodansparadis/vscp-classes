@@ -122,26 +122,26 @@
 
 <type id="31"
     name="Start"
-    token="VSCP2_TYPE_VSCPD_START" />
+    token="VSCP2_TYPE_VSCPD_DRV3_START" />
 
 <type id="32"
     name="Stop"
-    token="VSCP2_TYPE_VSCPD_STOP" />
+    token="VSCP2_TYPE_VSCPD_DRV3_STOP" />
 
  <type id="33"
     name="Pause"
-    token="VSCP2_TYPE_VSCPD_PAUSE" />
+    token="VSCP2_TYPE_VSCPD_DRV3_PAUSE" />
 
  <type id="34"
     name="Resume"
-    token="VSCP2_TYPE_VSCPD_RESUME" />
+    token="VSCP2_TYPE_VSCPD_DRV3_RESUME" />
 
   <type id="35"
     name="Restart"
-    token="VSCP2_TYPE_VSCPD_RESTART" />
+    token="VSCP2_TYPE_VSCPD_DRV3_RESTART" />
 
    <type id="36"
     name="Config"
-    token="VSCP2_TYPE_VSCPD_CONFIG" />
+    token="VSCP2_TYPE_VSCPD_DRV3_CONFIG" />
 
 </class>
