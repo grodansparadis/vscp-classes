@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="13" name="Measurement" token="CLASS1.MEASUREMENTX3">
+    <type id="0" name="General event" token="VSCP_TYPE_MEASUREMENTX3_GENERAL" />
+</class>

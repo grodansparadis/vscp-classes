@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="87"
+    name="Set value with zone"
+    token="CLASS1.SETVALUEZONEX2"
+    events="class_12_measurement.xml" >
+</class>

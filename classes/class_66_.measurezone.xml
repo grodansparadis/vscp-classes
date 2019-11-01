@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="66"
+    name="Measurement with zone"
+    token="CLASS1.MEASUREZONEX1"
+    events="class_11_measurement.xml" >
+</class>

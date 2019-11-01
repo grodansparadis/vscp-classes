@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="63"
+    name="Double precision floating point measurement"
+    token="CLASS1.MEASUREMENT64X3"
+    events="class_13_measurement.xml" >
+</class>

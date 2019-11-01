@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="71"
+    name="Single precision floating point measurement"
+    token="CLASS1.MEASUREMENT32X1"
+    events="class_11_measurement.xml" >
+</class>

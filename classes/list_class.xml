@@ -1,19 +1,39 @@
 <!-- List if VSCP classes in publishing order -->
 <classlist>
     <!-- Level I -->
-    <item name="class_0_protocol.xml" />  
-    <item name="class_1_alarm.xml" /> 
+    <item name="class_0_protocol.xml" />
+    <item name="class_1_alarm.xml" />
     <item name="class_2_security.xml" />
     <item name="class_10_measurement.xml" />
+    <item name="class_11_measurement.xml" />
+    <item name="class_12_measurement.xml" />
+    <item name="class_13_measurement.xml" />
+    <item name="class_14_measurement.xml" />
     <item name="class_15_data.xml" />
     <item name="class_20_information.xml" />
     <item name="class_30_control.xml" />
-    <item name="class_40_multimedia.xml" /> 
+    <item name="class_40_multimedia.xml" />
     <item name="class_50_aol.xml" />
-    <item name="class_60_measurement64.xml" /> 
+    <item name="class_60_measurement64.xml" />
+    <item name="class_61_measurement64.xml" />
+    <item name="class_62_measurement64.xml" />
+    <item name="class_63_measurement64.xml" />
+    <item name="class_64_measurement64.xml" />
     <item name="class_65_.measurezone.xml" />
+    <item name="class_66_.measurezone.xml" />
+    <item name="class_67_.measurezone.xml" />
+    <item name="class_68_.measurezone.xml" />
+    <item name="class_69_.measurezone.xml" />
     <item name="class_70_.measurement32.xml" />
+    <item name="class_71_.measurement32.xml" />
+    <item name="class_72_.measurement32.xml" />
+    <item name="class_73_.measurement32.xml" />
+    <item name="class_74_.measurement32.xml" />
     <item name="class_85_setvaluezone.xml" />
+    <item name="class_86_setvaluezone.xml" />
+    <item name="class_87_setvaluezone.xml" />
+    <item name="class_88_setvaluezone.xml" />
+    <item name="class_89_setvaluezone.xml" />
     <item name="class_90_weather.xml" />
     <item name="class_95_weather_forecast.xml" />
     <item name="class_100_phone.xml" />
@@ -29,9 +49,9 @@
 
     <!-- Level I over Level II -->
     <item name="class_512_protocol.xml" />
-    <item name="class_513_alarm.xml" /> 
-    <item name="class_514_security.xml" /> 
-    <item name="class_522_measurement.xml" /> 
+    <item name="class_513_alarm.xml" />
+    <item name="class_514_security.xml" />
+    <item name="class_522_measurement.xml" />
     <item name="class_527_data.xml" />
     <item name="class_532_information.xml" />
     <item name="class_542_control.xml" />
@@ -42,7 +62,7 @@
     <item name="class_582_measurement32.xml" />
     <item name="class_597_setvaluezone.xml" />
     <item name="class_602.weather.xml" />
-    <item name="class_607_weather_forecast.xml" /> 
+    <item name="class_607_weather_forecast.xml" />
     <item name="class_612_phone.xml" />
     <item name="class_614_display.xml" />
     <item name="class_622_remote.xml" />
@@ -58,10 +78,10 @@
     <item name="class_1024_protocol.xml" />
     <item name="class_1025_control.xml" />
     <item name="class_1026_information.xml" />
-    <item name="class_1027_text2speech.xml" />        
-    <item name="class_1029_custom.xml" />  
+    <item name="class_1027_text2speech.xml" />
+    <item name="class_1029_custom.xml" />
     <item name="class_1030_display.xml" />
     <item name="class_1040_measurement_str.xml" />
     <item name="class_1060_measurement_float.xml" />
-    <item name="class_65535_vscpd.xml" />   
+    <item name="class_65535_vscpd.xml" />
 </classlist>
