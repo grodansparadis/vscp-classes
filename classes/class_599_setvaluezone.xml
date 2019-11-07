@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="599"
+    name="Class2 Level I SetValueZone"
+    token="CLASS2.LEVEL1.SETVALUEZONEX2"
+    events="class_12_measurement.xml" />

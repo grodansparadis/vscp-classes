@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="580"
+    name="Class2 Level I Measurementzone"
+    token="CLASS2.LEVEL1.MEASUREZONEX3"
+    events="class_13_measurement.xml" />

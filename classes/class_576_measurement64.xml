@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="576"
+    name="Class2 Level I Measurement64"
+    token="CLASS2.LEVEL1.MEASUREMENT64X4"
+    events="class_14_measurement.xml" />

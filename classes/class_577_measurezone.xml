@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="577" 
-    name="Class2 Level I Measurementzone" 
-    token="CLASS2.LEVEL1.MEASUREZONE" 
+<class id="577"
+    name="Class2 Level I Measurementzone"
+    token="CLASS2.LEVEL1.MEASUREZONE"
     events="class_10_measurement.xml" />

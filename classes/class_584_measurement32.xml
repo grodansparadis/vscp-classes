@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="584"
+    name="Class2 Level I Measuremet32"
+    token="CLASS2.LEVEL1.MEASUREMENT32X2"
+    events="class_12_measurement.xml" />
