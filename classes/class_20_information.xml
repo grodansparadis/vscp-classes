@@ -326,6 +326,17 @@
 
 <type id="80"
     name="Updated"
-    token="VSCP_TYPE_INFORMATION_UPDATED" />     
+    token="VSCP_TYPE_INFORMATION_UPDATED" />
 
+<type id="81"
+    name="Connect"
+    token="VSCP_TYPE_INFORMATION_CONNECT" /> 
+
+<type id="82"
+    name="Disconnect"
+    token="VSCP_TYPE_INFORMATION_DISCONNECT" />         
+
+<type id="83"
+    name="Reconnect"
+    token="VSCP_TYPE_INFORMATION_RECONNECT" />
 </class>
