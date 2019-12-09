@@ -35,7 +35,7 @@ if len(order_list) == 0:
     print("No classes defined in class list!")
     sys.exit() 
 
-print("## Defined classes") 
+#print("## Defined classes") 
 for vscp_class in order_list:
     
     fname = '../classes/' + vscp_class
@@ -45,120 +45,123 @@ for vscp_class in order_list:
     id = int(type_root.attrib["id"])
     if id == 0:
         print("    ")
-        print("* **[Level I events](./level_i_events.md)**")
+        print("* Level I events")
+        print(" * [Description](./level_i_events.md)")
     elif id == 512:
         print("    ")
-        print("* **[Level I events over level II](./level_i_events_over_level_ii.md)**")
+        print("* Level I events over level II")
+        print(" * [Description](./level_i_events_over_level_ii.md)")
     elif id == 1024:
         print("    ")
-        print("* **[Level II events](./level_ii_events.md)**")
+        print("* Level II events")
+        print(" * [Description](./level_ii_events.md)")
 
-    outstr = "   * [" + \
+    outstr = " * [" + \
         type_root.attrib["token"] + " = " + \
         type_root.attrib["id"] + " (" + hex(id) + ")](./" + \
         type_root.attrib["token"].lower() + ".md)"
     print(outstr)  
 
 print("    ")
-print("## Defined events")
-print("*Generated: " + str(datetime.datetime.now()) + "*" )
+# print("## Defined events")
+# print("*Generated: " + str(datetime.datetime.now()) + "*" )
 
-# Show events 
-cnt = 0
-for vscp_class in order_list:  
+# # Show events 
+# cnt = 0
+# for vscp_class in order_list:  
 
-    fname = '../classes/' + vscp_class
-    type_tree = ET.parse(fname)
-    type_root = type_tree.getroot()
+#     fname = '../classes/' + vscp_class
+#     type_tree = ET.parse(fname)
+#     type_root = type_tree.getroot()
 
-    # Get description
-    description = ""
-    with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
+#     # Get description
+#     description = ""
+#     with open('../classes/' + type_root.attrib["id"] + '.md', 'r') as myfile:
 
-        description = myfile.read()
-        description = description.replace("\"","&quot;")
-        description = description.replace("'","&apos;")
-        description = description.replace("&","&amp;")
-        description = description.replace("<","&lt;")
-        description = description.replace(">","&gt;")
-        description = description.replace("\n","\\n")
-        description = description.replace("\r","\\r")
-        description = description.replace("\t","\\t")
+#         description = myfile.read()
+#         description = description.replace("\"","&quot;")
+#         description = description.replace("'","&apos;")
+#         description = description.replace("&","&amp;")
+#         description = description.replace("<","&lt;")
+#         description = description.replace(">","&gt;")
+#         description = description.replace("\n","\\n")
+#         description = description.replace("\r","\\r")
+#         description = description.replace("\t","\\t")
 
-    id = int(type_root.attrib["id"])
-    if id == 0:
-        print("    ")
-        print("* **[Level I events](./level_i_events.md)**")
-    elif id == 512:
-        print("    ")
-        print("* **[Level I events over level II](./level_i_events_over_level_ii.md)**")
-    elif id == 1024:
-        print("    ")
-        print("* **[Level II events](./level_ii_events.md)**")     
+#     id = int(type_root.attrib["id"])
+#     if id == 0:
+#         print("    ")
+#         print("* **[Level I events](./level_i_events.md)**")
+#     elif id == 512:
+#         print("    ")
+#         print("* **[Level I events over level II](./level_i_events_over_level_ii.md)**")
+#     elif id == 1024:
+#         print("    ")
+#         print("* **[Level II events](./level_ii_events.md)**")     
 
-    outstr = "   * [" + \
-        type_root.attrib["token"] + " = " + \
-        type_root.attrib["id"] + " (" + hex(id) + ")](./" + \
-        type_root.attrib["token"].lower() + ".md)"
+#     outstr = "   * [" + \
+#         type_root.attrib["token"] + " = " + \
+#         type_root.attrib["id"] + " (" + hex(id) + ")](./" + \
+#         type_root.attrib["token"].lower() + ".md)"
 
-    print(outstr) 
+#     print(outstr) 
 
-    # Types
-    events = ""
-    try:
-        events = type_root.attrib["events"]
-    except:
-        # 'events' tag does not exist
-        outstr = ""
-        for child in type_root.iter('type'):            
-            # Get description
-            description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
-                description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+#     # Types
+#     events = ""
+#     try:
+#         events = type_root.attrib["events"]
+#     except:
+#         # 'events' tag does not exist
+#         outstr = ""
+#         for child in type_root.iter('type'):            
+#             # Get description
+#             description = ""
+#             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+#                 description = myfile.read()
+#                 description = description.replace("\"","&quot;")
+#                 description = description.replace("'","&apos;")
+#                 description = description.replace("&","&amp;")
+#                 description = description.replace("<","&lt;")
+#                 description = description.replace(">","&gt;")
+#                 description = description.replace("\n","\\n")
+#                 description = description.replace("\r","\\r")
+#                 description = description.replace("\t","\\t")
 
-            typeid = int(child.attrib["id"])
-            outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
-                child.attrib["name"] + "](./" + \
-                type_root.attrib["token"].lower() + ".md#type"+ \
-                child.attrib["id"] + ")"
-            print(outstr)
+#             typeid = int(child.attrib["id"])
+#             outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
+#                 child.attrib["name"] + "](./" + \
+#                 type_root.attrib["token"].lower() + ".md#type"+ \
+#                 child.attrib["id"] + ")"
+#             print(outstr)
 
-    else:
-        classid = type_root.attrib["id"]
-        fname = '../classes/' + events
-        type_tree = ET.parse(fname)
-        type_root = type_tree.getroot()
+#     else:
+#         classid = type_root.attrib["id"]
+#         fname = '../classes/' + events
+#         type_tree = ET.parse(fname)
+#         type_root = type_tree.getroot()
 
-        outstr = ""
-        for child in type_root.iter('type'):
+#         outstr = ""
+#         for child in type_root.iter('type'):
 
-            # Get description
-            description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
-                description = myfile.read()
-                description = description.replace("\"","&quot;")
-                description = description.replace("'","&apos;")
-                description = description.replace("&","&amp;")
-                description = description.replace("<","&lt;")
-                description = description.replace(">","&gt;")
-                description = description.replace("\n","\\n")
-                description = description.replace("\r","\\r")
-                description = description.replace("\t","\\t")
+#             # Get description
+#             description = ""
+#             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+#                 description = myfile.read()
+#                 description = description.replace("\"","&quot;")
+#                 description = description.replace("'","&apos;")
+#                 description = description.replace("&","&amp;")
+#                 description = description.replace("<","&lt;")
+#                 description = description.replace(">","&gt;")
+#                 description = description.replace("\n","\\n")
+#                 description = description.replace("\r","\\r")
+#                 description = description.replace("\t","\\t")
 
-            typeid = int(child.attrib["id"])
-            outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
-                child.attrib["name"] + "](./" + \
-                type_root.attrib["token"].lower() + ".md#type"+ \
-                child.attrib["id"] + ")"
-            print(outstr)   
+#             typeid = int(child.attrib["id"])
+#             outstr = "      * [Type=" + child.attrib["id"] + " (" + hex(typeid) + ") - " + \
+#                 child.attrib["name"] + "](./" + \
+#                 type_root.attrib["token"].lower() + ".md#type"+ \
+#                 child.attrib["id"] + ")"
+#             print(outstr)   
 
 print(" ") 
 

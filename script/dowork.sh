@@ -172,7 +172,8 @@ rm /tmp/node_vscp_type.js.md5
 # Generate and upload documentation
 mkdir -p /tmp/vscp-events
 python3 make_docs_sidebar.py >/tmp/vscp-events/sidebar.md
-cp /tmp/vscp-events/sidebar.md ../../vscp-doc-spec/
+cp /tmp/vscp-events/sidebar.md ../../vscp-doc-spec/_generated_sidebar.md
+cat ../../vscp-doc-spec/_main_sidebar.md ../../vscp-doc-spec/_generated_sidebar.md >../../vscp-doc-spec/_sidebar.md
 python3 make_docs.py -o /tmp/vscp-events
 tar -czf /tmp/vscp_docs.tgz -C /tmp/vscp-events/ .
 md5sum /tmp/vscp_docs.tgz >/tmp/vscp_docs.tgz.md5

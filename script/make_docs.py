@@ -114,8 +114,7 @@ for vscp_class in order_list:
             outstr += "## " + \
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"] +\
-                " {#type" + child.attrib["id"] + "}"
+                ") - " + child.attrib["name"] 
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             outstr += "\n"
@@ -145,8 +144,7 @@ for vscp_class in order_list:
             outstr += "## " + \
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"] +\
-                " {#type" + child.attrib["id"] + "}"
+                ") - " + child.attrib["name"] "
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             
@@ -159,11 +157,11 @@ for vscp_class in order_list:
 
             typeid = int(child.attrib["id"])
     
-            outstr += "\n" 
+            outstr += "\n\n" 
             outstr += "----"
-            outstr += "\n"
+            outstr += "\n\n"
 
-    outstr += "\n" + "{% include \"./bottom_copyright.md\" %}"
+    outstr += "\n" + "[filename](./bottom_copyright.md ':include')"
     if bverbose:
         print(outstr)
     # Write the file
