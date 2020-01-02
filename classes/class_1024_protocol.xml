@@ -28,8 +28,6 @@
     name="Level II who is there response"
     token="VSCP2_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
 
-<type id="42"
-    name="High Level Object"
-    token="VSCP2_TYPE_PROTOCOL_HIGH_LEVEL_OBJECT" />
+<!-- Type=42 Reserved -->
 
 </class>

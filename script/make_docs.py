@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2000-2019 Ake Hedman, 
+# Copyright (c) 2000-2020 Ake Hedman, 
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make event docs. for VSCP specification document
@@ -114,14 +114,16 @@ for vscp_class in order_list:
             outstr += "## " + \
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"] 
+                ") - " + child.attrib["name"] +\
+                " :id=type" + child.attrib["id"]
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             outstr += "\n"
 
             # Get description
             description = ""
-            with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
+            with open('../classes/' + type_root.attrib["id"] + "." + 
+                        child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
                 outstr += description
 
@@ -144,7 +146,8 @@ for vscp_class in order_list:
             outstr += "## " + \
                 "Type=" + child.attrib["id"] +\
                 " (" + fmthex(child.attrib["id"]) +\
-                ") - " + child.attrib["name"] "
+                ") - " + child.attrib["name"] +\
+                " :id=type" + child.attrib["id"]
             outstr += "\n" 
             outstr += "    " + child.attrib["token"]
             
