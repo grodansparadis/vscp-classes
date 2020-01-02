@@ -79,6 +79,7 @@
     <item name="class_1025_control.xml" />
     <item name="class_1026_information.xml" />
     <item name="class_1027_text2speech.xml" />
+    <item name="class_1028_hlo.xml" />
     <item name="class_1029_custom.xml" />
     <item name="class_1030_display.xml" />
     <item name="class_1040_measurement_str.xml" />
