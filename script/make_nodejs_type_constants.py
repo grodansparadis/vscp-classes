@@ -45,7 +45,16 @@ print("                           This file is auto-generated")
 print("                see https://github.com/grodansparadis/vscp-classes")
 print("                        Generated:", datetime.datetime.now())
 print("*/")
-print("\n\nvar exports = module.exports = {};\n")
+print("")
+print("/** \n * VSCP type map")
+print(" */")
+print("var vscp_type_map = new Map();")
+print("\n")
+print("module.exports = function (vscpclass,vscptype) {")
+print("    return vscp_type_map.get((vscpclass << 16) + vscptype);")
+print("};")
+print("")
+#print("\n\nvar exports = module.exports = {};\n")
 
 for class_index, vscp_class in enumerate(order_list):
     fname = '../classes/' + vscp_class
@@ -72,6 +81,14 @@ for class_index, vscp_class in enumerate(order_list):
             print(";")
         else:
             print(" ")
+
+        # Add elements to type map
+        print("\n")
+        for child in type_root.iter('type'):
+            print("vscp_type_map.set( (" + \
+                type_root.attrib["id"] + " << 16) + " + \
+                child.attrib["id"] + ",'" + \
+                child.attrib["token"] + "'); \n", end='')    
     else:
         fname = '../classes/' + events
         type_tree = ET.parse(fname)

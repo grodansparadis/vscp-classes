@@ -42,7 +42,16 @@ print("            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!")
 print("                           This file is auto-generated")
 print("                see https://github.com/grodansparadis/vscp-classes")
 print("                        Generated:", datetime.datetime.now() )
-print("*/\n\nvar exports = module.exports = {};\n")
+print("*/\n\n")
+print("/** \n * VSCP class map")
+print(" */")
+print("var vscp_class_map = new Map();")
+print("")
+print("module.exports = function (vscpclass) {")
+print("    return vscp_class_map.get(vscpclass);")
+print("};")
+print("")
+#print("var exports = module.exports = {};\n")
 
 for index, vscp_class in enumerate(order_list):
     fname = '../classes/' + vscp_class
@@ -55,4 +64,17 @@ for index, vscp_class in enumerate(order_list):
     outstr = "module.exports.VSCP_" + outstr;
     print(outstr)
 
-print("\n")
+print("")
+
+print("// Assign elements to class map")
+for index, vscp_class in enumerate(order_list):
+    fname = '../classes/' + vscp_class
+    type_tree = ET.parse(fname)
+    type_root = type_tree.getroot()
+    #print "type root tag",type_root.tag
+    outstr = "vscp_class_map.set(" + \
+        type_root.attrib["id"] + \
+        ",'" + \
+        type_root.attrib["token"] + "');"
+    print(outstr)
+
