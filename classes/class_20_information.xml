@@ -339,4 +339,14 @@
 <type id="83"
     name="Reconnect"
     token="VSCP_TYPE_INFORMATION_RECONNECT" />
+
+<type id="84"
+    name="Enter"
+    token="VSCP_TYPE_INFORMATION_ENTER" />
+
+<type id="85"
+    name="Exit"
+    token="VSCP_TYPE_INFORMATION_EXIT" />
+
+
 </class>

@@ -117,7 +117,8 @@ for vscp_class in order_list:
                 ") - " + child.attrib["name"] +\
                 " :id=type" + child.attrib["id"]
             outstr += "\n" 
-            outstr += "    " + child.attrib["token"]
+            outstr += "```\n" + child.attrib["token"]
+            outstr += "\n```"
             outstr += "\n"
 
             # Get description
