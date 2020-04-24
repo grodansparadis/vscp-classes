@@ -11,6 +11,7 @@
 #
 
 import sys
+import os
 import getopt
 import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
@@ -63,6 +64,7 @@ for opt, arg in opts:
         bverbose = True
     elif opt in ("-o", "--outdir"):
         outdir = arg
+        os.mkdir(outdir)
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
