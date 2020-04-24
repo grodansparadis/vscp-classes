@@ -68,11 +68,13 @@ python3 make_python_class_header.py >/tmp/vscp_class.py
 cp /tmp/vscp_class.py ../../pyvscp/vscp/
 md5sum /tmp/vscp_class.py >/tmp/vscp_class.py.md5
 # Make compressed lib for classes
-zip /tmp/python_vscp_class.zip /tmp/vscp_type.py /tmp/vscp_class.py.md5
+zip -j /tmp/python_vscp_class.zip /tmp/vscp_class.py /tmp/vscp_class.py.md5
+md5sum /tmp/python_vscp_class.zip >/tmp/python_vscp_class.zip.md5
 echo "uploading vscp_class.py"
 curl -T /tmp/vscp_class.py ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T /tmp/vscp_class.py.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T /tmp/python_vscp_class.zip ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T /tmp/python_vscp_class.zip.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_class.py
 rm /tmp/vscp_class.py.md5
 rm /tmp/python_vscp_class.zip
@@ -82,11 +84,13 @@ python3 make_python_type_header.py >/tmp/vscp_type.py
 cp /tmp/vscp_type.py ../../pyvscp/vscp/
 md5sum /tmp/vscp_type.py >/tmp/vscp_type.py.md5
 # Make compressed lib for types
-zip /tmp/python_vscp_type.zip /tmp/vscp_type.py /tmp/vscp_type.py.md5
+zip -j /tmp/python_vscp_type.zip /tmp/vscp_type.py /tmp/vscp_type.py.md5
+md5sum /tmp/python_vscp_type.zip >/tmp/python_vscp_type.zip.md5
 echo "uploading vscp_type.py"
 curl -T /tmp/vscp_type.py ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T /tmp/vscp_type.py.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T /tmp/python_vscp_type.zip ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T /tmp/python_vscp_type.zip.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 rm /tmp/vscp_type.py
 rm /tmp/vscp_type.py.md5
 rm /tmp/python_vscp_type.zip

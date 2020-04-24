@@ -64,7 +64,7 @@ for opt, arg in opts:
         bverbose = True
     elif opt in ("-o", "--outdir"):
         outdir = arg
-        os.mkdir(outdir)
+        os.makedirs(outdir, exist_ok=True)
 
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
