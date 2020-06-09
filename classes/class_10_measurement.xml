@@ -1,93 +1,955 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <class id="10" name="Measurement" token="CLASS1.MEASUREMENT">
+
     <type id="0" name="General event" token="VSCP_TYPE_MEASUREMENT_GENERAL" />
+
     <type id="1" name="Count" token="VSCP_TYPE_MEASUREMENT_COUNT" >
         <units>
-            <unit id="0" name="Count" description="Count." conversion="val"/>
+            <unit id="0" 
+                    name="Count"
+                    symbol-ascii="units"
+                    symbol-utf8="units"
+                    description="Count." 
+                    conversion="{{val}}"/>
         </units>
+        <render>
+            <vscpworks template="&lt;b&gt;Unit: &lt;/b&gt; = {{unitstr}} [{{unit}}]&lt;br&gt; &lt;b&gt;Sensorindex: &lt;/b&gt; = {{sensorindex}}&lt;br&gt; &lt;b&gt;Value: &lt;/b&gt; = {{val}}{{symbol}}&lt;br&gt;"/> 
+        </render>
     </type>
+    
     <type id="2" name="Length/Distance" token="VSCP_TYPE_MEASUREMENT_LENGTH" >
         <units>
-            <unit id="0" name="Meter" description="Meter." conversion="val"/>
+            <unit id="0" 
+                    name="Meter"
+                    symbol-ascii="m"
+                    symbol-utf8="m" 
+                    description="Meter." 
+                    conversion="{{val}}"/>
         </units>
     </type>
+    
     <type id="3" name="Mass" token="VSCP_TYPE_MEASUREMENT_MASS" >
         <units>
-            <unit id="0" name="Kilogram" description="Kilogram."  conversion="val"/>
+            <unit id="0" 
+                    name="Kilogram"
+                    symbol-ascii="kg"
+                    symbol-utf8="kg"
+                    description="Kilogram."  
+                    conversion="{{val}}"/>
         </units>
     </type>
+    
     <type id="4" name="Time" token="VSCP_TYPE_MEASUREMENT_TIME" >
         <units>
-            <unit id="0" name="Seconds" description="Time in seconds."/>
-            <unit id="1" name="Milliseconds" description="Time in milliseconds." conversion="val*1000"/>
-            <unit id="2" name="yymdhms" description="Date." conversion="0"/>
-            <unit id="3" name="HHMMSS" description="Time." conversion="0"/>
+            <unit id="0" 
+                    name="Seconds"
+                    symbol-ascii="s"
+                    symbol-utf8="s"
+                    description="Time in seconds."
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="Milliseconds"                     
+                    description="Time in milliseconds."
+                    symbol-ascii="ms"
+                    symbol-utf8="ms" 
+                    conversion="{{val}}*1000"/>
+            <unit id="2" 
+                    name="yymdhms"                    
+                    description="Date."
+                    symbol-ascii=""
+                    symbol-utf8="" 
+                    conversion="{{val}}"/>
+            <unit id="3" 
+                    name="HHMMSS"                     
+                    description="Time."
+                    symbol-ascii=""
+                    symbol-utf8="" 
+                    conversion="{{val}}"/>
         </units>
     </type>
+    
     <type id="5" name="Electric Current" token="VSCP_TYPE_MEASUREMENT_ELECTRIC_CURRENT">
         <units>
-            <unit id="0" name="Ampere" description="Ampere"/>
+            <unit id="0" 
+                    name="Ampere" 
+                    description="Ampere"
+                    symbol-ascii="A"
+                    symbol-utf8="A"
+                    conversion="{{val}}" />
         </units>
     </type>
+    
     <type id="6" name="Temperature" token="VSCP_TYPE_MEASUREMENT_TEMPERATURE" >
         <units>
-            <unit id="0" name="Kelvin" description="Degrees Kelvin." conversion="val"/>
-            <unit id="1" name="Celsius" description="Degrees Celsius." conversion="val+273.15 "/>
-            <unit id="2" name="Fahrenheit" description="Degrees Fahrenheit." conversion="val + 459.67) × 5/9"/>
+            <unit id="0" 
+                    name="kelvin"
+                    description="Degrees Kelvin"
+                    symbol-ascii="K"
+                    symbol-utf8="K"                            
+                    conversion="{{val}}"/>
+            <unit id="1" 
+                    name="celsius"
+                    description="Degrees Celsius"
+                    symbol-ascii="C"
+                    symbol-utf8="°C"        
+                    conversion="{{val}} + 273.15 "/>
+            <unit id="2" 
+                    name="fahrenheit"
+                    description="Degrees Fahrenheit"
+                    symbol-ascii="F"
+                    symbol-utf8="°F" 
+                    conversion="({{val}} + 459.67) * 5/9"/>
         </units>
     </type>
-    <type id="7" name="Amount of substance" token="VSCP_TYPE_MEASUREMENT_AMOUNT_OF_SUBSTANCE" />
-    <type id="8" name="Luminous Intensity (Intensity of light)" token="VSCP_TYPE_MEASUREMENT_INTENSITY_OF_LIGHT" />
-    <type id="9" name="Frequency" token="VSCP_TYPE_MEASUREMENT_FREQUENCY" />
-    <type id="10" name="Radioactivity and other random events" token="VSCP_TYPE_MEASUREMENT_RADIOACTIVITY" />
-    <type id="11" name="Force" token="VSCP_TYPE_MEASUREMENT_FORCE" />
-    <type id="12" name="Pressure" token="VSCP_TYPE_MEASUREMENT_PRESSURE" />
-    <type id="13" name="Energy" token="VSCP_TYPE_MEASUREMENT_ENERGY" />
-    <type id="14" name="Power" token="VSCP_TYPE_MEASUREMENT_POWER" />
-    <type id="15" name="Electrical Charge" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CHARGE" />
-    <type id="16" name="Electrical Potential (Voltage)" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_POTENTIAL" />
-    <type id="17" name="Electrical Capacitance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CAPACITANCE" />
-    <type id="18" name="Electrical Resistance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_RESISTANCE" />
-    <type id="19" name="Electrical Conductance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CONDUCTANCE" />
-    <type id="20" name="Magnetic Field Strength" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FIELD_STRENGTH" />
-    <type id="21" name="Magnetic Flux" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FLUX" />
-    <type id="22" name="Magnetic Flux Density" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FLUX_DENSITY" />
-    <type id="23" name="Inductance" token="VSCP_TYPE_MEASUREMENT_INDUCTANCE" />
-    <type id="24" name="Luminous Flux" token="VSCP_TYPE_MEASUREMENT_FLUX_OF_LIGHT" />
-    <type id="25" name="Illuminance" token="VSCP_TYPE_MEASUREMENT_ILLUMINANCE" />
-    <type id="26" name="Radiation dose" token="VSCP_TYPE_MEASUREMENT_RADIATION_DOSE" />
-    <type id="27" name="Catalytic activity" token="VSCP_TYPE_MEASUREMENT_CATALYTIC_ACITIVITY" />
-    <type id="28" name="Volume" token="VSCP_TYPE_MEASUREMENT_VOLUME" />
-    <type id="29" name="Sound intensity" token="VSCP_TYPE_MEASUREMENT_SOUND_INTENSITY" />
-    <type id="30" name="Angle" token="VSCP_TYPE_MEASUREMENT_ANGLE" />
-    <type id="31" name="Position WGS 84" token="VSCP_TYPE_MEASUREMENT_POSITION" />
-    <type id="32" name="Speed" token="VSCP_TYPE_MEASUREMENT_SPEED" />
-    <type id="33" name="Acceleration" token="VSCP_TYPE_MEASUREMENT_ACCELERATION" />
-    <type id="34" name="Tension" token="VSCP_TYPE_MEASUREMENT_TENSION" />
-    <type id="35" name="Damp/moist (Hygrometer reading)" token="VSCP_TYPE_MEASUREMENT_HUMIDITY" />
-    <type id="36" name="Flow" token="VSCP_TYPE_MEASUREMENT_FLOW" />
-    <type id="37" name="Thermal resistance" token="VSCP_TYPE_MEASUREMENT_THERMAL_RESISTANCE" />
-    <type id="38" name="Refractive (optical) power" token="VSCP_TYPE_MEASUREMENT_REFRACTIVE_POWER" />
-    <type id="39" name="Dynamic viscosity" token="VSCP_TYPE_MEASUREMENT_DYNAMIC_VISCOSITY" />
-    <type id="40" name="Sound impedance" token="VSCP_TYPE_MEASUREMENT_SOUND_IMPEDANCE" />
-    <type id="41" name="Sound resistance" token="VSCP_TYPE_MEASUREMENT_SOUND_RESISTANCE" />
-    <type id="42" name="Electric elastance" token="VSCP_TYPE_MEASUREMENT_ELECTRIC_ELASTANCE" />
-    <type id="43" name="Luminous energy" token="VSCP_TYPE_MEASUREMENT_LUMINOUS_ENERGY" />
-    <type id="44" name="Luminance" token="VSCP_TYPE_MEASUREMENT_LUMINANCE" />
-    <type id="45" name="Chemical concentration" token="VSCP_TYPE_MEASUREMENT_CHEMICAL_CONCENTRATION" />
-    <type id="46" name="Reserved" token="VSCP_TYPE_MEASUREMENT_RESERVED46" />
-    <type id="47" name="Dose equivalent" token="VSCP_TYPE_MEASUREMENT_DOSE_EQVIVALENT" />
-    <type id="48" name="Reserved" token="VSCP_TYPE_MEASUREMENT_RESERVED48" />
-    <type id="49" name="Dew Point" token="VSCP_TYPE_MEASUREMENT_DEWPOINT" />
-    <type id="50" name="Relative Level" token="VSCP_TYPE_MEASUREMENT_RELATIVE_LEVEL" />
-    <type id="51" name="Altitude" token="VSCP_TYPE_MEASUREMENT_ALTITUDE" />
-    <type id="52" name="Area" token="VSCP_TYPE_MEASUREMENT_AREA" />
-    <type id="53" name="Radiant intensity" token="VSCP_TYPE_MEASUREMENT_RADIANT_INTENSITY" />
-    <type id="54" name="Radiance" token="VSCP_TYPE_MEASUREMENT_RADIANCE" />
-    <type id="55" name="Irradiance, Exitance, Radiosity" token="VSCP_TYPE_MEASUREMENT_IRRADIANCE" />
-    <type id="56" name="Spectral radiance" token="VSCP_TYPE_MEASUREMENT_SPECTRAL_RADIANCE" />
-    <type id="57" name="Spectral irradiance" token="VSCP_TYPE_MEASUREMENT_SPECTRAL_IRRADIANCE" />
-    <type id="58" name="Sound pressure (acoustic pressure)" token="VSCP_TYPE_MEASUREMENT_SOUND_PRESSURE" />
-    <type id="59" name="Sound energy density" token="VSCP_TYPE_MEASUREMENT_SOUND_DENSITY" />
-    <type id="60" name="Sound level" token="VSCP_TYPE_MEASUREMENT_SOUND_LEVEL" />
+    
+    <type id="7" name="Amount of substance" token="VSCP_TYPE_MEASUREMENT_AMOUNT_OF_SUBSTANCE" >
+        <units>
+            <unit id="0" 
+                    name="mole" 
+                    description="Amount of substance in mole"
+                    symbol-ascii="mol"
+                    symbol-utf8="mol"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="8" name="Luminous Intensity (Intensity of light)" token="VSCP_TYPE_MEASUREMENT_INTENSITY_OF_LIGHT" >
+        <units>
+            <unit id="0" 
+                    name="candela" 
+                    description="Candela"
+                    symbol-ascii="cd"
+                    symbol-utf8="cd"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="9" name="Frequency" token="VSCP_TYPE_MEASUREMENT_FREQUENCY" >
+        <units>
+            <unit id="0" 
+                    name="hertz" 
+                    description="Hertz"
+                    symbol-ascii="Hz"
+                    symbol-utf8="hz"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="10" name="Radioactivity and other random events" token="VSCP_TYPE_MEASUREMENT_RADIOACTIVITY" >
+        <units>
+            <unit id="0" 
+                    name="becquerel" 
+                    description="Becquerel"
+                    symbol-ascii="Bq"
+                    symbol-utf8="Bq"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="curie" 
+                    description="Curie"
+                    symbol-ascii="Ci"
+                    symbol-utf8="Ci"
+                    conversion="{{val}}/(3.7*10^10)"
+                    Comment="Derived from 37 GBq" /> 
+            <unit id="2" 
+                    name="rutherford" 
+                    description="Rutherford"
+                    symbol-ascii="Rd"
+                    symbol-utf8="Rd"
+                    conversion="{{val}}/10^6)"
+                    Comment="Derived from 37 GBq" />                                       
+        </units>    
+    </type>
+    
+    <type id="11" name="Force" token="VSCP_TYPE_MEASUREMENT_FORCE" >
+        <units>
+            <unit id="0" 
+                    name="newton" 
+                    description="Newton"
+                    symbol-ascii="N"
+                    symbol-utf8="N"
+                    conversion="{{val}}"
+                    Comment="Derived from kg * m * s^⁻2" />
+        </units>    
+    </type>
+    
+    <type id="12" name="Pressure" token="VSCP_TYPE_MEASUREMENT_PRESSURE" >
+        <units>
+            <unit id="0" 
+                    name="pascal" 
+                    description="Pascal"
+                    symbol-ascii="Pa"
+                    symbol-utf8="Pa"
+                    conversion="{{val}}"
+                    comment="N/m2, Derived from kg/(m·s^2) or J/m^3" />
+            <unit id="1" 
+                    name="bar" 
+                    description="Bar"
+                    symbol-ascii="Pa"
+                    symbol-utf8="Pa"
+                    conversion="{{val}}*10^5"
+                    comment="" /> 
+            <unit id="2" 
+                    name="psi" 
+                    description="Psi"
+                    symbol-ascii="Pa"
+                    symbol-utf8="Pa"
+                    conversion="{{val}}*6.8948*10^3"
+                    comment="" />
+            <unit id="3" 
+                    name="atm" 
+                    description="Standard atmosphere"
+                    symbol-ascii="atm"
+                    symbol-utf8="atm"
+                    conversion="{{val}}*101.325*10^3"
+                    comment="" />
+            <unit id="4" 
+                    name="torr" 
+                    description="Torr"
+                    symbol-ascii="torr"
+                    symbol-utf8="torr"
+                    conversion="{{val}}*133.322368"
+                    comment="[Torr]≈[mmHg]" />
+            <unit id="5" 
+                    name="at" 
+                    description="Technical atmosphere"
+                    symbol-ascii="at"
+                    symbol-utf8="at"
+                    conversion="{{val}}*98.0665*10^3"
+                    comment="" />
+            <unit id="6" 
+                    name="at" 
+                    description="Centimeters of water column"
+                    symbol-ascii="cmH2O"
+                    symbol-utf8="cmH2O"
+                    conversion="{{val}}*98.0665"
+                    comment="" />                                                                                   
+        </units>    
+    </type>
+    
+    <type id="13" name="Energy" token="VSCP_TYPE_MEASUREMENT_ENERGY" >
+        <units>
+            <unit id="0" 
+                    name="joule" 
+                    description="Joule"
+                    symbol-ascii="J"
+                    symbol-utf8="J"
+                    conversion="{{val}}"
+                    comment="Derived from N*m" />
+            <unit id="1" 
+                    name="kwh" 
+                    description="Kilowatt-hour"
+                    symbol-ascii="kWh"
+                    symbol-utf8="kWh"
+                    conversion="{{val}}*3600"
+                    comment="" />        
+        </units>    
+    </type>
+    
+    <type id="14" name="Power" token="VSCP_TYPE_MEASUREMENT_POWER" >
+        <units>
+            <unit id="0" 
+                    name="watt" 
+                    description="Watt"
+                    symbol-ascii="W"
+                    symbol-utf8="W"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="Horsepower" 
+                    description="Horsepower"
+                    symbol-ascii="W"
+                    symbol-utf8="W"
+                    conversion="{{val}}*745.699872"
+                    description="One horsepower equals 33,000 foot-pounds of work per minute" />                    
+        </units>    
+    </type>
+    
+    <type id="15" name="Electrical Charge" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CHARGE" >
+        <units>
+            <unit id="0" 
+                    name="coulomb" 
+                    description="Coulomb"
+                    symbol-ascii="C"
+                    symbol-utf8="C"
+                    conversion="{{val}}"
+                    description="1C = 1A * 1s" />
+        </units>    
+    </type>
+    
+    <type id="16" name="Electrical Potential (Voltage)" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_POTENTIAL" >
+        <units>
+            <unit id="0" 
+                    name="voltage" 
+                    description="Voltage"
+                    symbol-ascii="V"
+                    symbol-utf8="V"
+                    conversion="{{val}}"
+                    description="V = kg⋅m2⋅A−1⋅s−3" />
+        </units>    
+    </type>
+    
+    <type id="17" name="Electrical Capacitance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CAPACITANCE" >
+        <units>
+            <unit id="0" 
+                    name="farad" 
+                    description="Farad"
+                    symbol-ascii="C"
+                    symbol-utf8="C"
+                    conversion="{{val}}"
+                    description="F = A2 s4 kg−1 m−2" />
+        </units>    
+    </type>
+    
+    <type id="18" name="Electrical Resistance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_RESISTANCE" >
+        <units>
+            <unit id="0" 
+                    name="ohm" 
+                    description="Ohm"
+                    symbol-ascii="ohm"
+                    symbol-utf8="Ω"
+                    conversion="{{val}}"
+                    description="W*A-2" />
+        </units>    
+    </type>
+    
+    <type id="19" name="Electrical Conductance" token="VSCP_TYPE_MEASUREMENT_ELECTRICAL_CONDUCTANCE" >
+        <units>
+            <unit id="0" 
+                    name="siemens" 
+                    description="Siemens"
+                    symbol-ascii="S"
+                    symbol-utf8="S"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="20" name="Magnetic Field Strength" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FIELD_STRENGTH" >
+        <units>
+            <unit id="0" 
+                    name="ampere per meter" 
+                    description="Ampere per meter"
+                    symbol-ascii="A/m"
+                    symbol-utf8="A/m"
+                    conversion="{{val}}"
+                    description="1kA/m=12.54Oe" />
+            <unit id="1" 
+                    name="Oersted" 
+                    description="Oersted"
+                    symbol-ascii="oe"
+                    symbol-utf8="oe"
+                    conversion="{{val}}*79.77"
+                    description="" />                                        
+        </units>    
+    </type>
+    
+    <type id="21" name="Magnetic Flux" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FLUX" >
+        <units>
+            <unit id="0" 
+                    name="weber" 
+                    description="Weber (B)"
+                    symbol-ascii="Wb"
+                    symbol-utf8="Wb"
+                    conversion="{{val}}"
+                    description="kg⋅m2⋅s−2⋅A−1, A flux density of 1 Wb/m2 is 1 tesla" />
+              
+                    
+
+        </units>    
+    </type>
+    
+    <type id="22" name="Magnetic Flux Density" token="VSCP_TYPE_MEASUREMENT_MAGNETIC_FLUX_DENSITY" >
+        <units>
+            <unit id="0" 
+                    name="tesla" 
+                    description="Tesla (B)"
+                    symbol-ascii="A"
+                    symbol-utf8="A"
+                    conversion="{{val}}"
+                    description="kilogram per second2 per ampere" />
+            <unit id="1" 
+                    name="gauss" 
+                    description="Gauss"
+                    symbol-ascii="Gs"
+                    symbol-utf8="Gs"
+                    conversion="{{val}}*10^−4"
+                    description="" />        
+        </units>    
+    </type>
+    
+    <type id="23" name="Inductance" token="VSCP_TYPE_MEASUREMENT_INDUCTANCE" >
+        <units>
+            <unit id="0" 
+                    name="henry" 
+                    description="Henry"
+                    symbol-ascii="H"
+                    symbol-utf8="H"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="24" name="Luminous Flux" token="VSCP_TYPE_MEASUREMENT_FLUX_OF_LIGHT" >
+        <units>
+            <unit id="0" 
+                    name="Ampere" 
+                    description="Ampere"
+                    symbol-ascii="lm"
+                    symbol-utf8="Φv"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="25" name="Illuminance" token="VSCP_TYPE_MEASUREMENT_ILLUMINANCE" >
+        <units>
+            <unit id="0" 
+                    name="lux" 
+                    description="Lux"
+                    symbol-ascii="lx"
+                    symbol-utf8="lx"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="26" name="Radiation dose (absorbed)" token="VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_ABSORBED" >
+        <units>
+            <unit id="0" 
+                    name="gray" 
+                    description="Gray"
+                    symbol-ascii="gy"
+                    symbol-utf8="gy"
+                    conversion="{{val}}" 
+                    description="Absorbed dose" />             
+        </units>    
+    </type>
+    
+    <type id="27" name="Catalytic activity" token="VSCP_TYPE_MEASUREMENT_CATALYTIC_ACITIVITY" >
+        <units>
+            <unit id="0" 
+                    name="katal" 
+                    description="Katal"
+                    symbol-ascii="kat"
+                    symbol-utf8="kat"
+                    conversion="{{val}}"
+                    description="mol/s" />
+        </units>    
+    </type>
+    
+    <type id="28" name="Volume" token="VSCP_TYPE_MEASUREMENT_VOLUME" >
+        <units>
+            <unit id="0" 
+                    name="cubic meter" 
+                    description="Cubic meter"
+                    symbol-ascii="m3"
+                    symbol-utf8="m³"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="litre" 
+                    description="Litre"
+                    symbol-ascii="L"
+                    symbol-utf8="dm³"
+                    conversion="{{val}}*10^3" />
+            <unit id="2" 
+                    name="decilitre" 
+                    description="Decilitre"
+                    symbol-ascii="dl"
+                    symbol-utf8="dl"
+                    conversion="{{val}}*10^4" />
+            <unit id="3" 
+                    name="centilitre" 
+                    description="Centilitre"
+                    symbol-ascii="cl"
+                    symbol-utf8="cl"
+                    conversion="{{val}}*10^5" />
+            <unit id="4" 
+                    name="millilitre" 
+                    description="Millilitre"
+                    symbol-ascii="ml"
+                    symbol-utf8="cm³"
+                    conversion="{{val}}*10^6" />                                                        
+        </units>    
+    </type>
+    
+    <type id="29" name="Sound intensity" token="VSCP_TYPE_MEASUREMENT_SOUND_INTENSITY" >
+        <units>
+            <unit id="0" 
+                    name="watt per square meter" 
+                    description="watt per square meter"
+                    symbol-ascii="W/m2"
+                    symbol-utf8="W/m²"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="30" name="Angle" token="VSCP_TYPE_MEASUREMENT_ANGLE" >
+        <units>
+            <unit id="0" 
+                    name="radian" 
+                    description="Radian"
+                    symbol-ascii="rad"
+                    symbol-utf8="rad"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="degree" 
+                    description="Degree"
+                    symbol-ascii="deg"
+                    symbol-utf8="°"
+                    conversion="{{val}}*pi/180" />
+            <unit id="2" 
+                    name="arcminute" 
+                    description="Arcminute"
+                    symbol-ascii="arcmin"
+                    symbol-utf8="arcmin"
+                    conversion="{{val}}*pi/10800" /> 
+            <unit id="3" 
+                    name="arcsecond" 
+                    description="Arcsecond"
+                    symbol-ascii="arcsec"
+                    symbol-utf8="arcsec"
+                    conversion="{{val}}*pi/648000" />                                               
+        </units>    
+    </type>
+    
+    <type id="31" name="Position WGS 84" token="VSCP_TYPE_MEASUREMENT_POSITION" >
+        <units>
+            <unit id="0" 
+                    name="Longitude" 
+                    description="Longitude"
+                    symbol-ascii="long"
+                    symbol-utf8="long"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="Latitude" 
+                    description="Latitude"
+                    symbol-ascii="lat"
+                    symbol-utf8="lat"
+                    conversion="{{val}}" />        
+        </units>    
+    </type>
+    
+    <type id="32" name="Speed" token="VSCP_TYPE_MEASUREMENT_SPEED" >
+        <units>
+            <unit id="0" 
+                    name="meter per second" 
+                    description="Meters per second"
+                    symbol-ascii="m/s"
+                    symbol-utf8="m/s"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="kilometers per hour" 
+                    description="Kilometers per hour"
+                    symbol-ascii="km/h"
+                    symbol-utf8="km/h"
+                    conversion="{{val}}/3.6" /> 
+            <unit id="2" 
+                    name="miles per hour" 
+                    description="Miles per hour"
+                    symbol-ascii="mph"
+                    symbol-utf8="mph"
+                    conversion="{{val}}*0.44704" />                
+        </units>    
+    </type>
+    
+    <type id="33" name="Acceleration" token="VSCP_TYPE_MEASUREMENT_ACCELERATION" >
+        <units>
+            <unit id="0" 
+                    name="meters per second/second " 
+                    description="Meters per second/second "
+                    symbol-ascii="m/s2"
+                    symbol-utf8="m/s²"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="34" name="Tension" token="VSCP_TYPE_MEASUREMENT_TENSION" >
+        <units>
+            <unit id="0" 
+                    name="newton meter" 
+                    description="Newton meter"
+                    symbol-ascii="N/m"
+                    symbol-utf8="N/m"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="35" name="Damp/moist (Hygrometer reading)" token="VSCP_TYPE_MEASUREMENT_HUMIDITY" >
+        <units>
+            <unit id="0" 
+                    name="relative humidity (0-100%)" 
+                    description="Relative humidity (0-100%)"
+                    symbol-ascii="%"
+                    symbol-utf8="%"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="36" name="Flow" token="VSCP_TYPE_MEASUREMENT_FLOW" >
+        <units>
+            <unit id="0" 
+                    name="cubic meters per second" 
+                    description="Cubic meters per second"
+                    symbol-ascii="m3/s"
+                    symbol-utf8="m³/s"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="litres per second" 
+                    description="Litres meters per second"
+                    symbol-ascii="L/s"
+                    symbol-utf8="dm³/s"
+                    conversion="{{val}}" />        
+        </units>    
+    </type>
+    
+    <type id="37" name="Thermal resistance" token="VSCP_TYPE_MEASUREMENT_THERMAL_RESISTANCE" >
+        <units>
+            <unit id="0" 
+                    name="kelvins per watt" 
+                    description="Kelvins per watt"
+                    symbol-ascii="K/W"
+                    symbol-utf8="K/W"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="38" name="Refractive (optical) power" token="VSCP_TYPE_MEASUREMENT_REFRACTIVE_POWER" >
+        <units>
+            <unit id="0" 
+                    name="refractive (optical) power" 
+                    description="Refractive (optical) power"
+                    symbol-ascii="dpt"
+                    symbol-utf8="dpt"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="39" name="Dynamic viscosity" token="VSCP_TYPE_MEASUREMENT_DYNAMIC_VISCOSITY" >
+        <units>            
+            <unit id="0" 
+                    name="pascal second" 
+                    description="Pascal second"
+                    symbol-ascii="Pa s"
+                    symbol-utf8="Pa s"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="poise" 
+                    description="poise"
+                    symbol-ascii="P"
+                    symbol-utf8="P"
+                    conversion="{{val}}/10" />         
+            <unit id="2" 
+                    name="poiseuille" 
+                    description="Poiseuille"
+                    symbol-ascii="PI"
+                    symbol-utf8="PI"
+                    conversion="{{val}}" />        
+        </units>    
+    </type>
+    
+    <type id="40" name="Sound impedance" token="VSCP_TYPE_MEASUREMENT_SOUND_IMPEDANCE" >
+        <units>
+            <unit id="0" 
+                    name="pascal second per cubic metre" 
+                    description="Pascal second per cubic metre"
+                    symbol-ascii="Pa s/m3"
+                    symbol-utf8="Pa·s/m³"
+                    conversion="{{val}}"
+                    description="Alternative unit is rayl/m2 (Rayleigh)" />
+        </units>    
+    </type>
+    
+    <type id="41" name="Sound resistance" token="VSCP_TYPE_MEASUREMENT_SOUND_RESISTANCE" >
+        <units>
+            <unit id="0" 
+                    name="acoustic ohm" 
+                    description="Acoustic ohm"
+                    symbol-ascii="Pa s/ m3"
+                    symbol-utf8="Pa · s/ m³"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="42" name="Electric elastance" token="VSCP_TYPE_MEASUREMENT_ELECTRIC_ELASTANCE" >
+        <units>
+            <unit id="0" 
+                    name="reciprocal farad (daraf)" 
+                    description="Reciprocal farad (daraf)"
+                    symbol-ascii="1/F"
+                    symbol-utf8="1/F"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="43" name="Luminous energy" token="VSCP_TYPE_MEASUREMENT_LUMINOUS_ENERGY" >
+        <units>
+            <unit id="0" 
+                    name="talbot" 
+                    description="Talbot"
+                    symbol-ascii="tb"
+                    symbol-utf8="tb"
+                    conversion="{{val}}"
+                    description="lm · s" />
+        </units>    
+    </type>
+    
+    <type id="44" name="Luminance" token="VSCP_TYPE_MEASUREMENT_LUMINANCE" >
+        <units>
+            <unit id="0" 
+                    name="candela per square metre" 
+                    description="Candela per square metre"
+                    symbol-ascii="cd/m2"
+                    symbol-utf8="cd/m²"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="45" name="Chemical (molar) concentration" token="VSCP_TYPE_MEASUREMENT_CHEMICAL_CONCENTRATION_MOLAR" >
+        <units>
+            <unit id="0" 
+                    name="mol per cubic metre" 
+                    description="Mol per cubic metre"
+                    symbol-ascii="mol/m3 "
+                    symbol-utf8="mol/m³ "
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="mol per litre" 
+                    description="Mol per litre"
+                    symbol-ascii="mol/L "
+                    symbol-utf8="mol/L "
+                    conversion="{{val}}/1000" />        
+        </units>    
+    </type>
+    
+    <type id="46" name="Chemical (mass) concentration" token="VSCP_TYPE_MEASUREMENT_CHEMICAL_CONCENTRATION_MASS" >
+        <units>
+            <unit id="0" 
+                    name="kilogram per cubic metre" 
+                    description="Kilogram per cubic metre"
+                    symbol-ascii="kg/m3 "
+                    symbol-utf8="kg/m³ "
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="47" name="Reserved" token="VSCP_TYPE_MEASUREMENT_DOSE_EQVIVALENT" >   
+    </type>
+    
+    <type id="48" name="Reserved" token="VSCP_TYPE_MEASUREMENT_RESERVED48" >   
+    </type>
+    
+    <type id="49" name="Dew Point" token="VSCP_TYPE_MEASUREMENT_DEWPOINT" >
+        <units>
+            <unit id="0" 
+                    name="kelvin"
+                    description="Degrees Kelvin"
+                    symbol-ascii="K"
+                    symbol-utf8="K"                            
+                    conversion="{{val}}"/>
+            <unit id="1" 
+                    name="celsius"
+                    description="Degrees Celsius"
+                    symbol-ascii="C"
+                    symbol-utf8="°C"        
+                    conversion="{{val}} + 273.15 "/>
+            <unit id="2" 
+                    name="fahrenheit"
+                    description="Degrees Fahrenheit"
+                    symbol-ascii="F"
+                    symbol-utf8="°F" 
+                    conversion="({{val}} + 459.67) * 5/9"/>
+        </units>    
+    </type>
+    
+    <type id="50" name="Relative Level" token="VSCP_TYPE_MEASUREMENT_RELATIVE_LEVEL" >
+        <units>
+            <unit id="0" 
+                    name="relative value" 
+                    description="relative"
+                    symbol-ascii="relative"
+                    symbol-utf8="relative"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="51" name="Altitude" token="VSCP_TYPE_MEASUREMENT_ALTITUDE" >
+        <units>
+            <unit id="0" 
+                    name="meter" 
+                    description="meter"
+                    symbol-ascii="m"
+                    symbol-utf8="m"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="feet" 
+                    description="Feet"
+                    symbol-ascii="ft"
+                    symbol-utf8="ft"
+                    conversion="{{val}}*0.3048" />
+            <unit id="2" 
+                    name="inch" 
+                    description="Inch"
+                    symbol-ascii="in"
+                    symbol-utf8="in"
+                    conversion="{{val}}*0.0254" />                 
+        </units>    
+    </type>
+    
+    <type id="52" name="Area" token="VSCP_TYPE_MEASUREMENT_AREA" >
+        <units>
+            <unit id="0" 
+                    name="square meter" 
+                    description="Square meter"
+                    symbol-ascii="m2"
+                    symbol-utf8="m²"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="53" name="Radiant intensity" token="VSCP_TYPE_MEASUREMENT_RADIANT_INTENSITY" >
+        <units>
+            <unit id="0" 
+                    name="watt per steradian" 
+                    description="Watt per steradian"
+                    symbol-ascii="W/sr"
+                    symbol-utf8="W/sr"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="54" name="Radiance" token="VSCP_TYPE_MEASUREMENT_RADIANCE" >
+        <units>
+            <unit id="0" 
+                    name="watt per steradian per square metre" 
+                    description="Watt per steradian per square metre"
+                    symbol-ascii="W⋅sr−1⋅m−2"
+                    symbol-utf8="W⋅sr^−1⋅m^−2"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="55" name="Irradiance, Exitance, Radiosity" token="VSCP_TYPE_MEASUREMENT_IRRADIANCE" >
+        <units>
+            <unit id="0" 
+                    name="watt per square metre" 
+                    description="Watt per square metre"
+                    symbol-ascii="W/m2"
+                    symbol-utf8="W/m²"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="56" name="Spectral radiance" token="VSCP_TYPE_MEASUREMENT_SPECTRAL_RADIANCE" >
+        <units>
+            <unit id="0" 
+                    name="watt per steradian per square metre, per metre " 
+                    description="Watt per steradian per square metre, per metre "
+                    symbol-ascii="W⋅sr−1⋅m−2"
+                    symbol-utf8="W⋅sr^−1⋅m*^−2"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="watt per square metre, per metre " 
+                    description="Watt per square metre, per metre "
+                    symbol-ascii="W⋅sr−1⋅m−3"
+                    symbol-utf8="W⋅sr^−1⋅m*^−3"
+                    conversion="{{val}}" /> 
+            <unit id="2" 
+                    name="watt per square metre per hertz " 
+                    description="Watt per square metre per hertz "
+                    symbol-ascii="W/m3"
+                    symbol-utf8="W/m^3"
+                    conversion="{{val}}" />               
+        </units>    
+    </type>
+    
+    <type id="57" name="Spectral irradiance" token="VSCP_TYPE_MEASUREMENT_SPECTRAL_IRRADIANCE" >
+        <units>
+            <unit id="0" 
+                    name="watt per square metre per hertz " 
+                    description="Watt per square metre per hertz "
+                    symbol-ascii="W⋅m−2⋅Hz−1"
+                    symbol-utf8="W⋅m^−2⋅Hz^−1"
+                    conversion="{{val}}" />
+            <unit id="1" 
+                    name="watt per square metre, per metre " 
+                    description="Watt per square metre, per metre "
+                    symbol-ascii="W⋅sr−1⋅m−3"
+                    symbol-utf8="W⋅sr^−1⋅m*^−3"
+                    conversion="{{val}}" /> 
+            <unit id="2" 
+                    name="watt per square metre per hertz " 
+                    description="Watt per square metre per hertz "
+                    symbol-ascii="W/m3"
+                    symbol-utf8="W/m^3"
+                    conversion="{{val}}" />         
+        </units>    
+    </type>
+    
+    <type id="58" name="Sound pressure (acoustic pressure)" token="VSCP_TYPE_MEASUREMENT_SOUND_PRESSURE" >
+        <units>
+            <unit id="0" 
+                    name="pascal" 
+                    description="Pascal"
+                    symbol-ascii="Pa"
+                    symbol-utf8="Pa"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="59" name="Sound energy density" token="VSCP_TYPE_MEASUREMENT_SOUND_DENSITY" >
+        <units>
+            <unit id="0" 
+                    name="pascal" 
+                    description="Pascal"
+                    symbol-ascii="Pa"
+                    symbol-utf8="Pa"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="60" name="Sound level" token="VSCP_TYPE_MEASUREMENT_SOUND_LEVEL" >
+        <units>
+            <unit id="0" 
+                    name="decibel" 
+                    description="Decibel"
+                    symbol-ascii="dB"
+                    symbol-utf8="dB"
+                    conversion="{{val}}" />
+        </units>    
+    </type>
+    
+    <type id="61" name="Radiation dose (equivalent)" token="VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ" >
+        <units>
+            <unit id="0" 
+                    name="sievert" 
+                    description="Sievert"
+                    symbol-ascii="sv"
+                    symbol-utf8="sv"
+                    conversion="{{val}}"
+                    description="Equivalent dose, J⋅kg−1" />   
+            <unit id="1" 
+                    name="rem" 
+                    description="Rem"
+                    symbol-ascii="rem"
+                    symbol-utf8="rem"
+                    conversion="{{val}}/100"
+                    description="" />              
+        </units>    
+    </type>
+    
+    <type id="62" name="Radiation dose (exposure)" token="VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE" >
+        <units>
+            <unit id="0" 
+                    name="coulomb per kilogram" 
+                    description="Coulomb per kilogram"
+                    symbol-ascii="C/kg"
+                    symbol-utf8="C/kg"
+                    conversion="{{val}}"
+                    description="" />   
+            <unit id="1" 
+                    name="röntgen" 
+                    description="Röntgen"
+                    symbol-ascii="R"
+                    symbol-utf8="R"
+                    conversion="{{val}}/(2.58*10^-4)"
+                    description="" />              
+        </units>    
+    </type>
+    
 </class>

@@ -2,5 +2,5 @@
 
 <class id="523"
     name="Class2 Level I Measurements"
-    token="CLASS2.LEVEL1.MEASUREMENX1T"
-    events="class_12_measurementx1.xml" />
+    token="CLASS2.LEVEL1.MEASUREMENTX1"
+    events="class_11_measurement.xml" />

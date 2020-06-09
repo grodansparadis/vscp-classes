@@ -28,23 +28,60 @@ Links to other classes should have this format
 
     [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](./class1.information.md#type9)
 
+### Render templates 
+
+A structure
+
+```xml
+<render>
+    <vscpworks template="......." />
+</render>
+```
+
+holds one or more mustache named templates used to display information about an events dynamic data content. The first template defined is **vscpworks**. This template is used to display HTML based info about an event. The event is used as argument when the mustache expression is parsed. Meaning all parts of the event can be used. So for example {{vscpData[0]}} is data byte 0, vscpClass is the class, vscpGuid is the GUID and so on.
+
+A typical example is this visualization for CLASS1.MEASUREMENT
+
+```xml
+<vscpworks template="&lt;b&gt;Unit: &lt;/b&gt; = {{unitstr}} [{{unit}}]&lt;br&gt; &lt;b&gt;Sensorindex: &lt;/b&gt; = {{sensorindex}}&lt;br&gt; &lt;b&gt;Value: &lt;/b&gt; = {{val}}{{symbol-utf8}}&lt;br&gt;"/>
+```
+
+
 ### Measurements
 The measurement class (10) has a **\<unit\>** token that is used to describe units. Attributes are
 
 * **name** Name for the unit.
 * **description** Description of the unit.
-* **conversion** Conversion code to convert a value of the unit to a value of unit 0. Javascript is used as pseudo code for the conversion and value is specified as **val** in this code. Set to "0" if a conversion is not possible.
+* **symbol-ascii** Symbol in ASCII format
+* **symbol-utf8** Symbol in UTF8 format
+* **conversion** Conversion code to convert a value of the specific unit to a value of unit 0. Javascript [mustache](https://github.com/janl/mustache.js/) format is used as pseudo code for the conversion and value is specified as **{{val}}** in this code. [mathjs]() is used to parse the expression after mustache parser is run.
+Set to **{{val}}** if a conversion is not possible.
 
 This is how this looks for the temperature measurement type
 
 ```xml
 <type id="6" name="Temperature" token="VSCP_TYPE_MEASUREMENT_TEMPERATURE" >
         <units>
-            <unit id="0" Name="Kelvin" Description="Degrees Kelvin."/>
-            <unit id="1" Name="Celsius" Description="Degrees Celsius." conversion="val+273.15 "/>
-            <unit id="2" Name="Fahrenheit" Description="Degrees Fahrenheit." conversion="val + 459.67) × 5/9"/>
+            <unit id="0" 
+                    name="kelvin"
+                    description="Degrees Kelvin"
+                    symbol-ascii="K"
+                    symbol-utf8="K"
+                    conversion="{{val}}"/>
+            <unit id="1" 
+                    name="celsius"
+                    description="Degrees Celsius"
+                    symbol-ascii="C"
+                    symbol-utf8="°C"        
+                    conversion="{{val}} + 273.15 "/>
+            <unit id="2" 
+                    name="fahrenheit"
+                    description="Degrees Fahrenheit"
+                    symbol-ascii="F"
+                    symbol-utf8="°F" 
+                    conversion="({{val}} + 459.67) * 5/9"/>
         </units>
-    </type>
+</type>
 ```
 
 Note that unit can be in the interval 0-255 as class=10 is used to describe also Level II measurement classes. For Level I classes only unit 0-3 is valid of course.

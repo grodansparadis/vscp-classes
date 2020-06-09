@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright © 2000-2020 Ake Hedman,
+# Copyright (C) 2000-2020 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make JSON data from VSCP class & type
