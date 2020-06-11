@@ -65,6 +65,7 @@ outdata = json.dumps(o)
 if bverbose:
     print( outdata )
     print( o['class']['@token'])
+    print( o['class']['type'])
 
 # Write the file
 #file = open(outdir + "/" + filename,"w")
