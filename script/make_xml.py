@@ -34,7 +34,7 @@ def replace_specials(str):
 xclass = {}
 order_list = []  # class list order
 class_list = []  # List with class attributes
-type_list = []  # List with type attributes
+type_list = []   # List with type attributes
 
 args = sys.argv[1:]
 nargs = len(args)

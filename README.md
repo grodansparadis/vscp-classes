@@ -43,7 +43,8 @@ holds one or more mustache named templates used to display information about an 
 A typical example is this visualization for CLASS1.MEASUREMENT
 
 ```xml
-<vscpworks template="&lt;b&gt;Unit: &lt;/b&gt; = {{unitstr}} [{{unit}}]&lt;br&gt; &lt;b&gt;Sensorindex: &lt;/b&gt; = {{sensorindex}}&lt;br&gt; &lt;b&gt;Value: &lt;/b&gt; = {{val}}{{symbol-utf8}}&lt;br&gt;"/>
+<vscpworks template="&lt;b&gt;Unit: &lt;/b&gt; = {{unitstr}} [{{unit}}]&lt;br&gt; &lt;b&gt;Sensorindex: &lt;/b&gt; = {{sensorindex}}&lt;br&gt; &lt;b&gt;Value: &lt;/b&gt; = {{val}}{{symbol-utf8}}&lt;br&gt;"
+/>
 ```
 
 

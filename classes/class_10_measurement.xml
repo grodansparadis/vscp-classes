@@ -260,7 +260,7 @@
                     symbol-ascii="W"
                     symbol-utf8="W"
                     conversion="{{val}}*745.699872"
-                    description="One horsepower equals 33,000 foot-pounds of work per minute" />                    
+                    comment="One horsepower equals 33,000 foot-pounds of work per minute" />                    
         </units>    
     </type>
     
@@ -272,7 +272,7 @@
                     symbol-ascii="C"
                     symbol-utf8="C"
                     conversion="{{val}}"
-                    description="1C = 1A * 1s" />
+                    comment="1C = 1A * 1s" />
         </units>    
     </type>
     
@@ -284,7 +284,7 @@
                     symbol-ascii="V"
                     symbol-utf8="V"
                     conversion="{{val}}"
-                    description="V = kg⋅m2⋅A−1⋅s−3" />
+                    comment="V = kg⋅m2⋅A−1⋅s−3" />
         </units>    
     </type>
     
@@ -296,7 +296,7 @@
                     symbol-ascii="C"
                     symbol-utf8="C"
                     conversion="{{val}}"
-                    description="F = A2 s4 kg−1 m−2" />
+                    comment="F = A2 s4 kg−1 m−2" />
         </units>    
     </type>
     
@@ -308,7 +308,7 @@
                     symbol-ascii="ohm"
                     symbol-utf8="Ω"
                     conversion="{{val}}"
-                    description="W*A-2" />
+                    comment="W*A-2" />
         </units>    
     </type>
     
@@ -331,14 +331,14 @@
                     symbol-ascii="A/m"
                     symbol-utf8="A/m"
                     conversion="{{val}}"
-                    description="1kA/m=12.54Oe" />
+                    comment="1kA/m=12.54Oe" />
             <unit id="1" 
                     name="Oersted" 
                     description="Oersted"
                     symbol-ascii="oe"
                     symbol-utf8="oe"
                     conversion="{{val}}*79.77"
-                    description="" />                                        
+                    comment="" />                                        
         </units>    
     </type>
     
@@ -350,7 +350,7 @@
                     symbol-ascii="Wb"
                     symbol-utf8="Wb"
                     conversion="{{val}}"
-                    description="kg⋅m2⋅s−2⋅A−1, A flux density of 1 Wb/m2 is 1 tesla" />
+                    comment="kg⋅m2⋅s−2⋅A−1, A flux density of 1 Wb/m2 is 1 tesla" />
               
                     
 
@@ -365,14 +365,14 @@
                     symbol-ascii="A"
                     symbol-utf8="A"
                     conversion="{{val}}"
-                    description="kilogram per second2 per ampere" />
+                    comment="kilogram per second2 per ampere" />
             <unit id="1" 
                     name="gauss" 
                     description="Gauss"
                     symbol-ascii="Gs"
                     symbol-utf8="Gs"
                     conversion="{{val}}*10^−4"
-                    description="" />        
+                    comment="" />        
         </units>    
     </type>
     
@@ -417,7 +417,7 @@
                     symbol-ascii="gy"
                     symbol-utf8="gy"
                     conversion="{{val}}" 
-                    description="Absorbed dose" />             
+                    comment="Absorbed dose" />             
         </units>    
     </type>
     
@@ -429,7 +429,7 @@
                     symbol-ascii="kat"
                     symbol-utf8="kat"
                     conversion="{{val}}"
-                    description="mol/s" />
+                    comment="mol/s" />
         </units>    
     </type>
     
@@ -651,7 +651,7 @@
                     symbol-ascii="Pa s/m3"
                     symbol-utf8="Pa·s/m³"
                     conversion="{{val}}"
-                    description="Alternative unit is rayl/m2 (Rayleigh)" />
+                    comment="Alternative unit is rayl/m2 (Rayleigh)" />
         </units>    
     </type>
     
@@ -685,7 +685,7 @@
                     symbol-ascii="tb"
                     symbol-utf8="tb"
                     conversion="{{val}}"
-                    description="lm · s" />
+                    comment="lm · s" />
         </units>    
     </type>
     
@@ -922,14 +922,14 @@
                     symbol-ascii="sv"
                     symbol-utf8="sv"
                     conversion="{{val}}"
-                    description="Equivalent dose, J⋅kg−1" />   
+                    comment="Equivalent dose, J⋅kg−1" />   
             <unit id="1" 
                     name="rem" 
                     description="Rem"
                     symbol-ascii="rem"
                     symbol-utf8="rem"
                     conversion="{{val}}/100"
-                    description="" />              
+                    comment="" />              
         </units>    
     </type>
     
@@ -941,14 +941,14 @@
                     symbol-ascii="C/kg"
                     symbol-utf8="C/kg"
                     conversion="{{val}}"
-                    description="" />   
+                    comment="" />   
             <unit id="1" 
                     name="röntgen" 
                     description="Röntgen"
                     symbol-ascii="R"
                     symbol-utf8="R"
                     conversion="{{val}}/(2.58*10^-4)"
-                    description="" />              
+                    comment="" />              
         </units>    
     </type>
     
