@@ -4,9 +4,9 @@
     name="Level II Custom" 
     token="CLASS2.CUSTOM" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_CUSTOM_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_CUSTOM_GENERAL" />
 
 </class>
 

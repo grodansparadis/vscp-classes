@@ -246,6 +246,47 @@ Make type constants module for the node.js.
 #### Usage
     make_nodejs_type_constants.py >path/output
 
+
+### xml2json.py
+Convert XML file to JSON
+
+#### Usage
+    _xmltojson.py ../classes/../classes/class_10_measurement.xml >outfile.json
+
+* -v - Verbose
+* -h - Help
+
+In Python one can now use statements like the following to access information
+
+```
+# - Class token
+print( o['class']['@token'])
+
+# - All types
+print( o['class']['type'])
+
+# - Name for Type=6   
+print( o['class']['type'][6]
+['@name'])
+
+# - Unit =  Degrees celsius
+print( o['class']['type'][6]['units']['unit'][1])  
+
+# - # UTF8 symbol for degrees celsius
+print( o['class']['type'][6]
+['units']['unit'][1]['@symbol-utf8'])  
+
+# - Conversion formula to unit = 0
+print( o['class']['type'][6]['units']['unit'][1]['@conversion'])
+
+for conversions a mustache template is used where {{val}} is the floating point value.
+
+etc..
+
+```
+
+----
+
 ----
 
 ### dowork.sh

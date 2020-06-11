@@ -4,13 +4,13 @@
     name="Text to speech" 
     token="CLASS2.TEXT2SPEECH" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_TEXT2SPEECH_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_TEXT2SPEECH_GENERAL" />
 
-<type id="1" 
-    name="Talk"
-    token="VSCP2_TYPE_TEXT2SPEECH_TALK" />
+    <type id="1" 
+        name="Talk"
+        token="VSCP2_TYPE_TEXT2SPEECH_TALK" />
  
 </class>
 

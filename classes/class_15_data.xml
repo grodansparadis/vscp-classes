@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="15"
-    name="Data"
-    token="CLASS1.DATA" >
+    <class id="15"
+        name="Data"
+        token="CLASS1.DATA" >
 
-<type id="0"
-    name="General event"
-    token="VSCP_TYPE_DATA_GENERAL" />
+    <type id="0"
+        name="General event"
+        token="VSCP_TYPE_DATA_GENERAL" />
 
-<type id="1"
-    name="I/O value"
-    token="VSCP_TYPE_DATA_IO" />
+    <type id="1"
+        name="I/O value"
+        token="VSCP_TYPE_DATA_IO" />
 
-<type id="2"
-    name="A/D value"
-    token="VSCP_TYPE_DATA_AD" />
+    <type id="2"
+        name="A/D value"
+        token="VSCP_TYPE_DATA_AD" />
 
-<type id="3"
-    name="D/A value"
-    token="VSCP_TYPE_DATA_DA" />
+    <type id="3"
+        name="D/A value"
+        token="VSCP_TYPE_DATA_DA" />
 
-<type id="4"
-    name="Relative strength"
-    token="VSCP_TYPE_DATA_RELATIVE_STRENGTH" />
+    <type id="4"
+        name="Relative strength"
+        token="VSCP_TYPE_DATA_RELATIVE_STRENGTH" />
 
-<type id="5"
-    name="Signal Level"
-    token="VSCP_TYPE_DATA_SIGNAL_LEVEL" />
+    <type id="5"
+        name="Signal Level"
+        token="VSCP_TYPE_DATA_SIGNAL_LEVEL" />
 
-<type id="6"
-    name="Signal Quality"
-    token="VSCP_TYPE_DATA_SIGNAL_QUALITY" >
-    <units>
-        <unit id="0" name="Percent" description="Level 0-100 percent." conversion="val"/>
-        <unit id="1" name="Integer" description="Integer value." conversion="val"/>
-        <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion="val"/>
-    </units>
-</type>
+    <type id="6"
+        name="Signal Quality"
+        token="VSCP_TYPE_DATA_SIGNAL_QUALITY" >
+        <units>
+            <unit id="0" name="Percent" description="Level 0-100 percent." conversion="val"/>
+            <unit id="1" name="Integer" description="Integer value." conversion="val"/>
+            <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion="val"/>
+        </units>
+    </type>
 
 </class>

@@ -4,212 +4,212 @@
     name="Control"
     token="CLASS1.CONTROL" >
 
-<type id="0"
-    name="General event"
-    token="VSCP_TYPE_CONTROL_GENERAL" />
+    <type id="0"
+        name="General event"
+        token="VSCP_TYPE_CONTROL_GENERAL" />
 
-<type  id="1"
-    name="Mute on/off"
-    token="VSCP_TYPE_CONTROL_MUTE" />
+    <type  id="1"
+        name="Mute on/off"
+        token="VSCP_TYPE_CONTROL_MUTE" />
 
-<type  id="2"
-    name ="(All) Lamp(s) on/off"
-    token="VSCP_TYPE_CONTROL_ALL_LAMPS" />
+    <type  id="2"
+        name ="(All) Lamp(s) on/off"
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS" />
 
-<type  id="3"
-    name="Open"
-    token="VSCP_TYPE_CONTROL_OPEN" />
+    <type  id="3"
+        name="Open"
+        token="VSCP_TYPE_CONTROL_OPEN" />
 
-<type  id="4"
-    name="Close"
-    token="VSCP_TYPE_CONTROL_CLOSE" />
+    <type  id="4"
+        name="Close"
+        token="VSCP_TYPE_CONTROL_CLOSE" />
 
-<type  id="5"
-    name="TurnOn"
-    token="VSCP_TYPE_CONTROL_TURNON" />
+    <type  id="5"
+        name="TurnOn"
+        token="VSCP_TYPE_CONTROL_TURNON" />
 
-<type  id="6"
-    name="TurnOff"
-    token="VSCP_TYPE_CONTROL_TURNOFF" />
+    <type  id="6"
+        name="TurnOff"
+        token="VSCP_TYPE_CONTROL_TURNOFF" />
 
-<type  id="7"
-    name="Start"
-    token="VSCP_TYPE_CONTROL_START" />
+    <type  id="7"
+        name="Start"
+        token="VSCP_TYPE_CONTROL_START" />
 
-<type  id="8"
-    name="Stop"
-    token="VSCP_TYPE_CONTROL_STOP" />
+    <type  id="8"
+        name="Stop"
+        token="VSCP_TYPE_CONTROL_STOP" />
 
-<type  id="9"
-    name="Reset"
-    token="VSCP_TYPE_CONTROL_RESET" />
+    <type  id="9"
+        name="Reset"
+        token="VSCP_TYPE_CONTROL_RESET" />
 
-<type  id="10"
-    name="Interrupt"
-    token="VSCP_TYPE_CONTROL_INTERRUPT" />
+    <type  id="10"
+        name="Interrupt"
+        token="VSCP_TYPE_CONTROL_INTERRUPT" />
 
-<type  id="11"
-    name="Sleep"
-    token="VSCP_TYPE_CONTROL_SLEEP" />
+    <type  id="11"
+        name="Sleep"
+        token="VSCP_TYPE_CONTROL_SLEEP" />
 
-<type  id="12"
-    name="Wakeup"
-    token="VSCP_TYPE_CONTROL_WAKEUP" />
+    <type  id="12"
+        name="Wakeup"
+        token="VSCP_TYPE_CONTROL_WAKEUP" />
 
-<type  id="13"
-    name="Resume"
-    token="VSCP_TYPE_CONTROL_RESUME" />
+    <type  id="13"
+        name="Resume"
+        token="VSCP_TYPE_CONTROL_RESUME" />
 
-<type  id="14"
-    name="Pause"
-    token="VSCP_TYPE_CONTROL_PAUSE" />
+    <type  id="14"
+        name="Pause"
+        token="VSCP_TYPE_CONTROL_PAUSE" />
 
-<type  id="15"
-    name="Activate"
-    token="VSCP_TYPE_CONTROL_ACTIVATE" />
+    <type  id="15"
+        name="Activate"
+        token="VSCP_TYPE_CONTROL_ACTIVATE" />
 
-<type  id="16"
-    name="Deactivate"
-    token="VSCP_TYPE_CONTROL_DEACTIVATE" />
+    <type  id="16"
+        name="Deactivate"
+        token="VSCP_TYPE_CONTROL_DEACTIVATE" />
 
-<type  id="17"
-    name="Reserved for future use"
-    token="VSCP_TYPE_CONTROL_RESERVED17" />
+    <type  id="17"
+        name="Reserved for future use"
+        token="VSCP_TYPE_CONTROL_RESERVED17" />
 
-<type  id="18"
-    name="Reserved for future use"
-    token="VSCP_TYPE_CONTROL_RESERVED18" />
+    <type  id="18"
+        name="Reserved for future use"
+        token="VSCP_TYPE_CONTROL_RESERVED18" />
 
-<type  id="19"
-    name="Reserved for future use"
-    token="VSCP_TYPE_CONTROL_RESERVED19" />
+    <type  id="19"
+        name="Reserved for future use"
+        token="VSCP_TYPE_CONTROL_RESERVED19" />
 
-<type  id="20"
-    name="Dim lamp(s)"
-    token="VSCP_TYPE_CONTROL_DIM_LAMPS" />
+    <type  id="20"
+        name="Dim lamp(s)"
+        token="VSCP_TYPE_CONTROL_DIM_LAMPS" />
 
-<type  id="21"
-    name="Change Channel"
-    token="VSCP_TYPE_CONTROL_CHANGE_CHANNEL" />
+    <type  id="21"
+        name="Change Channel"
+        token="VSCP_TYPE_CONTROL_CHANGE_CHANNEL" />
 
-<type  id="22"
-    name="Change Level"
-    token="VSCP_TYPE_CONTROL_CHANGE_LEVEL" />
+    <type  id="22"
+        name="Change Level"
+        token="VSCP_TYPE_CONTROL_CHANGE_LEVEL" />
 
-<type  id="23"
-    name="Relative Change Level"
-    token="VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL" />
+    <type  id="23"
+        name="Relative Change Level"
+        token="VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL" />
 
-<type  id="24"
-    name="Measurement Request"
-    token="VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST" />
+    <type  id="24"
+        name="Measurement Request"
+        token="VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST" />
 
-<type  id="25"
-    name="Stream Data"
-    token="VSCP_TYPE_CONTROL_STREAM_DATA" />
+    <type  id="25"
+        name="Stream Data"
+        token="VSCP_TYPE_CONTROL_STREAM_DATA" />
 
-<type  id="26"
-    name="Sync"
-    token="VSCP_TYPE_CONTROL_SYNC" />
+    <type  id="26"
+        name="Sync"
+        token="VSCP_TYPE_CONTROL_SYNC" />
 
-<type  id="27"
-    name="Zoned Stream Data"
-    token="VSCP_TYPE_CONTROL_ZONED_STREAM_DATA" />
+    <type  id="27"
+        name="Zoned Stream Data"
+        token="VSCP_TYPE_CONTROL_ZONED_STREAM_DATA" />
 
-<type  id="28"
-    name="Set Pre-set"
-    token="VSCP_TYPE_CONTROL_SET_PRESET" />
+    <type  id="28"
+        name="Set Pre-set"
+        token="VSCP_TYPE_CONTROL_SET_PRESET" />
 
-<type  id="29"
-    name="Toggle state"
-    token="VSCP_TYPE_CONTROL_TOGGLE_STATE" />
+    <type  id="29"
+        name="Toggle state"
+        token="VSCP_TYPE_CONTROL_TOGGLE_STATE" />
 
-<type  id="30"
-    name="Timed pulse on"
-    token="VSCP_TYPE_CONTROL_TIMED_PULSE_ON" />
+    <type  id="30"
+        name="Timed pulse on"
+        token="VSCP_TYPE_CONTROL_TIMED_PULSE_ON" />
 
-<type  id="31"
-    name="Timed pulse off"
-    token="VSCP_TYPE_CONTROL_TIMED_PULSE_OFF" />
+    <type  id="31"
+        name="Timed pulse off"
+        token="VSCP_TYPE_CONTROL_TIMED_PULSE_OFF" />
 
-<type  id="32"
-    name="Set country/language"
-    token="VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGE" />
+    <type  id="32"
+        name="Set country/language"
+        token="VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGE" />
 
-<type  id="33"
-    name="Big Change level"
-    token="VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL" />
+    <type  id="33"
+        name="Big Change level"
+        token="VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL" />
 
-<type  id="34"
-    name="Move shutter up"
-    token="VSCP_TYPE_CONTROL_SHUTTER_UP" />
+    <type  id="34"
+        name="Move shutter up"
+        token="VSCP_TYPE_CONTROL_SHUTTER_UP" />
 
-<type  id="35"
-    name="Move shutter down"
-    token="VSCP_TYPE_CONTROL_SHUTTER_DOWN" />
+    <type  id="35"
+        name="Move shutter down"
+        token="VSCP_TYPE_CONTROL_SHUTTER_DOWN" />
 
-<type  id="36"
-    name="Move shutter left"
-    token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" />
+    <type  id="36"
+        name="Move shutter left"
+        token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" />
 
-<type  id="37"
-    name="Move shutter right"
-    token="VSCP_TYPE_CONTROL_SHUTTER_RIGHT" />
+    <type  id="37"
+        name="Move shutter right"
+        token="VSCP_TYPE_CONTROL_SHUTTER_RIGHT" />
 
-<type  id="38"
-    name="Move shutter to middle position"
-    token="VSCP_TYPE_CONTROL_SHUTTER_MIDDLE" />
+    <type  id="38"
+        name="Move shutter to middle position"
+        token="VSCP_TYPE_CONTROL_SHUTTER_MIDDLE" />
 
-<type  id="39"
-    name="Move shutter to preset position"
-    token="VSCP_TYPE_CONTROL_SHUTTER_PRESET" />
+    <type  id="39"
+        name="Move shutter to preset position"
+        token="VSCP_TYPE_CONTROL_SHUTTER_PRESET" />
 
-<type  id="40"
-    name="(All) Lamp(s) on"
-    token="VSCP_TYPE_CONTROL_ALL_LAMPS_ON" />
+    <type  id="40"
+        name="(All) Lamp(s) on"
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS_ON" />
 
-<type  id="41"
-    name="(All) Lamp(s) off"
-    token="VSCP_TYPE_CONTROL_ALL_LAMPS_OFF" />
+    <type  id="41"
+        name="(All) Lamp(s) off"
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS_OFF" />
 
-<type  id="42"
-    name="Lock"
-    token="VSCP_TYPE_CONTROL_LOCK" />
+    <type  id="42"
+        name="Lock"
+        token="VSCP_TYPE_CONTROL_LOCK" />
 
-<type  id="43"
-    name="Unlock"
-    token="VSCP_TYPE_CONTROL_UNLOCK" />
+    <type  id="43"
+        name="Unlock"
+        token="VSCP_TYPE_CONTROL_UNLOCK" />
 
-<type  id="44"
-    name="PWM set"
-    token="VSCP_TYPE_CONTROL_PWM" />
+    <type  id="44"
+        name="PWM set"
+        token="VSCP_TYPE_CONTROL_PWM" />
 
-<type  id="45"
-    name="Lock with token"
-    token="VSCP_TYPE_CONTROL_TOKEN_LOCK" />
+    <type  id="45"
+        name="Lock with token"
+        token="VSCP_TYPE_CONTROL_TOKEN_LOCK" />
 
-<type  id="46"
-    name="Unlock with token"
-    token="VSCP_TYPE_CONTROL_TOKEN_UNLOCK" />
+    <type  id="46"
+        name="Unlock with token"
+        token="VSCP_TYPE_CONTROL_TOKEN_UNLOCK" />
 
-<type  id="47"
-    name="Set security level"
-    token="VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL" />
+    <type  id="47"
+        name="Set security level"
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL" />
 
-<type  id="48"
-    name="Set security pin"
-    token="VSCP_TYPE_CONTROL_SET_SECURITY_PIN" />
+    <type  id="48"
+        name="Set security pin"
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_PIN" />
 
-<type  id="49"
-    name="Set security password"
-    token="VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD" />
+    <type  id="49"
+        name="Set security password"
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD" />
 
-<type  id="50"
-    name="Set security token"
-    token="VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN" />
+    <type  id="50"
+        name="Set security token"
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN" />
 
-<type  id="51"
-    name="Request new security token"
-    token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" />
+    <type  id="51"
+        name="Request new security token"
+        token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" />
 
 </class>

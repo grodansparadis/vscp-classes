@@ -4,16 +4,16 @@
     name="High Level Object" 
     token="CLASS2.HLO" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_HLO_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_HLO_GENERAL" />
 
-<type id="1" 
-    name="HLO Command"
-    token="VSCP2_TYPE_HLO_COMMAND" />
+    <type id="1" 
+        name="HLO Command"
+        token="VSCP2_TYPE_HLO_COMMAND" />
 
-<type id="2" 
-    name="HLO Response"
-    token="VSCP2_TYPE_HLO_RESPONSE" />
+    <type id="2" 
+        name="HLO Response"
+        token="VSCP2_TYPE_HLO_RESPONSE" />
  
 </class>

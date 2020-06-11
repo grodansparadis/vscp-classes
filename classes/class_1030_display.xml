@@ -4,9 +4,9 @@
     name="Level II Display" 
     token="CLASS2.DISPLAY" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_DISPLAY_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_DISPLAY_GENERAL" />
 
 </class>
 

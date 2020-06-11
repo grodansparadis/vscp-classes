@@ -9,6 +9,19 @@
 #
 # Convert XML file to JSON  xml2json filename.xml >filename.json
 #
+# - Class token
+# print( o['class']['@token'])    
+# - All types
+# print( o['class']['type'])
+# - Name for Type=6   
+# print( o['class']['type'][6]['@name'])
+# - Unit =  Degrees celsius 
+# print( o['class']['type'][6]['units']['unit'][1])  
+# - # UTF8 symbol for degrees celsius
+# print( o['class']['type'][6]['units']['unit'][1]['@symbol-utf8'])  
+# - Conversion formula to unit = 0
+# print( o['class']['type'][6]['units']['unit'][1]['@conversion'])
+
 
 import sys
 import os
@@ -63,9 +76,13 @@ o = xmltodict.parse(indata)
 outdata = json.dumps(o)
 
 if bverbose:
-    print( outdata )
-    print( o['class']['@token'])
-    print( o['class']['type'])
+#   print( outdata )
+    print( o['class']['@token'])    # class token
+    print( o['class']['type'])      # All types
+    print( o['class']['type'][6]['@name']) # Name for Type=6
+    print( o['class']['type'][6]['units']['unit'][1])  # Degrees celsius
+    print( o['class']['type'][6]['units']['unit'][1]['@symbol-utf8'])  # Symbol for degrees celsius
+    print( o['class']['type'][6]['units']['unit'][1]['@conversion']) # Conversion formula to unit 0
 
 # Write the file
 #file = open(outdir + "/" + filename,"w")

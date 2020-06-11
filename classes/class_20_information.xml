@@ -4,349 +4,349 @@
     name="Information" 
     token="CLASS1.INFORMATION" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_INFORMATION_GENERAL" /> 
-
-<type id="1" 
-    name="Button"
-    token="VSCP_TYPE_INFORMATION_BUTTON" />
-
-<type id="2"
-    name="Mouse"
-    token="VSCP_TYPE_INFORMATION_MOUSE" />
-
-<type id="3"
-    name="On"
-    token="VSCP_TYPE_INFORMATION_ON" />
-
-<type id="4"
-    name="Off"
-    token="VSCP_TYPE_INFORMATION_OFF" />
-
-<type id="5"
-    name="Alive"
-    token="VSCP_TYPE_INFORMATION_ALIVE" />
-
-<type id="6" 
-    name="Terminating"
-    token="VSCP_TYPE_INFORMATION_TERMINATING" />
-
-<type id="7" 
-    name="Opened"
-    token="VSCP_TYPE_INFORMATION_OPENED" />
-
-<type id="8" 
-    name="Closed"
-    token="VSCP_TYPE_INFORMATION_CLOSED" />
-
-<type id="9"
-    name="Node Heartbeat"
-    token="VSCP_TYPE_INFORMATION_NODE_HEARTBEAT" />
-
-<type id="10" 
-    name="Below limit"
-    token="VSCP_TYPE_INFORMATION_BELOW_LIMIT" />
-
-<type id="11" 
-    name="Above limit"
-    token="VSCP_TYPE_INFORMATION_ABOVE_LIMIT" />
-
-<type id="12" 
-    name="Pulse"
-    token="VSCP_TYPE_INFORMATION_PULSE" />
-
-<type id="13" 
-    name="Error"
-    token="VSCP_TYPE_INFORMATION_ERROR" />
-
-<type id="14" 
-    name="Resumed"
-    token="VSCP_TYPE_INFORMATION_RESUMED" />
-
-<type id="15" 
-    name="Paused"
-    token="VSCP_TYPE_INFORMATION_PAUSED" />
-
-<type id="16" 
-    name="Sleeping"
-    token="VSCP_TYPE_INFORMATION_SLEEP" />
-
-<type id="17" 
-    name="Good morning"
-    token="VSCP_TYPE_INFORMATION_GOOD_MORNING" />
-
-<type id="18" 
-    name="Good day"
-    token="VSCP_TYPE_INFORMATION_GOOD_DAY" />
-
-<type id="19" 
-    name="Good afternoon"
-    token="VSCP_TYPE_INFORMATION_GOOD_AFTERNOON" />
-
-<type id="20" 
-    name="Good evening"
-    token="VSCP_TYPE_INFORMATION_GOOD_EVENING" />
-
-<type id="21" 
-    name="Good night"
-    token="VSCP_TYPE_INFORMATION_GOOD_NIGHT" />
-
-<type id="22" 
-    name="See you soon"
-    token="VSCP_TYPE_INFORMATION_SEE_YOU_SOON" />
-
-<type id="23" 
-    name="Goodbye"
-    token="VSCP_TYPE_INFORMATION_GOODBYE" />
-
-<type id="24" 
-    name="Stop"
-    token="VSCP_TYPE_INFORMATION_STOP" />
-
-<type id="25" 
-    name="Start"
-    token="VSCP_TYPE_INFORMATION_START" />
-
-<type id="26" 
-    name="ResetCompleted"
-    token="VSCP_TYPE_INFORMATION_RESET_COMPLETED" />
-
-<type id="27" 
-    name="Interrupted"
-    token="VSCP_TYPE_INFORMATION_INTERRUPTED" />
-
-<type id="28" 
-    name="PreparingToSleep"
-    token="VSCP_TYPE_INFORMATION_PREPARING_TO_SLEEP" />
-
-<type id="29" 
-    name="WokenUp"
-    token="VSCP_TYPE_INFORMATION_WOKEN_UP" />
-
-<type id="30" 
-    name="Dusk"
-    token="VSCP_TYPE_INFORMATION_DUSK" />
-
-<type id="31" 
-    name="Dawn"
-    token="VSCP_TYPE_INFORMATION_DAWN" />
-
-<type id="32" 
-    name="Active"
-    token="VSCP_TYPE_INFORMATION_ACTIVE" />
-
-<type id="33" 
-    name="Inactive"
-    token="VSCP_TYPE_INFORMATION_INACTIVE" />
-
-<type id="34" 
-    name="Busy"
-    token="VSCP_TYPE_INFORMATION_BUSY" />
-
-<type id="35" 
-    name="Idle"
-    token="VSCP_TYPE_INFORMATION_IDLE" />
-
-<type id="36"
-    name="Stream Data"
-    token="VSCP_TYPE_INFORMATION_STREAM_DATA" />
-
-<type id="37" 
-    name="Token Activity"
-    token="VSCP_TYPE_INFORMATION_TOKEN_ACTIVITY" />
-                                                                                         
-<type id="38" 
-    name="Stream Data with zone"
-    token="VSCP_TYPE_INFORMATION_STREAM_DATA_WITH_ZONE" />
-
-<type id="39" 
-    name="Confirm"
-    token="VSCP_TYPE_INFORMATION_CONFIRM" />
-
-<type id="40" 
-    name="Level Changed"
-    token="VSCP_TYPE_INFORMATION_LEVEL_CHANGED" />
-
-<type id="41" 
-    name="Warning"
-    token="VSCP_TYPE_INFORMATION_WARNING" />
-
-<type id="42" 
-    name="State"
-    token="VSCP_TYPE_INFORMATION_STATE" />
-
-<type id="43" 
-    name="Action Trigger"
-    token="VSCP_TYPE_INFORMATION_ACTION_TRIGGER" />
-
-<type id="44" 
-    name="Sunrise"
-    token="VSCP_TYPE_INFORMATION_SUNRISE" />
-
-<type id="45" 
-    name="Sunset"
-    token="VSCP_TYPE_INFORMATION_SUNSET" />
-
-<type id="46" 
-    name="Start of record"
-    token="VSCP_TYPE_INFORMATION_START_OF_RECORD" />
-
-<type id="47" 
-    name="End of record"
-    token="VSCP_TYPE_INFORMATION_END_OF_RECORD" />
-
-<type id="48" 
-    name="Pre-set active"
-    token="VSCP_TYPE_INFORMATION_PRESET_ACTIVE" />
-
-<type id="49" 
-    name="Detect"
-    token="VSCP_TYPE_INFORMATION_DETECT" />
-
-<type id="50" 
-    name="Overflow"
-    token="VSCP_TYPE_INFORMATION_OVERFLOW" />
-
-<type id="51" 
-    name="Big level changed"
-    token="VSCP_TYPE_INFORMATION_BIG_LEVEL_CHANGED" />
-
-<type id="52" 
-    name="Civil sunrise twilight time"
-    token="VSCP_TYPE_INFORMATION_SUNRISE_TWILIGHT_START" />
-
-<type id="53" 
-    name="Civil sunset twilight time"
-    token="VSCP_TYPE_INFORMATION_SUNSET_TWILIGHT_START" />
-
-<type id="54"
-    name="Nautical sunrise twilight time"
-    token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNRISE_TWILIGHT_START" />
-
-<type id="55" 
-    name="Nautical sunset twilight time"
-    token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNSET_TWILIGHT_START" />
-
-<type id="56" 
-    name="Astronomical sunrise twilight time"
-    token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNRISE_TWILIGHT_START" />
-
-<type id="57"
-    name="Astronomical sunset twilight time"
-    token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNSET_TWILIGHT_START" />
-
-<type id="58" 
-    name="Calculated Noon"
-    token="VSCP_TYPE_INFORMATION_CALCULATED_NOON" />
-
-<type id="59" 
-    name="Shutter up"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_UP" />
-
-<type id="60" 
-    name="Shutter down"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_DOWN" />
-
-<type id="61"
-    name="Shutter left"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_LEFT" />
-
-<type id="62" 
-    name="Shutter right"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_RIGHT" />
-
-<type id="63" 
-    name="Shutter reached top end"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_TOP" />
-
-<type id="64" 
-    name="Shutter reached bottom end"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_BOTTOM" />
-
-<type id="65"
-    name="Shutter reached middle end"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_MIDDLE" />
-
-<type id="66" 
-    name="Shutter reached preset end"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_PRESET" />
-
-<type id="67" 
-    name="Shutter reached preset left"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_LEFT" />
-
-<type id="68" 
-    name="Shutter reached preset right"
-    token="VSCP_TYPE_INFORMATION_SHUTTER_END_RIGHT" />
-
-<type id="69" 
-    name="Long click"
-    token="VSCP_TYPE_INFORMATION_LONG_CLICK" />
-
-<type id="70" 
-    name="Single click"
-    token="VSCP_TYPE_INFORMATION_SINGLE_CLICK" />
-
-<type id="71" 
-    name="Double click"
-    token="VSCP_TYPE_INFORMATION_DOUBLE_CLICK" />
-
-<type id="72" 
-    name="Date"
-    token="VSCP_TYPE_INFORMATION_DATE" />
-
-<type id="73" 
-    name="Time"
-    token="VSCP_TYPE_INFORMATION_TIME" />
-
-<type id="74" 
-    name="Weekday"
-    token="VSCP_TYPE_INFORMATION_WEEKDAY" />
-
-<type id="75" 
-    name="Lock"
-    token="VSCP_TYPE_INFORMATION_LOCK" />
-
-<type id="76"
-    name="Unlock"
-    token="VSCP_TYPE_INFORMATION_UNLOCK" />
-
-<type id="77"
-    name="DateTime"
-    token="VSCP_TYPE_INFORMATION_DATETIME" />
-
-<type id="78" 
-    name="Rising"
-    token="VSCP_TYPE_INFORMATION_RISING" />
-
-<type id="79"
-    name="Falling"
-    token="VSCP_TYPE_INFORMATION_FALLING" />
-
-<type id="80"
-    name="Updated"
-    token="VSCP_TYPE_INFORMATION_UPDATED" />
-
-<type id="81"
-    name="Connect"
-    token="VSCP_TYPE_INFORMATION_CONNECT" /> 
-
-<type id="82"
-    name="Disconnect"
-    token="VSCP_TYPE_INFORMATION_DISCONNECT" />         
-
-<type id="83"
-    name="Reconnect"
-    token="VSCP_TYPE_INFORMATION_RECONNECT" />
-
-<type id="84"
-    name="Enter"
-    token="VSCP_TYPE_INFORMATION_ENTER" />
-
-<type id="85"
-    name="Exit"
-    token="VSCP_TYPE_INFORMATION_EXIT" />
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_INFORMATION_GENERAL" /> 
+
+    <type id="1" 
+        name="Button"
+        token="VSCP_TYPE_INFORMATION_BUTTON" />
+
+    <type id="2"
+        name="Mouse"
+        token="VSCP_TYPE_INFORMATION_MOUSE" />
+
+    <type id="3"
+        name="On"
+        token="VSCP_TYPE_INFORMATION_ON" />
+
+    <type id="4"
+        name="Off"
+        token="VSCP_TYPE_INFORMATION_OFF" />
+
+    <type id="5"
+        name="Alive"
+        token="VSCP_TYPE_INFORMATION_ALIVE" />
+
+    <type id="6" 
+        name="Terminating"
+        token="VSCP_TYPE_INFORMATION_TERMINATING" />
+
+    <type id="7" 
+        name="Opened"
+        token="VSCP_TYPE_INFORMATION_OPENED" />
+
+    <type id="8" 
+        name="Closed"
+        token="VSCP_TYPE_INFORMATION_CLOSED" />
+
+    <type id="9"
+        name="Node Heartbeat"
+        token="VSCP_TYPE_INFORMATION_NODE_HEARTBEAT" />
+
+    <type id="10" 
+        name="Below limit"
+        token="VSCP_TYPE_INFORMATION_BELOW_LIMIT" />
+
+    <type id="11" 
+        name="Above limit"
+        token="VSCP_TYPE_INFORMATION_ABOVE_LIMIT" />
+
+    <type id="12" 
+        name="Pulse"
+        token="VSCP_TYPE_INFORMATION_PULSE" />
+
+    <type id="13" 
+        name="Error"
+        token="VSCP_TYPE_INFORMATION_ERROR" />
+
+    <type id="14" 
+        name="Resumed"
+        token="VSCP_TYPE_INFORMATION_RESUMED" />
+
+    <type id="15" 
+        name="Paused"
+        token="VSCP_TYPE_INFORMATION_PAUSED" />
+
+    <type id="16" 
+        name="Sleeping"
+        token="VSCP_TYPE_INFORMATION_SLEEP" />
+
+    <type id="17" 
+        name="Good morning"
+        token="VSCP_TYPE_INFORMATION_GOOD_MORNING" />
+
+    <type id="18" 
+        name="Good day"
+        token="VSCP_TYPE_INFORMATION_GOOD_DAY" />
+
+    <type id="19" 
+        name="Good afternoon"
+        token="VSCP_TYPE_INFORMATION_GOOD_AFTERNOON" />
+
+    <type id="20" 
+        name="Good evening"
+        token="VSCP_TYPE_INFORMATION_GOOD_EVENING" />
+
+    <type id="21" 
+        name="Good night"
+        token="VSCP_TYPE_INFORMATION_GOOD_NIGHT" />
+
+    <type id="22" 
+        name="See you soon"
+        token="VSCP_TYPE_INFORMATION_SEE_YOU_SOON" />
+
+    <type id="23" 
+        name="Goodbye"
+        token="VSCP_TYPE_INFORMATION_GOODBYE" />
+
+    <type id="24" 
+        name="Stop"
+        token="VSCP_TYPE_INFORMATION_STOP" />
+
+    <type id="25" 
+        name="Start"
+        token="VSCP_TYPE_INFORMATION_START" />
+
+    <type id="26" 
+        name="ResetCompleted"
+        token="VSCP_TYPE_INFORMATION_RESET_COMPLETED" />
+
+    <type id="27" 
+        name="Interrupted"
+        token="VSCP_TYPE_INFORMATION_INTERRUPTED" />
+
+    <type id="28" 
+        name="PreparingToSleep"
+        token="VSCP_TYPE_INFORMATION_PREPARING_TO_SLEEP" />
+
+    <type id="29" 
+        name="WokenUp"
+        token="VSCP_TYPE_INFORMATION_WOKEN_UP" />
+
+    <type id="30" 
+        name="Dusk"
+        token="VSCP_TYPE_INFORMATION_DUSK" />
+
+    <type id="31" 
+        name="Dawn"
+        token="VSCP_TYPE_INFORMATION_DAWN" />
+
+    <type id="32" 
+        name="Active"
+        token="VSCP_TYPE_INFORMATION_ACTIVE" />
+
+    <type id="33" 
+        name="Inactive"
+        token="VSCP_TYPE_INFORMATION_INACTIVE" />
+
+    <type id="34" 
+        name="Busy"
+        token="VSCP_TYPE_INFORMATION_BUSY" />
+
+    <type id="35" 
+        name="Idle"
+        token="VSCP_TYPE_INFORMATION_IDLE" />
+
+    <type id="36"
+        name="Stream Data"
+        token="VSCP_TYPE_INFORMATION_STREAM_DATA" />
+
+    <type id="37" 
+        name="Token Activity"
+        token="VSCP_TYPE_INFORMATION_TOKEN_ACTIVITY" />
+                                                                                            
+    <type id="38" 
+        name="Stream Data with zone"
+        token="VSCP_TYPE_INFORMATION_STREAM_DATA_WITH_ZONE" />
+
+    <type id="39" 
+        name="Confirm"
+        token="VSCP_TYPE_INFORMATION_CONFIRM" />
+
+    <type id="40" 
+        name="Level Changed"
+        token="VSCP_TYPE_INFORMATION_LEVEL_CHANGED" />
+
+    <type id="41" 
+        name="Warning"
+        token="VSCP_TYPE_INFORMATION_WARNING" />
+
+    <type id="42" 
+        name="State"
+        token="VSCP_TYPE_INFORMATION_STATE" />
+
+    <type id="43" 
+        name="Action Trigger"
+        token="VSCP_TYPE_INFORMATION_ACTION_TRIGGER" />
+
+    <type id="44" 
+        name="Sunrise"
+        token="VSCP_TYPE_INFORMATION_SUNRISE" />
+
+    <type id="45" 
+        name="Sunset"
+        token="VSCP_TYPE_INFORMATION_SUNSET" />
+
+    <type id="46" 
+        name="Start of record"
+        token="VSCP_TYPE_INFORMATION_START_OF_RECORD" />
+
+    <type id="47" 
+        name="End of record"
+        token="VSCP_TYPE_INFORMATION_END_OF_RECORD" />
+
+    <type id="48" 
+        name="Pre-set active"
+        token="VSCP_TYPE_INFORMATION_PRESET_ACTIVE" />
+
+    <type id="49" 
+        name="Detect"
+        token="VSCP_TYPE_INFORMATION_DETECT" />
+
+    <type id="50" 
+        name="Overflow"
+        token="VSCP_TYPE_INFORMATION_OVERFLOW" />
+
+    <type id="51" 
+        name="Big level changed"
+        token="VSCP_TYPE_INFORMATION_BIG_LEVEL_CHANGED" />
+
+    <type id="52" 
+        name="Civil sunrise twilight time"
+        token="VSCP_TYPE_INFORMATION_SUNRISE_TWILIGHT_START" />
+
+    <type id="53" 
+        name="Civil sunset twilight time"
+        token="VSCP_TYPE_INFORMATION_SUNSET_TWILIGHT_START" />
+
+    <type id="54"
+        name="Nautical sunrise twilight time"
+        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNRISE_TWILIGHT_START" />
+
+    <type id="55" 
+        name="Nautical sunset twilight time"
+        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNSET_TWILIGHT_START" />
+
+    <type id="56" 
+        name="Astronomical sunrise twilight time"
+        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNRISE_TWILIGHT_START" />
+
+    <type id="57"
+        name="Astronomical sunset twilight time"
+        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNSET_TWILIGHT_START" />
+
+    <type id="58" 
+        name="Calculated Noon"
+        token="VSCP_TYPE_INFORMATION_CALCULATED_NOON" />
+
+    <type id="59" 
+        name="Shutter up"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_UP" />
+
+    <type id="60" 
+        name="Shutter down"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_DOWN" />
+
+    <type id="61"
+        name="Shutter left"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_LEFT" />
+
+    <type id="62" 
+        name="Shutter right"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_RIGHT" />
+
+    <type id="63" 
+        name="Shutter reached top end"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_TOP" />
+
+    <type id="64" 
+        name="Shutter reached bottom end"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_BOTTOM" />
+
+    <type id="65"
+        name="Shutter reached middle end"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_MIDDLE" />
+
+    <type id="66" 
+        name="Shutter reached preset end"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_PRESET" />
+
+    <type id="67" 
+        name="Shutter reached preset left"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_LEFT" />
+
+    <type id="68" 
+        name="Shutter reached preset right"
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_RIGHT" />
+
+    <type id="69" 
+        name="Long click"
+        token="VSCP_TYPE_INFORMATION_LONG_CLICK" />
+
+    <type id="70" 
+        name="Single click"
+        token="VSCP_TYPE_INFORMATION_SINGLE_CLICK" />
+
+    <type id="71" 
+        name="Double click"
+        token="VSCP_TYPE_INFORMATION_DOUBLE_CLICK" />
+
+    <type id="72" 
+        name="Date"
+        token="VSCP_TYPE_INFORMATION_DATE" />
+
+    <type id="73" 
+        name="Time"
+        token="VSCP_TYPE_INFORMATION_TIME" />
+
+    <type id="74" 
+        name="Weekday"
+        token="VSCP_TYPE_INFORMATION_WEEKDAY" />
+
+    <type id="75" 
+        name="Lock"
+        token="VSCP_TYPE_INFORMATION_LOCK" />
+
+    <type id="76"
+        name="Unlock"
+        token="VSCP_TYPE_INFORMATION_UNLOCK" />
+
+    <type id="77"
+        name="DateTime"
+        token="VSCP_TYPE_INFORMATION_DATETIME" />
+
+    <type id="78" 
+        name="Rising"
+        token="VSCP_TYPE_INFORMATION_RISING" />
+
+    <type id="79"
+        name="Falling"
+        token="VSCP_TYPE_INFORMATION_FALLING" />
+
+    <type id="80"
+        name="Updated"
+        token="VSCP_TYPE_INFORMATION_UPDATED" />
+
+    <type id="81"
+        name="Connect"
+        token="VSCP_TYPE_INFORMATION_CONNECT" /> 
+
+    <type id="82"
+        name="Disconnect"
+        token="VSCP_TYPE_INFORMATION_DISCONNECT" />         
+
+    <type id="83"
+        name="Reconnect"
+        token="VSCP_TYPE_INFORMATION_RECONNECT" />
+
+    <type id="84"
+        name="Enter"
+        token="VSCP_TYPE_INFORMATION_ENTER" />
+
+    <type id="85"
+        name="Exit"
+        token="VSCP_TYPE_INFORMATION_EXIT" />
 
 
 </class>

@@ -4,44 +4,44 @@
     name="Display" 
     token="CLASS1.DISPLAY" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_DISPLAY_GENERAL" /> 
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_DISPLAY_GENERAL" /> 
 
-<type id="1"
-    name="Clear Display"
-    token="VSCP_TYPE_DISPLAY_CLEAR_DISPLAY" />
+    <type id="1"
+        name="Clear Display"
+        token="VSCP_TYPE_DISPLAY_CLEAR_DISPLAY" />
 
-<type id="2"
-    name="Position cursor"
-    token="VSCP_TYPE_DISPLAY_POSITION_CURSOR" />
+    <type id="2"
+        name="Position cursor"
+        token="VSCP_TYPE_DISPLAY_POSITION_CURSOR" />
 
-<type id="3"
-    name="Write Display"
-    token="VSCP_TYPE_DISPLAY_WRITE_DISPLAY" />
+    <type id="3"
+        name="Write Display"
+        token="VSCP_TYPE_DISPLAY_WRITE_DISPLAY" />
 
-<type id="4"
-    name="Write Display buffer"
-    token="VSCP_TYPE_DISPLAY_WRITE_DISPLAY_BUFFER" />
+    <type id="4"
+        name="Write Display buffer"
+        token="VSCP_TYPE_DISPLAY_WRITE_DISPLAY_BUFFER" />
 
-<type id="5"
-    name="Show Display Buffer"
-    token="VSCP_TYPE_DISPLAY_SHOW_DISPLAY_BUFFER" />
+    <type id="5"
+        name="Show Display Buffer"
+        token="VSCP_TYPE_DISPLAY_SHOW_DISPLAY_BUFFER" />
 
-<type id="6"
-    name="Set Display Buffer Parameter"
-    token="VSCP_TYPE_DISPLAY_SET_DISPLAY_BUFFER_PARAM" />
+    <type id="6"
+        name="Set Display Buffer Parameter"
+        token="VSCP_TYPE_DISPLAY_SET_DISPLAY_BUFFER_PARAM" />
 
-<type id="32"
-    name="Show Text"
-    token="VSCP_TYPE_DISPLAY_SHOW_TEXT" />
+    <type id="32"
+        name="Show Text"
+        token="VSCP_TYPE_DISPLAY_SHOW_TEXT" />
 
-<type id="48"
-    name="Set LED"
-    token="VSCP_TYPE_DISPLAY_SHOW_LED" />
+    <type id="48"
+        name="Set LED"
+        token="VSCP_TYPE_DISPLAY_SHOW_LED" />
 
-<type id="49"
-    name="Set RGB Color"
-    token="VSCP_TYPE_DISPLAY_SHOW_LED_COLOR" />
+    <type id="49"
+        name="Set RGB Color"
+        token="VSCP_TYPE_DISPLAY_SHOW_LED_COLOR" />
 
 </class>

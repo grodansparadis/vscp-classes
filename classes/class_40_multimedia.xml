@@ -4,164 +4,164 @@
     name="Multimedia" 
     token="CLASS1.MULTIMEDIA" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_MULTIMEDIA_GENERAL" /> 
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_MULTIMEDIA_GENERAL" /> 
 
-<type id="1"
-    name="Playback"
-    token="VSCP_TYPE_MULTIMEDIA_PLAYBACK" />
+    <type id="1"
+        name="Playback"
+        token="VSCP_TYPE_MULTIMEDIA_PLAYBACK" />
 
-<type id="2"
-    name="NavigatorKey English"
-    token="VSCP_TYPE_MULTIMEDIA_NAVIGATOR_KEY_ENG" />
+    <type id="2"
+        name="NavigatorKey English"
+        token="VSCP_TYPE_MULTIMEDIA_NAVIGATOR_KEY_ENG" />
 
-<type id="3"
-    name="Adjust Contrast"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_CONTRAST" />
+    <type id="3"
+        name="Adjust Contrast"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_CONTRAST" />
 
-<type id="4"
-    name="Adjust Focus"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_FOCUS" />
+    <type id="4"
+        name="Adjust Focus"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_FOCUS" />
 
-<type id="5"
-    name="Adjust Tint"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_TINT" />
+    <type id="5"
+        name="Adjust Tint"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_TINT" />
 
-<type id="6"
-    name="Adjust Color Balance"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_COLOUR_BALANCE" />
+    <type id="6"
+        name="Adjust Color Balance"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_COLOUR_BALANCE" />
 
-<type id="7"
-    name="Adjust Brightness"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_BRIGHTNESS" />
+    <type id="7"
+        name="Adjust Brightness"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_BRIGHTNESS" />
 
-<type id="8"
-    name="Adjust Hue"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_HUE" />
+    <type id="8"
+        name="Adjust Hue"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_HUE" />
 
-<type id="9"
-    name="Adjust Bass"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_BASS" />
+    <type id="9"
+        name="Adjust Bass"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_BASS" />
 
-<type id="10"
-    name="Adjust Treble"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_TREBLE" />
+    <type id="10"
+        name="Adjust Treble"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_TREBLE" />
 
-<type id="11"
-    name="Adjust Master Volume"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_MASTER_VOLUME" />
+    <type id="11"
+        name="Adjust Master Volume"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_MASTER_VOLUME" />
 
-<type id="12"
-    name="Adjust Front Volume"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_FRONT_VOLUME" />
+    <type id="12"
+        name="Adjust Front Volume"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_FRONT_VOLUME" />
 
-<type id="13"
-    name="Adjust Center Volume"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_CENTRE_VOLUME" />
+    <type id="13"
+        name="Adjust Center Volume"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_CENTRE_VOLUME" />
 
-<type id="14"
-    name="Adjust Rear Volume"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_REAR_VOLUME" />
+    <type id="14"
+        name="Adjust Rear Volume"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_REAR_VOLUME" />
 
-<type id="15"
-    name="Adjust Side Volume"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SIDE_VOLUME" />
+    <type id="15"
+        name="Adjust Side Volume"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SIDE_VOLUME" />
 
-<type id="16"
-    name="Reserved"
-    token="VSCP_TYPE_MULTIMEDIA_RESERVED16" /> 
+    <type id="16"
+        name="Reserved"
+        token="VSCP_TYPE_MULTIMEDIA_RESERVED16" /> 
 
-<type id="17"
-    name="Reserved"
-    token="VSCP_TYPE_MULTIMEDIA_RESERVED17" /> 
+    <type id="17"
+        name="Reserved"
+        token="VSCP_TYPE_MULTIMEDIA_RESERVED17" /> 
 
- <type id="18"
-    name="Reserved"
-    token="VSCP_TYPE_MULTIMEDIA_RESERVED18" /> 
+    <type id="18"
+        name="Reserved"
+        token="VSCP_TYPE_MULTIMEDIA_RESERVED18" /> 
 
- <type id="19"
-    name="Reserved"
-    token="VSCP_TYPE_MULTIMEDIA_RESERVED19" />       
+    <type id="19"
+        name="Reserved"
+        token="VSCP_TYPE_MULTIMEDIA_RESERVED19" />       
 
-<type id="20"
-    name="Select Disk"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_DISK" />
+    <type id="20"
+        name="Select Disk"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_DISK" />
 
-<type id="21"
-    name="Select Track"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_TRACK" />
+    <type id="21"
+        name="Select Track"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_TRACK" />
 
-<type id="22"
-    name="Select Album/Play list"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_ALBUM" />
+    <type id="22"
+        name="Select Album/Play list"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_ALBUM" />
 
-<type id="23"
-    name="Select Channel"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHANNEL" />
+    <type id="23"
+        name="Select Channel"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHANNEL" />
 
-<type id="24"
-    name="Select Page"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_PAGE" />
+    <type id="24"
+        name="Select Page"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_PAGE" />
 
-<type id="25"
-    name="Select Chapter"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHAPTER" />
+    <type id="25"
+        name="Select Chapter"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_CHAPTER" />
 
-<type id="26" 
-    name="Select Screen Format"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_SCREEN_FORMAT" />
+    <type id="26" 
+        name="Select Screen Format"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_SCREEN_FORMAT" />
 
-<type id="27"
-    name="Select Input Source"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_INPUT_SOURCE" />
+    <type id="27"
+        name="Select Input Source"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_INPUT_SOURCE" />
 
-<type id="28"
-    name="Select Output"
-    token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_OUTPUT" />
+    <type id="28"
+        name="Select Output"
+        token="VSCP_TYPE_MULTIMEDIA_ADJUST_SELECT_OUTPUT" />
 
-<type id="29"
-    name="Record"
-    token="VSCP_TYPE_MULTIMEDIA_RECORD" />
+    <type id="29"
+        name="Record"
+        token="VSCP_TYPE_MULTIMEDIA_RECORD" />
 
-<type id="30"
-    name="Set Recording Volume"
-    token="VSCP_TYPE_MULTIMEDIA_SET_RECORDING_VOLUME" />
+    <type id="30"
+        name="Set Recording Volume"
+        token="VSCP_TYPE_MULTIMEDIA_SET_RECORDING_VOLUME" />
 
-<type id="40"
-    name="Tivo Function"
-    token="VSCP_TYPE_MULTIMEDIA_TIVO_FUNCTION" />
+    <type id="40"
+        name="Tivo Function"
+        token="VSCP_TYPE_MULTIMEDIA_TIVO_FUNCTION" />
 
-<type id="50"
-    name="Get Current Title"
-    token="VSCP_TYPE_MULTIMEDIA_GET_CURRENT_TITLE" />
+    <type id="50"
+        name="Get Current Title"
+        token="VSCP_TYPE_MULTIMEDIA_GET_CURRENT_TITLE" />
 
-<type id="51"
-    name="Set media position in milliseconds"
-    token="VSCP_TYPE_MULTIMEDIA_SET_POSITION" />
+    <type id="51"
+        name="Set media position in milliseconds"
+        token="VSCP_TYPE_MULTIMEDIA_SET_POSITION" />
 
-<type id="52"
-    name="Get media information"
-    token="VSCP_TYPE_MULTIMEDIA_GET_MEDIA_INFO" />
+    <type id="52"
+        name="Get media information"
+        token="VSCP_TYPE_MULTIMEDIA_GET_MEDIA_INFO" />
 
-<type id="53"
-    name="Remove Item from Album"
-    token="VSCP_TYPE_MULTIMEDIA_REMOVE_ITEM" />
+    <type id="53"
+        name="Remove Item from Album"
+        token="VSCP_TYPE_MULTIMEDIA_REMOVE_ITEM" />
 
-<type id="54"
-    name="Remove all Items from Album"
-    token="VSCP_TYPE_MULTIMEDIA_REMOVE_ALL_ITEMS" />
+    <type id="54"
+        name="Remove all Items from Album"
+        token="VSCP_TYPE_MULTIMEDIA_REMOVE_ALL_ITEMS" />
 
-<type id="55"
-    name="Save Album/Play list"
-    token="VSCP_TYPE_MULTIMEDIA_SAVE_ALBUM" />
+    <type id="55"
+        name="Save Album/Play list"
+        token="VSCP_TYPE_MULTIMEDIA_SAVE_ALBUM" />
 
-<type id="60"
-    name="Multimedia Control"
-    token="VSCP_TYPE_MULTIMEDIA_CONTROL" />
+    <type id="60"
+        name="Multimedia Control"
+        token="VSCP_TYPE_MULTIMEDIA_CONTROL" />
 
-<type id="61"
-    name="Multimedia Control response"
-    token="VSCP_TYPE_MULTIMEDIA_CONTROL_RESPONSE" />
+    <type id="61"
+        name="Multimedia Control response"
+        token="VSCP_TYPE_MULTIMEDIA_CONTROL_RESPONSE" />
 
 </class>

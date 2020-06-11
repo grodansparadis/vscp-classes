@@ -4,25 +4,25 @@
     name="Level II Information" 
     token="CLASS2.INFORMATION" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_INFORMATION_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_INFORMATION_GENERAL" />
 
-<type id="1" 
-    name="Token Activity"
-    token="VSCP2_TYPE_INFORMATION_TOKEN_ACTIVITY" />
+    <type id="1" 
+        name="Token Activity"
+        token="VSCP2_TYPE_INFORMATION_TOKEN_ACTIVITY" />
 
-<type id="2" 
-    name="Level II Node Heartbeat"
-    token="VSCP2_TYPE_INFORMATION_HEART_BEAT" />
+    <type id="2" 
+        name="Level II Node Heartbeat"
+        token="VSCP2_TYPE_INFORMATION_HEART_BEAT" />
 
-<type id="3"
-    name="Level II Proxy Node Heartbeat"
-    token="VSCP2_TYPE_INFORMATION_PROXY_HEART_BEAT" />
+    <type id="3"
+        name="Level II Proxy Node Heartbeat"
+        token="VSCP2_TYPE_INFORMATION_PROXY_HEART_BEAT" />
 
-<type id="4" 
-    name="Level II Multicast channel announce"
-    token="VSCP2_TYPE_INFORMATION_CHANNEL_ANNOUNCE" />
+    <type id="4" 
+        name="Level II Multicast channel announce"
+        token="VSCP2_TYPE_INFORMATION_CHANNEL_ANNOUNCE" />
 
 </class>
 

@@ -4,30 +4,30 @@
     name="Level II Protocol Functionality"
     token="CLASS2.PROTOCOL" >
 
-<type id="0"
-    name="General event"
-    token="VSCP2_TYPE_PROTOCOL_GENERAL" />
+    <type id="0"
+        name="General event"
+        token="VSCP2_TYPE_PROTOCOL_GENERAL" />
 
-<type id="1"
-    name="Read Register"
-    token="VSCP2_TYPE_PROTOCOL_READ_REGISTER" />
+    <type id="1"
+        name="Read Register"
+        token="VSCP2_TYPE_PROTOCOL_READ_REGISTER" />
 
-<type id="2"
-    name="Write Register"
-    token="VSCP2_TYPE_PROTOCOL_WRITE_REGISTER" />
+    <type id="2"
+        name="Write Register"
+        token="VSCP2_TYPE_PROTOCOL_WRITE_REGISTER" />
 
-<type id="3"
-    name="Read Write Response"
-    token="VSCP2_TYPE_PROTOCOL_READ_WRITE_RESPONSE" />
+    <type id="3"
+        name="Read Write Response"
+        token="VSCP2_TYPE_PROTOCOL_READ_WRITE_RESPONSE" />
 
-<type id="20"
-    name="High end server/service capabilities"
-    token="VSCP2_TYPE_PROTOCOL_HIGH_END_SERVER_CAPS" />
+    <type id="20"
+        name="High end server/service capabilities"
+        token="VSCP2_TYPE_PROTOCOL_HIGH_END_SERVER_CAPS" />
 
-<type id="32"
-    name="Level II who is there response"
-    token="VSCP2_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
+    <type id="32"
+        name="Level II who is there response"
+        token="VSCP2_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
 
-<!-- Type=42 Reserved -->
+    <!-- Type=42 Reserved -->
 
 </class>

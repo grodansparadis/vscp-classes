@@ -4,9 +4,9 @@
     name="Local use" 
     token="CLASS1.LOCAL" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_LOCAL_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_LOCAL_GENERAL" />
 
 </class>
 

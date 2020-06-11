@@ -4,12 +4,12 @@
     name="Wireless" 
     token="CLASS1.WIRELESS" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_WIRELESS_GENERAL" />
-     
-<type id="1"
-    name="GSM Cell"
-    token="VSCP_TYPE_WIRELESS_GSM_CELL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_WIRELESS_GENERAL" />
+        
+    <type id="1"
+        name="GSM Cell"
+        token="VSCP_TYPE_WIRELESS_GSM_CELL" />
 
 </class>

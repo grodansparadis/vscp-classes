@@ -5,16 +5,16 @@
     token="CLASS1.GNSS"
     alternative-token="CLASS1.GPS" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_GNSS_GENERAL" /> 
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_GNSS_GENERAL" /> 
 
-<type id="1"
-    name="Position"
-    token="VSCP_TYPE_GNSS_POSITION" />
+    <type id="1"
+        name="Position"
+        token="VSCP_TYPE_GNSS_POSITION" />
 
-<type id="2"
-    name="Satellites"
-    token="VSCP_TYPE_GNSS_SATELLITES" />
+    <type id="2"
+        name="Satellites"
+        token="VSCP_TYPE_GNSS_SATELLITES" />
 
 </class>

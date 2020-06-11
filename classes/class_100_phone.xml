@@ -4,48 +4,48 @@
     name="Phone" 
     token="CLASS1.PHONE" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_PHONE_GENERAL" /> 
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_PHONE_GENERAL" /> 
 
-<type id="1"
-    name="Incoming call"
-    token="VSCP_TYPE_PHONE_INCOMING_CALL" /> 
-
-
-<type id="2" 
-    name="Outgoing call"
-    token="VSCP_TYPE_PHONE_OUTGOING_CALL" /> 
+    <type id="1"
+        name="Incoming call"
+        token="VSCP_TYPE_PHONE_INCOMING_CALL" /> 
 
 
-<type id="3" 
-    name="Ring"
-    token="VSCP_TYPE_PHONE_RING" /> 
+    <type id="2" 
+        name="Outgoing call"
+        token="VSCP_TYPE_PHONE_OUTGOING_CALL" /> 
 
 
-<type id="4" 
-    name="Answer"
-    token="VSCP_TYPE_PHONE_ANSWER" /> 
+    <type id="3" 
+        name="Ring"
+        token="VSCP_TYPE_PHONE_RING" /> 
 
 
-<type id="5"
-    name="Hangup"
-    token="VSCP_TYPE_PHONE_HANGUP" /> 
+    <type id="4" 
+        name="Answer"
+        token="VSCP_TYPE_PHONE_ANSWER" /> 
 
 
-<type id="6" 
-    name="Giveup"
-    token="VSCP_TYPE_PHONE_GIVEUP" /> 
+    <type id="5"
+        name="Hangup"
+        token="VSCP_TYPE_PHONE_HANGUP" /> 
 
 
-<type id="7" 
-    name="Transfer"
-    token="VSCP_TYPE_PHONE_TRANSFER" /> 
+    <type id="6" 
+        name="Giveup"
+        token="VSCP_TYPE_PHONE_GIVEUP" /> 
 
 
-<type id="8" 
-    name="Database Info"
-    token="VSCP_TYPE_PHONE_DATABASE_INFO" /> 
+    <type id="7" 
+        name="Transfer"
+        token="VSCP_TYPE_PHONE_TRANSFER" /> 
+
+
+    <type id="8" 
+        name="Database Info"
+        token="VSCP_TYPE_PHONE_DATABASE_INFO" /> 
 
 
 

@@ -4,8 +4,8 @@
     name="Level II Control" 
     token="CLASS2.CONTROL" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP2_TYPE_CONTROL_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_CONTROL_GENERAL" />
 
 </class>

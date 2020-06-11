@@ -4,8 +4,8 @@
     name="Laboratory use" 
     token="CLASS1.LABORATORY" >
 
-<type id="0" 
-    name="General event"
-    token="VSCP_TYPE_LABORATORY_GENERAL" />
+    <type id="0" 
+        name="General event"
+        token="VSCP_TYPE_LABORATORY_GENERAL" />
 
 </class>
