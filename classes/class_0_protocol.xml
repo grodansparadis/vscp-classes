@@ -6,186 +6,869 @@
 
     <type id="0" 
         name="General event." 
-        token="VSCP_TYPE_PROTOCOL_GENERAL" />
+        token="VSCP_TYPE_PROTOCOL_GENERAL" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 
     <type id="1" 
         name="Segment Controller Heartbeat." 
-        token="VSCP_TYPE_PROTOCOL_SEGCTRL_HEARTBEAT" />
+        token="VSCP_TYPE_PROTOCOL_SEGCTRL_HEARTBEAT" >
+        <render>
+            <vscpworks 
+                variables="
+                 crc8:      : function() { return (e.vscpData[0]); }
+                 time_epoch : function() { return (e.vscpData[1]&lt;&lt;24 +
+   				                                  e.vscpData[2]&lt;&lt;16 +
+   				                                  e.vscpData[3]&lt;&lt;8 +
+   				                                  e.vscpData[4]); }"
+                template="
+                 {{lbl-start}}CRC8: {{lbl-end}} {{val-start}}{{crc8}}{{val-end}}{{newline}}
+                 {{lbl-start}}Time(UTC): {{lbl-end}} {{val-start}}{{time_epoch}{{val-end}}{{newline}}"
+            />
+        </render> 
+    </type>
 
     <type id="2" 
         name="New node on line / Probe." 
-        token="VSCP_TYPE_PROTOCOL_NEW_NODE_ONLINE" />
+        token="VSCP_TYPE_PROTOCOL_NEW_NODE_ONLINE" >
+        <render>
+            <vscpworks 
+                variables="
+                 nickname: function() { return (e.vscpData[0]); }"
+                template="
+                 {{lbl-start}}Target id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}"
+            />
+        </render>
+    </type>
 
     <type id="3" 
         name="Probe ACK." 
-        token="VSCP_TYPE_PROTOCOL_PROBE_ACK" />
+        token="VSCP_TYPE_PROTOCOL_PROBE_ACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 
     <type id="4" 
         name="Reserved for future use." 
-        token="VSCP_TYPE_PROTOCOL_RESERVED4" />
+        token="VSCP_TYPE_PROTOCOL_RESERVED4" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="no data"
+            />
+        </render>
+    </type>    
 
     <type id="5"
         name="Reserved for future use."
-        token="VSCP_TYPE_PROTOCOL_RESERVED5" />
+        token="VSCP_TYPE_PROTOCOL_RESERVED5" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 
     <type id="6"
         name="Set nickname-ID for node." 
-        token="VSCP_TYPE_PROTOCOL_SET_NICKNAME" />
+        token="VSCP_TYPE_PROTOCOL_SET_NICKNAME" >
+        <render>
+            <vscpworks 
+                variables="old-nickname: function() { return (e.vscpData[0]); }
+                           new-nickname: function() { return (e.vscpData[1]); }"
+                template="{{lbl-start}}Old id: {{lbl-end}} {{val-start}}{{old-nickname}}{{val-end}}{{newline}}
+                 {{lbl-start}}New id(UTC): {{lbl-end}} {{val-start}}{{new-nickname}{{val-end}}{{newline}}"
+            />
+        </render>
+    </type>
 
     <type id="7"
         name="Nickname-ID accepted."
-        token="VSCP_TYPE_PROTOCOL_NICKNAME_ACCEPTED" />
+        token="VSCP_TYPE_PROTOCOL_NICKNAME_ACCEPTED" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 
     <type id="8" 
         name="Drop nickname-ID / Reset Device." 
-        token="VSCP_TYPE_PROTOCOL_DROP_NICKNAME" />
+        token="VSCP_TYPE_PROTOCOL_DROP_NICKNAME" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]; }
+                    flags: function() { if (e.vscpData.length>1) return e.vscpData[1]; }
+                    time-restart: function() { if (e.vscpData.length>2) return e.vscpData[2]; }
+                    flag_reset_keep_nickname: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x20) ) 
+                                                                return &quot;Reset device, keep id&quot;; else return &quot;Reset device, nickname discovery&quot; }
+                    restore-default: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x40) ) 
+                                                                return &quot;Set persistent storage to default&quot;; else return &quot;Keep persistent storage&quot;; }
+                    go-idle:  function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x80) ) 
+                                                                return &quot;Go idle. Do not start up again.&quot;; else return &quot;Start normal&quot;; }
+                "
+                template="
+                    {{lbl-start}}Current id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Flags [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}}{{newline}}
+                    {{ident}}{{lbl-start}}Flag bit 5: {{val-start}}{{lbl-end}}{{flag_reset_keep_nickname}}{{val-end}}{{newline}}
+                    {{ident}}{{lbl-start}}Flag bit 6: {{val-start}}{{lbl-end}}{{restore-default}}{{val-end}}{{newline}}
+                    {{ident}}{{lbl-start}}Flag bit 7: {{val-start}}{{lbl-end}}{{go-idle}}{{val-end}}{{newline}}
+                    {{lbl-start}}Delay [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}} seconds{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="9" 
         name="Read register." 
-        token="VSCP_TYPE_PROTOCOL_READ_REGISTER"/>
+        token="VSCP_TYPE_PROTOCOL_READ_REGISTER" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]; }
+                    register: function() { return e.vscpData[1]; }
+                "
+                template="
+                    {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="10" 
         name="Read/Write response." 
-        token="VSCP_TYPE_PROTOCOL_RW_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_RW_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="
+                    register: function() { return e.vscpData[0]; }
+                    content: function() { return e.vscpData[1]; }
+                "
+                template="
+                    {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                    {{lbl-start}}Value: {{lbl-end}} {{val-start}}{{content}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="11" 
         name="Write register." 
-        token="VSCP_TYPE_PROTOCOL_WRITE_REGISTER" />
+        token="VSCP_TYPE_PROTOCOL_WRITE_REGISTER" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]; }
+                    register: function() { return e.vscpData[1]; }
+                    content: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                    {{lbl-start}}Value: {{lbl-end}} {{val-start}}{{content}}{{val-end}}{{newline}}
+                "
+            />
+        </render>    
+    </type>
 
     <type id="12"
         name="Enter boot loader mode." 
-        token="VSCP_TYPE_PROTOCOL_ENTER_BOOT_LOADER" />
+        token="VSCP_TYPE_PROTOCOL_ENTER_BOOT_LOADER" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]; }
+                    algorithm: function() { return e.vscpData[1]; }
+                    guid0: function() { return e.vscpData[2]; }
+                    guid3: function() { return e.vscpData[3]; }
+                    guid5: function() { return e.vscpData[4]; }
+                    guid7: function() { return e.vscpData[5]; }
+                    pageselect-msb: function() { return e.vscpData[6]; }
+                    pageselect-lsb: function() { return e.vscpData[7]; }
+                    pageselect: function() { return (e.vscpData[6]&amp;&amp;8 + e.vscpData[7]); }
+                    algorithm-str: function() { 
+                        switch (e.vscpData[1]) {
+
+                            case 0x00: 	
+                                str = &quot;VSCP algorithm&quot; ;
+                                break;
+
+                            case 0x01: 	
+                                str = &quot;Microchip PIC algorithm&quot; ;
+                                break;
+
+                            case 0x10: 	
+                                str = &quot;Atmel AVR algorithm 0&quot; ;
+                                break;
+
+                            case 0x20: 	
+                                str = &quot;NXP ARM algorithm 0&quot; ;
+                                break;
+
+                            case 0x30: 	
+                                str = &quot;ST ARM algorithm 0&quot; ;
+                                break;
+
+                            default:
+                                str = &quot;Unknown&quot; ;   
+                        }
+                        return str; }
+                "
+                template="
+                    {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Algorithm: {{lbl-end}} {{val-start}}{{algorithm-str}} [{{algorithm}}]{{val-end}}{{newline}}
+                    {{lbl-start}}GUID[0]: {{lbl-end}} {{val-start}}{{guid0}}{{val-end}}{{newline}}
+                    {{lbl-start}}GUID[3]: {{lbl-end}} {{val-start}}{{guid3}}{{val-end}}{{newline}}
+                    {{lbl-start}}GUID[5]: {{lbl-end}} {{val-start}}{{guid5}}{{val-end}}{{newline}}
+                    {{lbl-start}}GUID[7]: {{lbl-end}} {{val-start}}{{guid7}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register page: {{lbl-end}} {{val-start}}{{pageselect}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="13" 
         name="ACK boot loader mode." 
-        token="VSCP_TYPE_PROTOCOL_ACK_BOOT_LOADER" />
+        token="VSCP_TYPE_PROTOCOL_ACK_BOOT_LOADER" >
+        <render>
+            <vscpworks 
+                variables="
+                    flash-block-size: function() { return ( e.vscpData[0]&amp;&amp;24 +
+                                                            e.vscpData[1]&amp;&amp;16 +
+                                                            e.vscpData[2]&amp;&amp;8 +
+                                                            e.vscpData[3] ); }
+                    number-blocks: function() { return (    e.vscpData[4]&amp;&amp;24 +
+                                                            e.vscpData[5]&amp;&amp;16 +
+                                                            e.vscpData[6]&amp;&amp;8 +
+                                                            e.vscpData[7] ); }
+                "
+                template="
+                    {{lbl-start}}Flash block size: {{lbl-end}} {{val-start}}{{flash-block-size}}{{val-end}}{{newline}}
+                    {{lbl-start}}Available blocks: {{lbl-end}} {{val-start}}{{number-blocks}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="14" 
         name="NACK boot loader mode." 
-        token="VSCP_TYPE_PROTOCOL_NACK_BOOT_LOADER" />
+        token="VSCP_TYPE_PROTOCOL_NACK_BOOT_LOADER" >
+        <render>
+            <vscpworks 
+                variables="
+                    error: function() { if (e.vscpData.length) return e.vscpData[0]; }
+                "
+                template="
+                    {{lbl-start}}Error [opt]: {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="15" 
         name="Start block data transfer." 
-        token="VSCP_TYPE_PROTOCOL_START_BLOCK" />
+        token="VSCP_TYPE_PROTOCOL_START_BLOCK" >
+        <render>
+            <vscpworks 
+                variables="
+                    block: function() { if (e.vscpData.length) return ( e.vscpData[0]&amp;&amp;24 +
+                                                                        e.vscpData[1]&amp;&amp;16 +
+                                                                        e.vscpData[2]&amp;&amp;8 +
+                                                                        e.vscpData[3] ); }
+                    memtype: function() { if (e.vscpData.length>4) return e.vscpData[4]; }
+                    bank: function() { if (e.vscpData.length>5) return e.vscpData[5]; }
+                "
+                template="
+                    {{lbl-start}}Block : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
+                    {{lbl-start}}Memory type [opt]: {{lbl-end}} {{val-start}}{{memtype}}{{val-end}}{{newline}}
+                    {{lbl-start}}Bank [opt]: {{lbl-end}} {{val-start}}{{bank}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="16" 
         name="Block data." 
-        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA" />
+        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA" >
+        <render>
+            <vscpworks 
+                variables="
+                    data0: function() { return ( e.vscpData[0] ); }
+                    data1: function() { return ( e.vscpData[1] ); }
+                    data2: function() { return ( e.vscpData[2] ); }
+                    data3: function() { return ( e.vscpData[3] ); }
+                    data4: function() { return ( e.vscpData[4] ); }
+                    data5: function() { return ( e.vscpData[5] ); }
+                    data6: function() { return ( e.vscpData[6] ); }
+                    data7: function() { return ( e.vscpData[7] ); }
+                "
+                template="
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data0}} {{data1}} {{data2}} {{data3}} {{data4}} {{data5}} {{data6}} {{data7}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="17" 
         name="ACK data block." 
-        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_ACK" />
+        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_ACK" >
+        <render>
+            <vscpworks 
+                variables="
+                    crc: function() { return ( e.vscpData[0]&amp;&amp;8 +
+                                               e.vscpData[1] ); }
+                    write-pointer: function() { return ( e.vscpData[0]&amp;&amp;24 +
+                                                         e.vscpData[1]&amp;&amp;16 +
+                                                         e.vscpData[2]&amp;&amp;8 +
+                                                         e.vscpData[3] ); }
+  
+                "
+                template="
+                    {{lbl-start}}CRC16 : {{lbl-end}} {{val-start}}{{crc}}{{val-end}}{{newline}}
+                    {{lbl-start}}Write pointer: {{lbl-end}} {{val-start}}{{write-pointer}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="18" 
         name="NACK data block." 
-        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_NACK" />
+        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_NACK" >
+        <render>
+            <vscpworks 
+                variables="
+                    error: function() { return ( e.vscpData[0]; }                 
+                    write-pointer: function() { return ( e.vscpData[1]&amp;&amp;24 +
+                                                         e.vscpData[2]&amp;&amp;16 +
+                                                         e.vscpData[3]&amp;&amp;8 +
+                                                         e.vscpData[4] ); }
+                    
+                "
+                template="
+                    {{lbl-start}}Error code : {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}
+                    {{lbl-start}}Write pointer: {{lbl-end}} {{val-start}}{{write-pointer}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="19" 
         name="Program data block." 
-        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA" />
+        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA" >
+        <render>
+            <vscpworks 
+                variables="                
+                    block: function() { return ( e.vscpData[0]&amp;&amp;24 +
+                                                         e.vscpData[1]&amp;&amp;16 +
+                                                         e.vscpData[2]&amp;&amp;8 +
+                                                         e.vscpData[3] ); }
+                    
+                "
+                template="
+                    {{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="20" 
         name="ACK program data block." 
-        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_ACK" />
+        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_ACK" >
+        <render>
+            <vscpworks 
+                variables="                
+                    block: function() { return ( e.vscpData[0]&amp;&amp;24 +
+                                                         e.vscpData[1]&amp;&amp;16 +
+                                                         e.vscpData[2]&amp;&amp;8 +
+                                                         e.vscpData[3] ); }
+                    
+                "
+                template="
+                    {{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="21" 
         name="NACK program data block." 
-        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_NACK" />
+        token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_NACK" >
+        <render>
+            <vscpworks 
+                variables="  
+                    error: block: function() { return e.vscpData[0]; }
+                    block: function() { return ( e.vscpData[1]&amp;&amp;24 +
+                                                 e.vscpData[2]&amp;&amp;16 +
+                                                 e.vscpData[3]&amp;&amp;8 +
+                                                 e.vscpData[4] ); }
+                    
+                "
+                template="
+                    {{lbl-start}}Error : {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}
+                    {{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="22" 
         name="Activate new image." 
-        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE" />
+        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    crc: function() { return ( e.vscpData[0]&amp;&amp;8 +
+                                                 e.vscpData[1]; }                    
+                "
+                template="
+                    {{lbl-start}}CRC16 : {{lbl-end}} {{val-start}}{{crc}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="23" 
         name="GUID drop nickname-ID / reset device." 
-        token="VSCP_TYPE_PROTOCOL_RESET_DEVICE" />
+        token="VSCP_TYPE_PROTOCOL_RESET_DEVICE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }
+                    guid4: function() { 
+                        var str = &quot;&quot;
+                        switch(e.vscpData[0])  {
+
+                            case 0:
+                                str = &quot;GUID[0]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
+                                      &quot; GUID[1]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
+                                      &quot; GUID[2]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
+                                      &quot; GUID[3]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2); 
+                                break;
+
+                            case 1:
+                                str = &quot;GUID[4]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
+                                      &quot; GUID[5]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
+                                      &quot; GUID[6]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
+                                      &quot; GUID[7]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
+                                break;
+
+                            case 2:
+                                str = &quot;GUID[8]=&quot;   + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
+                                      &quot; GUID[9]=&quot;  + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
+                                      &quot; GUID[10]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
+                                      &quot; GUID[11]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
+                                break;
+
+                            case 3:
+                                str = &quot;GUID[12]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
+                                      &quot; GUID[13]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
+                                      &quot; GUID[14]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
+                                      &quot; GUID[15]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
+                                break;
+
+                            default:  
+                                str = &quot;Invalid index&quot;;
+                                break;              
+                        }
+
+                        return str; 
+                    }                    
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}GUID quartet : {{lbl-end}} {{val-start}}{{guid4}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="24" 
         name="Page read." 
-        token="VSCP_TYPE_PROTOCOL_PAGE_READ" />
+        token="VSCP_TYPE_PROTOCOL_PAGE_READ" >
+        <render>
+            <vscpworks 
+                variables="  
+                    nickname: function() { return e.vscpData[0]; }
+                    offset: function() { return e.vscpData[1]; }
+                    count: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page offset : {{lbl-end}} {{val-start}}{{offset}}{{val-end}}{{newline}}
+                    {{lbl-start}}Count : {{lbl-end}} {{val-start}}{{count}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="25" 
         name="Page write." 
-        token="VSCP_TYPE_PROTOCOL_PAGE_WRITE" />
+        token="VSCP_TYPE_PROTOCOL_PAGE_WRITE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    nickname: function() { return e.vscpData[0]; }
+                    offset: function() { return e.vscpData[1]; }
+                    data: function() { 
+                        var str = &quot;&quot;;
+                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);
+                        return str; 
+                    }
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page offset : {{lbl-end}} {{val-start}}{{offset}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="26" 
         name="Read/Write page response." 
-        token="VSCP_TYPE_PROTOCOL_RW_PAGE_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_RW_PAGE_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    seqno: function() { return e.vscpData[0]; }
+                    data: function() { 
+                        var str = &quot;&quot;;
+                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);
+                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);
+                        return str; 
+                    }
+                "
+                template="
+                    {{lbl-start}}Sequence no : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="27" 
         name="High end server/service probe."
-        token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_PROBE" />
+        token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_PROBE" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 
     <type id="28" 
         name="High end server/service response." 
-        token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_RESPONSE" >
+        <render>
+            <vscpworks variables="
+                capability: function() { return ((&quot;0000&quot; + (e.vscpData[0]&amp;&amp;8 +
+                                                 e.vscpData[1]).toString(16)).substr(-4) ); },
+                ipv4: function() { 
+                    let str = e.vscpData[2].toString() + &quot;.&quot; +
+                              e.vscpData[3].toString() + &quot;.&quot; +
+                              e.vscpData[4].toString() + &quot;.&quot; +
+                              e.vscpData[5].toString();         
+                    return str; },
+                port: function() { return (e.vscpData[6]&amp;&amp;8 +
+                                           e.vscpData[6]); }
+                "                                         
+                template="
+                    {{lbl-start}}Server caps : {{lbl-end}} {{val-start}}{{capability}}{{val-end}}{{newline}}
+                    {{lbl-start}}IPv4 : {{lbl-end}} {{val-start}}{{ipv4}}{{val-end}}{{newline}}
+                    {{lbl-start}}Port : {{lbl-end}} {{val-start}}{{port}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="29" 
         name="Increment register." 
-        token="VSCP_TYPE_PROTOCOL_INCREMENT_REGISTER" />
+        token="VSCP_TYPE_PROTOCOL_INCREMENT_REGISTER" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return (e.vscpData[0]) };,
+                    register: function() { return (e.vscpData[1]) };,
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register : {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="30" 
         name="Decrement register." 
-        token="VSCP_TYPE_PROTOCOL_DECREMENT_REGISTER" />
+        token="VSCP_TYPE_PROTOCOL_DECREMENT_REGISTER" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return (e.vscpData[0]) };,
+                    register: function() { return (e.vscpData[1]) };,
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register : {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="31" 
         name="Who is there?" 
-        token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE" />
+        token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return (e.vscpData[0]) };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="32" 
         name="Who is there response." 
-        token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }
+                    data: function() { 
+                        var str = &quot;&quot;
+                        switch(e.vscpData[0])  {
+
+                            case 0:
+                                str = &quot;GUID[15]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; GUID[14]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; GUID[13]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; GUID[12]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[4]) + &quot;'&quot; +
+                                      &quot; GUID[11]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; GUID[10]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; GUID[9]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) + &quot; '&quot; + String.fromCharCode(e.vscpData[7]) + &quot;'&quot; ;
+                                break;
+
+                            case 1:
+                                str = &quot;GUID[8]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; GUID[7]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; GUID[6]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; GUID[5]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; +
+                                      &quot; GUID[4]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; GUID[3]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; GUID[2]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[7]) + &quot;'&quot; +;
+                                break;
+
+                            case 2:
+                                str = str = &quot;GUID[2]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; GUID[1]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; MDF[0]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; MDF[1]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; +
+                                      &quot; MDF[2]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; MDF[3]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; MDF[4]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[7]) + &quot;'&quot; +;
+                                break;
+
+                            case 3:
+                                str = &quot;MDF[5]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; MDF[6]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; MDF[7]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; MDF[8]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; + 
+                                      &quot; MDF[9]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; MDF[10]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; MDF[11]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[7]) + &quot;'&quot; ;
+                                break;
+
+                            case 4:
+                                str = &quot;MDF[12]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; MDF[13]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; MDF[14]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; MDF[15]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; + 
+                                      &quot; MDF[16]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; MDF[17]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; MDF[18]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) +  &quot; '&quot; +  String.fromCharCode(e.vscpData[7]) + &quot;'&quot; ;
+                                break;
+
+                            case 5:
+                                str = &quot;MDF[19]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; MDF[20]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; MDF[21]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; MDF[22]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; + 
+                                      &quot; MDF[23]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; MDF[24]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; MDF[25]=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2) +  &quot; '&quot; +  String.fromCharCode(e.vscpData[7]) + &quot;'&quot; ;
+                                break;
+
+                            case 6:
+                                str = &quot;MDF[26]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; +
+                                      &quot; MDF[27]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; +
+                                      &quot; MDF[28]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; +
+                                      &quot; MDF[29]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; + 
+                                      &quot; MDF[30]=&quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; +
+                                      &quot; MDF[31]=&quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; +
+                                      &quot; Zero=&quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);
+                                break;
+
+                            default:  
+                                str = &quot;Invalid index&quot;;
+                                break;              
+                        }
+
+                        return str; 
+                    }                    
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="33" 
         name="Get decision matrix info." 
-        token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO" />
+        token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return (e.vscpData[0]) };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="34" 
         name="Decision matrix info response." 
-        token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_GET_MATRIX_INFO_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="
+                    size: function() { return (e.vscpData[0]) };,
+                    offset: function() { return (e.vscpData[1]) };,
+                    page-start: function() { return (e.vscpData[2]&amp;&amp;8 + e.vscpData[3]) };
+                    page-end: function() { return (e.vscpData[4]&amp;&amp;8 + e.vscpData[5]) };
+                    row-size: function() { return (e.vscpData[6]) };
+                "
+                template="
+                    {{lbl-start}}Size : {{lbl-end}} {{val-start}}{{size}}{{val-end}}{{newline}}
+                    {{lbl-start}}Offset : {{lbl-end}} {{val-start}}{{offset}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page start [opt] : {{lbl-end}} {{val-start}}{{page-start}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page end [opt] : {{lbl-end}} {{val-start}}{{page-end}}{{val-end}}{{newline}}
+                    {{lbl-start}}LII Row size [opt] : {{lbl-end}} {{val-start}}{{row-size}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="35" 
         name="Get embedded MDF." 
-        token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF" />
+        token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return (e.vscpData[0]) };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="36" 
         name="Embedded MDF response." 
-        token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="
+                    index: function() { return (e.vscpData[0]&amp;&amp;8 + e.vscpData[1]) };
+                    data: function() { 
+                        let str = &quot;[0]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[1]) + &quot;'&quot; ;
+                        if (e.vscpData-length > 3) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[2]) + &quot;'&quot; ;
+                        if (e.vscpData-length > 4) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[3]) + &quot;'&quot; ;
+                        if (e.vscpData-length > 5) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[4]) + &quot;'&quot; ; 
+                        if (e.vscpData-length > 6) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[5]) + &quot;'&quot; ;
+                        if (e.vscpData-length > 7) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2) + &quot; '&quot; +  String.fromCharCode(e.vscpData[6]) + &quot;'&quot; ;
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="37" 
         name="Extended page read register." 
-        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_READ" />
+        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_READ" >
+    </type>
 
     <type id="38" 
         name="Extended page write register." 
-        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_WRITE" />
+        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_WRITE" >
+    </type>
 
     <type id="39" 
         name="Extended page read/write response." 
-        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_RESPONSE" >
+    </type>
 
     <type id="40" 
         name="Get event interest." 
-        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" /> 
+        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" > 
+    </type>
 
     <type id="41" 
         name="Get event interest response." 
-        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST_RESPONSE" />
+        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST_RESPONSE" >
+    </type>
 
     <type id="48" 
         name="Activate new image ACK." 
-        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_ACK" />
+        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_ACK" >
+    </type>
 
     <type id="49" 
         name="Activate new image NACK." 
-        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_NACK" />
+        token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_NACK" >
+    </type>
 
     <type id="50" 
         name="Block data transfer ACK." 
-        token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK" />
+        token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK" >
+    </type>
 
     <type id="51" 
         name="Block data transfer NACK." 
-        token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" />
+        token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" >
+    </type>
 
 </class>
