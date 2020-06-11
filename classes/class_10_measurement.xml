@@ -8,8 +8,8 @@
         <units>
             <unit id="0" 
                     name="Count"
-                    symbol-ascii="units"
-                    symbol-utf8="units"
+                    symbol-ascii=""
+                    symbol-utf8=""
                     description="Count." 
                     conversion="{{val}}"/>
         </units>
