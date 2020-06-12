@@ -6,138 +6,640 @@
 
     <type id="0"
         name="General event"
-        token="VSCP_TYPE_SECURITY_GENERAL" />
+        token="VSCP_TYPE_SECURITY_GENERAL" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>    
 
     <type id="1"
         name="Motion Detect"
-        token="VSCP_TYPE_SECURITY_MOTION" />
+        token="VSCP_TYPE_SECURITY_MOTION" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="2"
         name="Glass break"
-        token="VSCP_TYPE_SECURITY_GLASS_BREAK" />
+        token="VSCP_TYPE_SECURITY_GLASS_BREAK" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="3"
         name="Beam break"
-        token="VSCP_TYPE_SECURITY_BEAM_BREAK" />
+        token="VSCP_TYPE_SECURITY_BEAM_BREAK" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="4"
         name="Sensor tamper"
-        token="VSCP_TYPE_SECURITY_SENSOR_TAMPER" />
+        token="VSCP_TYPE_SECURITY_SENSOR_TAMPER" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="5"
         name="Shock sensor"
-        token="VSCP_TYPE_SECURITY_SHOCK_SENSOR" />
+        token="VSCP_TYPE_SECURITY_SHOCK_SENSOR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="6"
         name="Smoke sensor"
-        token="VSCP_TYPE_SECURITY_SMOKE_SENSOR" />
+        token="VSCP_TYPE_SECURITY_SMOKE_SENSOR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="7"
         name="Heat sensor"
-        token="VSCP_TYPE_SECURITY_HEAT_SENSOR" />
+        token="VSCP_TYPE_SECURITY_HEAT_SENSOR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="8"
         name="Panic switch"
-        token="VSCP_TYPE_SECURITY_PANIC_SWITCH" />
+        token="VSCP_TYPE_SECURITY_PANIC_SWITCH" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="9"
         name="Door Contact"
-        token="VSCP_TYPE_SECURITY_DOOR_OPEN" />
+        token="VSCP_TYPE_SECURITY_DOOR_OPEN" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="10"
         name="Window Contact"
-        token="VSCP_TYPE_SECURITY_WINDOW_OPEN" />
+        token="VSCP_TYPE_SECURITY_WINDOW_OPEN" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="11"
         name="CO Sensor"
-        token="VSCP_TYPE_SECURITY_CO_SENSOR" />
+        token="VSCP_TYPE_SECURITY_CO_SENSOR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="12"
         name="Frost detected"
-        token="VSCP_TYPE_SECURITY_FROST_DETECTED" />
+        token="VSCP_TYPE_SECURITY_FROST_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="13"
         name="Flame detected"
-        token="VSCP_TYPE_SECURITY_FLAME_DETECTED" />
+        token="VSCP_TYPE_SECURITY_FLAME_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="14"
         name="Oxygen Low"
-        token="VSCP_TYPE_SECURITY_OXYGEN_LOW" />
+        token="VSCP_TYPE_SECURITY_OXYGEN_LOW" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="15"
         name="Weight detected."
-        token="VSCP_TYPE_SECURITY_WEIGHT_DETECTED" />
+        token="VSCP_TYPE_SECURITY_WEIGHT_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="16"
         name="Water detected."
-        token="VSCP_TYPE_SECURITY_WATER_DETECTED" />
+        token="VSCP_TYPE_SECURITY_WATER_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="17"
         name="Condensation detected."
-        token="VSCP_TYPE_SECURITY_CONDENSATION_DETECTED" />
+        token="VSCP_TYPE_SECURITY_CONDENSATION_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="18"
         name="Noise (sound) detected."
-        token="VSCP_TYPE_SECURITY_SOUND_DETECTED" />
+        token="VSCP_TYPE_SECURITY_SOUND_DETECTED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="19"
         name="Harmful sound levels detected."
-        token="VSCP_TYPE_SECURITY_HARMFUL_SOUND_LEVEL" />
+        token="VSCP_TYPE_SECURITY_HARMFUL_SOUND_LEVEL" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="20"
         name="Tamper detected."
-        token="VSCP_TYPE_SECURITY_TAMPER" />
+        token="VSCP_TYPE_SECURITY_TAMPER" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="21"
         name="Authenticated"
-        token="VSCP_TYPE_SECURITY_AUTHENTICATED" />
+        token="VSCP_TYPE_SECURITY_AUTHENTICATED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="22"
         name="Unauthenticated"
-        token="VSCP_TYPE_SECURITY_UNAUTHENTICATED" />
+        token="VSCP_TYPE_SECURITY_UNAUTHENTICATED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="23"
         name="Authorized"
-        token="VSCP_TYPE_SECURITY_AUTHORIZED" />
+        token="VSCP_TYPE_SECURITY_AUTHORIZED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="24"
         name="Unauthorized"
-        token="VSCP_TYPE_SECURITY_UNAUTHORIZED" />
+        token="VSCP_TYPE_SECURITY_UNAUTHORIZED" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="25"
         name="ID check"
-        token="VSCP_TYPE_SECURITY_ID_CHECK" />
+        token="VSCP_TYPE_SECURITY_ID_CHECK" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="26"
         name="Valid pin"
-        token="VSCP_TYPE_SECURITY_PIN_OK" />
+        token="VSCP_TYPE_SECURITY_PIN_OK" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="27"
         name="Invalid pin"
-        token="VSCP_TYPE_SECURITY_PIN_FAIL" />
+        token="VSCP_TYPE_SECURITY_PIN_FAIL" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="28"
         name="Pin warning"
-        token="VSCP_TYPE_SECURITY_PIN_WARNING" />
+        token="VSCP_TYPE_SECURITY_PIN_WARNING" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="29"
         name="Pin error"
-        token="VSCP_TYPE_SECURITY_PIN_ERROR" />
+        token="VSCP_TYPE_SECURITY_PIN_ERROR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="30"
         name="Valid password"
-        token="VSCP_TYPE_SECURITY_PASSWORD_OK" />
+        token="VSCP_TYPE_SECURITY_PASSWORD_OK" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="31"
         name="Invalid password"
-        token="VSCP_TYPE_SECURITY_PASSWORD_FAIL" />
+        token="VSCP_TYPE_SECURITY_PASSWORD_FAIL" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="32"
         name="Password warning"
-        token="VSCP_TYPE_SECURITY_PASSWORD_WARNING" />
+        token="VSCP_TYPE_SECURITY_PASSWORD_WARNING" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="33"
         name="Password error"
-        token="VSCP_TYPE_SECURITY_PASSWORD_ERROR" />
+        token="VSCP_TYPE_SECURITY_PASSWORD_ERROR" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
 </class>

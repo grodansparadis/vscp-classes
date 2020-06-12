@@ -3,7 +3,6 @@
 <class id="1" 
     name="Alarm functionality" 
     token="CLASS1.ALARM" >
-
     <type id="0" 
         name="General event"
         token="VSCP_TYPE_ALARM_GENERAL" >
