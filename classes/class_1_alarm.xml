@@ -6,53 +6,252 @@
 
     <type id="0" 
         name="General event"
-        token="VSCP_TYPE_ALARM_GENERAL" />
+        token="VSCP_TYPE_ALARM_GENERAL" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>    
 
     <type id="1" 
         name="Warning" 
-        token="VSCP_TYPE_ALARM_WARNING" />
+        token="VSCP_TYPE_ALARM_WARNING" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
 
     <type id="2" 
         name="Alarm occurred"
-        token="VSCP_TYPE_ALARM_ALARM" />
+        token="VSCP_TYPE_ALARM_ALARM" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { return (&quot;00000000&quot; + e.vscpData[0].toString(2)).substr(-8) }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Alarm: {{lbl-end}} {{val-start}}{{alarm}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="3" 
         name="Alarm sound on/off"
-        token="VSCP_TYPE_ALARM_SOUND" />
+        token="VSCP_TYPE_ALARM_SOUND" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="4" 
         name="Alarm light on/off"
-        token="VSCP_TYPE_ALARM_LIGHT" />
+        token="VSCP_TYPE_ALARM_LIGHT" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="5" 
         name="Power on/off"
-        token="VSCP_TYPE_ALARM_POWER" />
+        token="VSCP_TYPE_ALARM_POWER" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="6" 
         name="Emergency Stop"
-        token="VSCP_TYPE_ALARM_EMERGENCY_STOP" />
+        token="VSCP_TYPE_ALARM_EMERGENCY_STOP" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="7" 
         name="Emergency Pause"
-        token="VSCP_TYPE_ALARM_EMERGENCY_PAUSE" />
+        token="VSCP_TYPE_ALARM_EMERGENCY_PAUSE" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="8" 
         name="Emergency Reset"
-        token="VSCP_TYPE_ALARM_EMERGENCY_RESET" />
+        token="VSCP_TYPE_ALARM_EMERGENCY_RESET" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="9" 
         name="Emergency Resume"
-        token="VSCP_TYPE_ALARM_EMERGENCY_RESUME" />
+        token="VSCP_TYPE_ALARM_EMERGENCY_RESUME" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="10"
         name="Arm"
-        token="VSCP_TYPE_ALARM_ARM" />
+        token="VSCP_TYPE_ALARM_ARM" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="11" 
         name="Disarm"
-        token="VSCP_TYPE_ALARM_DISARM" />
+        token="VSCP_TYPE_ALARM_DISARM" >
+        <render>
+            <vscpworks 
+                variables="
+                    alarm:      : function() { return (e.vscpData[0]); }
+                    state       : function() { if (e.vscpData[0]) return &quot; - ON&quot; else return &quot; - OFF&quot; }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="12" 
         name="Watchdog"
-        token="VSCP_TYPE_ALARM_WATCHDOG" />
+        token="VSCP_TYPE_ALARM_WATCHDOG" >
+        <render>
+            <vscpworks 
+                variables="
+                    index:      : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}Index: {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
+    </type>
+
 </class>
