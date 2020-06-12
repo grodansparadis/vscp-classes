@@ -829,46 +829,157 @@
     <type id="37" 
         name="Extended page read register." 
         token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_READ" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]) };
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
+                    register: function() { return e.vscpData[3]) };
+                    count: function() { if (e.vscpData[3].length>3) return e.vscpData[4]) else return 1; };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page : {{lbl-end}} {{val-start}}{{page}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register : {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                    {{lbl-start}}Count : {{lbl-end}} {{val-start}}{{count}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
     </type>
 
     <type id="38" 
         name="Extended page write register." 
         token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_WRITE" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]) };
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
+                    register: function() { return e.vscpData[3]) };
+                    content: function() { return e.vscpData[4]) };
+                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) };
+                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) };
+                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page : {{lbl-end}} {{val-start}}{{page}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register : {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                    {{lbl-start}}Count : {{lbl-end}} {{val-start}}{{count}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
     </type>
 
     <type id="39" 
         name="Extended page read/write response." 
         token="VSCP_TYPE_PROTOCOL_EXTENDED_PAGE_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables="
+                    nickname: function() { return e.vscpData[0]) };
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
+                    register: function() { return e.vscpData[3]) };
+                    content: function() { return e.vscpData[4]) };
+                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) };
+                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) };
+                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) };
+                "
+                template="
+                    {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                    {{lbl-start}}Page : {{lbl-end}} {{val-start}}{{page}}{{val-end}}{{newline}}
+                    {{lbl-start}}Register : {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                    {{lbl-start}}Count : {{lbl-end}} {{val-start}}{{count}}{{val-end}}{{newline}}
+                "
+            />
+        </render>
     </type>
 
     <type id="40" 
         name="Get event interest." 
-        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" > 
+        token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" >
+        <render>
+            <vscpworks 
+                variables="
+                    index: function() { return e.vscpData[0]) };
+                    classbit9: function() { return e.vscpData[1]) };
+                    flag1: function() { if (e.vscpData[1] &amp; 8) return &quot;- all types&quot; else &quot;- one type&quot; };
+                    flag2: function() { if (e.vscpData[1] &amp; 16) return &quot;- all types&quot; else &quot;- one type&quot; };
+                    flag3: function() { if (e.vscpData[1] &amp; 32) return &quot;- all types&quot; else &quot;- one type&quot; };
+                    class1: function() { if (e.vscpData.length > 2) return e.vscpData[2]) };
+                    type1: function() { if (e.vscpData.length > 3) return ((e.vscpData[1] &amp; 1)*512 + e.vscpData[3]) };
+                    class2: function() { if (e.vscpData.length > 4) return e.vscpData[4]) };
+                    type2: function() { if (e.vscpData.length > 5) return ((e.vscpData[1] &amp; 2)*512 + e.vscpData[5]) };
+                    class3: function() { if (e.vscpData.length > 6) return e.vscpData[6]) };
+                    type3: function() { if (e.vscpData.length > 7) return ((e.vscpData[1] &amp; 4)*512 + e.vscpData[7]) };
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Class bits : {{lbl-end}} {{val-start}}{{classbit9}}{{val-end}}{{newline}}
+                    {{lbl-start}}Class 1 : {{lbl-end}} {{val-start}}{{class1}}{{val-end}}{{newline}}
+                    {{lbl-start}}Type 1 : {{lbl-end}} {{val-start}}{{type1}}{{flag1}}{{val-end}}{{newline}}
+                    {{lbl-start}}Class 2 : {{lbl-end}} {{val-start}}{{class2}}{{val-end}}{{newline}}
+                    {{lbl-start}}Type 2 : {{lbl-end}} {{val-start}}{{type2}}{{flag2}}{{val-end}}{{newline}}
+                    {{lbl-start}}Class 3 : {{lbl-end}} {{val-start}}{{class3}}{{val-end}}{{newline}}
+                    {{lbl-start}}Type 3 : {{lbl-end}} {{val-start}}{{type3}}{{flag3}}{{val-end}}{{newline}}
+                "
+            />
+        </render> 
     </type>
 
     <type id="41" 
         name="Get event interest response." 
         token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST_RESPONSE" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
     </type>
 
     <type id="48" 
         name="Activate new image ACK." 
         token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_ACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
     </type>
 
     <type id="49" 
         name="Activate new image NACK." 
         token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE_NACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
     </type>
 
     <type id="50" 
         name="Block data transfer ACK." 
         token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
     </type>
 
     <type id="51" 
         name="Block data transfer NACK." 
         token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
     </type>
 
 </class>
