@@ -6,347 +6,1976 @@
 
     <type id="0" 
         name="General event"
-        token="VSCP_TYPE_INFORMATION_GENERAL" /> 
+        token="VSCP_TYPE_INFORMATION_GENERAL" > 
+    </type>
 
     <type id="1" 
         name="Button"
-        token="VSCP_TYPE_INFORMATION_BUTTON" />
+        token="VSCP_TYPE_INFORMATION_BUTTON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    statebits: function() { return e.vscpData[0] &amp; 7; },
+                    statetxt: function() { 
+                        switch( e.vscpData[0] &amp; 7 ) {
+
+                            case 0:
+                                return &quot;Button released&quot;;
+                                break;
+
+                            case 1:
+                                return &quot;Button pressed&quot;;
+                                break;
+
+                            case 2:
+                                return &quot;Button key&quot;;
+                                break;   
+
+                            default:
+                                return &quot;Button unknown state&quot;;
+                                break;         
+                        }
+                    },
+                    repeats: function() { return ( e.vscpData[0] &lt;&lt; 3 &amp; 0x1f); },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    button_code: function() { return (e.vscpData[3] << 8 + e.vscpData[4]); },
+                    button_code_page: function() { if ( e.vscpData >= 7 ) 
+                                                      return (e.vscpData[5] << 8 + e.vscpData[6]); 
+                                                   else
+                                                      return &quot;No code-page&quot;; 
+                                                }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
+                    {{lbl-start}}State : {{lbl-end}} {{val-start}}{{statetxt}} [{{statebits}}]{{val-end}}{{newline}}
+                    {{lbl-start}}Repeats : {{lbl-end}} {{val-start}}{{repeats}}{{val-end}}{{newline}}
+                    {{lbl-start}}button_code : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}button_code_page : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}                    
+                "
+            />
+        </render>
+    </type>
 
     <type id="2"
         name="Mouse"
-        token="VSCP_TYPE_INFORMATION_MOUSE" />
+        token="VSCP_TYPE_INFORMATION_MOUSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    type: function() { return e.vscpData[0]; }
+                    typetxt: function() { 
+                        switch( e.vscpData[0] ) {
+
+                            case 0:
+                                return &quot;Absolute coordinates&quot;;
+                                break;
+
+                            case 1:
+                                return &quot;Relative coordinates&quot;;
+                                break;  
+
+                            default:
+                                return &quot;Unknown coordinate coding&quot;;
+                                break;         
+                        }
+                    }
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    coorinate_x: function() { return (e.vscpData[3] << 8 + e.vscpData[4]); }
+                    coorinate_y: function() { return (e.vscpData[5] << 8 + e.vscpData[6]); }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
+                    {{lbl-start}}Type : {{lbl-end}} {{val-start}}{{typetxt}} [{{type}}]{{val-end}}{{newline}}
+                    {{lbl-start}}x-coordinates : {{lbl-end}} {{val-start}}{{coorinate_x}}{{val-end}}{{newline}}
+                    {{lbl-start}}y-coordinates : {{lbl-end}} {{val-start}}{{coorinate_y}}{{val-end}}{{newline}}
+                    
+                "
+            />
+        </render>
+    </type>
 
     <type id="3"
         name="On"
-        token="VSCP_TYPE_INFORMATION_ON" />
+        token="VSCP_TYPE_INFORMATION_ON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Turned on{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="4"
         name="Off"
-        token="VSCP_TYPE_INFORMATION_OFF" />
+        token="VSCP_TYPE_INFORMATION_OFF" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Turned off{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="5"
         name="Alive"
-        token="VSCP_TYPE_INFORMATION_ALIVE" />
+        token="VSCP_TYPE_INFORMATION_ALIVE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is alive{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="6" 
         name="Terminating"
-        token="VSCP_TYPE_INFORMATION_TERMINATING" />
+        token="VSCP_TYPE_INFORMATION_TERMINATING" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is terminating{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="7" 
         name="Opened"
-        token="VSCP_TYPE_INFORMATION_OPENED" />
+        token="VSCP_TYPE_INFORMATION_OPENED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is open{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="8" 
         name="Closed"
-        token="VSCP_TYPE_INFORMATION_CLOSED" />
+        token="VSCP_TYPE_INFORMATION_CLOSED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is closed{{newline}}{{newline}}
+                "
+            />
+        </render>    
+    </type>
 
     <type id="9"
         name="Node Heartbeat"
-        token="VSCP_TYPE_INFORMATION_NODE_HEARTBEAT" />
+        token="VSCP_TYPE_INFORMATION_NODE_HEARTBEAT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Node heartbeat{{newline}}{{newline}}
+                "
+            />
+        </render>    
+    </type>
 
     <type id="10" 
         name="Below limit"
-        token="VSCP_TYPE_INFORMATION_BELOW_LIMIT" />
+        token="VSCP_TYPE_INFORMATION_BELOW_LIMIT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is below set limit{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="11" 
         name="Above limit"
-        token="VSCP_TYPE_INFORMATION_ABOVE_LIMIT" />
+        token="VSCP_TYPE_INFORMATION_ABOVE_LIMIT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is above set limit{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="12" 
         name="Pulse"
-        token="VSCP_TYPE_INFORMATION_PULSE" />
+        token="VSCP_TYPE_INFORMATION_PULSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Pulse{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="13" 
         name="Error"
-        token="VSCP_TYPE_INFORMATION_ERROR" />
+        token="VSCP_TYPE_INFORMATION_ERROR" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    An errod occured{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="14" 
         name="Resumed"
-        token="VSCP_TYPE_INFORMATION_RESUMED" />
+        token="VSCP_TYPE_INFORMATION_RESUMED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Has resumed{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="15" 
         name="Paused"
-        token="VSCP_TYPE_INFORMATION_PAUSED" />
+        token="VSCP_TYPE_INFORMATION_PAUSED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Has paused{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="16" 
         name="Sleeping"
-        token="VSCP_TYPE_INFORMATION_SLEEP" />
+        token="VSCP_TYPE_INFORMATION_SLEEP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is sleeping{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="17" 
         name="Good morning"
-        token="VSCP_TYPE_INFORMATION_GOOD_MORNING" />
+        token="VSCP_TYPE_INFORMATION_GOOD_MORNING" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Good morning{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="18" 
         name="Good day"
-        token="VSCP_TYPE_INFORMATION_GOOD_DAY" />
+        token="VSCP_TYPE_INFORMATION_GOOD_DAY" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Good day{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="19" 
         name="Good afternoon"
-        token="VSCP_TYPE_INFORMATION_GOOD_AFTERNOON" />
+        token="VSCP_TYPE_INFORMATION_GOOD_AFTERNOON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Good afternoon{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="20" 
         name="Good evening"
-        token="VSCP_TYPE_INFORMATION_GOOD_EVENING" />
+        token="VSCP_TYPE_INFORMATION_GOOD_EVENING" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Good evening{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="21" 
         name="Good night"
-        token="VSCP_TYPE_INFORMATION_GOOD_NIGHT" />
+        token="VSCP_TYPE_INFORMATION_GOOD_NIGHT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Good night{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="22" 
         name="See you soon"
-        token="VSCP_TYPE_INFORMATION_SEE_YOU_SOON" />
+        token="VSCP_TYPE_INFORMATION_SEE_YOU_SOON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    See you soon{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="23" 
         name="Goodbye"
-        token="VSCP_TYPE_INFORMATION_GOODBYE" />
+        token="VSCP_TYPE_INFORMATION_GOODBYE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Bye bye{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="24" 
         name="Stop"
-        token="VSCP_TYPE_INFORMATION_STOP" />
+        token="VSCP_TYPE_INFORMATION_STOP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is stopped{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="25" 
         name="Start"
-        token="VSCP_TYPE_INFORMATION_START" />
+        token="VSCP_TYPE_INFORMATION_START" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is started{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="26" 
         name="ResetCompleted"
-        token="VSCP_TYPE_INFORMATION_RESET_COMPLETED" />
+        token="VSCP_TYPE_INFORMATION_RESET_COMPLETED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Reset completed{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="27" 
         name="Interrupted"
-        token="VSCP_TYPE_INFORMATION_INTERRUPTED" />
+        token="VSCP_TYPE_INFORMATION_INTERRUPTED" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Interrupted{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="28" 
         name="PreparingToSleep"
-        token="VSCP_TYPE_INFORMATION_PREPARING_TO_SLEEP" />
+        token="VSCP_TYPE_INFORMATION_PREPARING_TO_SLEEP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Preparing to sleep{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="29" 
         name="WokenUp"
-        token="VSCP_TYPE_INFORMATION_WOKEN_UP" />
+        token="VSCP_TYPE_INFORMATION_WOKEN_UP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Woken up{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="30" 
         name="Dusk"
-        token="VSCP_TYPE_INFORMATION_DUSK" />
+        token="VSCP_TYPE_INFORMATION_DUSK" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Dusk{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="31" 
         name="Dawn"
-        token="VSCP_TYPE_INFORMATION_DAWN" />
+        token="VSCP_TYPE_INFORMATION_DAWN" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Dawn{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="32" 
         name="Active"
-        token="VSCP_TYPE_INFORMATION_ACTIVE" />
+        token="VSCP_TYPE_INFORMATION_ACTIVE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is active{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="33" 
         name="Inactive"
-        token="VSCP_TYPE_INFORMATION_INACTIVE" />
+        token="VSCP_TYPE_INFORMATION_INACTIVE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is inactive{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="34" 
         name="Busy"
-        token="VSCP_TYPE_INFORMATION_BUSY" />
+        token="VSCP_TYPE_INFORMATION_BUSY" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is busy{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="35" 
         name="Idle"
-        token="VSCP_TYPE_INFORMATION_IDLE" />
+        token="VSCP_TYPE_INFORMATION_IDLE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    Is idle{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="36"
         name="Stream Data"
-        token="VSCP_TYPE_INFORMATION_STREAM_DATA" />
+        token="VSCP_TYPE_INFORMATION_STREAM_DATA" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                    data: function() {
+                        var outstr;
+                        
+                        for (i=1;i<e.vscpData.length;i++) {
+                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
+                        }
+
+                        outstr += &quot;'&quot;;
+                        for (i=1;i<e.vscpData.length;i++) {
+                            if (e.vscpData.length>1) outstr += String.fromCharCode(e.vscpData[i]);
+                        }
+                        outstr += &quot;'&quot;;
+
+                        return outstr; 
+                    }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}{{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="37" 
         name="Token Activity"
-        token="VSCP_TYPE_INFORMATION_TOKEN_ACTIVITY" />
-                                                                                            
+        token="VSCP_TYPE_INFORMATION_TOKEN_ACTIVITY" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }
+                    typecode: function() { return e.vscpData[0] &amp; 3; }
+                    eventcodetxt: function() {
+                        switch (e.vscpData[0] &amp; 3) {
+
+                            case 0:
+                                return &quot;Touched and released&quot;;
+                                break;
+
+                            case 1:
+                                return &quot;Touched&quot;;
+                                break;    
+
+                            case 2:
+                                return &quot;Released&quot;;
+                                break;    
+
+                            default:
+                                return &quot;Unknown code&quot;;
+                                break;    
+                        }
+                    },
+                    typecode: function() { return ((e.vscpData[0] &gt;&gt; 2) &amp; 0x3f ); },
+                    typecodetxt: function() {
+                        switch ((e.vscpData[0] &gt;&gt; 2) &amp; 0x3f ) {
+
+                            case 0:
+                                return &quot;Unknown Token (128-bits).&quot;;
+                                break;
+
+                            case 1:
+                                return &quot;iButton 64-bit token (64-bits).&quot;;
+                                break;    
+
+                            case 2:
+                                return &quot;RFID token (64-bits).&quot;;
+                                break; 
+
+                            case 3:
+                                return &quot;RFID token (128-bits).&quot;;
+                                break;
+
+                            case 4:
+                                return &quot;RFID token (256-bits).&quot;;
+                                break;           
+
+                            case 9:
+                                return &quot;Id/credit card token (128-bits).&quot;;
+                                break;
+
+                            case 9:
+                                return &quot;Id/credit card token (128-bits).&quot;;
+                                break;
+
+                            case 16:
+                                return &quot;Biometric device token. (256-bits).&quot;;
+                                break;
+
+                            case 17:
+                                return &quot;Biometric device token. (64-bits).&quot;;
+                                break;
+
+                            case 18:
+                                return &quot;Bluetooth device token (48-bits).&quot;;
+                                break;
+
+                            case 19:
+                                return &quot;GSM IMEI code token (64-bits).&quot;;
+                                break;
+
+                            case 20:
+                                return &quot;GSM IMSI code token (64-bits).&quot;;
+                                break;    
+
+                            case 21:
+                                return &quot;RFID token (40-bits).&quot;;
+                                break;
+
+                            case 22:
+                                return &quot;RFID token (32-bits).&quot;;
+                                break;
+
+                            case 23:
+                                return &quot;RFID token (24-bits).&quot;;
+                                break;
+
+                            case 24:
+                                return &quot;RFID token (16-bits).&quot;;
+                                break;
+
+                            case 25:
+                                return &quot;RFID token (8-bits).&quot;;
+                                break;
+
+                            default:
+                                return &quot;Undefined token code&quot;;
+                                break;    
+                        }
+                    },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    frame: function() { return e.vscpData[3]; },
+                    data: function() {
+                        var outstr;
+                        
+                        for (i=4;i<e.vscpData.length;i++) {
+                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
+                        }
+
+                        return outstr; 
+                    }
+                "
+                template="
+                    {{lbl-start}}Event code : {{lbl-end}} {{val-start}}{{eventcodetxt}} [{{eventcode}}]{{val-end}}{{newline}}
+                    {{lbl-start}}Type : {{lbl-end}} {{val-start}}{{typecodetxt}} [{{typecode}}]{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
+
     <type id="38" 
         name="Stream Data with zone"
-        token="VSCP_TYPE_INFORMATION_STREAM_DATA_WITH_ZONE" />
+        token="VSCP_TYPE_INFORMATION_STREAM_DATA_WITH_ZONE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    zone: function() { return e.vscpData[0]; },
+                    subzone: function() { return e.vscpData[1]; },
+                    frame: function() { return e.vscpData[2]; }
+                    data: function() {
+                        var outstr;
+                        
+                        for (i=3;i<e.vscpData.length;i++) {
+                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
+                        }
+
+                        return outstr; 
+                    }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
+                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="39" 
         name="Confirm"
-        token="VSCP_TYPE_INFORMATION_CONFIRM" />
+        token="VSCP_TYPE_INFORMATION_CONFIRM" >
+        <render>
+            <vscpworks 
+                variables="  
+                    zone: function() { return e.vscpData[0]; },
+                    subzone: function() { return e.vscpData[1]; },
+                    frame: function() { return e.vscpData[2]; },
+                    vscpclass: function() { (return e.vscpData[3] << 8 + e.vscpData[4]); },
+                    vscptype: function() { return (e.vscpData[5] << 8 + e.vscpData[6]); }                   
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
+                    {{lbl-start}}VSCP class : {{lbl-end}} {{val-start}}{{vscpclass}}{{val-end}}{{newline}}
+                    {{lbl-start}}VSCP type : {{lbl-end}} {{val-start}}{{vscptype}}{{val-end}}{{newline}}
+                    Event confirmed{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="40" 
         name="Level Changed"
-        token="VSCP_TYPE_INFORMATION_LEVEL_CHANGED" />
+        token="VSCP_TYPE_INFORMATION_LEVEL_CHANGED" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    reserved: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }                
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
+                    Level has changed{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>    
+    </type>
 
     <type id="41" 
         name="Warning"
-        token="VSCP_TYPE_INFORMATION_WARNING" />
+        token="VSCP_TYPE_INFORMATION_WARNING" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    reserved: function() { return e.vscpData[0]; }, 
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }                
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
+                    WARNING{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="42" 
         name="State"
-        token="VSCP_TYPE_INFORMATION_STATE" />
+        token="VSCP_TYPE_INFORMATION_STATE" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    reserved: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } ,
+                    from: function() { return e.vscpData[3]; },
+                    to: function() { return e.vscpData[4]; }               
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
+                    State change from {{from}} to {{to}} {{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="43" 
         name="Action Trigger"
-        token="VSCP_TYPE_INFORMATION_ACTION_TRIGGER" />
+        token="VSCP_TYPE_INFORMATION_ACTION_TRIGGER" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    id: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }                
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Action id : {{lbl-end}} {{val-start}}{{id}}{{val-end}}{{newline}}
+                    Action trigger{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="44" 
         name="Sunrise"
-        token="VSCP_TYPE_INFORMATION_SUNRISE" />
+        token="VSCP_TYPE_INFORMATION_SUNRISE" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    reserved: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }                
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
+                    Sunrise{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="45" 
         name="Sunset"
-        token="VSCP_TYPE_INFORMATION_SUNSET" />
+        token="VSCP_TYPE_INFORMATION_SUNSET" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    reserved: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }                
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
+                    Sunset{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="46" 
         name="Start of record"
-        token="VSCP_TYPE_INFORMATION_START_OF_RECORD" />
+        token="VSCP_TYPE_INFORMATION_START_OF_RECORD" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    frame: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } ,
+                    framecount: function() { return e.vscpData[2]; }
+                    framecounttxt: function() { 
+                        if ( e.vscpData[2] ) {
+                            return &quot;&quot;;
+                        }
+                        else {
+                            return &quot;Not used&quot;; 
+                        }
+                    }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
+                    {{lbl-start}}Frame count: {{lbl-end}} {{val-start}}{{framecount}} {{framecounttxt}}{{val-end}}{{newline}}
+                    Multi frame start{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="47" 
         name="End of record"
-        token="VSCP_TYPE_INFORMATION_END_OF_RECORD" />
+        token="VSCP_TYPE_INFORMATION_END_OF_RECORD" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    frame: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
+                    Multi frame end{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="48" 
         name="Pre-set active"
-        token="VSCP_TYPE_INFORMATION_PRESET_ACTIVE" />
+        token="VSCP_TYPE_INFORMATION_PRESET_ACTIVE" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    user: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    preset: function() { return e.vscpData[3]; } 
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}User : {{lbl-end}} {{val-start}}{{user}}{{val-end}}{{newline}}
+                    {{lbl-start}}Preset code: {{lbl-end}} {{val-start}}{{preset}} {{framecounttxt}}{{val-end}}{{newline}}
+                    Activate preset{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="49" 
         name="Detect"
-        token="VSCP_TYPE_INFORMATION_DETECT" />
+        token="VSCP_TYPE_INFORMATION_DETECT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    preset: function() { return e.vscpData[3]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    Detection{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="50" 
         name="Overflow"
-        token="VSCP_TYPE_INFORMATION_OVERFLOW" />
+        token="VSCP_TYPE_INFORMATION_OVERFLOW" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    preset: function() { return e.vscpData[3]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    Overflow{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="51" 
         name="Big level changed"
-        token="VSCP_TYPE_INFORMATION_BIG_LEVEL_CHANGED" />
+        token="VSCP_TYPE_INFORMATION_BIG_LEVEL_CHANGED" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    cvalue: function() { return e.vscpData[3]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}} 
+                    {{lbl-start}}Change value : {{lbl-end}} {{val-start}}{{cvalue}}{{val-end}}{{newline}}                   
+                    Change{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="52" 
         name="Civil sunrise twilight time"
-        token="VSCP_TYPE_INFORMATION_SUNRISE_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_SUNRISE_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="53" 
         name="Civil sunset twilight time"
-        token="VSCP_TYPE_INFORMATION_SUNSET_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_SUNSET_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="54"
         name="Nautical sunrise twilight time"
-        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNRISE_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNRISE_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="55" 
         name="Nautical sunset twilight time"
-        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNSET_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_NAUTICAL_SUNSET_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="56" 
         name="Astronomical sunrise twilight time"
-        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNRISE_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNRISE_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="57"
         name="Astronomical sunset twilight time"
-        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNSET_TWILIGHT_START" />
+        token="VSCP_TYPE_INFORMATION_ASTRONOMICAL_SUNSET_TWILIGHT_START" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="58" 
         name="Calculated Noon"
-        token="VSCP_TYPE_INFORMATION_CALCULATED_NOON" />
+        token="VSCP_TYPE_INFORMATION_CALCULATED_NOON" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="59" 
         name="Shutter up"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_UP" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_UP" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="60" 
         name="Shutter down"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_DOWN" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_DOWN" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; } ,
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="61"
         name="Shutter left"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_LEFT" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_LEFT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="62" 
         name="Shutter right"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_RIGHT" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_RIGHT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="63" 
         name="Shutter reached top end"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_TOP" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_TOP" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="64" 
         name="Shutter reached bottom end"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_BOTTOM" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_BOTTOM" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="65"
         name="Shutter reached middle end"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_MIDDLE" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_MIDDLE" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="66" 
         name="Shutter reached preset end"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_PRESET" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_PRESET" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="67" 
         name="Shutter reached preset left"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_LEFT" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_LEFT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="68" 
         name="Shutter reached preset right"
-        token="VSCP_TYPE_INFORMATION_SHUTTER_END_RIGHT" />
+        token="VSCP_TYPE_INFORMATION_SHUTTER_END_RIGHT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="69" 
         name="Long click"
-        token="VSCP_TYPE_INFORMATION_LONG_CLICK" />
+        token="VSCP_TYPE_INFORMATION_LONG_CLICK" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    Long click{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="70" 
         name="Single click"
-        token="VSCP_TYPE_INFORMATION_SINGLE_CLICK" />
+        token="VSCP_TYPE_INFORMATION_SINGLE_CLICK" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    Single click{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="71" 
         name="Double click"
-        token="VSCP_TYPE_INFORMATION_DOUBLE_CLICK" />
+        token="VSCP_TYPE_INFORMATION_DOUBLE_CLICK" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    Double click{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="72" 
         name="Date"
-        token="VSCP_TYPE_INFORMATION_DATE" />
+        token="VSCP_TYPE_INFORMATION_DATE" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    century: function() { return e.vscpData[3]; },
+                    year: function() { return e.vscpData[4]; },
+                    month: function() { return e.vscpData[5]; },
+                    day: function() { return e.vscpData[6]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Date : {{lbl-end}}{{century}}{{year}}-{{month}}-{{day}} {{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="73" 
         name="Time"
-        token="VSCP_TYPE_INFORMATION_TIME" />
+        token="VSCP_TYPE_INFORMATION_TIME" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    hour: function() { return e.vscpData[3]; },
+                    minute: function() { return e.vscpData[4]; },
+                    second: function() { return e.vscpData[5]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Time : {{lbl-end}} {{val-start}}{{hour}}:{{minute}}:{{second}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="74" 
         name="Weekday"
-        token="VSCP_TYPE_INFORMATION_WEEKDAY" />
+        token="VSCP_TYPE_INFORMATION_WEEKDAY" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    weekday: function() { return e.vscpData[3]; },
+                    weekdaystr: function() {
+                        switch (e.vscpData[4]) {
+
+                            case 0:
+                                return &quot;Monday&quot;;
+                                break;
+
+                            case 1:
+                                return &quot;Tuesday&quot;;
+                                break;
+
+                            case 2:
+                                return &quot;Wednesday&quot;;
+                                break;
+
+                            case 3:
+                                return &quot;Thursday&quot;;
+                                break;
+
+                            case 4:
+                                return &quot;Friday&quot;;
+                                break;
+
+                            case 5:
+                                return &quot;Saturday&quot;;
+                                break;
+
+                            case 6:
+                                return &quot;Sunday&quot;;
+                                break;                        
+                        } 
+                    }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Weekday : {{lbl-end}} {{val-start}}{{weekday}} [{{weekdaystr}}]{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="75" 
         name="Lock"
-        token="VSCP_TYPE_INFORMATION_LOCK" />
+        token="VSCP_TYPE_INFORMATION_LOCK" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="76"
         name="Unlock"
-        token="VSCP_TYPE_INFORMATION_UNLOCK" />
+        token="VSCP_TYPE_INFORMATION_UNLOCK" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="77"
         name="DateTime"
-        token="VSCP_TYPE_INFORMATION_DATETIME" />
+        token="VSCP_TYPE_INFORMATION_DATETIME" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; }, 
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    sec     : e.vscpData[7] & 0x3f; },
+                    minute  : function() { return((e.vscpData[6] << 8 + e.vscpData[7]) >> 6 & 0x3f); },
+                    hour    : function() { return((e.vscpData[6] << 8 + e.vscpData[7]) >> 12 & 0x1f); },
+                    day     : function() { return((e.vscpData[5] >> 1) & 0x1f); },
+                    month   : function() { return((e.vscpData[4] << 8 + e.vscpData[5]) >> 6 & 0x0f); },
+                    year    : function() { return((e.vscpData[3] << 8 + e.vscpData[4]) >> 2 & 0xfff); },
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{lbl-start}}Date/Time : {{lbl-end}} {{val-start}}{{year}}-{{month}}-{{day}} {{hour}}:{{minute}}:{{sec}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="78" 
         name="Rising"
-        token="VSCP_TYPE_INFORMATION_RISING" />
+        token="VSCP_TYPE_INFORMATION_RISING" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="79"
         name="Falling"
-        token="VSCP_TYPE_INFORMATION_FALLING" />
+        token="VSCP_TYPE_INFORMATION_FALLING" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="80"
         name="Updated"
-        token="VSCP_TYPE_INFORMATION_UPDATED" />
+        token="VSCP_TYPE_INFORMATION_UPDATED" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="81"
         name="Connect"
-        token="VSCP_TYPE_INFORMATION_CONNECT" /> 
+        token="VSCP_TYPE_INFORMATION_CONNECT" > 
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="82"
         name="Disconnect"
-        token="VSCP_TYPE_INFORMATION_DISCONNECT" />         
+        token="VSCP_TYPE_INFORMATION_DISCONNECT" >   
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>      
+    </type>
 
     <type id="83"
         name="Reconnect"
-        token="VSCP_TYPE_INFORMATION_RECONNECT" />
+        token="VSCP_TYPE_INFORMATION_RECONNECT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="84"
         name="Enter"
-        token="VSCP_TYPE_INFORMATION_ENTER" />
+        token="VSCP_TYPE_INFORMATION_ENTER" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; }, 
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; } 
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type id="85"
         name="Exit"
-        token="VSCP_TYPE_INFORMATION_EXIT" />
-
+        token="VSCP_TYPE_INFORMATION_EXIT" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    index: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
 </class>

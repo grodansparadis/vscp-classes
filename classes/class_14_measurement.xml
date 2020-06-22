@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="14" name="Measurement" token="CLASS1.MEASUREMENTX4">
+
+    <render>
+        <vscpworks 
+            template="
+                {{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}} 
+                {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}} 
+                {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}
+            "
+        />
+    </render>
+    
     <type id="0" name="General event" token="VSCP_TYPE_MEASUREMENTX4_GENERAL" />
 </class>

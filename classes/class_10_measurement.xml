@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<class id="10" name="Measurement" token="CLASS1.MEASUREMENT">
+<class id="10" 
+    name="Measurement" 
+    token="CLASS1.MEASUREMENT">
+
+    <render>
+        <vscpworks 
+            template="
+                {{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}} 
+                {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}} 
+                {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}
+            "
+        />
+    </render>
 
     <type id="0" name="General event" token="VSCP_TYPE_MEASUREMENT_GENERAL" />
 
@@ -13,9 +25,6 @@
                     description="Count." 
                     conversion="{{val}}"/>
         </units>
-        <render>
-            <vscpworks template="&lt;b&gt;Unit: &lt;/b&gt; = {{unitstr}} [{{unit}}]&lt;br&gt; &lt;b&gt;Sensorindex: &lt;/b&gt; = {{sensorindex}}&lt;br&gt; &lt;b&gt;Value: &lt;/b&gt; = {{val}}{{symbol}}&lt;br&gt;"/> 
-        </render>
     </type>
     
     <type id="2" name="Length/Distance" token="VSCP_TYPE_MEASUREMENT_LENGTH" >
@@ -26,7 +35,7 @@
                     symbol-utf8="m" 
                     description="Meter." 
                     conversion="{{val}}"/>
-        </units>
+        </units>        
     </type>
     
     <type id="3" name="Mass" token="VSCP_TYPE_MEASUREMENT_MASS" >
