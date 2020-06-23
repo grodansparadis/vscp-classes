@@ -39,9 +39,9 @@
                     repeats: function() { return ( e.vscpData[0] &lt;&lt; 3 &amp; 0x1f); },
                     zone: function() { return e.vscpData[1]; },
                     subzone: function() { return e.vscpData[2]; },
-                    button_code: function() { return (e.vscpData[3] << 8 + e.vscpData[4]); },
-                    button_code_page: function() { if ( e.vscpData >= 7 ) 
-                                                      return (e.vscpData[5] << 8 + e.vscpData[6]); 
+                    button_code: function() { return (e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); },
+                    button_code_page: function() { if ( e.vscpData &gt;= 7 ) 
+                                                      return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); 
                                                    else
                                                       return &quot;No code-page&quot;; 
                                                 }
@@ -83,8 +83,8 @@
                     }
                     zone: function() { return e.vscpData[1]; },
                     subzone: function() { return e.vscpData[2]; },
-                    coorinate_x: function() { return (e.vscpData[3] << 8 + e.vscpData[4]); }
-                    coorinate_y: function() { return (e.vscpData[5] << 8 + e.vscpData[6]); }
+                    coorinate_x: function() { return (e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); }
+                    coorinate_y: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -768,12 +768,12 @@
                     data: function() {
                         var outstr;
                         
-                        for (i=1;i<e.vscpData.length;i++) {
+                        for (i=1;i&lt;e.vscpData.length;i++) {
                             if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
                         }
 
                         outstr += &quot;'&quot;;
-                        for (i=1;i<e.vscpData.length;i++) {
+                        for (i=1;i&lt;e.vscpData.length;i++) {
                             if (e.vscpData.length>1) outstr += String.fromCharCode(e.vscpData[i]);
                         }
                         outstr += &quot;'&quot;;
@@ -900,7 +900,7 @@
                     data: function() {
                         var outstr;
                         
-                        for (i=4;i<e.vscpData.length;i++) {
+                        for (i=4;i&lt;e.vscpData.length;i++) {
                             if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
                         }
 
@@ -932,8 +932,8 @@
                     data: function() {
                         var outstr;
                         
-                        for (i=3;i<e.vscpData.length;i++) {
-                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
+                        for (i=3;i&lt;e.vscpData.length;i++) {
+                            if (e.vscpData.length&gt;1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
                         }
 
                         return outstr; 
@@ -959,8 +959,8 @@
                     zone: function() { return e.vscpData[0]; },
                     subzone: function() { return e.vscpData[1]; },
                     frame: function() { return e.vscpData[2]; },
-                    vscpclass: function() { (return e.vscpData[3] << 8 + e.vscpData[4]); },
-                    vscptype: function() { return (e.vscpData[5] << 8 + e.vscpData[6]); }                   
+                    vscpclass: function() { (return e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); },
+                    vscptype: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }                   
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1800,12 +1800,12 @@
                     index: function() { return e.vscpData[0]; }, 
                     zone: function() { return e.vscpData[1]; },
                     subzone: function() { return e.vscpData[2]; },
-                    sec     : e.vscpData[7] & 0x3f; },
-                    minute  : function() { return((e.vscpData[6] << 8 + e.vscpData[7]) >> 6 & 0x3f); },
-                    hour    : function() { return((e.vscpData[6] << 8 + e.vscpData[7]) >> 12 & 0x1f); },
-                    day     : function() { return((e.vscpData[5] >> 1) & 0x1f); },
-                    month   : function() { return((e.vscpData[4] << 8 + e.vscpData[5]) >> 6 & 0x0f); },
-                    year    : function() { return((e.vscpData[3] << 8 + e.vscpData[4]) >> 2 & 0xfff); },
+                    sec     : e.vscpData[7] &amp; 0x3f; },
+                    minute  : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 6 &amp; 0x3f); },
+                    hour    : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 12 &amp; 0x1f); },
+                    day     : function() { return((e.vscpData[5] &gt;&gt; 1) &amp; 0x1f); },
+                    month   : function() { return((e.vscpData[4] &lt;&lt; 8 + e.vscpData[5]) &gt;&gt; 6 &amp; 0x0f); },
+                    year    : function() { return((e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]) &gt;&gt; 2 &amp; 0xfff); },
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}

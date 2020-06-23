@@ -6,210 +6,606 @@
 
     <type id="0"
         name="General event"
-        token="VSCP_TYPE_CONTROL_GENERAL" />
+        token="VSCP_TYPE_CONTROL_GENERAL" >
+    </type>    
 
     <type  id="1"
         name="Mute on/off"
-        token="VSCP_TYPE_CONTROL_MUTE" />
+        token="VSCP_TYPE_CONTROL_MUTE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    optstr: function() { 
+                        if ( e.vscpData[0] )
+                            return &quot;inactivate&quot;;
+                        else
+                            return &quot;activate&quot;;    
+                     },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Mute : {{lbl-end}} {{val-start}}{{optstr}} [{{opt}}]{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>    
 
     <type  id="2"
         name ="(All) Lamp(s) on/off"
-        token="VSCP_TYPE_CONTROL_ALL_LAMPS" />
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    optstr: function() { 
+                        if ( e.vscpData[0] )
+                            return &quot;off&quot;;
+                        else
+                            return &quot;on&quot;;    
+                     },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}All lamps : {{lbl-end}} {{val-start}}{{optstr}} [{{opt}}]{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="3"
         name="Open"
-        token="VSCP_TYPE_CONTROL_OPEN" />
+        token="VSCP_TYPE_CONTROL_OPEN" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="4"
         name="Close"
-        token="VSCP_TYPE_CONTROL_CLOSE" />
+        token="VSCP_TYPE_CONTROL_CLOSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="5"
         name="TurnOn"
-        token="VSCP_TYPE_CONTROL_TURNON" />
+        token="VSCP_TYPE_CONTROL_TURNON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="6"
         name="TurnOff"
-        token="VSCP_TYPE_CONTROL_TURNOFF" />
+        token="VSCP_TYPE_CONTROL_TURNOFF" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="7"
         name="Start"
-        token="VSCP_TYPE_CONTROL_START" />
+        token="VSCP_TYPE_CONTROL_START" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="8"
         name="Stop"
-        token="VSCP_TYPE_CONTROL_STOP" />
+        token="VSCP_TYPE_CONTROL_STOP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="9"
         name="Reset"
-        token="VSCP_TYPE_CONTROL_RESET" />
+        token="VSCP_TYPE_CONTROL_RESET" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="10"
         name="Interrupt"
-        token="VSCP_TYPE_CONTROL_INTERRUPT" />
+        token="VSCP_TYPE_CONTROL_INTERRUPT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Interrupt level : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="11"
         name="Sleep"
-        token="VSCP_TYPE_CONTROL_SLEEP" />
+        token="VSCP_TYPE_CONTROL_SLEEP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="12"
         name="Wakeup"
-        token="VSCP_TYPE_CONTROL_WAKEUP" />
+        token="VSCP_TYPE_CONTROL_WAKEUP" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="13"
         name="Resume"
-        token="VSCP_TYPE_CONTROL_RESUME" />
+        token="VSCP_TYPE_CONTROL_RESUME" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="14"
         name="Pause"
-        token="VSCP_TYPE_CONTROL_PAUSE" />
+        token="VSCP_TYPE_CONTROL_PAUSE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="15"
         name="Activate"
-        token="VSCP_TYPE_CONTROL_ACTIVATE" />
+        token="VSCP_TYPE_CONTROL_ACTIVATE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="16"
         name="Deactivate"
-        token="VSCP_TYPE_CONTROL_DEACTIVATE" />
+        token="VSCP_TYPE_CONTROL_DEACTIVATE" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Option : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="17"
         name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED17" />
+        token="VSCP_TYPE_CONTROL_RESERVED17" >
+    </type>
 
     <type  id="18"
         name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED18" />
+        token="VSCP_TYPE_CONTROL_RESERVED18" >
+    </type>
 
     <type  id="19"
         name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED19" />
+        token="VSCP_TYPE_CONTROL_RESERVED19" >
+    </type>
 
     <type  id="20"
         name="Dim lamp(s)"
-        token="VSCP_TYPE_CONTROL_DIM_LAMPS" />
+        token="VSCP_TYPE_CONTROL_DIM_LAMPS" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Dim lamps : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="21"
         name="Change Channel"
-        token="VSCP_TYPE_CONTROL_CHANGE_CHANNEL" />
+        token="VSCP_TYPE_CONTROL_CHANGE_CHANNEL" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Channel : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="22"
         name="Change Level"
-        token="VSCP_TYPE_CONTROL_CHANGE_LEVEL" />
+        token="VSCP_TYPE_CONTROL_CHANGE_LEVEL" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Absolute level : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="23"
         name="Relative Change Level"
-        token="VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL" />
+        token="VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Relative level : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="24"
         name="Measurement Request"
-        token="VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST" />
+        token="VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    optstr: function() { 
+                        if ( e.vscpData[0] )
+                            return &quot;All&quot;;
+                        else
+                            return &quot;Specific&quot;;    
+                     },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; }
+                "
+                template="
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Req. message : {{lbl-end}} {{val-start}}{{opt}} {{optstr}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
     <type  id="25"
         name="Stream Data"
-        token="VSCP_TYPE_CONTROL_STREAM_DATA" />
+        token="VSCP_TYPE_CONTROL_STREAM_DATA" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; },
+                "
+                template="
+                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>    
+    </type>
 
     <type  id="26"
         name="Sync"
-        token="VSCP_TYPE_CONTROL_SYNC" />
+        token="VSCP_TYPE_CONTROL_SYNC" >
+    </type>
 
     <type  id="27"
         name="Zoned Stream Data"
-        token="VSCP_TYPE_CONTROL_ZONED_STREAM_DATA" />
+        token="VSCP_TYPE_CONTROL_ZONED_STREAM_DATA" >
+    </type>
 
     <type  id="28"
         name="Set Pre-set"
-        token="VSCP_TYPE_CONTROL_SET_PRESET" />
+        token="VSCP_TYPE_CONTROL_SET_PRESET" >
+    </type>
 
     <type  id="29"
         name="Toggle state"
-        token="VSCP_TYPE_CONTROL_TOGGLE_STATE" />
+        token="VSCP_TYPE_CONTROL_TOGGLE_STATE" >
+    </type>
 
     <type  id="30"
         name="Timed pulse on"
-        token="VSCP_TYPE_CONTROL_TIMED_PULSE_ON" />
+        token="VSCP_TYPE_CONTROL_TIMED_PULSE_ON" >
+    </type>
 
     <type  id="31"
         name="Timed pulse off"
-        token="VSCP_TYPE_CONTROL_TIMED_PULSE_OFF" />
+        token="VSCP_TYPE_CONTROL_TIMED_PULSE_OFF" >
+    </type>
 
     <type  id="32"
         name="Set country/language"
-        token="VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGE" />
+        token="VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGE" >
+    </type>
 
     <type  id="33"
         name="Big Change level"
-        token="VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL" />
+        token="VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL" >
+    </type>
 
     <type  id="34"
         name="Move shutter up"
-        token="VSCP_TYPE_CONTROL_SHUTTER_UP" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_UP" >
+    </type>
 
     <type  id="35"
         name="Move shutter down"
-        token="VSCP_TYPE_CONTROL_SHUTTER_DOWN" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_DOWN" >
+    </type>
 
     <type  id="36"
         name="Move shutter left"
-        token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" >
+    </type>
 
     <type  id="37"
         name="Move shutter right"
-        token="VSCP_TYPE_CONTROL_SHUTTER_RIGHT" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_RIGHT" >
+    </type>
 
     <type  id="38"
         name="Move shutter to middle position"
-        token="VSCP_TYPE_CONTROL_SHUTTER_MIDDLE" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_MIDDLE" >
+    </type>
 
     <type  id="39"
         name="Move shutter to preset position"
-        token="VSCP_TYPE_CONTROL_SHUTTER_PRESET" />
+        token="VSCP_TYPE_CONTROL_SHUTTER_PRESET" >
+    </type>
 
     <type  id="40"
         name="(All) Lamp(s) on"
-        token="VSCP_TYPE_CONTROL_ALL_LAMPS_ON" />
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS_ON" >
+    </type>
 
     <type  id="41"
         name="(All) Lamp(s) off"
-        token="VSCP_TYPE_CONTROL_ALL_LAMPS_OFF" />
+        token="VSCP_TYPE_CONTROL_ALL_LAMPS_OFF" >
+    </type>
 
     <type  id="42"
         name="Lock"
-        token="VSCP_TYPE_CONTROL_LOCK" />
+        token="VSCP_TYPE_CONTROL_LOCK" >
+    </type>
 
     <type  id="43"
         name="Unlock"
-        token="VSCP_TYPE_CONTROL_UNLOCK" />
+        token="VSCP_TYPE_CONTROL_UNLOCK" >
+    </type>
 
     <type  id="44"
         name="PWM set"
-        token="VSCP_TYPE_CONTROL_PWM" />
+        token="VSCP_TYPE_CONTROL_PWM" >
+    </type>
 
     <type  id="45"
         name="Lock with token"
-        token="VSCP_TYPE_CONTROL_TOKEN_LOCK" />
+        token="VSCP_TYPE_CONTROL_TOKEN_LOCK" >
+    </type>
 
     <type  id="46"
         name="Unlock with token"
-        token="VSCP_TYPE_CONTROL_TOKEN_UNLOCK" />
+        token="VSCP_TYPE_CONTROL_TOKEN_UNLOCK" >
+    </type>
 
     <type  id="47"
         name="Set security level"
-        token="VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL" />
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL" >
+    </type>
 
     <type  id="48"
         name="Set security pin"
-        token="VSCP_TYPE_CONTROL_SET_SECURITY_PIN" />
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_PIN" >
+    </type>
 
     <type  id="49"
         name="Set security password"
-        token="VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD" />
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD" >
+    </type>
 
     <type  id="50"
         name="Set security token"
-        token="VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN" />
+        token="VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN" >
+    </type>
 
     <type  id="51"
         name="Request new security token"
-        token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" />
+        token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" >
+    </type>
 
 </class>
