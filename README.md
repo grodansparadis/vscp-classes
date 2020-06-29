@@ -258,14 +258,14 @@ Convert XML file to JSON
 
 In Python one can now use statements like the following to access information
 
-```
+```python
 # - Class token
 print( o['class']['@token'])
 
 # - All types
 print( o['class']['type'])
 
-# - Name for Type=6   
+# - Name for Type=6
 print( o['class']['type'][6]
 ['@name'])
 
@@ -278,14 +278,11 @@ print( o['class']['type'][6]
 
 # - Conversion formula to unit = 0
 print( o['class']['type'][6]['units']['unit'][1]['@conversion'])
+```
 
 for conversions a mustache template is used where {{val}} is the floating point value.
 
 etc..
-
-```
-
-----
 
 ----
 
@@ -296,3 +293,95 @@ This is an internal bash script that is used on our internal development system 
     dowork.sh <ftp-server> <user> <password>
 
 ----
+
+### Format
+
+It is possible to specify how user level software should render the data part of an event. It is possible to define many renderings but one is always available for VSCP Works. A typical event definition looks like this
+
+```xml
+<type  id="51"
+    name="Request new security token"
+    token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" >
+    <render>
+        <vscpworks 
+            variables="  
+                opt: function() { return e.vscpData[0]; },
+                zone: function() { return e.vscpData[1]; },
+                subzone: function() { return e.vscpData[2]; },
+            "
+            template="     
+                {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}               
+                {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                {{newline}}
+            "
+        />
+    </render>
+</type>
+```
+The rendering for VSCP Works is defined here. Each rendering definition consist of two parts. 
+
+The first part is a variable substitution and define part that have access to the current event as the object *e* and therefore all it's data. As a variable also can be defined as a function you can assign values using functions which do calculations on the dynamic data that is provided by the environnement. A function here has access to standard Javascript functionality and the node-vscp package functionality or similar.
+
+The second part is the actual rendering on mustache format. A defined variable should be written as {{variablename}} and will be substituted with the variable as of above.
+
+There are some special substitution's available
+
+
+| Expression | Will be replaced with |
+| ---------- | --------------------- |
+| __{{lbl-start}}__ | Start of label (set to bold/color...) |
+| __{{lbl-end}}__ | End of label (Restet bold/color...) |
+| __{{val-start}}__ | Start of value (set to bold/color...) |
+| __{{val-end}}__ | End of value (Restet bold/color...) | 
+| __{{newline}}__ | New line |
+| __{{ident}}__ | Default ident (what is default is defined by application) |
+| __{{unit}}__ | Unit as numerical (if defined) |
+| __{{unitstr}}__ | Unit name |
+| __{{unit_description}}__ | Unit description |
+| __{{unit_comment}}__  | Unit comment |
+| __{{unit_ascii}}__  |  Unit in ASCII. Use if the environment cant handel Unicode.  |
+| __{{unit_utf8}}__  | Unit in UTF8. Use in Unicode aware environments. |
+
+This is another example of variable definitions
+
+```json
+variables="
+   crc8:             : function() { return e.vscpData[0]; }
+   time_epoch        : function() { return e.vscpData[1]&lt;&lt;24 +
+   				         e.vscpData[2]&lt;&lt;16 +
+   				         e.vscpData[3]&lt;&lt;8 +
+   				         e.vscpData[4]] }
+"
+```
+
+and another
+
+```json
+variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    password: function() {
+                        var rval = &quot;&quot;;
+                        for ( i=3;i&lt;e.vscpData.length;i++) {
+                            rval += String.fromCharCode(e.vscpData[i]);
+                        }
+                        return rval;
+                    }
+                "
+```
+
+Note that some characters has to be coded as they are reserved in XML. For completeness they are listed here
+
+| Character | Encode as |
+| :-------: | :-------: |
+| < | &amp;lt;   |
+| > | &amp;gt;   |
+| & | &amp;amp;  |
+| " | &amp;quot; |
+| ' | &amp;apos; |
+
+
+Technically variables are evaluated using the [math.js](https://mathjs.org/) package. The (mustache.js)[https://github.com/janl/mustache.js/] package is then used to obtain render information.
+
