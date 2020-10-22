@@ -536,12 +536,12 @@ VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL
 ```
 Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.
 
- | Data byte | Description                                                                                               | 
- | :---------: | -----------                                                                                               | 
- | 0         | Index                                                                                                     | 
- | 1         | Zone for which event applies to (0-255). 255 is all zones.                                                | 
- | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.                                        | 
- | 3-7       | Level as signed Integer. The range can be adjusted by the user by sending the needed number of bytes 1-5. | 
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0         | Index        | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | 
+ | 3-7       | Level as signed integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the signed integer (MSB first). | 
 
 ----
 

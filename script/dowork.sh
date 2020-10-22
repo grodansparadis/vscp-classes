@@ -6,7 +6,7 @@
 # and a folder "events" is expected to be available on the
 # root public_html folder of this server.
 #
-# Usage: ./dowwork host user password ["save"]
+# Usage: ./dowork.sh host user password ["save"]
 
 # Remove old generated data
 rm -rf ../generated/*

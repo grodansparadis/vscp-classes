@@ -631,10 +631,10 @@ VSCP_TYPE_INFORMATION_WARNING
 ```
  A node indicates that a warning condition occurred. 
 
- | Data byte | Description                                                        | 
- | :---------: | -----------                                                        | 
- | 0         | Relative or absolute level.                                        | 
- | 1         | Zone for which event applies to (0-255). 255 is all zones.         | 
+ | Data byte | Description | 
+ | :---------: | ----------- | 
+ | 0         | Reserved level. | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones. | 
  | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | 
 
 ----

@@ -49,7 +49,8 @@ for vscp_class in order_list:
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
 
-    outstr = type_root.attrib["token"]
+    outstr = "VSCP_"
+    outstr += type_root.attrib["token"]
     outstr = outstr.replace(".","_")
     while len(outstr)<40:
         outstr += " "
