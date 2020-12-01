@@ -69,19 +69,19 @@
         token="VSCP_TYPE_CONFIGURE_RESTORE_NACK" />
     
     <type id="30"
-        name="Set mode"
-        token="VSCP_TYPE_CONFIGURE_SET_MODE" />
+        name="Set parameter"
+        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER" />
 
     <type id="31" 
-        name="Set default mode"
-        token="VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE" />
+        name="Set parameter to default"
+        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT" />
 
     <type id="32" 
-        name="Set mode acknowledge"
-        token="VSCP_TYPE_CONFIGURE_SET_MODE_ACK" />
+        name="Set parameter acknowledge"
+        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK" />
     
     <type id="33" 
-        name="Set mode negative acknowledge"
-        token="VSCP_TYPE_CONFIGURE_SET_MODE_NACK" />
+        name="Set paramter negative acknowledge"
+        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK" />
 
 </class>

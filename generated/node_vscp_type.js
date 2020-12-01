@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-01 12:33:05.868981
+                        Generated: 2020-12-01 13:13:00.466246
 */
 
 'use strict';
@@ -1082,10 +1082,10 @@ module.exports.VSCP_TYPE_CONFIGURE_RELOAD_NACK = 12,
 module.exports.VSCP_TYPE_CONFIGURE_RESTORE = 13,
 module.exports.VSCP_TYPE_CONFIGURE_RESTORE_ACK = 14,
 module.exports.VSCP_TYPE_CONFIGURE_RESTORE_NACK = 15,
-module.exports.VSCP_TYPE_CONFIGURE_SET_MODE = 30,
-module.exports.VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE = 31,
-module.exports.VSCP_TYPE_CONFIGURE_SET_MODE_ACK = 32,
-module.exports.VSCP_TYPE_CONFIGURE_SET_MODE_NACK = 33;
+module.exports.VSCP_TYPE_CONFIGURE_SET_PARAMETER = 30,
+module.exports.VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT = 31,
+module.exports.VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK = 32,
+module.exports.VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK = 33;
 
 
 vscp_type_map.set( (120 << 16) + 0,'VSCP_TYPE_CONFIGURE_GENERAL'); 
@@ -1104,10 +1104,10 @@ vscp_type_map.set( (120 << 16) + 12,'VSCP_TYPE_CONFIGURE_RELOAD_NACK');
 vscp_type_map.set( (120 << 16) + 13,'VSCP_TYPE_CONFIGURE_RESTORE'); 
 vscp_type_map.set( (120 << 16) + 14,'VSCP_TYPE_CONFIGURE_RESTORE_ACK'); 
 vscp_type_map.set( (120 << 16) + 15,'VSCP_TYPE_CONFIGURE_RESTORE_NACK'); 
-vscp_type_map.set( (120 << 16) + 30,'VSCP_TYPE_CONFIGURE_SET_MODE'); 
-vscp_type_map.set( (120 << 16) + 31,'VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE'); 
-vscp_type_map.set( (120 << 16) + 32,'VSCP_TYPE_CONFIGURE_SET_MODE_ACK'); 
-vscp_type_map.set( (120 << 16) + 33,'VSCP_TYPE_CONFIGURE_SET_MODE_NACK'); 
+vscp_type_map.set( (120 << 16) + 30,'VSCP_TYPE_CONFIGURE_SET_PARAMETER'); 
+vscp_type_map.set( (120 << 16) + 31,'VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT'); 
+vscp_type_map.set( (120 << 16) + 32,'VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK'); 
+vscp_type_map.set( (120 << 16) + 33,'VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK'); 
  
 //  CLASS1.GNSS = 206  -  Position (GNSS)
 module.exports.VSCP_TYPE_GNSS_GENERAL = 0,

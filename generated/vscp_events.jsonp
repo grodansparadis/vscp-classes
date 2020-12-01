@@ -1,6 +1,6 @@
 myFunc(
 {
-"Generated" : " 2020-12-01 12:29:15.804164 ",
+"Generated" : " 2020-12-01 13:08:12.404335 ",
 "events": [
 {
 	"class": 0,
@@ -5753,29 +5753,29 @@ myFunc(
 	},
 	{
 		"type": 30,
-		"token": "VSCP_TYPE_CONFIGURE_SET_MODE",
-		"name": "Set mode",
+		"token": "VSCP_TYPE_CONFIGURE_SET_PARAMETER",
+		"name": "Set parameter",
 		"units": [],
-		"description": "Set mode, that is, set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n | 5    | Value id MSB. | \n | 6    | Value id LSB. |\n"
+		"description": "Set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n | 5    | Value id MSB. | \n | 6    | Value id LSB. |\n"
 	},
 	{
 		"type": 31,
-		"token": "VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE",
-		"name": "Set default mode",
+		"token": "VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT",
+		"name": "Set parameter to default",
 		"units": [],
-		"description": "Set default mode, that is, set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n "
+		"description": "Set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n "
 	},
 	{
 		"type": 32,
-		"token": "VSCP_TYPE_CONFIGURE_SET_MODE_ACK",
-		"name": "Set mode acknowledge",
+		"token": "VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK",
+		"name": "Set parameter acknowledge",
 		"units": [],
 		"description": "This event should be sent by the node after setting the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Parameter id MSB. | \n | 1    | Parameter id LSB. |\n | 2    | Value id MSB. | \n | 3    | Value id LSB. |\n"
 	},
 	{
 		"type": 33,
-		"token": "VSCP_TYPE_CONFIGURE_SET_MODE_NACK",
-		"name": "Set mode negative acknowledge",
+		"token": "VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK",
+		"name": "Set paramter negative acknowledge",
 		"units": [],
 		"description": "should be sent by the node if it fails to set the new value.\n\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Parameter id MSB. | \n | 1    | Parameter id LSB. |\n | 2    | Value id MSB. | \n | 3    | Value id LSB. |\n"
 	}

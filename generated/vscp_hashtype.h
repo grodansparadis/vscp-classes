@@ -2,7 +2,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-01 12:29:12.208246
+                        Generated: 2020-12-01 13:08:08.854304
 */
  
 
@@ -881,10 +881,10 @@
 	m_hashType[ MAKE_CLASSTYPE_LONG(120,13) ] = _("VSCP_TYPE_CONFIGURE_RESTORE");
 	m_hashType[ MAKE_CLASSTYPE_LONG(120,14) ] = _("VSCP_TYPE_CONFIGURE_RESTORE_ACK");
 	m_hashType[ MAKE_CLASSTYPE_LONG(120,15) ] = _("VSCP_TYPE_CONFIGURE_RESTORE_NACK");
-	m_hashType[ MAKE_CLASSTYPE_LONG(120,30) ] = _("VSCP_TYPE_CONFIGURE_SET_MODE");
-	m_hashType[ MAKE_CLASSTYPE_LONG(120,31) ] = _("VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE");
-	m_hashType[ MAKE_CLASSTYPE_LONG(120,32) ] = _("VSCP_TYPE_CONFIGURE_SET_MODE_ACK");
-	m_hashType[ MAKE_CLASSTYPE_LONG(120,33) ] = _("VSCP_TYPE_CONFIGURE_SET_MODE_NACK");
+	m_hashType[ MAKE_CLASSTYPE_LONG(120,30) ] = _("VSCP_TYPE_CONFIGURE_SET_PARAMETER");
+	m_hashType[ MAKE_CLASSTYPE_LONG(120,31) ] = _("VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT");
+	m_hashType[ MAKE_CLASSTYPE_LONG(120,32) ] = _("VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK");
+	m_hashType[ MAKE_CLASSTYPE_LONG(120,33) ] = _("VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK");
 
 	//  CLASS1.GNSS = 206  -  Position (GNSS)
 	m_hashType[ MAKE_CLASSTYPE_LONG(206,0) ] = _("VSCP_TYPE_GNSS_GENERAL");

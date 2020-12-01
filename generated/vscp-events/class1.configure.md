@@ -294,11 +294,11 @@ This event should be sent by the node after restoring a new configuration to neg
 
 ----
 
-## Type=30 (0x1E) - Set mode :id=type30
+## Type=30 (0x1E) - Set parameter :id=type30
 ```
-VSCP_TYPE_CONFIGURE_SET_MODE
+VSCP_TYPE_CONFIGURE_SET_PARAMETER
 ```
-Set mode, that is, set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.
+Set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.
 
 CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.
 
@@ -316,11 +316,11 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node i
 
 ----
 
-## Type=31 (0x1F) - Set default mode :id=type31
+## Type=31 (0x1F) - Set parameter to default :id=type31
 ```
-VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT
 ```
-Set default mode, that is, set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.
+Set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.
 
 CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.
 
@@ -336,9 +336,9 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node i
  
 ----
 
-## Type=32 (0x20) - Set mode acknowledge :id=type32
+## Type=32 (0x20) - Set parameter acknowledge :id=type32
 ```
-VSCP_TYPE_CONFIGURE_SET_MODE_ACK
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK
 ```
 This event should be sent by the node after setting the new value.
 
@@ -351,9 +351,9 @@ This event should be sent by the node after setting the new value.
 
 ----
 
-## Type=33 (0x21) - Set mode negative acknowledge :id=type33
+## Type=33 (0x21) - Set paramter negative acknowledge :id=type33
 ```
-VSCP_TYPE_CONFIGURE_SET_MODE_NACK
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK
 ```
 should be sent by the node if it fails to set the new value.
 

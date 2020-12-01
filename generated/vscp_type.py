@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-01 12:29:13.871735
+#                        Generated: 2020-12-01 13:08:10.495712
 #
  
  
@@ -579,10 +579,10 @@ VSCP_TYPE_CONFIGURE_RELOAD_NACK                      = 12 # Reload configuration
 VSCP_TYPE_CONFIGURE_RESTORE                          = 13 # Restore configuration
 VSCP_TYPE_CONFIGURE_RESTORE_ACK                      = 14 # Restore configuration acknowledge
 VSCP_TYPE_CONFIGURE_RESTORE_NACK                     = 15 # Restore configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_SET_MODE                         = 30 # Set mode
-VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE                 = 31 # Set default mode
-VSCP_TYPE_CONFIGURE_SET_MODE_ACK                     = 32 # Set mode acknowledge
-VSCP_TYPE_CONFIGURE_SET_MODE_NACK                    = 33 # Set mode negative acknowledge
+VSCP_TYPE_CONFIGURE_SET_PARAMETER                    = 30 # Set parameter
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT            = 31 # Set parameter to default
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK                = 32 # Set parameter acknowledge
+VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK               = 33 # Set paramter negative acknowledge
 
 #  CLASS1.GNSS = 206  -  Position (GNSS)
 VSCP_TYPE_GNSS_GENERAL                               = 0 # General event
