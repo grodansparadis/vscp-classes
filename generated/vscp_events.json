@@ -1,5 +1,5 @@
 {
-"Generated" : " 2020-06-11 14:08:14.949934 ",
+"Generated" : " 2020-10-22 14:27:57.628444 ",
 "events": [
 {
 	"class": 0,
@@ -1540,7 +1540,7 @@
 		"token": "VSCP_TYPE_INFORMATION_WARNING",
 		"name": "Warning",
 		"units": [],
-		"description": " A node indicates that a warning condition occurred. \n\n | Data byte | Description                                                        | \n | :---------: | -----------                                                        | \n | 0         | Relative or absolute level.                                        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.         | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n"
+		"description": " A node indicates that a warning condition occurred. \n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0         | Reserved level. | \n | 1         | Zone for which event applies to (0-255). 255 is all zones. | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n"
 	},
 	{
 		"type": 42,
@@ -2094,7 +2094,7 @@
 		"token": "VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL",
 		"name": "Big Change level",
 		"units": [],
-		"description": "Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.\n\n | Data byte | Description                                                                                               | \n | :---------: | -----------                                                                                               | \n | 0         | Index                                                                                                     | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.                                                | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.                                        | \n | 3-7       | Level as signed Integer. The range can be adjusted by the user by sending the needed number of bytes 1-5. | \n"
+		"description": "Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Index        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Level as signed integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the signed integer (MSB first). | \n"
 	},
 	{
 		"type": 34,
@@ -8137,7 +8137,7 @@
 		"token": "VSCP_TYPE_INFORMATION_WARNING",
 		"name": "Warning",
 		"units": [],
-		"description": " A node indicates that a warning condition occurred. \n\n | Data byte | Description                                                        | \n | :---------: | -----------                                                        | \n | 0         | Relative or absolute level.                                        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.         | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n"
+		"description": " A node indicates that a warning condition occurred. \n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0         | Reserved level. | \n | 1         | Zone for which event applies to (0-255). 255 is all zones. | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n"
 	},
 	{
 		"type": 42,
@@ -8691,7 +8691,7 @@
 		"token": "VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL",
 		"name": "Big Change level",
 		"units": [],
-		"description": "Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.\n\n | Data byte | Description                                                                                               | \n | :---------: | -----------                                                                                               | \n | 0         | Index                                                                                                     | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.                                                | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.                                        | \n | 3-7       | Level as signed Integer. The range can be adjusted by the user by sending the needed number of bytes 1-5. | \n"
+		"description": "Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Index        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Level as signed integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the signed integer (MSB first). | \n"
 	},
 	{
 		"type": 34,

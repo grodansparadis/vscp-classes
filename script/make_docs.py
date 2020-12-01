@@ -152,10 +152,14 @@ for vscp_class in order_list:
                 ") - " + child.attrib["name"] +\
                 " :id=type" + child.attrib["id"]
             outstr += "\n" 
-            outstr += "    " + child.attrib["token"]
+            #outstr += "    " + child.attrib["token"] 
+            outstr += "\n" 
+            outstr += "```\n" + child.attrib["token"]
+            outstr += "\n```"
+            outstr += "\n"
             
             # Get description
-            description = ""
+            description = "\n"
             with open('../classes/' + type_root.attrib["id"] + "." + child.attrib["id"] + '.md', 'r') as myfile:
                 description = myfile.read()
                 outstr += description
