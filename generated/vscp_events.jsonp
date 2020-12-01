@@ -1,6 +1,6 @@
 myFunc(
 {
-"Generated" : " 2020-10-22 14:27:58.425658 ",
+"Generated" : " 2020-12-01 12:18:17.471666 ",
 "events": [
 {
 	"class": 0,
@@ -4171,7 +4171,7 @@ myFunc(
 	"class": 85,
 	"name": "Set value with zone",
 	"token": "CLASS1.SETVALUEZONE",
-	"description": "## Description\n\nThis class mirrors the standard measurement events is [CLASS1.MEASUREMENT=10](./class1.measurement.md) but also have zone information and is intended for setting a value instead of providing a measurement.\n\n | Byte | Description                                                        |\n | ---- | -----------                                                        |\n | 0    | Index for device (This is NOT the same as senorindex is in data coding byte). |\n | 1    | Zone for which event applies to (0-255). 255 is all zones.         |\n | 2    | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |\n | 3    | Data coding.                                                       |\n | 4-7  | Data with format defined by byte 0.                                |\n \n",
+	"description": "## Description\n\nThis class mirrors the standard measurement events is [CLASS1.MEASUREMENT=10](./class1.measurement.md) but also have zone information and is intended for setting a value instead of providing a measurement.\n\nThis class can for example be used to set setpoints on a node. If 256 set points is enough (!!!) use index to identify the setpoint. If more is needed use subzone as a page into this storage and make this configurable on the node.\n\nFor large integers and strings several events may need to be used to set a single value.\n\n | Byte | Description                                                        |\n | ---- | -----------                                                        |\n | 0    | Index for device (This is NOT the same as senorindex is in data coding byte). |\n | 1    | Zone for which event applies to (0-255). 255 is all zones.         |\n | 2    | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |\n | 3    | Data coding.                                                       |\n | 4-7  | Data with format defined by byte 0.                                |\n \n",
 	"types": [
 	{
 		"type": 0,
@@ -5630,6 +5630,154 @@ myFunc(
 		"name": "MAPito Remote Format",
 		"units": [],
 		"description": "Instead of sending codes that relates to a certain remote this format is general. And therefore more flexible. \n\n | Byte | Description                                                            | \n | :----: | -----------                                                            | \n | 0    | Repeat Count.                                                          | \n | 1    | Zone for which event applies to (0-255). 255 is all zones.             | \n | 2    | Sub-zone for which the event applies to (0-255). 255 is all sub-zones. | \n | 3    | Control address MSB.                                                   | \n | 4    | Control address.                                                       | \n | 5    | Control address.                                                       | \n | 6    | Control address LSB.                                                   | \n | 7    | Key Code.                                                              | \n"
+	}
+	]
+},
+{
+	"class": 120,
+	"name": "Configure",
+	"token": "CLASS1.CONFIGURE",
+	"description": "## Description\n\nEvents for configuration of sets and parameters on nodes without register manipulation.\n",
+	"types": [
+	{
+		"type": 0,
+		"token": "VSCP_TYPE_CONFIGURE_GENERAL",
+		"name": "General event",
+		"units": [],
+		"description": "General Event."
+	},
+	{
+		"type": 1,
+		"token": "VSCP_TYPE_CONFIGURE_LOAD",
+		"name": "Load configuration",
+		"units": [],
+		"description": "Load a specific configuration on a node.  The configuration to load is defined by a 16-byte configuration id. It is recommended that configuration id zero is the default configuration.\n\nThe optional control byte can be used to request a reset if the device after configuration is loaded.\n\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_LOAD_ACK should be sent by the node after loading the new configuration to acknowledge a successful load of configuration data.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_LOAD_NACK should be sent by the node after loading the new configuration to negative acknowledge a failed load of configuration data.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Configuration id MSB. | \n | 4    | Configuration id LSB. |\n | 5    | Control byte (optional). |\n\n## Control byte\n\n| Bit | Description | \n| :----: | ----------- | \n| 0-6    | Reserved.   | \n| 7    | Reset device when new configuration is loaded.   | \n"
+	},
+	{
+		"type": 2,
+		"token": "VSCP_TYPE_CONFIGURE_LOAD_ACK",
+		"name": "Load configuration acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after loading a new configuration to acknowledge a successful load of configuration data. The configuration id for the successfully loaded configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 3,
+		"token": "VSCP_TYPE_CONFIGURE_LOAD_NACK",
+		"name": "Load configuration negative acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after loading a new configuration to negative acknowledge an unsuccessful load of configuration data. The configuration id for the unsuccessfully loaded configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 4,
+		"token": "VSCP_TYPE_CONFIGURE_SAVE",
+		"name": "Save configuration",
+		"units": [],
+		"description": "Save a specific configuration on a node.  The configuration to save is identified by a 16-byte configuration id. It is recommended that configuration id zero is the default configuration.\n\nThe optional control byte can be used to request a reset if the device after configuration is saved.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SAVE_ACK should be sent by the node after saving the new configuration to acknowledge a successful save of configuration data.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SAVE_NACK should be sent by the node after saving the new configuration to negative acknowledge a failed save of configuration data.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Configuration id MSB. | \n | 4    | Configuration id LSB. |\n | 5    | Control byte (optional). |\n\n## Control byte\n\n| Bit | Description | \n| :----: | ----------- | \n| 0-6    | Reserved.   | \n| 7    | Reset device when new configuration is loaded.   | \n"
+	},
+	{
+		"type": 5,
+		"token": "VSCP_TYPE_CONFIGURE_SAVE_ACK",
+		"name": "Save configuration acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after saving a new configuration to acknowledge a successful save of configuration data. The configuration id for the successfully saved configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 6,
+		"token": "VSCP_TYPE_CONFIGURE_SAVE_NACK",
+		"name": "Save configuration negative acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after saving a new configuration to negative acknowledge an unsuccessful save of configuration data. The configuration id for the unsuccessfully saved configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 7,
+		"token": "VSCP_TYPE_CONFIGURE_COMMIT",
+		"name": "commit configuration",
+		"units": [],
+		"description": "Commit a specific configuration on a node.  The configuration to commit is identified by a 16-byte configuration id. It is recommended that configuration id zero is the default configuration.\n\nThe optional control byte can be used to request a reset if the device after configuration is saved.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_COMMIT_ACK should be sent by the node after committing the new configuration to acknowledge a successful commit of configuration data.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_COMMIT_NACK should be sent by the node after committing the new configuration to negative acknowledge a failed commit of configuration data.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Configuration id MSB. | \n | 4    | Configuration id LSB. |\n | 5    | Control byte (optional). |\n\n## Control byte\n\n| Bit | Description | \n| :----: | ----------- | \n| 0-6    | Reserved.   | \n| 7    | Reset device when new configuration is loaded.   | \n"
+	},
+	{
+		"type": 8,
+		"token": "VSCP_TYPE_CONFIGURE_COMMIT_ACK",
+		"name": "Commit configuration acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after comitting a new configuration to acknowledge a successful commit of configuration data. The configuration id for the successfully committed configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 9,
+		"token": "VSCP_TYPE_CONFIGURE_COMMIT_NACK",
+		"name": "Commit configuration negative acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after committing a new configuration to negative acknowledge an unsuccessful commit of configuration data. The configuration id for the unsuccessfully committed configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 10,
+		"token": "VSCP_TYPE_CONFIGURE_RELOAD",
+		"name": "Reload configuration",
+		"units": [],
+		"description": "Reload a specific configuration on a node.  The configuration to reload is identified by a 16-byte configuration id. It is recommended that configuration id zero is the default configuration.\n\nThe optional control byte can be used to request a reset if the device after configuration is saved.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_RELOAD_ACK should be sent by the node after reloadinf the new configuration to acknowledge a successful reload of configuration data.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_RELOAD_NACK should be sent by the node after reloading the new configuration to negative acknowledge a failed reload of configuration data.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Configuration id MSB. | \n | 4    | Configuration id LSB. |\n | 5    | Control byte (optional). |\n\n## Control byte\n\n| Bit | Description | \n| :----: | ----------- | \n| 0-6    | Reserved.   | \n| 7    | Reset device when new configuration is loaded.   | \n"
+	},
+	{
+		"type": 11,
+		"token": "VSCP_TYPE_CONFIGURE_REALOD_ACK",
+		"name": "Reload configuration acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after reloading a new configuration to acknowledge a successful reload of configuration data. The configuration id for the successfully reloaded configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 12,
+		"token": "VSCP_TYPE_CONFIGURE_RELOAD_NACK",
+		"name": "Reload configuration negative acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after reloading a new configuration to negative acknowledge an unsuccessful reload of configuration data. The configuration id for the unsuccessfully reloaded configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 13,
+		"token": "VSCP_TYPE_CONFIGURE_RESTORE",
+		"name": "Restore configuration",
+		"units": [],
+		"description": "Restore a specific configuration on a node.  The configuration to restore is identified by a 16-byte configuration id. It is recommended that configuration id zero is the default configuration.\n\nThe optional control byte can be used to request a reset if the device after configuration is saved.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_RESTORE_ACK should be sent by the node after restoring the new configuration to acknowledge a successful restore of configuration data.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_RESTORE_NACK should be sent by the node after restoring the new configuration to negative acknowledge a failed restore of configuration data.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Configuration id MSB. | \n | 4    | Configuration id LSB. |\n | 5    | Control byte (optional). |\n\n## Control byte\n\n| Bit | Description | \n| :----: | ----------- | \n| 0-6    | Reserved.   | \n| 7    | Reset device when new configuration is loaded.   | \n"
+	},
+	{
+		"type": 14,
+		"token": "VSCP_TYPE_CONFIGURE_RESTORE_ACK",
+		"name": "Restore configuration acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after restoring a new configuration to acknowledge a successful restore of configuration data. The configuration id for the successfully restored configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 15,
+		"token": "VSCP_TYPE_CONFIGURE_RESTORE_NACK",
+		"name": "Restore configuration negative acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after restoring a new configuration to negative acknowledge an unsuccessful restore of configuration data. The configuration id for the unsuccessfully restored configuration should be given in byte 0 and 1.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Configuration id MSB. | \n | 1    | Configuration id LSB. |\n"
+	},
+	{
+		"type": 30,
+		"token": "VSCP_TYPE_CONFIGURE_SET_MODE",
+		"name": "Set mode",
+		"units": [],
+		"description": "Set mode, that is, set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n | 5    | Value id MSB. | \n | 6    | Value id LSB. |\n"
+	},
+	{
+		"type": 31,
+		"token": "VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE",
+		"name": "Set default mode",
+		"units": [],
+		"description": "Set default mode, that is, set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_ACK should be sent by the node after setting the new value.\n\nCLASS1.CONFIGURE, VSCP_TYPE_CONFIGURE_SET_MODE_NACK should be sent by the node if it fails to set the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Index.                | \n | 1    | Zone.                 | \n | 2    | Subzone.              | \n | 3    | Parameter id MSB. | \n | 4    | Parameter id LSB. |\n "
+	},
+	{
+		"type": 32,
+		"token": "VSCP_TYPE_CONFIGURE_SET_MODE_ACK",
+		"name": "Set mode acknowledge",
+		"units": [],
+		"description": "This event should be sent by the node after setting the new value.\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Parameter id MSB. | \n | 1    | Parameter id LSB. |\n | 2    | Value id MSB. | \n | 3    | Value id LSB. |\n"
+	},
+	{
+		"type": 33,
+		"token": "VSCP_TYPE_CONFIGURE_SET_MODE_NACK",
+		"name": "Set mode negative acknowledge",
+		"units": [],
+		"description": "should be sent by the node if it fails to set the new value.\n\n\n | Byte | Description | \n | :----: | ----------- | \n | 0    | Parameter id MSB. | \n | 1    | Parameter id LSB. |\n | 2    | Value id MSB. | \n | 3    | Value id LSB. |\n"
 	}
 	]
 },

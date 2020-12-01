@@ -10,7 +10,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_ALARM_GENERALGeneral Event. 
+
+```
+VSCP_TYPE_ALARM_GENERAL
+```
+General Event. 
 
 
 
@@ -18,7 +22,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=1 (0x01) - Warning :id=type1
-    VSCP_TYPE_ALARM_WARNINGIndicates a warning condition. 
+
+```
+VSCP_TYPE_ALARM_WARNING
+```
+Indicates a warning condition. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -34,7 +42,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=2 (0x02) - Alarm occurred :id=type2
-    VSCP_TYPE_ALARM_ALARMIndicates an alarm condition.
+
+```
+VSCP_TYPE_ALARM_ALARM
+```
+Indicates an alarm condition.
 
  | Data byte | Description                                                        |
  | :-------: | ------------------------------------------------------------------ |
@@ -50,7 +62,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=3 (0x03) - Alarm sound on/off :id=type3
-    VSCP_TYPE_ALARM_SOUNDAlarm sound should be turned on or off. 
+
+```
+VSCP_TYPE_ALARM_SOUND
+```
+Alarm sound should be turned on or off. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -66,7 +82,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=4 (0x04) - Alarm light on/off :id=type4
-    VSCP_TYPE_ALARM_LIGHTAlarm light should be turned on or off. 
+
+```
+VSCP_TYPE_ALARM_LIGHT
+```
+Alarm light should be turned on or off. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -82,7 +102,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=5 (0x05) - Power on/off :id=type5
-    VSCP_TYPE_ALARM_POWERPower has been lost or is available again. 
+
+```
+VSCP_TYPE_ALARM_POWER
+```
+Power has been lost or is available again. 
 
  | Data byte | Description | 
  | :---------: | -----------  | 
@@ -98,7 +122,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=6 (0x06) - Emergency Stop :id=type6
-    VSCP_TYPE_ALARM_EMERGENCY_STOPEmergency stop has been hit/activated. All systems on the zone/sub-zone should go to their inactive/safe state.
+
+```
+VSCP_TYPE_ALARM_EMERGENCY_STOP
+```
+Emergency stop has been hit/activated. All systems on the zone/sub-zone should go to their inactive/safe state.
  
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -114,7 +142,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=7 (0x07) - Emergency Pause :id=type7
-    VSCP_TYPE_ALARM_EMERGENCY_PAUSEEmergency pause has been hit/activated. All systems on the zone/sub-zone should go to their inactive/safe state but preserve there settings. 
+
+```
+VSCP_TYPE_ALARM_EMERGENCY_PAUSE
+```
+Emergency pause has been hit/activated. All systems on the zone/sub-zone should go to their inactive/safe state but preserve there settings. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -130,7 +162,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=8 (0x08) - Emergency Reset :id=type8
-    VSCP_TYPE_ALARM_EMERGENCY_RESETIssued after an emergency stop or pause in order for nodes to reset and start operating .
+
+```
+VSCP_TYPE_ALARM_EMERGENCY_RESET
+```
+Issued after an emergency stop or pause in order for nodes to reset and start operating .
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -146,7 +182,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=9 (0x09) - Emergency Resume :id=type9
-    VSCP_TYPE_ALARM_EMERGENCY_RESUMEIssued after an emergency pause in order for nodes to start operating from where they left of without resetting their registers . 
+
+```
+VSCP_TYPE_ALARM_EMERGENCY_RESUME
+```
+Issued after an emergency pause in order for nodes to start operating from where they left of without resetting their registers . 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -162,7 +202,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=10 (0x0A) - Arm :id=type10
-    VSCP_TYPE_ALARM_ARMIssued after an alarm system has been armed. 
+
+```
+VSCP_TYPE_ALARM_ARM
+```
+Issued after an alarm system has been armed. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -178,7 +222,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=11 (0x0B) - Disarm :id=type11
-    VSCP_TYPE_ALARM_DISARMIssued after an alarm system has been disarmed. 
+
+```
+VSCP_TYPE_ALARM_DISARM
+```
+Issued after an alarm system has been disarmed. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 
@@ -194,7 +242,11 @@ If both or one of zone/sub-zone are omitted they should be interpreted as if the
 
 
 ## Type=12 (0x0C) - Watchdog :id=type12
-    VSCP_TYPE_ALARM_WATCHDOGIssued when a watchdog has been triggered. 
+
+```
+VSCP_TYPE_ALARM_WATCHDOG
+```
+Issued when a watchdog has been triggered. 
 
  | Data byte | Description | 
  | :---------: | ----------- | 

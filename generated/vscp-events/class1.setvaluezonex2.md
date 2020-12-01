@@ -15,7 +15,11 @@ This class mirrors the standard measurement events is [CLASS1.MEASUREMENT=12](./
  | 4-7  | Data with format defined by byte 0.                                |
 
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_MEASUREMENTX2_GENERALGeneral Event.
+
+```
+VSCP_TYPE_MEASUREMENTX2_GENERAL
+```
+General Event.
 
 
 

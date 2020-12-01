@@ -8,14 +8,22 @@ This class mirrors the [CLASS1.CONTROL](./class1.control.md) class but use a dif
 
 See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format.
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_CONTROL_GENERALGeneral Event.
+
+```
+VSCP_TYPE_CONTROL_GENERAL
+```
+General Event.
 
 
 ----
 
 
 ## Type=1 (0x01) - Mute on/off :id=type1
-    VSCP_TYPE_CONTROL_MUTEMute/Un-mute all sound generating nodes in a zone 
+
+```
+VSCP_TYPE_CONTROL_MUTE
+```
+Mute/Un-mute all sound generating nodes in a zone 
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -29,7 +37,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=2 (0x02) - (All) Lamp(s) on/off :id=type2
-    VSCP_TYPE_CONTROL_ALL_LAMPSTurn on/off lamps on nodes in zone.
+
+```
+VSCP_TYPE_CONTROL_ALL_LAMPS
+```
+Turn on/off lamps on nodes in zone.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -45,7 +57,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=3 (0x03) - Open :id=type3
-    VSCP_TYPE_CONTROL_OPENPerform open on all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_OPEN
+```
+Perform open on all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -60,7 +76,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=4 (0x04) - Close :id=type4
-    VSCP_TYPE_CONTROL_CLOSEPerform close on all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_CLOSE
+```
+Perform close on all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -75,7 +95,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=5 (0x05) - TurnOn :id=type5
-    VSCP_TYPE_CONTROL_TURNONTurn On a nodes in a zone/subzone. 
+
+```
+VSCP_TYPE_CONTROL_TURNON
+```
+Turn On a nodes in a zone/subzone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -90,7 +114,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=6 (0x06) - TurnOff :id=type6
-    VSCP_TYPE_CONTROL_TURNOFFTurn Off a nodes in a zone/subzone. 
+
+```
+VSCP_TYPE_CONTROL_TURNOFF
+```
+Turn Off a nodes in a zone/subzone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -105,7 +133,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=7 (0x07) - Start :id=type7
-    VSCP_TYPE_CONTROL_STARTStart all nodes in a zone.
+
+```
+VSCP_TYPE_CONTROL_START
+```
+Start all nodes in a zone.
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -119,7 +151,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=8 (0x08) - Stop :id=type8
-    VSCP_TYPE_CONTROL_STOPStop all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_STOP
+```
+Stop all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -134,7 +170,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=9 (0x09) - Reset :id=type9
-    VSCP_TYPE_CONTROL_RESETPerform Reset on all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_RESET
+```
+Perform Reset on all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -149,7 +189,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=10 (0x0A) - Interrupt :id=type10
-    VSCP_TYPE_CONTROL_INTERRUPTPerform Interrupt on all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_INTERRUPT
+```
+Perform Interrupt on all nodes in zone. 
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -164,7 +208,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=11 (0x0B) - Sleep :id=type11
-    VSCP_TYPE_CONTROL_SLEEPPerform Sleep on all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_SLEEP
+```
+Perform Sleep on all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -179,7 +227,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=12 (0x0C) - Wakeup :id=type12
-    VSCP_TYPE_CONTROL_WAKEUPWakeup all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_WAKEUP
+```
+Wakeup all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -194,7 +246,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=13 (0x0D) - Resume :id=type13
-    VSCP_TYPE_CONTROL_RESUMEResume all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_RESUME
+```
+Resume all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -209,7 +265,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=14 (0x0E) - Pause :id=type14
-    VSCP_TYPE_CONTROL_PAUSEPause all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_PAUSE
+```
+Pause all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -224,7 +284,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=15 (0x0F) - Activate :id=type15
-    VSCP_TYPE_CONTROL_ACTIVATEActivate all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_ACTIVATE
+```
+Activate all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -239,7 +303,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=16 (0x10) - Deactivate :id=type16
-    VSCP_TYPE_CONTROL_DEACTIVATEDeactivate all nodes in zone. 
+
+```
+VSCP_TYPE_CONTROL_DEACTIVATE
+```
+Deactivate all nodes in zone. 
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -254,28 +322,44 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=17 (0x11) - Reserved for future use :id=type17
-    VSCP_TYPE_CONTROL_RESERVED17Reserved. 
+
+```
+VSCP_TYPE_CONTROL_RESERVED17
+```
+Reserved. 
 
 
 ----
 
 
 ## Type=18 (0x12) - Reserved for future use :id=type18
-    VSCP_TYPE_CONTROL_RESERVED18Reserved. 
+
+```
+VSCP_TYPE_CONTROL_RESERVED18
+```
+Reserved. 
 
 
 ----
 
 
 ## Type=19 (0x13) - Reserved for future use :id=type19
-    VSCP_TYPE_CONTROL_RESERVED19Reserved.
+
+```
+VSCP_TYPE_CONTROL_RESERVED19
+```
+Reserved.
 
 
 ----
 
 
 ## Type=20 (0x14) - Dim lamp(s) :id=type20
-    VSCP_TYPE_CONTROL_DIM_LAMPSDim all dimmer devices on a segment to a specified dim value. 
+
+```
+VSCP_TYPE_CONTROL_DIM_LAMPS
+```
+Dim all dimmer devices on a segment to a specified dim value. 
 
  | Data byte | Description                                                                             | 
  | :---------: | -----------                                                                             | 
@@ -289,7 +373,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=21 (0x15) - Change Channel :id=type21
-    VSCP_TYPE_CONTROL_CHANGE_CHANNELThis is typical for changing TV channels or for changing AV amp input source etc. 
+
+```
+VSCP_TYPE_CONTROL_CHANGE_CHANNEL
+```
+This is typical for changing TV channels or for changing AV amp input source etc. 
 
  | Data byte | Description                                                                                                                                                                                                                                                                                                                                               | 
  | :---------: | -----------                                                                                                                                                                                                                                                                                                                                               | 
@@ -303,7 +391,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=22 (0x16) - Change Level :id=type22
-    VSCP_TYPE_CONTROL_CHANGE_LEVELChange an absolute level. 
+
+```
+VSCP_TYPE_CONTROL_CHANGE_LEVEL
+```
+Change an absolute level. 
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -317,7 +409,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=23 (0x17) - Relative Change Level :id=type23
-    VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL
+
+```
+VSCP_TYPE_CONTROL_RELATIVE_CHANGE_LEVEL
+```
+
  Relative Change Level request
  
  | Data byte | Description                                                        | 
@@ -332,7 +428,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=24 (0x18) - Measurement Request :id=type24
-    VSCP_TYPE_CONTROL_MEASUREMENT_REQUESTMeasurement Request
+
+```
+VSCP_TYPE_CONTROL_MEASUREMENT_REQUEST
+```
+Measurement Request
 
 | Data byte | Description                                                                                                                                                           | 
  | :---------: | -----------                                                                                                                                                           | 
@@ -346,7 +446,11 @@ See also [CLASS1.CONTROL, Type=40](./class1.control.md#type40) and [CLASS1.CONTR
 
 
 ## Type=25 (0x19) - Stream Data :id=type25
-    VSCP_TYPE_CONTROL_STREAM_DATARequest to stream data
+
+```
+VSCP_TYPE_CONTROL_STREAM_DATA
+```
+Request to stream data
 
  | Data byte | Description                                                               | 
  | :---------: | -----------                                                               | 
@@ -361,7 +465,11 @@ Use this event for streamed data out from a node. The source is then given by th
 
 
 ## Type=26 (0x1A) - Sync :id=type26
-    VSCP_TYPE_CONTROL_SYNCSynchronize events on a segment. 
+
+```
+VSCP_TYPE_CONTROL_SYNC
+```
+Synchronize events on a segment. 
 
  | Data byte | Description                                                                                                                                  | 
  | :---------: | -----------                                                                                                                                  | 
@@ -377,7 +485,11 @@ The sensor index can be used to index units within a module also or used as some
 
 
 ## Type=27 (0x1B) - Zoned Stream Data :id=type27
-    VSCP_TYPE_CONTROL_ZONED_STREAM_DATARequest streamed data from nodes identified by zone/subzone.
+
+```
+VSCP_TYPE_CONTROL_ZONED_STREAM_DATA
+```
+Request streamed data from nodes identified by zone/subzone.
 
  | Data byte | Description                                                               | 
  | :---------: | -----------                                                               | 
@@ -392,7 +504,11 @@ The sensor index can be used to index units within a module also or used as some
 
 
 ## Type=28 (0x1C) - Set Pre-set :id=type28
-    VSCP_TYPE_CONTROL_SET_PRESETSome nodes may have pre-set configurations to choose from. With this event a pre-set can be set for a zone/sub-zone.
+
+```
+VSCP_TYPE_CONTROL_SET_PRESET
+```
+Some nodes may have pre-set configurations to choose from. With this event a pre-set can be set for a zone/sub-zone.
 
 A node that receive and act on this event send CLASS1.INFORMATION, 
 
@@ -410,7 +526,11 @@ Type=48 as a response event.
 
 
 ## Type=29 (0x1D) - Toggle state :id=type29
-    VSCP_TYPE_CONTROL_TOGGLE_STATEToggle the state of a node.
+
+```
+VSCP_TYPE_CONTROL_TOGGLE_STATE
+```
+Toggle the state of a node.
 
 Note: This may be a bad design option as it often demands that the state should be known for the node on beforehand.
 
@@ -426,7 +546,11 @@ Note: This may be a bad design option as it often demands that the state should 
 
 
 ## Type=30 (0x1E) - Timed pulse on :id=type30
-    VSCP_TYPE_CONTROL_TIMED_PULSE_ONWith this event it is possible to generate a timed pulse that is on for a specified time.
+
+```
+VSCP_TYPE_CONTROL_TIMED_PULSE_ON
+```
+With this event it is possible to generate a timed pulse that is on for a specified time.
 
  | Data byte | Description                                                         |
  | :---------: | ----------- |
@@ -465,7 +589,11 @@ The control byte have the following bits defined
 
 
 ## Type=31 (0x1F) - Timed pulse off :id=type31
-    VSCP_TYPE_CONTROL_TIMED_PULSE_OFFWith this event it is possible to generate a timed pulse that is off for a specified time.
+
+```
+VSCP_TYPE_CONTROL_TIMED_PULSE_OFF
+```
+With this event it is possible to generate a timed pulse that is off for a specified time.
 
  | Data byte | Description                                                         | 
  | :---------: | -----------                                                         | 
@@ -505,7 +633,11 @@ The control byte have the following bits defined
 
 
 ## Type=32 (0x20) - Set country/language :id=type32
-    VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGESet country and language.
+
+```
+VSCP_TYPE_CONTROL_SET_COUNTRY_LANGUAGE
+```
+Set country and language.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -532,7 +664,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=33 (0x21) - Big Change level :id=type33
-    VSCP_TYPE_CONTROL_BIG_CHANGE_LEVELBig Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.
+
+```
+VSCP_TYPE_CONTROL_BIG_CHANGE_LEVEL
+```
+Big Change level can be used in situations when the one byte level of CLASS1.CONTROL, Type=22 is not enough.
 
  | Data byte | Description  | 
  | :---------: | -----------   | 
@@ -547,7 +683,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=34 (0x22) - Move shutter up :id=type34
-    VSCP_TYPE_CONTROL_SHUTTER_UPMove shutter up.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_UP
+```
+Move shutter up.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -561,7 +701,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=35 (0x23) - Move shutter down :id=type35
-    VSCP_TYPE_CONTROL_SHUTTER_DOWNMove shutter down.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_DOWN
+```
+Move shutter down.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -575,7 +719,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=36 (0x24) - Move shutter left :id=type36
-    VSCP_TYPE_CONTROL_SHUTTER_LEFTMove shutter left.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_LEFT
+```
+Move shutter left.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -590,7 +738,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=37 (0x25) - Move shutter right :id=type37
-    VSCP_TYPE_CONTROL_SHUTTER_RIGHTMove shutter right.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_RIGHT
+```
+Move shutter right.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -604,7 +756,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=38 (0x26) - Move shutter to middle position :id=type38
-    VSCP_TYPE_CONTROL_SHUTTER_MIDDLEMove shutter to middle position.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_MIDDLE
+```
+Move shutter to middle position.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -618,7 +774,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=39 (0x27) - Move shutter to preset position :id=type39
-    VSCP_TYPE_CONTROL_SHUTTER_PRESETMove shutter to preset position.
+
+```
+VSCP_TYPE_CONTROL_SHUTTER_PRESET
+```
+Move shutter to preset position.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -633,7 +793,11 @@ ISO codes can be found [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_co
 
 
 ## Type=40 (0x28) - (All) Lamp(s) on :id=type40
-    VSCP_TYPE_CONTROL_ALL_LAMPS_ONTurn on all lamps in a zone.
+
+```
+VSCP_TYPE_CONTROL_ALL_LAMPS_ON
+```
+Turn on all lamps in a zone.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -649,7 +813,11 @@ See also [CLASS1.CONTROL, Type=2](./class1.control.md#type2)
 
 
 ## Type=41 (0x29) - (All) Lamp(s) off :id=type41
-    VSCP_TYPE_CONTROL_ALL_LAMPS_OFFTurn off all lamps in a zone.
+
+```
+VSCP_TYPE_CONTROL_ALL_LAMPS_OFF
+```
+Turn off all lamps in a zone.
 
  | Data byte | Description                                                        | 
  | :---------: | -----------                                                        | 
@@ -665,7 +833,11 @@ See also [CLASS1.CONTROL, Type=2](./class1.control.md#type2)
 
 
 ## Type=42 (0x2A) - Lock :id=type42
-    VSCP_TYPE_CONTROL_LOCKLock devices in a zone.
+
+```
+VSCP_TYPE_CONTROL_LOCK
+```
+Lock devices in a zone.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -679,7 +851,11 @@ See also [CLASS1.CONTROL, Type=2](./class1.control.md#type2)
 
 
 ## Type=43 (0x2B) - Unlock :id=type43
-    VSCP_TYPE_CONTROL_UNLOCKUnlock devices in a zone.
+
+```
+VSCP_TYPE_CONTROL_UNLOCK
+```
+Unlock devices in a zone.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                        |
@@ -693,7 +869,11 @@ See also [CLASS1.CONTROL, Type=2](./class1.control.md#type2)
 
 
 ## Type=44 (0x2C) - PWM set :id=type44
-    VSCP_TYPE_CONTROL_PWMWith this event it is possible to set duty cycle output such as PWM.
+
+```
+VSCP_TYPE_CONTROL_PWM
+```
+With this event it is possible to set duty cycle output such as PWM.
 
  | Data byte | Description   |
  | :---------: | ----------- |
@@ -735,7 +915,11 @@ The control byte have the following bits defined
 
 
 ## Type=45 (0x2D) - Lock with token :id=type45
-    VSCP_TYPE_CONTROL_TOKEN_LOCKLock devices with token.
+
+```
+VSCP_TYPE_CONTROL_TOKEN_LOCK
+```
+Lock devices with token.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -751,7 +935,11 @@ The control byte have the following bits defined
 
 
 ## Type=46 (0x2E) - Unlock with token :id=type46
-    VSCP_TYPE_CONTROL_TOKEN_UNLOCKUnlock devices with token.
+
+```
+VSCP_TYPE_CONTROL_TOKEN_UNLOCK
+```
+Unlock devices with token.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -767,7 +955,11 @@ The control byte have the following bits defined
 
 
 ## Type=47 (0x2F) - Set security level :id=type47
-    VSCP_TYPE_CONTROL_SET_SECURITY_LEVELSet security level.
+
+```
+VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL
+```
+Set security level.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -782,7 +974,11 @@ The control byte have the following bits defined
 
 
 ## Type=48 (0x30) - Set security pin :id=type48
-    VSCP_TYPE_CONTROL_SET_SECURITY_PINSet security pin.
+
+```
+VSCP_TYPE_CONTROL_SET_SECURITY_PIN
+```
+Set security pin.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -798,7 +994,11 @@ The control byte have the following bits defined
 
 
 ## Type=49 (0x31) - Set security password :id=type49
-    VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORDSet security password.
+
+```
+VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD
+```
+Set security password.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -814,7 +1014,11 @@ The control byte have the following bits defined
 
 
 ## Type=50 (0x32) - Set security token :id=type50
-    VSCP_TYPE_CONTROL_SET_SECURITY_TOKENSet security token.
+
+```
+VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN
+```
+Set security token.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |
@@ -830,7 +1034,11 @@ The control byte have the following bits defined
 
 
 ## Type=51 (0x33) - Request new security token :id=type51
-    VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKENRequest new security token.
+
+```
+VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN
+```
+Request new security token.
 
  | Data byte | Description                                                        |
  | :---------: | -----------                                                      |

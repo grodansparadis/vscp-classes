@@ -39,6 +39,7 @@
  * [CLASS1.PHONE = 100 (0x64)](./class1.phone.md)
  * [CLASS1.DISPLAY = 102 (0x66)](./class1.display.md)
  * [CLASS1.IR = 110 (0x6e)](./class1.ir.md)
+ * [CLASS1.CONFIGURE = 120 (0x78)](./class1.configure.md)
  * [CLASS1.GNSS = 206 (0xce)](./class1.gnss.md)
  * [CLASS1.WIRELESS = 212 (0xd4)](./class1.wireless.md)
  * [CLASS1.DIAGNOSTIC = 506 (0x1fa)](./class1.diagnostic.md)

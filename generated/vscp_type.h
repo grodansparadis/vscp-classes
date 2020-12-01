@@ -48,7 +48,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-10-22 14:27:53.685751
+                        Generated: 2020-12-01 12:18:12.470980
 */
  
 #ifndef VSCP_TYPE_H
@@ -592,6 +592,28 @@
 #define VSCP_TYPE_REMOTE_LIRC                       32  /* LIRC (Linux Infrared Remote Control) */
 #define VSCP_TYPE_REMOTE_VSCP                       48  /* VSCP Abstract Remote Format */
 #define VSCP_TYPE_REMOTE_MAPITO                     49  /* MAPito Remote Format */
+    
+/*  CLASS1.CONFIGURE = 120  -  Configure */
+#define VSCP_TYPE_CONFIGURE_GENERAL                 0   /* General event */
+#define VSCP_TYPE_CONFIGURE_LOAD                    1   /* Load configuration */
+#define VSCP_TYPE_CONFIGURE_LOAD_ACK                2   /* Load configuration acknowledge */
+#define VSCP_TYPE_CONFIGURE_LOAD_NACK               3   /* Load configuration negative acknowledge */
+#define VSCP_TYPE_CONFIGURE_SAVE                    4   /* Save configuration */
+#define VSCP_TYPE_CONFIGURE_SAVE_ACK                5   /* Save configuration acknowledge */
+#define VSCP_TYPE_CONFIGURE_SAVE_NACK               6   /* Save configuration negative acknowledge */
+#define VSCP_TYPE_CONFIGURE_COMMIT                  7   /* commit configuration */
+#define VSCP_TYPE_CONFIGURE_COMMIT_ACK              8   /* Commit configuration acknowledge */
+#define VSCP_TYPE_CONFIGURE_COMMIT_NACK             9   /* Commit configuration negative acknowledge */
+#define VSCP_TYPE_CONFIGURE_RELOAD                  10  /* Reload configuration */
+#define VSCP_TYPE_CONFIGURE_REALOD_ACK              11  /* Reload configuration acknowledge */
+#define VSCP_TYPE_CONFIGURE_RELOAD_NACK             12  /* Reload configuration negative acknowledge */
+#define VSCP_TYPE_CONFIGURE_RESTORE                 13  /* Restore configuration */
+#define VSCP_TYPE_CONFIGURE_RESTORE_ACK             14  /* Restore configuration acknowledge */
+#define VSCP_TYPE_CONFIGURE_RESTORE_NACK            15  /* Restore configuration negative acknowledge */
+#define VSCP_TYPE_CONFIGURE_SET_MODE                30  /* Set mode */
+#define VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE        31  /* Set default mode */
+#define VSCP_TYPE_CONFIGURE_SET_MODE_ACK            32  /* Set mode acknowledge */
+#define VSCP_TYPE_CONFIGURE_SET_MODE_NACK           33  /* Set mode negative acknowledge */
     
 /*  CLASS1.GNSS = 206  -  Position (GNSS) */
 #define VSCP_TYPE_GNSS_GENERAL                      0   /* General event */

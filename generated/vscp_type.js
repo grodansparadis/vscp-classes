@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-10-22 14:33:13.150845
+                        Generated: 2020-12-01 12:22:48.419866
 */
 
 /** Namespace for all functionality of the VSCP provided libraries.
@@ -591,6 +591,28 @@ vscp.constants.types = {
     VSCP_TYPE_REMOTE_LIRC: 32,
     VSCP_TYPE_REMOTE_VSCP: 48,
     VSCP_TYPE_REMOTE_MAPITO: 49,
+ 
+//  CLASS1.CONFIGURE = 120  -  Configure
+    VSCP_TYPE_CONFIGURE_GENERAL: 0,
+    VSCP_TYPE_CONFIGURE_LOAD: 1,
+    VSCP_TYPE_CONFIGURE_LOAD_ACK: 2,
+    VSCP_TYPE_CONFIGURE_LOAD_NACK: 3,
+    VSCP_TYPE_CONFIGURE_SAVE: 4,
+    VSCP_TYPE_CONFIGURE_SAVE_ACK: 5,
+    VSCP_TYPE_CONFIGURE_SAVE_NACK: 6,
+    VSCP_TYPE_CONFIGURE_COMMIT: 7,
+    VSCP_TYPE_CONFIGURE_COMMIT_ACK: 8,
+    VSCP_TYPE_CONFIGURE_COMMIT_NACK: 9,
+    VSCP_TYPE_CONFIGURE_RELOAD: 10,
+    VSCP_TYPE_CONFIGURE_REALOD_ACK: 11,
+    VSCP_TYPE_CONFIGURE_RELOAD_NACK: 12,
+    VSCP_TYPE_CONFIGURE_RESTORE: 13,
+    VSCP_TYPE_CONFIGURE_RESTORE_ACK: 14,
+    VSCP_TYPE_CONFIGURE_RESTORE_NACK: 15,
+    VSCP_TYPE_CONFIGURE_SET_MODE: 30,
+    VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE: 31,
+    VSCP_TYPE_CONFIGURE_SET_MODE_ACK: 32,
+    VSCP_TYPE_CONFIGURE_SET_MODE_NACK: 33,
  
 //  CLASS1.GNSS = 206  -  Position (GNSS)
     VSCP_TYPE_GNSS_GENERAL: 0,

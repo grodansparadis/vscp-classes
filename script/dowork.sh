@@ -84,7 +84,7 @@ fi
 
 # Generate class definition header for python3
 python3 make_python_class_header.py >../generated/vscp_class.py
-cp ../generated/vscp_class.py ../../pyvscp/vscp/
+cp ../generated/vscp_class.py ../../pyvscpclasses
 md5sum ../generated/vscp_class.py >../generated/vscp_class.py.md5
 # Make compressed lib for classes
 zip -j ../generated/python_vscp_class.zip ../generated/vscp_class.py ../generated/vscp_class.py.md5
@@ -104,7 +104,7 @@ fi
 
 # Generate class definition header for python3
 python3 make_python_type_header.py >../generated/vscp_type.py
-cp ../generated/vscp_type.py ../../pyvscp/vscp/
+cp ../generated/vscp_type.py ../../pyvscptypes
 md5sum ../generated/vscp_type.py >../generated/vscp_type.py.md5
 # Make compressed lib for types
 zip -j ../generated/python_vscp_type.zip ../generated/vscp_type.py ../generated/vscp_type.py.md5
@@ -271,5 +271,6 @@ echo The following projects needs to be updated to GitHub
 echo "Update ../../vscp-js"
 echo "Update ../../node-vscp-class"
 echo "Update ../../node-vscp-type"
-echo "Update ../../pyvscp"
+echo "Update ../../pyvscpclasses"
+echo "Update ../../pyvscptypes"
 echo "Update ../../vscp-doc-spec (copy sidebar.md -> /_sidebar.md/)"

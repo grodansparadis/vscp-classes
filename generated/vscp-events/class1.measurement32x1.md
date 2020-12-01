@@ -23,7 +23,11 @@ That is a total of 32-bits. The most significant byte is stored in byte 0.
  | 3    | m7 m6 m5 m4 m3 m2 m1 m0        |
 
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_MEASUREMENTX1_GENERAL
+
+```
+VSCP_TYPE_MEASUREMENTX1_GENERAL
+```
+
 This is a general (custom) event that can be used if no other event is suitable. 
  
  

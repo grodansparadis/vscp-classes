@@ -151,8 +151,7 @@ for vscp_class in order_list:
                 " (" + fmthex(child.attrib["id"]) +\
                 ") - " + child.attrib["name"] +\
                 " :id=type" + child.attrib["id"]
-            outstr += "\n" 
-            #outstr += "    " + child.attrib["token"] 
+            outstr += "\n"  
             outstr += "\n" 
             outstr += "```\n" + child.attrib["token"]
             outstr += "\n```"

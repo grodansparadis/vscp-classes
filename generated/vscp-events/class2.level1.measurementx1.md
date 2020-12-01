@@ -8,7 +8,11 @@ This class mirrors the [CLASS1.MEASUREMENTX1](./class1.measurementx1.md) class b
 
 See [CLASS1.MEASUREMENT](./class1.measurement.md) for more information on the data format.
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_MEASUREMENTX1_GENERAL
+
+```
+VSCP_TYPE_MEASUREMENTX1_GENERAL
+```
+
 This is a general (custom) event that can be used if no other event is suitable. 
  
  

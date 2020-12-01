@@ -19,11 +19,11 @@ import datetime
 outstr = "{\n \"generated\": \"" + str( datetime.datetime.now() ) + "\"\n}\n"
 
 # Write the json file
-file = open("/tmp/version.json","w")
+file = open("../generated/version.json","w")
 file.write(outstr)
 file.close
 
 # Write the jsonp file
-file = open("/tmp/version.jsonp","w")
+file = open("../generated/version.jsonp","w")
 file.write("myFunc(" + outstr + ");")
 file.close

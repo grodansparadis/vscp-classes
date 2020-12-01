@@ -9,7 +9,11 @@ This class mirrors the [CLASS1.MEASUREMENT64X4](./class1.measurement64.md) class
 See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format.
 
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_MEASUREMENTX4_GENERALGeneral Event.
+
+```
+VSCP_TYPE_MEASUREMENTX4_GENERAL
+```
+General Event.
 
 
 

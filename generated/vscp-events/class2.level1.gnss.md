@@ -8,14 +8,22 @@ This class mirrors the [CLASS1.GNSS](./class1.gnss.md) class but use a different
 
 See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format.
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_GNSS_GENERALGeneral Event.
+
+```
+VSCP_TYPE_GNSS_GENERAL
+```
+General Event.
 
 
 ----
 
 
 ## Type=1 (0x01) - Position :id=type1
-    VSCP_TYPE_GNSS_POSITIONPosition information as decimal Latitude + Longitude. 
+
+```
+VSCP_TYPE_GNSS_POSITION
+```
+Position information as decimal Latitude + Longitude. 
 
  | Byte | Description                        | 
  | :----: | -----------                        | 
@@ -28,7 +36,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=2 (0x02) - Satellites :id=type2
-    VSCP_TYPE_GNSS_SATELLITESNumber of satellites used. 
+
+```
+VSCP_TYPE_GNSS_SATELLITES
+```
+Number of satellites used. 
 
  | Byte | Description                | 
  | :----: | -----------                | 

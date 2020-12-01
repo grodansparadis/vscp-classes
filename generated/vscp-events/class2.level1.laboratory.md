@@ -8,7 +8,11 @@ This class mirrors the [CLASS1.LABORATORY](./class1.laboratory.md) class but use
 
 See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format.
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_LABORATORY_GENERALGeneral Event.
+
+```
+VSCP_TYPE_LABORATORY_GENERAL
+```
+General Event.
 
 
 ----

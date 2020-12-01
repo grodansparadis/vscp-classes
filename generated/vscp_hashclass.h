@@ -2,7 +2,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-10-22 14:27:54.301274
+                        Generated: 2020-12-01 12:18:13.066874
 */
  
 	m_hashClass[ 0 ] = _("CLASS1_PROTOCOL");
@@ -43,6 +43,7 @@
 	m_hashClass[ 100 ] = _("CLASS1_PHONE");
 	m_hashClass[ 102 ] = _("CLASS1_DISPLAY");
 	m_hashClass[ 110 ] = _("CLASS1_IR");
+	m_hashClass[ 120 ] = _("CLASS1_CONFIGURE");
 	m_hashClass[ 206 ] = _("CLASS1_GNSS");
 	m_hashClass[ 212 ] = _("CLASS1_WIRELESS");
 	m_hashClass[ 506 ] = _("CLASS1_DIAGNOSTIC");

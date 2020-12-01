@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-10-22 14:33:13.750451
+                        Generated: 2020-12-01 12:22:49.007955
 */
 
 'use strict';
@@ -1064,6 +1064,50 @@ vscp_type_map.set( (110 << 16) + 3,'VSCP_TYPE_REMOTE_SONY12');
 vscp_type_map.set( (110 << 16) + 32,'VSCP_TYPE_REMOTE_LIRC'); 
 vscp_type_map.set( (110 << 16) + 48,'VSCP_TYPE_REMOTE_VSCP'); 
 vscp_type_map.set( (110 << 16) + 49,'VSCP_TYPE_REMOTE_MAPITO'); 
+ 
+//  CLASS1.CONFIGURE = 120  -  Configure
+module.exports.VSCP_TYPE_CONFIGURE_GENERAL = 0,
+module.exports.VSCP_TYPE_CONFIGURE_LOAD = 1,
+module.exports.VSCP_TYPE_CONFIGURE_LOAD_ACK = 2,
+module.exports.VSCP_TYPE_CONFIGURE_LOAD_NACK = 3,
+module.exports.VSCP_TYPE_CONFIGURE_SAVE = 4,
+module.exports.VSCP_TYPE_CONFIGURE_SAVE_ACK = 5,
+module.exports.VSCP_TYPE_CONFIGURE_SAVE_NACK = 6,
+module.exports.VSCP_TYPE_CONFIGURE_COMMIT = 7,
+module.exports.VSCP_TYPE_CONFIGURE_COMMIT_ACK = 8,
+module.exports.VSCP_TYPE_CONFIGURE_COMMIT_NACK = 9,
+module.exports.VSCP_TYPE_CONFIGURE_RELOAD = 10,
+module.exports.VSCP_TYPE_CONFIGURE_REALOD_ACK = 11,
+module.exports.VSCP_TYPE_CONFIGURE_RELOAD_NACK = 12,
+module.exports.VSCP_TYPE_CONFIGURE_RESTORE = 13,
+module.exports.VSCP_TYPE_CONFIGURE_RESTORE_ACK = 14,
+module.exports.VSCP_TYPE_CONFIGURE_RESTORE_NACK = 15,
+module.exports.VSCP_TYPE_CONFIGURE_SET_MODE = 30,
+module.exports.VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE = 31,
+module.exports.VSCP_TYPE_CONFIGURE_SET_MODE_ACK = 32,
+module.exports.VSCP_TYPE_CONFIGURE_SET_MODE_NACK = 33;
+
+
+vscp_type_map.set( (120 << 16) + 0,'VSCP_TYPE_CONFIGURE_GENERAL'); 
+vscp_type_map.set( (120 << 16) + 1,'VSCP_TYPE_CONFIGURE_LOAD'); 
+vscp_type_map.set( (120 << 16) + 2,'VSCP_TYPE_CONFIGURE_LOAD_ACK'); 
+vscp_type_map.set( (120 << 16) + 3,'VSCP_TYPE_CONFIGURE_LOAD_NACK'); 
+vscp_type_map.set( (120 << 16) + 4,'VSCP_TYPE_CONFIGURE_SAVE'); 
+vscp_type_map.set( (120 << 16) + 5,'VSCP_TYPE_CONFIGURE_SAVE_ACK'); 
+vscp_type_map.set( (120 << 16) + 6,'VSCP_TYPE_CONFIGURE_SAVE_NACK'); 
+vscp_type_map.set( (120 << 16) + 7,'VSCP_TYPE_CONFIGURE_COMMIT'); 
+vscp_type_map.set( (120 << 16) + 8,'VSCP_TYPE_CONFIGURE_COMMIT_ACK'); 
+vscp_type_map.set( (120 << 16) + 9,'VSCP_TYPE_CONFIGURE_COMMIT_NACK'); 
+vscp_type_map.set( (120 << 16) + 10,'VSCP_TYPE_CONFIGURE_RELOAD'); 
+vscp_type_map.set( (120 << 16) + 11,'VSCP_TYPE_CONFIGURE_REALOD_ACK'); 
+vscp_type_map.set( (120 << 16) + 12,'VSCP_TYPE_CONFIGURE_RELOAD_NACK'); 
+vscp_type_map.set( (120 << 16) + 13,'VSCP_TYPE_CONFIGURE_RESTORE'); 
+vscp_type_map.set( (120 << 16) + 14,'VSCP_TYPE_CONFIGURE_RESTORE_ACK'); 
+vscp_type_map.set( (120 << 16) + 15,'VSCP_TYPE_CONFIGURE_RESTORE_NACK'); 
+vscp_type_map.set( (120 << 16) + 30,'VSCP_TYPE_CONFIGURE_SET_MODE'); 
+vscp_type_map.set( (120 << 16) + 31,'VSCP_TYPE_CONFIGURE_SET_DEFAULT_MODE'); 
+vscp_type_map.set( (120 << 16) + 32,'VSCP_TYPE_CONFIGURE_SET_MODE_ACK'); 
+vscp_type_map.set( (120 << 16) + 33,'VSCP_TYPE_CONFIGURE_SET_MODE_NACK'); 
  
 //  CLASS1.GNSS = 206  -  Position (GNSS)
 module.exports.VSCP_TYPE_GNSS_GENERAL = 0,

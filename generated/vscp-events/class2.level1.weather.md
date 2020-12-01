@@ -8,14 +8,22 @@ This class mirrors the [CLASS1.WEATHER](./class1.weather.md) class but use a dif
 
 See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format.
 ## Type=0 (0x00) - General event :id=type0
-    VSCP_TYPE_WEATHER_GENERALGeneral Event.
+
+```
+VSCP_TYPE_WEATHER_GENERAL
+```
+General Event.
 
 
 ----
 
 
 ## Type=1 (0x01) - Season winter :id=type1
-    VSCP_TYPE_WEATHER_SEASONS_WINTERThe winter season has started.
+
+```
+VSCP_TYPE_WEATHER_SEASONS_WINTER
+```
+The winter season has started.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -30,7 +38,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=2 (0x02) - Season spring :id=type2
-    VSCP_TYPE_WEATHER_SEASONS_SPRINGThe spring season has started.
+
+```
+VSCP_TYPE_WEATHER_SEASONS_SPRING
+```
+The spring season has started.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -44,7 +56,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=3 (0x03) - Season summer :id=type3
-    VSCP_TYPE_WEATHER_SEASONS_SUMMERThe summer season has started.
+
+```
+VSCP_TYPE_WEATHER_SEASONS_SUMMER
+```
+The summer season has started.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -58,7 +74,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=4 (0x04) - Autumn summer :id=type4
-    VSCP_TYPE_WEATHER_SEASONS_AUTUMNThe autumn season has started.
+
+```
+VSCP_TYPE_WEATHER_SEASONS_AUTUMN
+```
+The autumn season has started.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -72,7 +92,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=5 (0x05) - No wind :id=type5
-    VSCP_TYPE_WEATHER_WIND_NONENo wind
+
+```
+VSCP_TYPE_WEATHER_WIND_NONE
+```
+No wind
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -86,7 +110,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=6 (0x06) - Low wind :id=type6
-    VSCP_TYPE_WEATHER_WIND_LOWLow wind speed conditions.
+
+```
+VSCP_TYPE_WEATHER_WIND_LOW
+```
+Low wind speed conditions.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -100,7 +128,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=7 (0x07) - Medium wind :id=type7
-    VSCP_TYPE_WEATHER_WIND_MEDIUMMedium wind speed conditions.
+
+```
+VSCP_TYPE_WEATHER_WIND_MEDIUM
+```
+Medium wind speed conditions.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -114,7 +146,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=8 (0x08) - High wind :id=type8
-    VSCP_TYPE_WEATHER_WIND_HIGHHigh wind speed conditions.
+
+```
+VSCP_TYPE_WEATHER_WIND_HIGH
+```
+High wind speed conditions.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -128,7 +164,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=9 (0x09) - Very high wind :id=type9
-    VSCP_TYPE_WEATHER_WIND_VERY_HIGHVery high wind speed conditions.
+
+```
+VSCP_TYPE_WEATHER_WIND_VERY_HIGH
+```
+Very high wind speed conditions.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -142,7 +182,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=10 (0x0A) - Air foggy :id=type10
-    VSCP_TYPE_WEATHER_AIR_FOGGYFogg.
+
+```
+VSCP_TYPE_WEATHER_AIR_FOGGY
+```
+Fogg.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -156,7 +200,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=11 (0x0B) - Air freezing :id=type11
-    VSCP_TYPE_WEATHER_AIR_FREEZINGFreezing.
+
+```
+VSCP_TYPE_WEATHER_AIR_FREEZING
+```
+Freezing.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -170,7 +218,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=12 (0x0C) - Air Very cold :id=type12
-    VSCP_TYPE_WEATHER_AIR_VERY_COLDCold
+
+```
+VSCP_TYPE_WEATHER_AIR_VERY_COLD
+```
+Cold
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -184,7 +236,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=13 (0x0D) - Air cold :id=type13
-    VSCP_TYPE_WEATHER_AIR_COLDVery cold
+
+```
+VSCP_TYPE_WEATHER_AIR_COLD
+```
+Very cold
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -198,7 +254,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=14 (0x0E) - Air normal :id=type14
-    VSCP_TYPE_WEATHER_AIR_NORMALAir normal
+
+```
+VSCP_TYPE_WEATHER_AIR_NORMAL
+```
+Air normal
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -212,7 +272,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=15 (0x0F) - Air hot :id=type15
-    VSCP_TYPE_WEATHER_AIR_HOTAir hot
+
+```
+VSCP_TYPE_WEATHER_AIR_HOT
+```
+Air hot
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -226,7 +290,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=16 (0x10) - Air very hot :id=type16
-    VSCP_TYPE_WEATHER_AIR_VERY_HOTAir very hot
+
+```
+VSCP_TYPE_WEATHER_AIR_VERY_HOT
+```
+Air very hot
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -240,7 +308,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=17 (0x11) - Pollution low :id=type17
-    VSCP_TYPE_WEATHER_AIR_POLLUTION_LOWPollution low
+
+```
+VSCP_TYPE_WEATHER_AIR_POLLUTION_LOW
+```
+Pollution low
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -254,7 +326,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=18 (0x12) - Pollution medium :id=type18
-    VSCP_TYPE_WEATHER_AIR_POLLUTION_MEDIUMPollution medium
+
+```
+VSCP_TYPE_WEATHER_AIR_POLLUTION_MEDIUM
+```
+Pollution medium
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -268,7 +344,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=19 (0x13) - Pollution high :id=type19
-    VSCP_TYPE_WEATHER_AIR_POLLUTION_HIGHPollution high
+
+```
+VSCP_TYPE_WEATHER_AIR_POLLUTION_HIGH
+```
+Pollution high
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -282,7 +362,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=20 (0x14) - Air humid :id=type20
-    VSCP_TYPE_WEATHER_AIR_HUMIDAir humid
+
+```
+VSCP_TYPE_WEATHER_AIR_HUMID
+```
+Air humid
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -296,7 +380,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=21 (0x15) - Air dry :id=type21
-    VSCP_TYPE_WEATHER_AIR_DRYAir dry
+
+```
+VSCP_TYPE_WEATHER_AIR_DRY
+```
+Air dry
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -310,7 +398,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=22 (0x16) - Soil humid :id=type22
-    VSCP_TYPE_WEATHER_SOIL_HUMIDsoil humid
+
+```
+VSCP_TYPE_WEATHER_SOIL_HUMID
+```
+soil humid
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -324,7 +416,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=23 (0x17) - Soil dry :id=type23
-    VSCP_TYPE_WEATHER_SOIL_DRYsoil dry
+
+```
+VSCP_TYPE_WEATHER_SOIL_DRY
+```
+soil dry
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -338,7 +434,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=24 (0x18) - Rain none :id=type24
-    VSCP_TYPE_WEATHER_RAIN_NONERain none
+
+```
+VSCP_TYPE_WEATHER_RAIN_NONE
+```
+Rain none
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -352,7 +452,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=25 (0x19) - Rain light :id=type25
-    VSCP_TYPE_WEATHER_RAIN_LIGHTRain light
+
+```
+VSCP_TYPE_WEATHER_RAIN_LIGHT
+```
+Rain light
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -366,7 +470,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=26 (0x1A) - Rain heavy :id=type26
-    VSCP_TYPE_WEATHER_RAIN_HEAVYRain heavy
+
+```
+VSCP_TYPE_WEATHER_RAIN_HEAVY
+```
+Rain heavy
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -380,7 +488,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=27 (0x1B) - Rain very heavy :id=type27
-    VSCP_TYPE_WEATHER_RAIN_VERY_HEAVYRain very heavy
+
+```
+VSCP_TYPE_WEATHER_RAIN_VERY_HEAVY
+```
+Rain very heavy
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -394,7 +506,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=28 (0x1C) - Sun none :id=type28
-    VSCP_TYPE_WEATHER_SUN_NONESun none
+
+```
+VSCP_TYPE_WEATHER_SUN_NONE
+```
+Sun none
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -408,7 +524,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=29 (0x1D) - Sun light :id=type29
-    VSCP_TYPE_WEATHER_SUN_LIGHTSun light
+
+```
+VSCP_TYPE_WEATHER_SUN_LIGHT
+```
+Sun light
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -422,7 +542,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=30 (0x1E) - Sun heavy :id=type30
-    VSCP_TYPE_WEATHER_SUN_HEAVYSun heavy
+
+```
+VSCP_TYPE_WEATHER_SUN_HEAVY
+```
+Sun heavy
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -436,7 +560,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=31 (0x1F) - Snow none :id=type31
-    VSCP_TYPE_WEATHER_SNOW_NONESnow none.
+
+```
+VSCP_TYPE_WEATHER_SNOW_NONE
+```
+Snow none.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -450,7 +578,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=32 (0x20) - Snow light :id=type32
-    VSCP_TYPE_WEATHER_SNOW_LIGHTSnow light.
+
+```
+VSCP_TYPE_WEATHER_SNOW_LIGHT
+```
+Snow light.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -464,7 +596,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=33 (0x21) - Snow heavy :id=type33
-    VSCP_TYPE_WEATHER_SNOW_HEAVYSnow heavy.
+
+```
+VSCP_TYPE_WEATHER_SNOW_HEAVY
+```
+Snow heavy.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -478,7 +614,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=34 (0x22) - Dew point :id=type34
-    VSCP_TYPE_WEATHER_DEW_POINTDew point.
+
+```
+VSCP_TYPE_WEATHER_DEW_POINT
+```
+Dew point.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -492,7 +632,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=35 (0x23) - Storm :id=type35
-    VSCP_TYPE_WEATHER_STORMStorm.
+
+```
+VSCP_TYPE_WEATHER_STORM
+```
+Storm.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -506,7 +650,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=36 (0x24) - Flood :id=type36
-    VSCP_TYPE_WEATHER_FLOODFlood.
+
+```
+VSCP_TYPE_WEATHER_FLOOD
+```
+Flood.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -520,7 +668,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=37 (0x25) - Earthquake :id=type37
-    VSCP_TYPE_WEATHER_EARTHQUAKEEarthquake
+
+```
+VSCP_TYPE_WEATHER_EARTHQUAKE
+```
+Earthquake
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -534,7 +686,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=38 (0x26) - Nuclear disaster :id=type38
-    VSCP_TYPE_WEATHER_NUCLEAR_DISASTERNuclera disaster
+
+```
+VSCP_TYPE_WEATHER_NUCLEAR_DISASTER
+```
+Nuclera disaster
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -548,7 +704,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=39 (0x27) - Fire :id=type39
-    VSCP_TYPE_WEATHER_FIREFire.
+
+```
+VSCP_TYPE_WEATHER_FIRE
+```
+Fire.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -562,7 +722,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=40 (0x28) - Lightning :id=type40
-    VSCP_TYPE_WEATHER_LIGHTNINGLightning.
+
+```
+VSCP_TYPE_WEATHER_LIGHTNING
+```
+Lightning.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -576,7 +740,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=41 (0x29) - UV Radiation low :id=type41
-    VSCP_TYPE_WEATHER_UV_RADIATION_LOWRadiation low.
+
+```
+VSCP_TYPE_WEATHER_UV_RADIATION_LOW
+```
+Radiation low.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -590,7 +758,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=42 (0x2A) - UV Radiation medium :id=type42
-    VSCP_TYPE_WEATHER_UV_RADIATION_MEDIUMRadiation medium.
+
+```
+VSCP_TYPE_WEATHER_UV_RADIATION_MEDIUM
+```
+Radiation medium.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -604,7 +776,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=43 (0x2B) - UV Radiation normal :id=type43
-    VSCP_TYPE_WEATHER_UV_RADIATION_NORMALRadiation normal.
+
+```
+VSCP_TYPE_WEATHER_UV_RADIATION_NORMAL
+```
+Radiation normal.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -618,7 +794,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=44 (0x2C) - UV Radiation high :id=type44
-    VSCP_TYPE_WEATHER_UV_RADIATION_HIGHRadiation high.
+
+```
+VSCP_TYPE_WEATHER_UV_RADIATION_HIGH
+```
+Radiation high.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -632,7 +812,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=45 (0x2D) - UV Radiation very high :id=type45
-    VSCP_TYPE_WEATHER_UV_RADIATION_VERY_HIGHRadiation very high.
+
+```
+VSCP_TYPE_WEATHER_UV_RADIATION_VERY_HIGH
+```
+Radiation very high.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -646,7 +830,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=46 (0x2E) - Warning level 1 :id=type46
-    VSCP_TYPE_WEATHER_WARNING_LEVEL1Warning level 1. This is the lowest varning level.
+
+```
+VSCP_TYPE_WEATHER_WARNING_LEVEL1
+```
+Warning level 1. This is the lowest varning level.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -660,7 +848,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=47 (0x2F) - Warning level 2 :id=type47
-    VSCP_TYPE_WEATHER_WARNING_LEVEL2Warninglevel 2.
+
+```
+VSCP_TYPE_WEATHER_WARNING_LEVEL2
+```
+Warninglevel 2.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -674,7 +866,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=48 (0x30) - Warning level 3 :id=type48
-    VSCP_TYPE_WEATHER_WARNING_LEVEL3Warninglevel 3.
+
+```
+VSCP_TYPE_WEATHER_WARNING_LEVEL3
+```
+Warninglevel 3.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -688,7 +884,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=49 (0x31) - Warning level 4 :id=type49
-    VSCP_TYPE_WEATHER_WARNING_LEVEL4Warning level 4.
+
+```
+VSCP_TYPE_WEATHER_WARNING_LEVEL4
+```
+Warning level 4.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -702,7 +902,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=50 (0x32) - Warning level 5 :id=type50
-    VSCP_TYPE_WEATHER_WARNING_LEVEL5Warning level 5. This is the highest warning level.
+
+```
+VSCP_TYPE_WEATHER_WARNING_LEVEL5
+```
+Warning level 5. This is the highest warning level.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -716,7 +920,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=51 (0x33) - Armageddon :id=type51
-    VSCP_TYPE_WEATHER_ARMAGEDONThe final warning level not seen by humans.
+
+```
+VSCP_TYPE_WEATHER_ARMAGEDON
+```
+The final warning level not seen by humans.
 
  | Byte | Description                                                        | 
  | :----: | -----------                                                        | 
@@ -730,7 +938,11 @@ See [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data f
 
 
 ## Type=52 (0x34) - UV Index :id=type52
-    VSCP_TYPE_WEATHER_UV_INDEX
+
+```
+VSCP_TYPE_WEATHER_UV_INDEX
+```
+
 UV Index is an international scale for UV intensity which can have the range of 1-15 where 1 is very low radiation and a value over 10 is extremely high radiation.
 
  | Data byte | Description                         |
