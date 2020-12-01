@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-01 13:08:09.457144
+#                        Generated: 2020-12-01 14:12:21.343679
 #
  
 VSCP_CLASS1_PROTOCOL                     = 0      # VSCP Protocol Functionality
@@ -60,7 +60,7 @@ VSCP_CLASS1_WEATHER_FORECAST             = 95     # Weather forecast
 VSCP_CLASS1_PHONE                        = 100    # Phone
 VSCP_CLASS1_DISPLAY                      = 102    # Display
 VSCP_CLASS1_IR                           = 110    # IR Remote I/f
-VSCP_CLASS1_CONFIGURE                    = 120    # Configure
+VSCP_CLASS1_CONFIGURATION                = 120    # Configure
 VSCP_CLASS1_GNSS                         = 206    # Position (GNSS)
 VSCP_CLASS1_WIRELESS                     = 212    # Wireless
 VSCP_CLASS1_DIAGNOSTIC                   = 506    # Diagnostic

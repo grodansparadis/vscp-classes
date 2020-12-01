@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-01 13:08:10.495712
+#                        Generated: 2020-12-01 14:12:22.375922
 #
  
  
@@ -562,27 +562,27 @@ VSCP_TYPE_REMOTE_LIRC                                = 32 # LIRC (Linux Infrared
 VSCP_TYPE_REMOTE_VSCP                                = 48 # VSCP Abstract Remote Format
 VSCP_TYPE_REMOTE_MAPITO                              = 49 # MAPito Remote Format
 
-#  CLASS1.CONFIGURE = 120  -  Configure
-VSCP_TYPE_CONFIGURE_GENERAL                          = 0 # General event
-VSCP_TYPE_CONFIGURE_LOAD                             = 1 # Load configuration
-VSCP_TYPE_CONFIGURE_LOAD_ACK                         = 2 # Load configuration acknowledge
-VSCP_TYPE_CONFIGURE_LOAD_NACK                        = 3 # Load configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_SAVE                             = 4 # Save configuration
-VSCP_TYPE_CONFIGURE_SAVE_ACK                         = 5 # Save configuration acknowledge
-VSCP_TYPE_CONFIGURE_SAVE_NACK                        = 6 # Save configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_COMMIT                           = 7 # commit configuration
-VSCP_TYPE_CONFIGURE_COMMIT_ACK                       = 8 # Commit configuration acknowledge
-VSCP_TYPE_CONFIGURE_COMMIT_NACK                      = 9 # Commit configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_RELOAD                           = 10 # Reload configuration
-VSCP_TYPE_CONFIGURE_REALOD_ACK                       = 11 # Reload configuration acknowledge
-VSCP_TYPE_CONFIGURE_RELOAD_NACK                      = 12 # Reload configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_RESTORE                          = 13 # Restore configuration
-VSCP_TYPE_CONFIGURE_RESTORE_ACK                      = 14 # Restore configuration acknowledge
-VSCP_TYPE_CONFIGURE_RESTORE_NACK                     = 15 # Restore configuration negative acknowledge
-VSCP_TYPE_CONFIGURE_SET_PARAMETER                    = 30 # Set parameter
-VSCP_TYPE_CONFIGURE_SET_PARAMETER_DEFAULT            = 31 # Set parameter to default
+#  CLASS1.CONFIGURATION = 120  -  Configure
+VSCP_TYPE_CONFIGURATION_GENERAL                      = 0 # General event
+VSCP_TYPE_CONFIGURATION_LOAD                         = 1 # Load configuration
+VSCP_TYPE_CONFIGURATION_LOAD_ACK                     = 2 # Load configuration acknowledge
+VSCP_TYPE_CONFIGURATION_LOAD_NACK                    = 3 # Load configuration negative acknowledge
+VSCP_TYPE_CONFIGURATION_SAVE                         = 4 # Save configuration
+VSCP_TYPE_CONFIGURATION_SAVE_ACK                     = 5 # Save configuration acknowledge
+VSCP_TYPE_CONFIGURATION_SAVE_NACK                    = 6 # Save configuration negative acknowledge
+VSCP_TYPE_CONFIGURATION_COMMIT                       = 7 # commit configuration
+VSCP_TYPE_CONFIGURATION_COMMIT_ACK                   = 8 # Commit configuration acknowledge
+VSCP_TYPE_CONFIGURATION_COMMIT_NACK                  = 9 # Commit configuration negative acknowledge
+VSCP_TYPE_CONFIGURATION_RELOAD                       = 10 # Reload configuration
+VSCP_TYPE_CONFIGURATION_REALOD_ACK                   = 11 # Reload configuration acknowledge
+VSCP_TYPE_CONFIGURATION_RELOAD_NACK                  = 12 # Reload configuration negative acknowledge
+VSCP_TYPE_CONFIGURATION_RESTORE                      = 13 # Restore configuration
+VSCP_TYPE_CONFIGURATION_RESTORE_ACK                  = 14 # Restore configuration acknowledge
+VSCP_TYPE_CONFIGURATION_RESTORE_NACK                 = 15 # Restore configuration negative acknowledge
+VSCP_TYPE_CONFIGURATION_SET_PARAMETER                = 30 # Set parameter
+VSCP_TYPE_CONFIGURATION_SET_PARAMETER_DEFAULT        = 31 # Set parameter to default
 VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK                = 32 # Set parameter acknowledge
-VSCP_TYPE_CONFIGURE_SET_PARAMETER_NACK               = 33 # Set paramter negative acknowledge
+VSCP_TYPE_CONFIGURATION_SET_PARAMETER_NACK           = 33 # Set paramter negative acknowledge
 
 #  CLASS1.GNSS = 206  -  Position (GNSS)
 VSCP_TYPE_GNSS_GENERAL                               = 0 # General event

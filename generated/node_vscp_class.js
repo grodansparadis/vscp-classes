@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-01 13:12:59.374392
+                        Generated: 2020-12-01 14:17:22.453783
 */
 
 
@@ -92,7 +92,7 @@ module.exports.VSCP_CLASS1_WEATHER_FORECAST = 95;
 module.exports.VSCP_CLASS1_PHONE = 100;
 module.exports.VSCP_CLASS1_DISPLAY = 102;
 module.exports.VSCP_CLASS1_IR = 110;
-module.exports.VSCP_CLASS1_CONFIGURE = 120;
+module.exports.VSCP_CLASS1_CONFIGURATION = 120;
 module.exports.VSCP_CLASS1_GNSS = 206;
 module.exports.VSCP_CLASS1_WIRELESS = 212;
 module.exports.VSCP_CLASS1_DIAGNOSTIC = 506;
@@ -195,7 +195,7 @@ vscp_class_map.set(95,'CLASS1.WEATHER_FORECAST');
 vscp_class_map.set(100,'CLASS1.PHONE');
 vscp_class_map.set(102,'CLASS1.DISPLAY');
 vscp_class_map.set(110,'CLASS1.IR');
-vscp_class_map.set(120,'CLASS1.CONFIGURE');
+vscp_class_map.set(120,'CLASS1.CONFIGURATION');
 vscp_class_map.set(206,'CLASS1.GNSS');
 vscp_class_map.set(212,'CLASS1.WIRELESS');
 vscp_class_map.set(506,'CLASS1.DIAGNOSTIC');

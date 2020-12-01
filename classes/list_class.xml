@@ -39,7 +39,7 @@
     <item name="class_100_phone.xml" />
     <item name="class_102_display.xml" />
     <item name="class_110_remote.xml" />
-    <item name="class_120_configure.xml" />
+    <item name="class_120_configuration.xml" />
     <item name="class_206_gnss.xml" />
     <item name="class_212_wireless.xml" />
     <item name="class_506_diagnostic.xml" />
