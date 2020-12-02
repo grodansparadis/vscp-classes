@@ -1214,5 +1214,63 @@
             />
         </render>
     </type>
+    
+    <type  id="52"
+        name="Increment"
+        token="VSCP_TYPE_CONTROL_INCREMENT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    value: function() {
+                        var rval = 0;
+                        for ( i=3;i&lt;e.vscpData.length;i++) {
+                            rval = val &lt;&lt; 8;
+                            rval += e.vscpData[i];
+                        }
+                        return rval;
+                    }
+                "
+                template="     
+                    {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}               
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Increment value : {{lbl-end}} {{val-start}}{{value}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
+    
+    <type  id="53"
+        name="Decrement"
+        token="VSCP_TYPE_CONTROL_DECREMENT" >
+        <render>
+            <vscpworks 
+                variables="  
+                    opt: function() { return e.vscpData[0]; },
+                    zone: function() { return e.vscpData[1]; },
+                    subzone: function() { return e.vscpData[2]; },
+                    value: function() {
+                        var rval = 0;
+                        for ( i=3;i&lt;e.vscpData.length;i++) {
+                            rval = val &lt;&lt; 8;
+                            rval += e.vscpData[i];
+                        }
+                        return rval;
+                    }
+                "
+                template="     
+                    {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}               
+                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Decrement value : {{lbl-end}} {{val-start}}{{value}}{{val-end}}{{newline}}
+                    {{newline}}
+                "
+            />
+        </render>
+    </type>
 
 </class>
