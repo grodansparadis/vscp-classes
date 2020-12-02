@@ -48,7 +48,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-01 14:12:19.647168
+                        Generated: 2020-12-02 10:23:01.459959
 */
  
 #ifndef VSCP_TYPE_H
@@ -593,7 +593,7 @@
 #define VSCP_TYPE_REMOTE_VSCP                       48  /* VSCP Abstract Remote Format */
 #define VSCP_TYPE_REMOTE_MAPITO                     49  /* MAPito Remote Format */
     
-/*  CLASS1.CONFIGURATION = 120  -  Configure */
+/*  CLASS1.CONFIGURATION = 120  -  Configuration */
 #define VSCP_TYPE_CONFIGURATION_GENERAL             0   /* General event */
 #define VSCP_TYPE_CONFIGURATION_LOAD                1   /* Load configuration */
 #define VSCP_TYPE_CONFIGURATION_LOAD_ACK            2   /* Load configuration acknowledge */
@@ -612,7 +612,7 @@
 #define VSCP_TYPE_CONFIGURATION_RESTORE_NACK        15  /* Restore configuration negative acknowledge */
 #define VSCP_TYPE_CONFIGURATION_SET_PARAMETER       30  /* Set parameter */
 #define VSCP_TYPE_CONFIGURATION_SET_PARAMETER_DEFAULT 31 /* Set parameter to default */
-#define VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK       32  /* Set parameter acknowledge */
+#define VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK   32  /* Set parameter acknowledge */
 #define VSCP_TYPE_CONFIGURATION_SET_PARAMETER_NACK  33  /* Set paramter negative acknowledge */
     
 /*  CLASS1.GNSS = 206  -  Position (GNSS) */

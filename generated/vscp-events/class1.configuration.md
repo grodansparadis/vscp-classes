@@ -1,4 +1,4 @@
-# Class=120 (0x78) - Configure
+# Class=120 (0x78) - Configuration
 
     CLASS1.CONFIGURATION
 
@@ -40,7 +40,7 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_LOAD_NACK should be sent by the no
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Reset device when new configuration is loaded.   | 
+| 7    | Reboot device after configuration is loaded.   | 
 
 ----
 
@@ -78,9 +78,9 @@ Save a specific configuration on a node.  The configuration to save is identifie
 
 The optional control byte can be used to request a reset if the device after configuration is saved.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SAVE_ACK should be sent by the node after saving the new configuration to acknowledge a successful save of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SAVE_ACK should be sent by the node after saving the new configuration to acknowledge a successful save of configuration data.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SAVE_NACK should be sent by the node after saving the new configuration to negative acknowledge a failed save of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SAVE_NACK should be sent by the node after saving the new configuration to negative acknowledge a failed save of configuration data.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -96,7 +96,7 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SAVE_NACK should be sent by the node a
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Reset device when new configuration is loaded.   | 
+| 7    | Reboot device after configuration is saved.   | 
 
 ----
 
@@ -134,9 +134,9 @@ Commit a specific configuration on a node.  The configuration to commit is ident
 
 The optional control byte can be used to request a reset if the device after configuration is saved.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_COMMIT_ACK should be sent by the node after committing the new configuration to acknowledge a successful commit of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_COMMIT_ACK should be sent by the node after committing the new configuration to acknowledge a successful commit of configuration data.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_COMMIT_NACK should be sent by the node after committing the new configuration to negative acknowledge a failed commit of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_COMMIT_NACK should be sent by the node after committing the new configuration to negative acknowledge a failed commit of configuration data.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -152,7 +152,7 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_COMMIT_NACK should be sent by the node
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Reset device when new configuration is loaded.   | 
+| 7    | Reboot device after configuration is committed.   | 
 
 ----
 
@@ -190,9 +190,9 @@ Reload a specific configuration on a node.  The configuration to reload is ident
 
 The optional control byte can be used to request a reset if the device after configuration is saved.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RELOAD_ACK should be sent by the node after reloadinf the new configuration to acknowledge a successful reload of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RELOAD_ACK should be sent by the node after reloadinf the new configuration to acknowledge a successful reload of configuration data.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RELOAD_NACK should be sent by the node after reloading the new configuration to negative acknowledge a failed reload of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RELOAD_NACK should be sent by the node after reloading the new configuration to negative acknowledge a failed reload of configuration data.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -208,7 +208,7 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RELOAD_NACK should be sent by the node
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Reset device when new configuration is loaded.   | 
+| 7    | Reboot device after configuration is reloaded.   | 
 
 ----
 
@@ -246,9 +246,9 @@ Restore a specific configuration on a node.  The configuration to restore is ide
 
 The optional control byte can be used to request a reset if the device after configuration is saved.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RESTORE_ACK should be sent by the node after restoring the new configuration to acknowledge a successful restore of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RESTORE_ACK should be sent by the node after restoring the new configuration to acknowledge a successful restore of configuration data.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RESTORE_NACK should be sent by the node after restoring the new configuration to negative acknowledge a failed restore of configuration data.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RESTORE_NACK should be sent by the node after restoring the new configuration to negative acknowledge a failed restore of configuration data.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -264,7 +264,7 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_RESTORE_NACK should be sent by the nod
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Reset device when new configuration is loaded.   | 
+| 7    | Rboot device after configuration is restored.   | 
 
 ----
 
@@ -300,9 +300,9 @@ VSCP_TYPE_CONFIGURATION_SET_PARAMETER
 ```
 Set a parameter identified by a 16-bit parameter id to a value identified by a 16-bit value identifier. A typical examples of the use of this event is to set the unit for a measurement on one or several nodes. It is recommended that the value identifier zero is used as the default value for a parameter.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SET_MODE_ACK should be sent by the node after setting the new value.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SET_MODE_ACK should be sent by the node after setting the new value.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SET_MODE_NACK should be sent by the node if it fails to set the new value.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SET_MODE_NACK should be sent by the node if it fails to set the new value.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -322,9 +322,9 @@ VSCP_TYPE_CONFIGURATION_SET_PARAMETER_DEFAULT
 ```
 Set the default value for a parameter identified by a 16-bit parameter id. In most cases this is the same as setting the mode for a parameter to value id zero.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SET_MODE_ACK should be sent by the node after setting the new value.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SET_MODE_ACK should be sent by the node after setting the new value.
 
-CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SET_MODE_NACK should be sent by the node if it fails to set the new value.
+CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SET_MODE_NACK should be sent by the node if it fails to set the new value.
 
  | Byte | Description | 
  | :----: | ----------- | 
@@ -334,11 +334,12 @@ CLASS1.CONFIGURE, VSCP_TYPE_CONFIGURATION_SET_MODE_NACK should be sent by the no
  | 3    | Parameter id MSB. | 
  | 4    | Parameter id LSB. |
  
+
 ----
 
 ## Type=32 (0x20) - Set parameter acknowledge :id=type32
 ```
-VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK
+VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK
 ```
 This event should be sent by the node after setting the new value.
 
@@ -355,7 +356,7 @@ This event should be sent by the node after setting the new value.
 ```
 VSCP_TYPE_CONFIGURATION_SET_PARAMETER_NACK
 ```
-should be sent by the node if it fails to set the new value.
+Should be sent by the node if it fails to set the new value.
 
 
  | Byte | Description | 

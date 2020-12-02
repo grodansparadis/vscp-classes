@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-01 14:17:23.571000
+                        Generated: 2020-12-02 10:29:00.347688
 */
 
 'use strict';
@@ -1065,7 +1065,7 @@ vscp_type_map.set( (110 << 16) + 32,'VSCP_TYPE_REMOTE_LIRC');
 vscp_type_map.set( (110 << 16) + 48,'VSCP_TYPE_REMOTE_VSCP'); 
 vscp_type_map.set( (110 << 16) + 49,'VSCP_TYPE_REMOTE_MAPITO'); 
  
-//  CLASS1.CONFIGURATION = 120  -  Configure
+//  CLASS1.CONFIGURATION = 120  -  Configuration
 module.exports.VSCP_TYPE_CONFIGURATION_GENERAL = 0,
 module.exports.VSCP_TYPE_CONFIGURATION_LOAD = 1,
 module.exports.VSCP_TYPE_CONFIGURATION_LOAD_ACK = 2,
@@ -1084,7 +1084,7 @@ module.exports.VSCP_TYPE_CONFIGURATION_RESTORE_ACK = 14,
 module.exports.VSCP_TYPE_CONFIGURATION_RESTORE_NACK = 15,
 module.exports.VSCP_TYPE_CONFIGURATION_SET_PARAMETER = 30,
 module.exports.VSCP_TYPE_CONFIGURATION_SET_PARAMETER_DEFAULT = 31,
-module.exports.VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK = 32,
+module.exports.VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK = 32,
 module.exports.VSCP_TYPE_CONFIGURATION_SET_PARAMETER_NACK = 33;
 
 
@@ -1106,7 +1106,7 @@ vscp_type_map.set( (120 << 16) + 14,'VSCP_TYPE_CONFIGURATION_RESTORE_ACK');
 vscp_type_map.set( (120 << 16) + 15,'VSCP_TYPE_CONFIGURATION_RESTORE_NACK'); 
 vscp_type_map.set( (120 << 16) + 30,'VSCP_TYPE_CONFIGURATION_SET_PARAMETER'); 
 vscp_type_map.set( (120 << 16) + 31,'VSCP_TYPE_CONFIGURATION_SET_PARAMETER_DEFAULT'); 
-vscp_type_map.set( (120 << 16) + 32,'VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK'); 
+vscp_type_map.set( (120 << 16) + 32,'VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK'); 
 vscp_type_map.set( (120 << 16) + 33,'VSCP_TYPE_CONFIGURATION_SET_PARAMETER_NACK'); 
  
 //  CLASS1.GNSS = 206  -  Position (GNSS)
