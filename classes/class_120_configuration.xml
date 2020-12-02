@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="120" 
-    name="Configure" 
+    name="Configuration" 
     token="CLASS1.CONFIGURATION" >
 
     <type id="0" 
