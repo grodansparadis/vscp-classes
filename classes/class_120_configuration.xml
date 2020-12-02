@@ -78,7 +78,7 @@
 
     <type id="32" 
         name="Set parameter acknowledge"
-        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK" />
+        token="VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK" />
     
     <type id="33" 
         name="Set paramter negative acknowledge"
