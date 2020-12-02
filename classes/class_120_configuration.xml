@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="120" 
-    name="Configure" 
+    name="Configuration" 
     token="CLASS1.CONFIGURATION" >
 
     <type id="0" 
@@ -78,7 +78,7 @@
 
     <type id="32" 
         name="Set parameter acknowledge"
-        token="VSCP_TYPE_CONFIGURE_SET_PARAMETER_ACK" />
+        token="VSCP_TYPE_CONFIGURATION_SET_PARAMETER_ACK" />
     
     <type id="33" 
         name="Set paramter negative acknowledge"
