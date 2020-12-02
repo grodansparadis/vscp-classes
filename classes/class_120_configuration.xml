@@ -33,7 +33,7 @@
         token="VSCP_TYPE_CONFIGURATION_SAVE_NACK" />
     
     <type id="7"
-        name="commit configuration"
+        name="Commit configuration"
         token="VSCP_TYPE_CONFIGURATION_COMMIT" />
 
     <type id="8" 
