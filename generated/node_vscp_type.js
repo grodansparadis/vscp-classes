@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-02 14:07:25.345946
+                        Generated: 2020-12-02 14:56:33.577830
 */
 
 'use strict';
@@ -510,7 +510,9 @@ module.exports.VSCP_TYPE_INFORMATION_CONNECT = 81,
 module.exports.VSCP_TYPE_INFORMATION_DISCONNECT = 82,
 module.exports.VSCP_TYPE_INFORMATION_RECONNECT = 83,
 module.exports.VSCP_TYPE_INFORMATION_ENTER = 84,
-module.exports.VSCP_TYPE_INFORMATION_EXIT = 85;
+module.exports.VSCP_TYPE_INFORMATION_EXIT = 85,
+module.exports.VSCP_TYPE_INFORMATION_INCREMENTED = 86,
+module.exports.VSCP_TYPE_INFORMATION_DECREMENTED = 87;
 
 
 vscp_type_map.set( (20 << 16) + 0,'VSCP_TYPE_INFORMATION_GENERAL'); 
@@ -599,6 +601,8 @@ vscp_type_map.set( (20 << 16) + 82,'VSCP_TYPE_INFORMATION_DISCONNECT');
 vscp_type_map.set( (20 << 16) + 83,'VSCP_TYPE_INFORMATION_RECONNECT'); 
 vscp_type_map.set( (20 << 16) + 84,'VSCP_TYPE_INFORMATION_ENTER'); 
 vscp_type_map.set( (20 << 16) + 85,'VSCP_TYPE_INFORMATION_EXIT'); 
+vscp_type_map.set( (20 << 16) + 86,'VSCP_TYPE_INFORMATION_INCREMENTED'); 
+vscp_type_map.set( (20 << 16) + 87,'VSCP_TYPE_INFORMATION_DECREMENTED'); 
  
 //  CLASS1.CONTROL = 30  -  Control
 module.exports.VSCP_TYPE_CONTROL_GENERAL = 0,
@@ -652,7 +656,9 @@ module.exports.VSCP_TYPE_CONTROL_SET_SECURITY_LEVEL = 47,
 module.exports.VSCP_TYPE_CONTROL_SET_SECURITY_PIN = 48,
 module.exports.VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD = 49,
 module.exports.VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN = 50,
-module.exports.VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN = 51;
+module.exports.VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN = 51,
+module.exports.VSCP_TYPE_CONTROL_INCREMENT = 52,
+module.exports.VSCP_TYPE_CONTROL_DECREMENT = 53;
 
 
 vscp_type_map.set( (30 << 16) + 0,'VSCP_TYPE_CONTROL_GENERAL'); 
@@ -707,6 +713,8 @@ vscp_type_map.set( (30 << 16) + 48,'VSCP_TYPE_CONTROL_SET_SECURITY_PIN');
 vscp_type_map.set( (30 << 16) + 49,'VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD'); 
 vscp_type_map.set( (30 << 16) + 50,'VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN'); 
 vscp_type_map.set( (30 << 16) + 51,'VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN'); 
+vscp_type_map.set( (30 << 16) + 52,'VSCP_TYPE_CONTROL_INCREMENT'); 
+vscp_type_map.set( (30 << 16) + 53,'VSCP_TYPE_CONTROL_DECREMENT'); 
  
 //  CLASS1.MULTIMEDIA = 40  -  Multimedia
 module.exports.VSCP_TYPE_MULTIMEDIA_GENERAL = 0,

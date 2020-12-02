@@ -1,5 +1,5 @@
 {
-"Generated" : " 2020-12-02 14:03:35.277278 ",
+"Generated" : " 2020-12-02 14:52:09.983185 ",
 "events": [
 {
 	"class": 0,
@@ -1849,6 +1849,20 @@
 		"name": "Exit",
 		"units": [],
 		"description": "Exit, something has been exited.\n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0 | Index for device. Set to zero if not used.| \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n "
+	},
+	{
+		"type": 86,
+		"token": "VSCP_TYPE_INFORMATION_INCREMENTED",
+		"name": "Incremented",
+		"units": [],
+		"description": "This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=52 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Incremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n"
+	},
+	{
+		"type": 87,
+		"token": "VSCP_TYPE_INFORMATION_DECREMENTED",
+		"name": "Decremented",
+		"units": [],
+		"description": "This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n"
 	}
 	]
 },
@@ -2221,6 +2235,20 @@
 		"name": "Request new security token",
 		"units": [],
 		"description": "Request new security token.\n\n | Data byte | Description                                                        |\n | :---------: | -----------                                                      |\n | 0         |\tOptional byte that have a meaning given by the issuer of the event.| \n | 1         | Zone for which event applies to (0-255). 255 is all zones.         |\n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |\n \n \n"
+	},
+	{
+		"type": 52,
+		"token": "VSCP_TYPE_CONTROL_INCREMENT",
+		"name": "Increment",
+		"units": [],
+		"description": "Increment value.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Increment as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default increment value. | \n"
+	},
+	{
+		"type": 53,
+		"token": "VSCP_TYPE_CONTROL_DECREMENT",
+		"name": "Decrement",
+		"units": [],
+		"description": "Decrement value.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decrement as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default decrement value. | \n"
 	}
 	]
 },
@@ -8594,6 +8622,20 @@
 		"name": "Exit",
 		"units": [],
 		"description": "Exit, something has been exited.\n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0 | Index for device. Set to zero if not used.| \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n "
+	},
+	{
+		"type": 86,
+		"token": "VSCP_TYPE_INFORMATION_INCREMENTED",
+		"name": "Incremented",
+		"units": [],
+		"description": "This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=52 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Incremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n"
+	},
+	{
+		"type": 87,
+		"token": "VSCP_TYPE_INFORMATION_DECREMENTED",
+		"name": "Decremented",
+		"units": [],
+		"description": "This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n"
 	}
 	]
 },
@@ -8966,6 +9008,20 @@
 		"name": "Request new security token",
 		"units": [],
 		"description": "Request new security token.\n\n | Data byte | Description                                                        |\n | :---------: | -----------                                                      |\n | 0         |\tOptional byte that have a meaning given by the issuer of the event.| \n | 1         | Zone for which event applies to (0-255). 255 is all zones.         |\n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |\n \n \n"
+	},
+	{
+		"type": 52,
+		"token": "VSCP_TYPE_CONTROL_INCREMENT",
+		"name": "Increment",
+		"units": [],
+		"description": "Increment value.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Increment as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default increment value. | \n"
+	},
+	{
+		"type": 53,
+		"token": "VSCP_TYPE_CONTROL_DECREMENT",
+		"name": "Decrement",
+		"units": [],
+		"description": "Decrement value.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decrement as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default decrement value. | \n"
 	}
 	]
 },

@@ -1053,4 +1053,42 @@ Request new security token.
 ----
 
 
+## Type=52 (0x34) - Increment :id=type52
+
+```
+VSCP_TYPE_CONTROL_INCREMENT
+```
+Increment value.
+
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0         | Optional byte that have a meaning given by the issuer of the event.        | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | 
+ | 3-7       | Increment as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default increment value. | 
+
+
+
+----
+
+
+## Type=53 (0x35) - Decrement :id=type53
+
+```
+VSCP_TYPE_CONTROL_DECREMENT
+```
+Decrement value.
+
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0         | Optional byte that have a meaning given by the issuer of the event.        | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | 
+ | 3-7       | Decrement as unsigned integer. The range can be adjusted by the user by sending just the needed number of bytes (1-5) which form the unsigned integer (MSB first). If omitted (or 0) 1 is assumed as default decrement value. | 
+
+
+
+----
+
+
 [filename](./bottom_copyright.md ':include')

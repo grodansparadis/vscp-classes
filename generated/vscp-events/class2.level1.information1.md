@@ -1690,4 +1690,42 @@ Exit, something has been exited.
 ----
 
 
+## Type=86 (0x56) - Incremented :id=type86
+
+```
+VSCP_TYPE_INFORMATION_INCREMENTED
+```
+This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=52 events.
+
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0         | Optional byte that have a meaning given by the issuer of the event.        | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | 
+ | 3-7       | Incremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | 
+
+
+
+----
+
+
+## Type=87 (0x57) - Decremented :id=type87
+
+```
+VSCP_TYPE_INFORMATION_DECREMENTED
+```
+This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 events.
+
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0         | Optional byte that have a meaning given by the issuer of the event.        | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | 
+ | 3-7       | Decremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | 
+
+
+
+----
+
+
 [filename](./bottom_copyright.md ':include')

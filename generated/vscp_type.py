@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-02 14:03:34.237479
+#                        Generated: 2020-12-02 14:52:08.931151
 #
  
  
@@ -297,6 +297,8 @@ VSCP_TYPE_INFORMATION_DISCONNECT                     = 82 # Disconnect
 VSCP_TYPE_INFORMATION_RECONNECT                      = 83 # Reconnect
 VSCP_TYPE_INFORMATION_ENTER                          = 84 # Enter
 VSCP_TYPE_INFORMATION_EXIT                           = 85 # Exit
+VSCP_TYPE_INFORMATION_INCREMENTED                    = 86 # Incremented
+VSCP_TYPE_INFORMATION_DECREMENTED                    = 87 # Decremented
 
 #  CLASS1.CONTROL = 30  -  Control
 VSCP_TYPE_CONTROL_GENERAL                            = 0 # General event
@@ -351,6 +353,8 @@ VSCP_TYPE_CONTROL_SET_SECURITY_PIN                   = 48 # Set security pin
 VSCP_TYPE_CONTROL_SET_SECURITY_PASSWORD              = 49 # Set security password
 VSCP_TYPE_CONTROL_SET_SECURITY_TOKEN                 = 50 # Set security token
 VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN             = 51 # Request new security token
+VSCP_TYPE_CONTROL_INCREMENT                          = 52 # Increment
+VSCP_TYPE_CONTROL_DECREMENT                          = 53 # Decrement
 
 #  CLASS1.MULTIMEDIA = 40  -  Multimedia
 VSCP_TYPE_MULTIMEDIA_GENERAL                         = 0 # General event
