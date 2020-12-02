@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-02 10:23:04.167160
+#                        Generated: 2020-12-02 14:03:34.237479
 #
  
  
@@ -570,7 +570,7 @@ VSCP_TYPE_CONFIGURATION_LOAD_NACK                    = 3 # Load configuration ne
 VSCP_TYPE_CONFIGURATION_SAVE                         = 4 # Save configuration
 VSCP_TYPE_CONFIGURATION_SAVE_ACK                     = 5 # Save configuration acknowledge
 VSCP_TYPE_CONFIGURATION_SAVE_NACK                    = 6 # Save configuration negative acknowledge
-VSCP_TYPE_CONFIGURATION_COMMIT                       = 7 # commit configuration
+VSCP_TYPE_CONFIGURATION_COMMIT                       = 7 # Commit configuration
 VSCP_TYPE_CONFIGURATION_COMMIT_ACK                   = 8 # Commit configuration acknowledge
 VSCP_TYPE_CONFIGURATION_COMMIT_NACK                  = 9 # Commit configuration negative acknowledge
 VSCP_TYPE_CONFIGURATION_RELOAD                       = 10 # Reload configuration

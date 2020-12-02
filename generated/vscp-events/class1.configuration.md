@@ -35,7 +35,7 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_LOAD_NACK should be sent by the no
  | 4    | Configuration id LSB. |
  | 5    | Control byte (optional). |
 
-## Control byte
+##### Control byte
 
 | Bit | Description | 
 | :----: | ----------- | 
@@ -91,7 +91,7 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_SAVE_NACK should be sent by the no
  | 4    | Configuration id LSB. |
  | 5    | Control byte (optional). |
 
-## Control byte
+##### Control byte
 
 | Bit | Description | 
 | :----: | ----------- | 
@@ -126,7 +126,7 @@ This event should be sent by the node after saving a new configuration to negati
 
 ----
 
-## Type=7 (0x07) - commit configuration :id=type7
+## Type=7 (0x07) - Commit configuration :id=type7
 ```
 VSCP_TYPE_CONFIGURATION_COMMIT
 ```
@@ -147,7 +147,7 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_COMMIT_NACK should be sent by the 
  | 4    | Configuration id LSB. |
  | 5    | Control byte (optional). |
 
-## Control byte
+##### Control byte
 
 | Bit | Description | 
 | :----: | ----------- | 
@@ -203,7 +203,7 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RELOAD_NACK should be sent by the 
  | 4    | Configuration id LSB. |
  | 5    | Control byte (optional). |
 
-## Control byte
+##### Control byte
 
 | Bit | Description | 
 | :----: | ----------- | 
@@ -259,12 +259,12 @@ CLASS1.CONFIGURATION, VSCP_TYPE_CONFIGURATION_RESTORE_NACK should be sent by the
  | 4    | Configuration id LSB. |
  | 5    | Control byte (optional). |
 
-## Control byte
+##### Control byte
 
 | Bit | Description | 
 | :----: | ----------- | 
 | 0-6    | Reserved.   | 
-| 7    | Rboot device after configuration is restored.   | 
+| 7    | Reboot device after configuration is restored.   | 
 
 ----
 
