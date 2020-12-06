@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="65535"
-    name="VSCP Daemon internal events"
+    name="Level II VSCP Daemon internal events"
     token="CLASS2.VSCPD" >
 
     <type id="0"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="1040" 
-    name="Measurement string" 
+    name="Level II Measurement string" 
     token="CLASS2.MEASUREMENT_STR" 
     events="class_10_measurement.xml" >
 </class>

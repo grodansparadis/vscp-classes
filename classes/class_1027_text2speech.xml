@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="1027" 
-    name="Text to speech" 
+    name="Level II Text to speech" 
     token="CLASS2.TEXT2SPEECH" >
 
     <type id="0" 
