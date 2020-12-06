@@ -1,4 +1,4 @@
-# Class=1027 (0x0403) - Text to speech
+# Class=1027 (0x0403) - Level II Text to speech
 
     CLASS2.TEXT2SPEECH
 

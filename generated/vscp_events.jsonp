@@ -1,6 +1,6 @@
 myFunc(
 {
-"Generated" : " 2020-12-02 14:52:10.826177 ",
+"Generated" : " 2020-12-06 21:25:30.597664 ",
 "events": [
 {
 	"class": 0,
@@ -13510,7 +13510,7 @@ myFunc(
 },
 {
 	"class": 1027,
-	"name": "Text to speech",
+	"name": "Level II Text to speech",
 	"token": "CLASS2.TEXT2SPEECH",
 	"description": "## Description\n\nThis is an interface that translates text to speech \n",
 	"types": [
@@ -13532,7 +13532,7 @@ myFunc(
 },
 {
 	"class": 1028,
-	"name": "High Level Object",
+	"name": "Level II High Level Object",
 	"token": "CLASS2.HLO",
 	"description": "## Description\n\nHLO (High Level Object) class. This class is used to talk to drivers and nodes using XML or JSON or other higher level formats. ",
 	"types": [
@@ -13591,7 +13591,7 @@ myFunc(
 },
 {
 	"class": 1040,
-	"name": "Measurement string",
+	"name": "Level II Measurement string",
 	"token": "CLASS2.MEASUREMENT_STR",
 	"description": "## Description\n\nThis is a mirror of [CLASS1_MEASUREMENT](./class1.measurement.md),[CLASS1_MEASUREMENTX1](./class1.measurementx1.md),[CLASS1_MEASUREMENTX2](./class1.measurementx2.md),[CLASS1_MEASUREMENTX3](./class1.measurementx3.md) and [CLASS1_MEASUREMENTX4](./class1.measurementx4.md) where the data is in string form. The zero terminated string has the following form “sensor-index, value-unit, zone, subzone, value” where the value is a floating point value in string form and the senor-index and value-unit is the same as for [CLASS1_MEASUREMENT](./class1.measurement.md),[CLASS1_MEASUREMENTX1](./class1.measurementx1.md),[CLASS1_MEASUREMENTX2](./class1.measurementx2.md),[CLASS1_MEASUREMENTX3](./class1.measurementx3.md) and [CLASS1_MEASUREMENTX4](./class1.measurementx4.md) but where sensor index's can be in the range 0-255 and value-unit in the range 0-255 (3 is standard).\n\n  * 0-255 is mirrored to [CLASS1_MEASUREMENT](./class1.measurement.md)\n  * 256-511 is mirrored to [CLASS1_MEASUREMENTX1](./class1.measurementx1.md)\n  * 512-767 is mirrored to [CLASS1_MEASUREMENTX2](./class1.measurementx2.md)\n  * 768-1023 is mirrored to [CLASS1_MEASUREMENTX3](./class1.measurementx3.md)\n  * 1024-1279 is mirrored to [CLASS1_MEASUREMENTX4](./class1.measurementx4.md)\n  * Events with type >= 1270 are only available in Level II.\n\nFloating point numbers should be written as \"2345.456\" **NOT** as \"2345,456\" independent of locale and the maximum number can have 483 digits including a possible decimal point.\n\n | Byte | Description |\n | :----: | ----------- |\n | 0    | Index for sensor, 0-255. |\n | 1    | Zone, 0-255. |\n | 2    | Subzone, 0-255. |\n | 3    | Unit from measurements, 0-255. |\n | 4..  | String up to the maximum data size 483 digits including a possible decimal point. The decimal point should always be a \".\" independent of locale. |\n\n",
 	"types": [
@@ -14040,7 +14040,7 @@ myFunc(
 },
 {
 	"class": 1060,
-	"name": "Measurement float",
+	"name": "Level II Measurement float",
 	"token": "CLASS2.MEASUREMENT_FLOAT",
 	"description": "## Description\n\nThis is a mirror of [CLASS1_MEASUREMENT](./class1.measurement.md),[CLASS1_MEASUREMENTX1](./class1.measurementx1.md),[CLASS1_MEASUREMENTX2](./class1.measurementx2.md),[CLASS1_MEASUREMENTX3](./class1.measurementx3.md) and [CLASS1_MEASUREMENTX4](./class1.measurementx4.md) where the data is in string form. The zero terminated string has the following form “sensor-index, value-unit, zone, subzone, value” where the value is a double precision floating point value and the senor-index and value-unit is the same as for [CLASS1_MEASUREMENT](./class1.measurement.md),[CLASS1_MEASUREMENTX1](./class1.measurementx1.md),[CLASS1_MEASUREMENTX2](./class1.measurementx2.md),[CLASS1_MEASUREMENTX3](./class1.measurementx3.md) and [CLASS1_MEASUREMENTX4](./class1.measurementx4.md) but where sensor index's can be in the range 0-255 and value-unit in the range 0-255.\n\n  * 0-255 is mirrored to [CLASS1_MEASUREMENT](./class1.measurement.md)\n  * 256-511 is mirrored to [CLASS1_MEASUREMENTX1](./class1.measurementx1.md)\n  * 512-767 is mirrored to [CLASS1_MEASUREMENTX2](./class1.measurementx2.md)\n  * 768-1023 is mirrored to [CLASS1_MEASUREMENTX3](./class1.measurementx3.md)\n  * 1024-1279 is mirrored to [CLASS1_MEASUREMENTX4](./class1.measurementx4.md)\n  * Events with type >= 1270 are oinly available in Level II.\n\n| Byte | Description |\n| :----: | ----------- |\n| 0    | Index for sensor, 0-255. |\n| 1    | Zone, 0-255. |\n| 2    | Sub zone, 0-255.|\n| 3    | Unit from measurements, 0-255.|\n| 4-11 | 64-bit double precision floating point value stored MSB first. |\n\n\n",
 	"types": [
@@ -14489,7 +14489,7 @@ myFunc(
 },
 {
 	"class": 65535,
-	"name": "VSCP Daemon internal events",
+	"name": "Level II VSCP Daemon internal events",
 	"token": "CLASS2.VSCPD",
 	"description": "## Description\n\nThis class is reserved for internal events used by the damon to communicate with level III drivers. Events of this type should never be visible on a physical bus. \n",
 	"types": [

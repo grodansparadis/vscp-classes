@@ -1,4 +1,4 @@
-# Class=65535 (0xFFFF) - VSCP Daemon internal events
+# Class=65535 (0xFFFF) - Level II VSCP Daemon internal events
 
     CLASS2.VSCPD
 

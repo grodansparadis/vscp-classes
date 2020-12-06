@@ -1,4 +1,4 @@
-# Class=1040 (0x0410) - Measurement string
+# Class=1040 (0x0410) - Level II Measurement string
 
     CLASS2.MEASUREMENT_STR
 

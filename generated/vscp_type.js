@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-02 14:56:33.027372
+                        Generated: 2020-12-06 21:30:17.790480
 */
 
 /** Namespace for all functionality of the VSCP provided libraries.
@@ -915,11 +915,11 @@ vscp.constants.types = {
     VSCP2_TYPE_INFORMATION_PROXY_HEART_BEAT: 3,
     VSCP2_TYPE_INFORMATION_CHANNEL_ANNOUNCE: 4,
  
-//  CLASS2.TEXT2SPEECH = 1027  -  Text to speech
+//  CLASS2.TEXT2SPEECH = 1027  -  Level II Text to speech
     VSCP2_TYPE_TEXT2SPEECH_GENERAL: 0,
     VSCP2_TYPE_TEXT2SPEECH_TALK: 1,
  
-//  CLASS2.HLO = 1028  -  High Level Object
+//  CLASS2.HLO = 1028  -  Level II High Level Object
     VSCP2_TYPE_HLO_GENERAL: 0,
     VSCP2_TYPE_HLO_COMMAND: 1,
     VSCP2_TYPE_HLO_RESPONSE: 2,
@@ -930,13 +930,13 @@ vscp.constants.types = {
 //  CLASS2.DISPLAY = 1030  -  Level II Display
     VSCP2_TYPE_DISPLAY_GENERAL: 0,
  
-//  CLASS2.MEASUREMENT_STR = 1040  -  Measurement string
+//  CLASS2.MEASUREMENT_STR = 1040  -  Level II Measurement string
 // Event types is the same as  CLASS1.MEASUREMENT = 10  -  Measurement
  
-//  CLASS2.MEASUREMENT_FLOAT = 1060  -  Measurement float
+//  CLASS2.MEASUREMENT_FLOAT = 1060  -  Level II Measurement float
 // Event types is the same as  CLASS1.MEASUREMENT = 10  -  Measurement
  
-//  CLASS2.VSCPD = 65535  -  VSCP Daemon internal events
+//  CLASS2.VSCPD = 65535  -  Level II VSCP Daemon internal events
     VSCP2_TYPE_VSCPD_GENERAL: 0,
     VSCP2_TYPE_VSCPD_LOOP: 1,
     VSCP2_TYPE_VSCPD_PAUSE: 3,

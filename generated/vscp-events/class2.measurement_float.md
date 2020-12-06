@@ -1,4 +1,4 @@
-# Class=1060 (0x0424) - Measurement float
+# Class=1060 (0x0424) - Level II Measurement float
 
     CLASS2.MEASUREMENT_FLOAT
 

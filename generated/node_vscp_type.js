@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-02 14:56:33.577830
+                        Generated: 2020-12-06 21:30:18.344993
 */
 
 'use strict';
@@ -1576,7 +1576,7 @@ vscp_type_map.set( (1026 << 16) + 2,'VSCP2_TYPE_INFORMATION_HEART_BEAT');
 vscp_type_map.set( (1026 << 16) + 3,'VSCP2_TYPE_INFORMATION_PROXY_HEART_BEAT'); 
 vscp_type_map.set( (1026 << 16) + 4,'VSCP2_TYPE_INFORMATION_CHANNEL_ANNOUNCE'); 
  
-//  CLASS2.TEXT2SPEECH = 1027  -  Text to speech
+//  CLASS2.TEXT2SPEECH = 1027  -  Level II Text to speech
 module.exports.VSCP2_TYPE_TEXT2SPEECH_GENERAL = 0,
 module.exports.VSCP2_TYPE_TEXT2SPEECH_TALK = 1;
 
@@ -1584,7 +1584,7 @@ module.exports.VSCP2_TYPE_TEXT2SPEECH_TALK = 1;
 vscp_type_map.set( (1027 << 16) + 0,'VSCP2_TYPE_TEXT2SPEECH_GENERAL'); 
 vscp_type_map.set( (1027 << 16) + 1,'VSCP2_TYPE_TEXT2SPEECH_TALK'); 
  
-//  CLASS2.HLO = 1028  -  High Level Object
+//  CLASS2.HLO = 1028  -  Level II High Level Object
 module.exports.VSCP2_TYPE_HLO_GENERAL = 0,
 module.exports.VSCP2_TYPE_HLO_COMMAND = 1,
 module.exports.VSCP2_TYPE_HLO_RESPONSE = 2;
@@ -1606,13 +1606,13 @@ module.exports.VSCP2_TYPE_DISPLAY_GENERAL = 0;
 
 vscp_type_map.set( (1030 << 16) + 0,'VSCP2_TYPE_DISPLAY_GENERAL'); 
  
-//  CLASS2.MEASUREMENT_STR = 1040  -  Measurement string
+//  CLASS2.MEASUREMENT_STR = 1040  -  Level II Measurement string
 // Event types is the same as  CLASS1.MEASUREMENT = 10  -  Measurement
  
-//  CLASS2.MEASUREMENT_FLOAT = 1060  -  Measurement float
+//  CLASS2.MEASUREMENT_FLOAT = 1060  -  Level II Measurement float
 // Event types is the same as  CLASS1.MEASUREMENT = 10  -  Measurement
  
-//  CLASS2.VSCPD = 65535  -  VSCP Daemon internal events
+//  CLASS2.VSCPD = 65535  -  Level II VSCP Daemon internal events
 module.exports.VSCP2_TYPE_VSCPD_GENERAL = 0,
 module.exports.VSCP2_TYPE_VSCPD_LOOP = 1,
 module.exports.VSCP2_TYPE_VSCPD_PAUSE = 3,

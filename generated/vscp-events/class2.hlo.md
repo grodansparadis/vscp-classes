@@ -1,4 +1,4 @@
-# Class=1028 (0x0404) - High Level Object
+# Class=1028 (0x0404) - Level II High Level Object
 
     CLASS2.HLO
 
