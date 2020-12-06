@@ -99,7 +99,7 @@ for vscp_class in order_list:
             outstr = "INSERT INTO vscp_type (type,link_to_class,token,description) VALUES (" + \
                 child.attrib["id"] + "," + \
                 type_root.attrib["id"] + "," + \
-                "'" + type_root.attrib["token"] + "'"
+                "'" + child.attrib["token"] + "'"
 
             # Get description
             description = ""
