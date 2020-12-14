@@ -661,4 +661,42 @@
         </render>        
     </type>
 
+    <type id="35"
+        name="In motion"
+        token="VSCP_TYPE_SECURITY_IN_MOTION" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
+
+    <type id="36"
+        name="Not in motion"
+        token="VSCP_TYPE_SECURITY_NOT_IN_MOTION" >
+        <render>
+            <vscpworks 
+                variables="
+                    userdef:    : function() { return (e.vscpData[0]); }
+                    zone:       : function() { return (e.vscpData[1]); }
+                    zubzone:    : function() { return (e.vscpData[2]); }
+                "
+                template="
+                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
+                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
+                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                "
+            />
+        </render>        
+    </type>
+
 </class>
