@@ -961,4 +961,16 @@
         </units>    
     </type>
     
+    <type id="63" name="Power factor" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" >
+        <units>
+            <unit id="0" 
+                    name="Percent" 
+                    description="Ratio between power in kW and apperant power in kVA"
+                    symbol-ascii="PF"
+                    symbol-utf8="PF"
+                    conversion="{{val}}"
+                    comment="" />               
+        </units>    
+    </type>
+
 </class>
