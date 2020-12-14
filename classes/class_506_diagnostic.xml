@@ -324,5 +324,12 @@
         name="External IC failure"
         token="VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL" />
 
+    <type id="80" 
+        name="Charging of battery or similar has started or is in progress"
+        token="VSCP_TYPE_DIAGNOSTIC_CHARGING_ON" />
+    
+    <type id="81" 
+        name="Charging of battery or similar has ended"
+        token="VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF" />
 </class>
 
