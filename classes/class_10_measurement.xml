@@ -250,8 +250,15 @@
                     description="Kilowatt-hour"
                     symbol-ascii="kWh"
                     symbol-utf8="kWh"
+                    conversion="{{val}}*3600000"
+                    comment="" />
+            <unit id="2" 
+                    name="wh" 
+                    description="watt-hour"
+                    symbol-ascii="Wh"
+                    symbol-utf8="Wh"
                     conversion="{{val}}*3600"
-                    comment="" />        
+                    comment="" />            
         </units>    
     </type>
     
