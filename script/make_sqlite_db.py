@@ -220,23 +220,55 @@ for vscp_class in order_list:
 
 #print("--------------------------------------------------------------------------------------")            
 for vscp_class in order_list:
-
     fname = '../classes/' + vscp_class
     class_tree = ET.parse(fname)
     class_root = class_tree.getroot()
+    classid = class_root.attrib["id"]    
     #print(fname)
-    for child in class_root:
-        classid = type_root.attrib["id"]
+    for child in class_root:        
         #print("child = " + child.tag)
         if (child.tag == "render"):
             for subchild in child:                
                 #print("child = " + child.tag)
                 #print("subchild = " + subchild.tag)
                 #print("template = " + subchild.attrib["template"])
-                outstr = "INSERT INTO vscp_render (link_to_class, type, template) VALUES (" + \
-                    classid + "," + \
+                try:
+                    variables = subchild.attrib["variables"].strip()
+                except:
+                    variables = ""
+                try:
+                    template = subchild.attrib["template"].strip()
+                except:
+                    template = ""    
+                outstr = "INSERT INTO vscp_render (link_to_class, link_to_type, type, variables, template) VALUES (" + \
+                    classid + ",-1," + \
                     "'" + subchild.tag.strip() + "'," + \
-                    "'" + subchild.attrib["template"].strip() + "');"
+                    "'" + variables + "'," + \
+                    "'" + template + "');"
                 print(outstr)
-
+        if (child.tag == "type"):
+            typeid = child.attrib["id"]
+            #print(typeid + " - " + classid)
+            for subchild in child:
+                #print(subchild.tag)
+                if (subchild.tag == "render"): 
+                    for subsubchild in subchild:
+                        #print(subsubchild.tag)
+                        #print(subsubchild.tag)
+                        #print("variables = " + subsubchild.attrib["variables"])
+                        #print("template = " + subsubchild.attrib["template"])
+                        try:
+                            variables = subsubchild.attrib["variables"].strip()
+                        except:
+                            variables = ""
+                        try:
+                            template = subsubchild.attrib["template"].strip()
+                        except:
+                            template = ""
+                        outstr = "INSERT INTO vscp_render (link_to_class, link_to_type, type, variables, template) VALUES (" + \
+                            classid + "," + typeid + "," + \
+                            "'" + subsubchild.tag.strip() + "'," + \
+                            "'" + variables + "'," + \
+                            "'" + template + "');"
+                        print(outstr)
 print(" ")

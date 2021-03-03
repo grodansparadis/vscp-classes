@@ -763,24 +763,7 @@
         token="VSCP_TYPE_INFORMATION_STREAM_DATA" >
         <render>
             <vscpworks 
-                variables="  
-                    index: function() { return e.vscpData[0]; },
-                    data: function() {
-                        var outstr;
-                        
-                        for (i=1;i&lt;e.vscpData.length;i++) {
-                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
-                        }
-
-                        outstr += &quot;'&quot;;
-                        for (i=1;i&lt;e.vscpData.length;i++) {
-                            if (e.vscpData.length>1) outstr += String.fromCharCode(e.vscpData[i]);
-                        }
-                        outstr += &quot;'&quot;;
-
-                        return outstr; 
-                    }
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9ICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbaV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICZxdW90OzsKICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9ICZxdW90OycmcXVvdDs7CiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVtpXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9ICZxdW90OycmcXVvdDs7CgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb3V0c3RyOyAKICAgICAgICAgICAgICAgICAgICB9"
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}{{newline}}

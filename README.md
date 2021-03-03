@@ -321,6 +321,7 @@ It is possible to specify how user level software should render the data part of
     </render>
 </type>
 ```
+
 The rendering for VSCP Works is defined here. Each rendering definition consist of two parts. 
 
 The first part is a variable substitution and define part that have access to the current event as the object *e* and therefore all it's data. As a variable also can be defined as a function you can assign values using functions which do calculations on the dynamic data that is provided by the environnement. A function here has access to standard Javascript functionality and the node-vscp package functionality or similar.
@@ -329,7 +330,22 @@ The second part is the actual rendering on mustache format. A defined variable s
 
 There are some special substitution's available
 
+**variables** and **templates** can have there definition strings prefixed with "BASE64:" to signal that they are encoded in BASE64. That is the example above will look like
 
+```xml
+<type  id="51"
+    name="Request new security token"
+    token="VSCP_TYPE_CONTROL_REQUEST_SECURITY_TOKEN" >
+    <render>
+        <vscpworks 
+            variables="BASE64:b3B0OiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF07IH0sCiAgICAgICAgICAgICAgICB6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMV07IH0sCiAgICAgICAgICAgICAgICBzdWJ6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMl07IH0="
+            template="BASE64:e3tsYmwtc3RhcnR9fU9wdCA6IHt7bGJsLWVuZH19IHt7dmFsLXN0YXJ0fX17e29wdH19e3t2YWwtZW5kfX17e25ld2xpbmV9fSAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAge3tsYmwtc3RhcnR9fVpvbmUgOiB7e2xibC1lbmR9fSB7e3ZhbC1zdGFydH19e3t6b25lfX17e3ZhbC1lbmR9fXt7bmV3bGluZX19CiAgICAgICAgICAgICAgICB7e2xibC1zdGFydH19U3Viem9uZSA6IHt7bGJsLWVuZH19IHt7dmFsLXN0YXJ0fX17e3N1YnpvbmV9fXt7dmFsLWVuZH19e3tuZXdsaW5lfX0KICAgICAgICAgICAgICAgIHt7bmV3bGluZX19"
+        />
+    </render>
+</type>
+```
+
+Base64 coded data may be simpler to handle and get things working for all codings (JSON, XML, SQL etc).
 | Expression | Will be replaced with |
 | ---------- | --------------------- |
 | __{{lbl-start}}__ | Start of label (set to bold/color...) |

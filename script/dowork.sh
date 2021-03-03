@@ -158,27 +158,6 @@ rm ../generated/vscp_events.xml
 rm ../generated/vscp_events.xml.md5
 fi
 
-# Generate and upload SQL
-python3 make_sqlite_db.py jsonp >../generated/vscp_events.sql
-md5sum ../generated/vscp_events.sql >../generated/vscp_events.sql.md5
-echo "Building vscp_data.sqlite3"
-sqlite3 ../generated/vscp_events.sqlite3 < ../generated/vscp_events.sql
-cp ../generated/vscp_events.sqlite3 ../../vscp/database
-md5sum ../generated/vscp_events.sqlite3 >../generated/vscp_events.sqlite3.md5
-echo "uploading vscp_events.sql and vscp_events.sqlite3"
-curl -T ../generated/vscp_events.sql ftp://"$2:$3"@$1/vscp.org/public_html/events/
-curl -T ../generated/vscp_events.sql.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
-curl -T ../generated/vscp_events.sqlite3 ftp://"$2:$3"@$1/vscp.org/public_html/events/
-curl -T ../generated/vscp_events.sqlite3.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
-cp ../generated/vscp_events.sqlite3 ~/development/VSCP/vscp/install_files
-if [ "$4" != "save" ]
-then
-rm ../generated/vscp_events.sql
-rm ../generated/vscp_events.sql.md5
-rm ../generated/vscp_events.sqlite3
-rm ../generated/vscp_events.sqlite3.md5
-fi
-
 # Generate and upload js class constants
 python3 make_js_class_constants.py jsonp >../generated/vscp_class.js
 md5sum ../generated/vscp_class.js >../generated/vscp_class.js.md5
@@ -265,6 +244,27 @@ done
 
 # HTML
 curl -T ../html/index.html ftp://"$2:$3"@$1/vscp.org/public_html/events/
+
+# Generate and upload SQL
+python3 make_sqlite_db.py jsonp >../generated/vscp_events.sql
+md5sum ../generated/vscp_events.sql >../generated/vscp_events.sql.md5
+echo "Building vscp_data.sqlite3"
+sqlite3 ../generated/vscp_events.sqlite3 < ../generated/vscp_events.sql
+cp ../generated/vscp_events.sqlite3 ../../vscp/database
+md5sum ../generated/vscp_events.sqlite3 >../generated/vscp_events.sqlite3.md5
+echo "uploading vscp_events.sql and vscp_events.sqlite3"
+curl -T ../generated/vscp_events.sql ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp_events.sql.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp_events.sqlite3 ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp_events.sqlite3.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
+cp ../generated/vscp_events.sqlite3 ~/development/VSCP/vscp/install_files
+if [ "$4" != "save" ]
+then
+rm ../generated/vscp_events.sql
+rm ../generated/vscp_events.sql.md5
+rm ../generated/vscp_events.sqlite3
+rm ../generated/vscp_events.sqlite3.md5
+fi
 
 if [ "$4" != "save" ]
 then
