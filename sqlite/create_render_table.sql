@@ -1,0 +1,2 @@
+-- Create the VSCP event render table
+CREATE TABLE `vscp_render` ( `idx_render` INTEGER NOT NULL UNIQUE, `link_to_class` INTEGER NOT NULL, `type` TEXT NOT NULL, `vscpworks` INTEGER NOT NULL, `render` TEXT NOT NULL, `{{val}}` TEXT NOT NULL, PRIMARY KEY(idx_render) );
