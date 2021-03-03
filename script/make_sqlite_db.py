@@ -15,6 +15,7 @@ import glob
 # https://docs.python.org/3/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
 import time
+import string
 import datetime
 
 xclass = {}
@@ -47,6 +48,12 @@ with open('../sqlite/create_unit_table.sql', 'r') as myfile:
 print(data, ";")
 print(" ")
 
+# Create render table
+with open('../sqlite/create_render_table.sql', 'r') as myfile:
+    data = myfile.read()
+print(data, ";")
+print(" ")
+
 # Read classes list to get list order
 class_tree = ET.parse('../classes/list_class.xml')
 class_root = class_tree.getroot()
@@ -66,8 +73,8 @@ for vscp_class in order_list:
 
     outstr = "INSERT INTO vscp_class (class,name,token,description) VALUES (" + \
         type_root.attrib["id"] + "," + \
-        "'" + type_root.attrib["name"] + "'," + \
-        "'" + type_root.attrib["token"] + "'"
+        "'" + type_root.attrib["name"].strip() + "'," + \
+        "'" + type_root.attrib["token"].strip() + "'"
 
     # Get description
     description = ""
@@ -78,7 +85,7 @@ for vscp_class in order_list:
         description = description.replace("\r", "\\r")
         description = description.replace("\t", "\\t")
 
-    outstr += ",'" + description + "');"
+    outstr += ",'" + description.strip() + "');"
 
     print(outstr)
 
@@ -99,7 +106,7 @@ for vscp_class in order_list:
             outstr = "INSERT INTO vscp_type (type,link_to_class,token,description) VALUES (" + \
                 child.attrib["id"] + "," + \
                 type_root.attrib["id"] + "," + \
-                "'" + child.attrib["token"] + "'"
+                "'" + child.attrib["token"].strip() + "'"
 
             # Get description
             description = ""
@@ -110,7 +117,7 @@ for vscp_class in order_list:
                 description = description.replace("\r", "\\r")
                 description = description.replace("\t", "\\t")
 
-            outstr += ",'" + description + "');"
+            outstr += ",'" + description.strip() + "');"
             print(outstr)
     else:
         classid = type_root.attrib["id"]
@@ -123,7 +130,7 @@ for vscp_class in order_list:
             outstr = "INSERT INTO vscp_type (type,link_to_class,token,description) VALUES (" + \
                 child.attrib["id"] + "," + \
                 classid + "," + \
-                "'" + child.attrib["token"] + "'"
+                "'" + child.attrib["token"].strip() + "'"
 
             # Get description
             description = ""
@@ -134,11 +141,12 @@ for vscp_class in order_list:
                 description = description.replace("\r", "\\r")
                 description = description.replace("\t", "\\t")
 
-            outstr += ",'" + description + "');"
+            outstr += ",'" + description.strip() + "');"
             print(outstr)
 
 print(" ")
 
+#  * * * UNIT
 for vscp_class in order_list:
 
     fname = '../classes/' + vscp_class
@@ -171,10 +179,10 @@ for vscp_class in order_list:
                         type_root.attrib["id"] + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
-                        "'" + unit.attrib["name"] + "'," + \
-                        "'" + unit.attrib["description"] + "'," + \
-                        "'" + unit.attrib["symbol-ascii"] + "'," + \
-                        "'" + unit.attrib["symbol-utf8"] + "'," + \
+                        "'" + unit.attrib["name"].strip() + "'," + \
+                        "'" + unit.attrib["description"].strip() + "'," + \
+                        "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
+                        "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
                         "'" + conversion + "');"
                     print(outstr)
     else:
@@ -201,11 +209,34 @@ for vscp_class in order_list:
                         classid + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
-                        "'" + unit.attrib["name"] + "'," + \
-                        "'" + unit.attrib["description"] + "'," + \
-                        "'" + unit.attrib["symbol-ascii"] + "'," + \
-                        "'" + unit.attrib["symbol-utf8"] + "'," + \
+                        "'" + unit.attrib["name"].strip() + "'," + \
+                        "'" + unit.attrib["description"].strip() + "'," + \
+                        "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
+                        "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
                         "'" + conversion + "');"
                     print(outstr)
+
+#  * * * RENDER * * *
+
+#print("--------------------------------------------------------------------------------------")            
+for vscp_class in order_list:
+
+    fname = '../classes/' + vscp_class
+    class_tree = ET.parse(fname)
+    class_root = class_tree.getroot()
+    #print(fname)
+    for child in class_root:
+        classid = type_root.attrib["id"]
+        #print("child = " + child.tag)
+        if (child.tag == "render"):
+            for subchild in child:                
+                #print("child = " + child.tag)
+                #print("subchild = " + subchild.tag)
+                #print("template = " + subchild.attrib["template"])
+                outstr = "INSERT INTO vscp_render (link_to_class, type, template) VALUES (" + \
+                    classid + "," + \
+                    "'" + subchild.tag.strip() + "'," + \
+                    "'" + subchild.attrib["template"].strip() + "');"
+                print(outstr)
 
 print(" ")

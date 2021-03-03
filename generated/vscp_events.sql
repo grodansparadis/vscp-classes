@@ -2,7 +2,7 @@
 --              !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 --                             This file is auto-generated
 --                  see https://github.com/grodansparadis/vscp-classes
---                          Generated: 2021-03-03 11:48:49.629547
+--                          Generated: 2021-03-03 17:43:08.173107
  
 -- Create the VSCP class table
 CREATE TABLE "vscp_class" ( `class` INTEGER NOT NULL UNIQUE, `name` TEXT NOT NULL, `token` TEXT NOT NULL UNIQUE, `description` TEXT NOT NULL, PRIMARY KEY(class) ); ;
@@ -11,7 +11,10 @@ CREATE TABLE "vscp_class" ( `class` INTEGER NOT NULL UNIQUE, `name` TEXT NOT NUL
 CREATE TABLE "vscp_type" ( `idxtype` INTEGER PRIMARY KEY AUTOINCREMENT, `type` INTEGER NOT NULL, `link_to_class` INTEGER NOT NULL, `token` TEXT NOT NULL, `description` TEXT ); ;
  
 -- Create the VSCP measurement unit table
-CREATE TABLE `vscp_unit` ( `idx_unit` INTEGER NOT NULL UNIQUE, `link_to_class` INTEGER NOT NULL, `link_to_type` INTEGER NOT NULL, `nunit` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `conversion` TEXT NOT NULL DEFAULT '{{val}}', `symbolascii` TEXT NOT NULL DEFAULT '?', 'symbolutf8' TEXT NOT NULL DEFAULT '?', PRIMARY KEY(idx_unit) ); ;
+CREATE TABLE `vscp_unit` ( `idx_unit` INTEGER NOT NULL UNIQUE, `link_to_class` INTEGER NOT NULL, `link_to_type` INTEGER NOT NULL, `nunit` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL,`conversion0` TEXT NOT NULL DEFAULT '{{val}}', `conversion` TEXT NOT NULL DEFAULT '{{val}}', `symbolascii` TEXT NOT NULL DEFAULT '?', 'symbolutf8' TEXT NOT NULL DEFAULT '?', PRIMARY KEY(idx_unit) ); ;
+ 
+-- Create the VSCP event render table
+CREATE TABLE `vscp_render` ( `idx_render` INTEGER NOT NULL UNIQUE, `link_to_class` INTEGER NOT NULL, `type` TEXT NOT NULL DEFAULT `vscpworks`, `template` TEXT NOT NULL DEFAULT `{{val}}`, PRIMARY KEY(idx_render) ); ;
  
 INSERT INTO vscp_class (class,name,token,description) VALUES (0,'VSCP Protocol Functionality','CLASS1.PROTOCOL','## Description\n\nThis class defines some types that must be implemented by every node that implements the VSCP protocol. The types in this class must be handled by all level I and Level II nodes. Note also that this class is repeated as Level II class=512 with the only difference that GUID''s are used instead of nicknames. This means that for all Level II class=512 events the data described here is preceded by the 16-bit destination GUID (address of receiver) stored with MSB first followed by the data specified here. Nickname is present also if documented below but have no meaning and should be discarded.\n\nAll other events are optional except for **one exception**. All nodes should send [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](./class1.information.md#type9) at least once every minute.\n');
 INSERT INTO vscp_class (class,name,token,description) VALUES (1,'Alarm functionality','CLASS1.ALARM','## Description\n\nAlarm events that indicate that something not ordinary has occurred. Note that the priority bits can be used as a mean to level alarm for severity. \n');
@@ -2209,4 +2212,10 @@ INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,convers
 INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (10,62,0,'coulomb per kilogram','Coulomb per kilogram','C/kg','C/kg','{{val}}');
 INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (10,62,1,'röntgen','Röntgen','R','R','{{val}}/(2.58*10^-4)');
 INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (10,63,0,'Percent','Ratio between power in kW and apperant power in kVA','PF','PF','{{val}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                  {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                  {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                  {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                  {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                  {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                  {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                  {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                  {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                  {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                  {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
+INSERT INTO vscp_render (link_to_class, type, template) VALUES (65535,'vscpworks','{{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}}                      {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}}                      {{lbl-start}}Value: {{lbl-end}} = {{val}}{{symbol}}{{newline}}');
  
