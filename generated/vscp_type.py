@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2020-12-06 21:25:28.750109
+#                        Generated: 2021-03-03 11:48:46.153159
 #
  
  
@@ -123,6 +123,10 @@ VSCP_TYPE_SECURITY_PASSWORD_OK                       = 30 # Valid password
 VSCP_TYPE_SECURITY_PASSWORD_FAIL                     = 31 # Invalid password
 VSCP_TYPE_SECURITY_PASSWORD_WARNING                  = 32 # Password warning
 VSCP_TYPE_SECURITY_PASSWORD_ERROR                    = 33 # Password error
+VSCP_TYPE_SECURITY_GAS_SENSOR                        = 34 # Gas
+VSCP_TYPE_SECURITY_IN_MOTION_DETECTED                = 35 # In motion
+VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED            = 36 # Not in motion
+VSCP_TYPE_SECURITY_VIBRATION_DETECTED                = 37 # Vibration
 
 #  CLASS1.MEASUREMENT = 10  -  Measurement
 VSCP_TYPE_MEASUREMENT_GENERAL                        = 0 # General event
@@ -188,6 +192,7 @@ VSCP_TYPE_MEASUREMENT_SOUND_DENSITY                  = 59 # Sound energy density
 VSCP_TYPE_MEASUREMENT_SOUND_LEVEL                    = 60 # Sound level
 VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ              = 61 # Radiation dose (equivalent)
 VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE        = 62 # Radiation dose (exposure)
+VSCP_TYPE_MEASUREMENT_POWER_FACTOR                   = 63 # Power factor
 
 #  CLASS1.MEASUREMENTX1 = 11  -  Measurement
 VSCP_TYPE_MEASUREMENTX1_GENERAL                      = 0 # General event
@@ -678,6 +683,8 @@ VSCP_TYPE_DIAGNOSTIC_HEATING_FAIL                    = 76 # Heating failure
 VSCP_TYPE_DIAGNOSTIC_TX_FAIL                         = 77 # Transmission failure
 VSCP_TYPE_DIAGNOSTIC_RX_FAIL                         = 78 # Receiption failure
 VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL                     = 79 # External IC failure
+VSCP_TYPE_DIAGNOSTIC_CHARGING_ON                     = 80 # Charging of battery or similar has started or is in progress
+VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF                    = 81 # Charging of battery or similar has ended
 
 #  CLASS1.ERROR = 508  -  Error
 VSCP_TYPE_ERROR_SUCCESS                              = 0 # Success

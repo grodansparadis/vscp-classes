@@ -263,6 +263,9 @@ for f in ../generated/vscp-events/*.md; do
     curl -T $f ftp://"$2:$3"@$1/vscp.org/public_html/events/docs/
 done
 
+# HTML
+curl -T ../html/index.html ftp://"$2:$3"@$1/vscp.org/public_html/events/
+
 if [ "$4" != "save" ]
 then
 rm -rf ../generated/vscp-events

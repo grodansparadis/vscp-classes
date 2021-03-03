@@ -95,20 +95,23 @@
                     name="kelvin"
                     description="Degrees Kelvin"
                     symbol-ascii="K"
-                    symbol-utf8="K"                            
+                    symbol-utf8="K"
+                    conversion0="{{val}}"                            
                     conversion="{{val}}"/>
             <unit id="1" 
                     name="celsius"
                     description="Degrees Celsius"
                     symbol-ascii="C"
-                    symbol-utf8="°C"        
-                    conversion="{{val}} + 273.15 "/>
+                    symbol-utf8="°C"
+                    conversion0="{{val}} - 273.15"
+                    conversion="{{val}} + 273.15"/>                    
             <unit id="2" 
                     name="fahrenheit"
                     description="Degrees Fahrenheit"
                     symbol-ascii="F"
                     symbol-utf8="°F" 
-                    conversion="({{val}} + 459.67) * 5/9"/>
+                    conversion0="({{val}} + 459.67)× 5/9"
+                    conversion="({{val}} - 273.15) * 1.8 + 32.0"/>
         </units>
     </type>
     
@@ -189,6 +192,7 @@
                     description="Pascal"
                     symbol-ascii="Pa"
                     symbol-utf8="Pa"
+                    conversion0="{{val}}"
                     conversion="{{val}}"
                     comment="N/m2, Derived from kg/(m·s^2) or J/m^3" />
             <unit id="1" 
@@ -196,6 +200,7 @@
                     description="Bar"
                     symbol-ascii="Pa"
                     symbol-utf8="Pa"
+                    conversion0="{{val}}/10^5"
                     conversion="{{val}}*10^5"
                     comment="" /> 
             <unit id="2" 

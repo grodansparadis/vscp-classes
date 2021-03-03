@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2020 Ake Hedman, Grodans Paradis AB <info@grodansparadis.com>
+# Copyright (C) 2000-2021 Ake Hedman, Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make hashtype definitions, vscp/src/vscp/common/vscphelper.cpp 
 #

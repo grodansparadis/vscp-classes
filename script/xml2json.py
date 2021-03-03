@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2020 Ake Hedman, 
+# Copyright (C) 2000-2021 Ake Hedman, 
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Convert XML file to JSON  xml2json filename.xml >filename.json

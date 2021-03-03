@@ -24,8 +24,17 @@ A motion has been detected.
  | 0 | User defined data. | 
  | 1 | Zone for which event applies to (0-255). 255 is all zones. | 
  | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | 
+ | 3 | Optional. Status | 
 
 If both or one of zone/sub-zone are omitted they should be interpreted as if they where 255. 
+
+The optional status byte can have the following values. If not present value = 0 should be assumed.
+
+| Value | Description | 
+ | :---------: | ----------- | 
+ | 0 | Security event occurred. | 
+ | 1 | Activated |
+ | 2 | Inactivated |
 
 ----
 
@@ -507,6 +516,62 @@ Password error. An invalid password has been entered by a device or user and it 
  | 1 | Zone for which event applies to (0-255). 255 is all zones.         |
  | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |
 
+----
+
+## Type=34 (0x22) - Gas :id=type34
+```
+VSCP_TYPE_SECURITY_GAS_SENSOR
+```
+Gas has been detected.
+
+ | Data byte | Description |
+ | :---------: | ----------- |
+ | 0 | User defined data. |
+ | 1 | Zone for which event applies to (0-255). 255 is all zones.         |
+ | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |
+ 
+----
+
+## Type=35 (0x23) - In motion :id=type35
+```
+VSCP_TYPE_SECURITY_IN_MOTION_DETECTED
+```
+An object is in motion
+
+ | Data byte | Description |
+ | :---------: | ----------- |
+ | 0 | User defined data. |
+ | 1 | Zone for which event applies to (0-255). 255 is all zones.         |
+ | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |
+ 
+----
+
+## Type=36 (0x24) - Not in motion :id=type36
+```
+VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED
+```
+An object is in rest (jammed)
+
+ | Data byte | Description |
+ | :---------: | ----------- |
+ | 0 | User defined data. |
+ | 1 | Zone for which event applies to (0-255). 255 is all zones.         |
+ | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |
+ 
+----
+
+## Type=37 (0x25) - Vibration :id=type37
+```
+VSCP_TYPE_SECURITY_VIBRATION_DETECTED
+```
+Vibration detected
+
+ | Data byte | Description |
+ | :---------: | ----------- |
+ | 0 | User defined data. |
+ | 1 | Zone for which event applies to (0-255). 255 is all zones.         |
+ | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. |
+ 
 ----
 
 [filename](./bottom_copyright.md ':include')

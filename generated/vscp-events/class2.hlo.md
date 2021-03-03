@@ -45,13 +45,13 @@ This event is not mandatory to implement by a device.
  | :----: | ----------- |
  | 0-15  | GUID for node that is addressed |
  | 16 | Type + Encryption |
- | 17-511 | Variable length high level payload. For type=0 first byte 
+ | 17-511 | Variable length high level payload. For type=0 first byte is separation character. |
 
 ##### Type (bits 7,6,5,4)
 
  | Type  | Description |
  | :----:  | ----------- |
- | 0 | UTF8 data where items is separated with a char specified by the first byte in the payload. Typical examples are comma separated-, semicolon separated-, etc, data |
+ | 0 | UTF8 data where items is separated with a char specified by the first byte in the payload. Typical examples are comma separated, semicolon separated, etc, data |
 | 1 | XML encoded data |
 | 2 | JSON encoded data |
 | 3 | BASE64 encoded data |
@@ -113,7 +113,7 @@ This event is not mandatory to implement by a device.
 
  | Type  | Description |
  | :----:  | ----------- |
- | 0 | UTF8 data where items is separated with a char specified by the first byte in the payload. Typical examples are comma separated-, semicolon separated-, etc, data |
+ | 0 | UTF8 data where items is separated with a char specified by the first byte in the payload. Typical examples are comma separated, semicolon separated, etc, data |
 | 1 | XML encoded data |
 | 2 | JSON encoded data |
 | 3 | BASE64 encoded data |

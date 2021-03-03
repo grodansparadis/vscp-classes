@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-06 21:30:17.790480
+                        Generated: 2021-03-03 11:53:36.100108
 */
 
 /** Namespace for all functionality of the VSCP provided libraries.
@@ -153,6 +153,10 @@ vscp.constants.types = {
     VSCP_TYPE_SECURITY_PASSWORD_FAIL: 31,
     VSCP_TYPE_SECURITY_PASSWORD_WARNING: 32,
     VSCP_TYPE_SECURITY_PASSWORD_ERROR: 33,
+    VSCP_TYPE_SECURITY_GAS_SENSOR: 34,
+    VSCP_TYPE_SECURITY_IN_MOTION_DETECTED: 35,
+    VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED: 36,
+    VSCP_TYPE_SECURITY_VIBRATION_DETECTED: 37,
  
 //  CLASS1.MEASUREMENT = 10  -  Measurement
     VSCP_TYPE_MEASUREMENT_GENERAL: 0,
@@ -218,6 +222,7 @@ vscp.constants.types = {
     VSCP_TYPE_MEASUREMENT_SOUND_LEVEL: 60,
     VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ: 61,
     VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE: 62,
+    VSCP_TYPE_MEASUREMENT_POWER_FACTOR: 63,
  
 //  CLASS1.MEASUREMENTX1 = 11  -  Measurement
     VSCP_TYPE_MEASUREMENTX1_GENERAL: 0,
@@ -708,6 +713,8 @@ vscp.constants.types = {
     VSCP_TYPE_DIAGNOSTIC_TX_FAIL: 77,
     VSCP_TYPE_DIAGNOSTIC_RX_FAIL: 78,
     VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL: 79,
+    VSCP_TYPE_DIAGNOSTIC_CHARGING_ON: 80,
+    VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF: 81,
  
 //  CLASS1.ERROR = 508  -  Error
     VSCP_TYPE_ERROR_SUCCESS: 0,

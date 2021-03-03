@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2020 Ake Hedman,
+# Copyright (C) 2000-2021 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make XML data from VSCP class & type
@@ -117,6 +117,8 @@ for vscp_class in order_list:
                         unitstr += "<unit id=\"" + unit.attrib["id"] + "\" "
                         unitstr += "name=\"" + unit.attrib["name"] + "\" "
                         unitstr += "description=\"" + unit.attrib["description"] + "\" "
+                        unitstr += "symbol-ascii=\"" + unit.attrib["symbol-ascii"] + "\" "
+                        unitstr += "symbol-utf8=\"" + unit.attrib["symbol-utf8"] + "\" "
                         try:
                             unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
                         except:
@@ -171,6 +173,8 @@ for vscp_class in order_list:
                         unitstr += "<unit id=\"" + unit.attrib["id"] + "\" "
                         unitstr += "name=\"" + unit.attrib["name"] + "\" "
                         unitstr += "description=\"" + unit.attrib["description"] + "\" "
+                        unitstr += "symbol-ascii=\"" + unit.attrib["symbol-ascii"] + "\" "
+                        unitstr += "symbol-utf8=\"" + unit.attrib["symbol-utf8"] + "\" "
                         try:
                             unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
                         except:

@@ -1032,4 +1032,20 @@ This is a measurement of a radiation dose (Exposed dose of ionizing radiation).
 ----
 
 
+## Type=63 (0x3F) - Power factor :id=type63
+
+```
+VSCP_TYPE_MEASUREMENT_POWER_FACTOR
+```
+**Default unit:** percent.   
+
+
+This is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.
+
+Power factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.
+
+
+----
+
+
 [filename](./bottom_copyright.md ':include')

@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2020-12-06 21:30:18.344993
+                        Generated: 2021-03-03 11:53:36.673193
 */
 
 'use strict';
@@ -214,7 +214,11 @@ module.exports.VSCP_TYPE_SECURITY_PIN_ERROR = 29,
 module.exports.VSCP_TYPE_SECURITY_PASSWORD_OK = 30,
 module.exports.VSCP_TYPE_SECURITY_PASSWORD_FAIL = 31,
 module.exports.VSCP_TYPE_SECURITY_PASSWORD_WARNING = 32,
-module.exports.VSCP_TYPE_SECURITY_PASSWORD_ERROR = 33;
+module.exports.VSCP_TYPE_SECURITY_PASSWORD_ERROR = 33,
+module.exports.VSCP_TYPE_SECURITY_GAS_SENSOR = 34,
+module.exports.VSCP_TYPE_SECURITY_IN_MOTION_DETECTED = 35,
+module.exports.VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED = 36,
+module.exports.VSCP_TYPE_SECURITY_VIBRATION_DETECTED = 37;
 
 
 vscp_type_map.set( (2 << 16) + 0,'VSCP_TYPE_SECURITY_GENERAL'); 
@@ -251,6 +255,10 @@ vscp_type_map.set( (2 << 16) + 30,'VSCP_TYPE_SECURITY_PASSWORD_OK');
 vscp_type_map.set( (2 << 16) + 31,'VSCP_TYPE_SECURITY_PASSWORD_FAIL'); 
 vscp_type_map.set( (2 << 16) + 32,'VSCP_TYPE_SECURITY_PASSWORD_WARNING'); 
 vscp_type_map.set( (2 << 16) + 33,'VSCP_TYPE_SECURITY_PASSWORD_ERROR'); 
+vscp_type_map.set( (2 << 16) + 34,'VSCP_TYPE_SECURITY_GAS_SENSOR'); 
+vscp_type_map.set( (2 << 16) + 35,'VSCP_TYPE_SECURITY_IN_MOTION_DETECTED'); 
+vscp_type_map.set( (2 << 16) + 36,'VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED'); 
+vscp_type_map.set( (2 << 16) + 37,'VSCP_TYPE_SECURITY_VIBRATION_DETECTED'); 
  
 //  CLASS1.MEASUREMENT = 10  -  Measurement
 module.exports.VSCP_TYPE_MEASUREMENT_GENERAL = 0,
@@ -315,7 +323,8 @@ module.exports.VSCP_TYPE_MEASUREMENT_SOUND_PRESSURE = 58,
 module.exports.VSCP_TYPE_MEASUREMENT_SOUND_DENSITY = 59,
 module.exports.VSCP_TYPE_MEASUREMENT_SOUND_LEVEL = 60,
 module.exports.VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ = 61,
-module.exports.VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE = 62;
+module.exports.VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE = 62,
+module.exports.VSCP_TYPE_MEASUREMENT_POWER_FACTOR = 63;
 
 
 vscp_type_map.set( (10 << 16) + 0,'VSCP_TYPE_MEASUREMENT_GENERAL'); 
@@ -381,6 +390,7 @@ vscp_type_map.set( (10 << 16) + 59,'VSCP_TYPE_MEASUREMENT_SOUND_DENSITY');
 vscp_type_map.set( (10 << 16) + 60,'VSCP_TYPE_MEASUREMENT_SOUND_LEVEL'); 
 vscp_type_map.set( (10 << 16) + 61,'VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ'); 
 vscp_type_map.set( (10 << 16) + 62,'VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE'); 
+vscp_type_map.set( (10 << 16) + 63,'VSCP_TYPE_MEASUREMENT_POWER_FACTOR'); 
  
 //  CLASS1.MEASUREMENTX1 = 11  -  Measurement
 module.exports.VSCP_TYPE_MEASUREMENTX1_GENERAL = 0;
@@ -1215,7 +1225,9 @@ module.exports.VSCP_TYPE_DIAGNOSTIC_COOLING_FAIL = 75,
 module.exports.VSCP_TYPE_DIAGNOSTIC_HEATING_FAIL = 76,
 module.exports.VSCP_TYPE_DIAGNOSTIC_TX_FAIL = 77,
 module.exports.VSCP_TYPE_DIAGNOSTIC_RX_FAIL = 78,
-module.exports.VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL = 79;
+module.exports.VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL = 79,
+module.exports.VSCP_TYPE_DIAGNOSTIC_CHARGING_ON = 80,
+module.exports.VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF = 81;
 
 
 vscp_type_map.set( (506 << 16) + 0,'VSCP_TYPE_DIAGNOSTIC_GENERAL'); 
@@ -1298,6 +1310,8 @@ vscp_type_map.set( (506 << 16) + 76,'VSCP_TYPE_DIAGNOSTIC_HEATING_FAIL');
 vscp_type_map.set( (506 << 16) + 77,'VSCP_TYPE_DIAGNOSTIC_TX_FAIL'); 
 vscp_type_map.set( (506 << 16) + 78,'VSCP_TYPE_DIAGNOSTIC_RX_FAIL'); 
 vscp_type_map.set( (506 << 16) + 79,'VSCP_TYPE_DIAGNOSTIC_EXT_IC_FAIL'); 
+vscp_type_map.set( (506 << 16) + 80,'VSCP_TYPE_DIAGNOSTIC_CHARGING_ON'); 
+vscp_type_map.set( (506 << 16) + 81,'VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF'); 
  
 //  CLASS1.ERROR = 508  -  Error
 module.exports.VSCP_TYPE_ERROR_SUCCESS = 0,

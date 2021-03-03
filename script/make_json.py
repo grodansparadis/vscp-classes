@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2020 Ake Hedman,
+# Copyright (C) 2000-2021 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make JSON data from VSCP class & type
@@ -95,13 +95,15 @@ for vscp_class in order_list:
                 70 == int(type_root.attrib["id"]) or
                 85 == int(type_root.attrib["id"]) or
                 1040 == int(type_root.attrib["id"]) or
-                    1060 == int(type_root.attrib["id"])):
+                1060 == int(type_root.attrib["id"])):
                 for unit in child.iter('unit'):
                     unitstr += "{"
                     unitstr += "\"id\":" + unit.attrib["id"] + ","
                     unitstr += "\"name\": \"" + unit.attrib["name"] + "\","
                     unitstr += "\"description\": \"" + \
                         unit.attrib["description"] + "\","
+                    unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
+                    unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
                     try:
                         unitstr += "\"conversion\": \"" + \
                             unit.attrib["conversion"] + "\""
@@ -160,6 +162,8 @@ for vscp_class in order_list:
                     unitstr += "\"name\": \"" + unit.attrib["name"] + "\","
                     unitstr += "\"description\": \"" + \
                         unit.attrib["description"] + "\","
+                    unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
+                    unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
                     try:
                         unitstr += "\"conversion\": \"" + \
                             unit.attrib["conversion"] + "\""

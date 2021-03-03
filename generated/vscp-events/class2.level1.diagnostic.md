@@ -1539,4 +1539,42 @@ A failure in an external IC circuit has been detected.
 ----
 
 
+## Type=80 (0x50) - Charging of battery or similar has started or is in progress :id=type80
+
+```
+VSCP_TYPE_DIAGNOSTIC_CHARGING_ON
+```
+Indicates that charging (of a battery for example) is active.
+
+ | Data byte | Description                                                                                       | 
+ | :---------: | -----------                                                                                       | 
+ | 0         | index. Often used as an index for channels/subdevices within a module.                            | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.                                        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.                                | 
+ | 3-7       | Can be present or not be present. If present the bytes give additional user specific information. | 
+ 
+
+
+----
+
+
+## Type=81 (0x51) - Charging of battery or similar has ended :id=type81
+
+```
+VSCP_TYPE_DIAGNOSTIC_CHARGING_OFF
+```
+Indicates that charging (of a battery for example) is inactive.
+
+ | Data byte | Description                                                                                       | 
+ | :---------: | -----------                                                                                       | 
+ | 0         | index. Often used as an index for channels/subdevices within a module.                            | 
+ | 1         | Zone for which event applies to (0-255). 255 is all zones.                                        | 
+ | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.                                | 
+ | 3-7       | Can be present or not be present. If present the bytes give additional user specific information. | 
+ 
+
+
+----
+
+
 [filename](./bottom_copyright.md ':include')

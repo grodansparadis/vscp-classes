@@ -278,7 +278,7 @@
                     {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
                 "
             />
-        </render>        
+        </render> 
     </type>
 
     <type id="15"
@@ -644,7 +644,7 @@
 
     <type id="34"
         name="Gas"
-        token="VSCP_TYPE_SECURITY_GAS" >
+        token="VSCP_TYPE_SECURITY_GAS_SENSOR" >
         <render>
             <vscpworks 
                 variables="
@@ -663,7 +663,7 @@
 
     <type id="35"
         name="In motion"
-        token="VSCP_TYPE_SECURITY_IN_MOTION" >
+        token="VSCP_TYPE_SECURITY_IN_MOTION_DETECTED" >
         <render>
             <vscpworks 
                 variables="
@@ -682,7 +682,7 @@
 
     <type id="36"
         name="Not in motion"
-        token="VSCP_TYPE_SECURITY_NOT_IN_MOTION" >
+        token="VSCP_TYPE_SECURITY_NOT_IN_MOTION_DETECTED" >
         <render>
             <vscpworks 
                 variables="
@@ -701,7 +701,7 @@
 
     <type id="37"
         name="Vibration"
-        token="VSCP_TYPE_SECURITY_VIBRATION" >
+        token="VSCP_TYPE_SECURITY_VIBRATION_DETECTED" >
         <render>
             <vscpworks 
                 variables="

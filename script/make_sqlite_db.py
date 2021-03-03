@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2020 Ake Hedman,
+# Copyright (C) 2000-2021 Ake Hedman,
 # Grodans Paradis AB <info@grodansparadis.com>
 #
 # Make records for the sqlite3 database
@@ -158,20 +158,23 @@ for vscp_class in order_list:
                 70 == classid or
                 85 == classid or
                 1040 == classid or
-                    1060 == classid):
+                1060 == classid):
 
                 for unit in child.iter('unit'):
 
                     try:
                         conversion = unit.attrib["conversion"]
                     except:
-                        conversion = "val"
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion) VALUES (" + \
+                        conversion = "{{val}}"
+                    
+                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (" + \
                         type_root.attrib["id"] + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
                         "'" + unit.attrib["name"] + "'," + \
                         "'" + unit.attrib["description"] + "'," + \
+                        "'" + unit.attrib["symbol-ascii"] + "'," + \
+                        "'" + unit.attrib["symbol-utf8"] + "'," + \
                         "'" + conversion + "');"
                     print(outstr)
     else:
@@ -188,18 +191,20 @@ for vscp_class in order_list:
                 70 == classid or
                 85 == classid or
                 1040 == classid or
-                    1060 == classid):
+                1060 == classid):
                 for unit in child.iter('unit'):
                     try:
                         conversion = unit.attrib["conversion"]
                     except:
                         conversion = "val"
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion) VALUES (" + \
+                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (" + \
                         classid + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
                         "'" + unit.attrib["name"] + "'," + \
                         "'" + unit.attrib["description"] + "'," + \
+                        "'" + unit.attrib["symbol-ascii"] + "'," + \
+                        "'" + unit.attrib["symbol-utf8"] + "'," + \
                         "'" + conversion + "');"
                     print(outstr)
 
