@@ -3,6 +3,7 @@
     
     <render>
         <vscpworks 
+            variable=""
             template="
                 {{lbl-start}}Unit: {{lbl-end}} = {{unitstr}} [{{unit}}]{{newline}} 
                 {{lbl-start}}Sensorindex: {{lbl-end}} = {{sensorindex}}{{newline}} 

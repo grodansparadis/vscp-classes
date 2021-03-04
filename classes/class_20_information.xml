@@ -14,38 +14,7 @@
         token="VSCP_TYPE_INFORMATION_BUTTON" >
         <render>
             <vscpworks 
-                variables="  
-                    statebits: function() { return e.vscpData[0] &amp; 7; },
-                    statetxt: function() { 
-                        switch( e.vscpData[0] &amp; 7 ) {
-
-                            case 0:
-                                return &quot;Button released&quot;;
-                                break;
-
-                            case 1:
-                                return &quot;Button pressed&quot;;
-                                break;
-
-                            case 2:
-                                return &quot;Button key&quot;;
-                                break;   
-
-                            default:
-                                return &quot;Button unknown state&quot;;
-                                break;         
-                        }
-                    },
-                    repeats: function() { return ( e.vscpData[0] &lt;&lt; 3 &amp; 0x1f); },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    button_code: function() { return (e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); },
-                    button_code_page: function() { if ( e.vscpData &gt;= 7 ) 
-                                                      return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); 
-                                                   else
-                                                      return &quot;No code-page&quot;; 
-                                                }
-                "
+                variables="BASE64:c3RhdGViaXRzOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF0gJmFtcDsgNzsgfSwKICAgICAgICAgICAgICAgICAgICBzdGF0ZXR4dDogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBzd2l0Y2goIGUudnNjcERhdGFbMF0gJmFtcDsgNyApIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiQnV0dG9uIHJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiBwcmVzc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiBrZXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZWZhdWx0OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiB1bmtub3duIHN0YXRlXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgIHJlcGVhdHM6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdICZsdDsmbHQ7IDMgJmFtcDsgMHgxZik7IH0sCiAgICAgICAgICAgICAgICAgICAgem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzFdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsyXTsgfSwKICAgICAgICAgICAgICAgICAgICBidXR0b25fY29kZTogZnVuY3Rpb24oKSB7IHJldHVybiAoZS52c2NwRGF0YVszXSAmbHQ7Jmx0OyA4ICsgZS52c2NwRGF0YVs0XSk7IH0sCiAgICAgICAgICAgICAgICAgICAgYnV0dG9uX2NvZGVfcGFnZTogZnVuY3Rpb24oKSB7IGlmICggZS52c2NwRGF0YSAmZ3Q7PSA3ICkgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAoZS52c2NwRGF0YVs1XSAmbHQ7Jmx0OyA4ICsgZS52c2NwRGF0YVs2XSk7IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk5vIGNvZGUtcGFnZVwiOyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
                     {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
@@ -63,29 +32,7 @@
         token="VSCP_TYPE_INFORMATION_MOUSE" >
         <render>
             <vscpworks 
-                variables="  
-                    type: function() { return e.vscpData[0]; }
-                    typetxt: function() { 
-                        switch( e.vscpData[0] ) {
-
-                            case 0:
-                                return &quot;Absolute coordinates&quot;;
-                                break;
-
-                            case 1:
-                                return &quot;Relative coordinates&quot;;
-                                break;  
-
-                            default:
-                                return &quot;Unknown coordinate coding&quot;;
-                                break;         
-                        }
-                    }
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    coorinate_x: function() { return (e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); }
-                    coorinate_y: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }
-                "
+                variables="BASE64:ICAgICAgICAgICAgICAgICAgICB0eXBlOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF07IH0KICAgICAgICAgICAgICAgICAgICB0eXBldHh0OiBmdW5jdGlvbigpIHsgCiAgICAgICAgICAgICAgICAgICAgICAgIHN3aXRjaCggZS52c2NwRGF0YVswXSApIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiQWJzb2x1dGUgY29vcmRpbmF0ZXNcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUmVsYXRpdmUgY29vcmRpbmF0ZXNcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5rbm93biBjb29yZGluYXRlIGNvZGluZ1wiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOyAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIHpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBzdWJ6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMl07IH0sCiAgICAgICAgICAgICAgICAgICAgY29vcmluYXRlX3g6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbM10gJmx0OyZsdDsgOCArIGUudnNjcERhdGFbNF0pOyB9CiAgICAgICAgICAgICAgICAgICAgY29vcmluYXRlX3k6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbNV0gJmx0OyZsdDsgOCArIGUudnNjcERhdGFbNl0pOyB9"
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
                     {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
@@ -104,9 +51,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -124,9 +71,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -144,9 +91,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -164,9 +111,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -184,9 +131,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -204,9 +151,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -224,9 +171,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -244,9 +191,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -264,9 +211,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -284,9 +231,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -304,9 +251,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -324,9 +271,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -344,9 +291,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -364,9 +311,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -384,9 +331,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -404,9 +351,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -424,9 +371,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -444,9 +391,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -464,9 +411,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -484,9 +431,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -504,9 +451,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -524,9 +471,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -544,9 +491,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -564,9 +511,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -584,9 +531,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -604,9 +551,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -624,9 +571,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -644,9 +591,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }   {{newline}}
+                    zone: function() { return e.vscpData[1]; }    {{newline}}
+                    subzone: function() { return e.vscpData[2]; } {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -664,9 +611,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -684,9 +631,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -704,9 +651,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -724,9 +671,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -744,9 +691,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -763,7 +710,7 @@
         token="VSCP_TYPE_INFORMATION_STREAM_DATA" >
         <render>
             <vscpworks 
-                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9ICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbaV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICZxdW90OzsKICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9ICZxdW90OycmcXVvdDs7CiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVtpXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9ICZxdW90OycmcXVvdDs7CgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb3V0c3RyOyAKICAgICAgICAgICAgICAgICAgICB9"
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IChcIjAwXCIgKyBlLnZzY3BEYXRhW2ldLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiIFwiOwogICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICBvdXRzdHIgKz0gXCInXCI7CiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVtpXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9IFwiJ1wiOwoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG91dHN0cjsgCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}{{newline}}
@@ -777,119 +724,7 @@
         token="VSCP_TYPE_INFORMATION_TOKEN_ACTIVITY" >
         <render>
             <vscpworks 
-                variables="  
-                    index: function() { return e.vscpData[0]; }
-                    typecode: function() { return e.vscpData[0] &amp; 3; }
-                    eventcodetxt: function() {
-                        switch (e.vscpData[0] &amp; 3) {
-
-                            case 0:
-                                return &quot;Touched and released&quot;;
-                                break;
-
-                            case 1:
-                                return &quot;Touched&quot;;
-                                break;    
-
-                            case 2:
-                                return &quot;Released&quot;;
-                                break;    
-
-                            default:
-                                return &quot;Unknown code&quot;;
-                                break;    
-                        }
-                    },
-                    typecode: function() { return ((e.vscpData[0] &gt;&gt; 2) &amp; 0x3f ); },
-                    typecodetxt: function() {
-                        switch ((e.vscpData[0] &gt;&gt; 2) &amp; 0x3f ) {
-
-                            case 0:
-                                return &quot;Unknown Token (128-bits).&quot;;
-                                break;
-
-                            case 1:
-                                return &quot;iButton 64-bit token (64-bits).&quot;;
-                                break;    
-
-                            case 2:
-                                return &quot;RFID token (64-bits).&quot;;
-                                break; 
-
-                            case 3:
-                                return &quot;RFID token (128-bits).&quot;;
-                                break;
-
-                            case 4:
-                                return &quot;RFID token (256-bits).&quot;;
-                                break;           
-
-                            case 9:
-                                return &quot;Id/credit card token (128-bits).&quot;;
-                                break;
-
-                            case 9:
-                                return &quot;Id/credit card token (128-bits).&quot;;
-                                break;
-
-                            case 16:
-                                return &quot;Biometric device token. (256-bits).&quot;;
-                                break;
-
-                            case 17:
-                                return &quot;Biometric device token. (64-bits).&quot;;
-                                break;
-
-                            case 18:
-                                return &quot;Bluetooth device token (48-bits).&quot;;
-                                break;
-
-                            case 19:
-                                return &quot;GSM IMEI code token (64-bits).&quot;;
-                                break;
-
-                            case 20:
-                                return &quot;GSM IMSI code token (64-bits).&quot;;
-                                break;    
-
-                            case 21:
-                                return &quot;RFID token (40-bits).&quot;;
-                                break;
-
-                            case 22:
-                                return &quot;RFID token (32-bits).&quot;;
-                                break;
-
-                            case 23:
-                                return &quot;RFID token (24-bits).&quot;;
-                                break;
-
-                            case 24:
-                                return &quot;RFID token (16-bits).&quot;;
-                                break;
-
-                            case 25:
-                                return &quot;RFID token (8-bits).&quot;;
-                                break;
-
-                            default:
-                                return &quot;Undefined token code&quot;;
-                                break;    
-                        }
-                    },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    frame: function() { return e.vscpData[3]; },
-                    data: function() {
-                        var outstr;
-                        
-                        for (i=4;i&lt;e.vscpData.length;i++) {
-                            if (e.vscpData.length>1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
-                        }
-
-                        return outstr; 
-                    }
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfQogICAgICAgICAgICAgICAgICAgIHR5cGVjb2RlOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF0gJmFtcDsgMzsgfQogICAgICAgICAgICAgICAgICAgIGV2ZW50Y29kZXR4dDogZnVuY3Rpb24oKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHN3aXRjaCAoZS52c2NwRGF0YVswXSAmYW1wOyAzKSB7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlRvdWNoZWQgYW5kIHJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlRvdWNoZWRcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5rbm93biBjb2RlXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICB0eXBlY29kZTogZnVuY3Rpb24oKSB7IHJldHVybiAoKGUudnNjcERhdGFbMF0gJmd0OyZndDsgMikgJmFtcDsgMHgzZiApOyB9LAogICAgICAgICAgICAgICAgICAgIHR5cGVjb2RldHh0OiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoICgoZS52c2NwRGF0YVswXSAmZ3Q7Jmd0OyAyKSAmYW1wOyAweDNmICkgewoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJVbmtub3duIFRva2VuICgxMjgtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcImlCdXR0b24gNjQtYml0IHRva2VuICg2NC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJGSUQgdG9rZW4gKDY0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOyAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDM6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoMTI4LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICgyNTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgICAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiSWQvY3JlZGl0IGNhcmQgdG9rZW4gKDEyOC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiSWQvY3JlZGl0IGNhcmQgdG9rZW4gKDEyOC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE2OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJpb21ldHJpYyBkZXZpY2UgdG9rZW4uICgyNTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxNzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJCaW9tZXRyaWMgZGV2aWNlIHRva2VuLiAoNjQtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxODoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJCbHVldG9vdGggZGV2aWNlIHRva2VuICg0OC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE5OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkdTTSBJTUVJIGNvZGUgdG9rZW4gKDY0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiR1NNIElNU0kgY29kZSB0b2tlbiAoNjQtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoNDAtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyMjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICgzMi1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDIzOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJGSUQgdG9rZW4gKDI0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoMTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyNToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICg4LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5kZWZpbmVkIHRva2VuIGNvZGVcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgIHpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBzdWJ6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMl07IH0sCiAgICAgICAgICAgICAgICAgICAgZnJhbWU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVszXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT00O2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IChcIjAwXCIgKyBlLnZzY3BEYXRhW2ldLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiIFwiOwogICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb3V0c3RyOyAKICAgICAgICAgICAgICAgICAgICB9"
                 template="
                     {{lbl-start}}Event code : {{lbl-end}} {{val-start}}{{eventcodetxt}} [{{eventcode}}]{{val-end}}{{newline}}
                     {{lbl-start}}Type : {{lbl-end}} {{val-start}}{{typecodetxt}} [{{typecode}}]{{val-end}}{{newline}}
@@ -908,20 +743,7 @@
         token="VSCP_TYPE_INFORMATION_STREAM_DATA_WITH_ZONE" >
         <render>
             <vscpworks 
-                variables="  
-                    zone: function() { return e.vscpData[0]; },
-                    subzone: function() { return e.vscpData[1]; },
-                    frame: function() { return e.vscpData[2]; }
-                    data: function() {
-                        var outstr;
-                        
-                        for (i=3;i&lt;e.vscpData.length;i++) {
-                            if (e.vscpData.length&gt;1) outstr += (&quot;00&quot; + e.vscpData[i].toString(16)).substr(-2) + &quot; &quot;;
-                        }
-
-                        return outstr; 
-                    }
-                "
+                variables="BASE64:em9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzBdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBmcmFtZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9CiAgICAgICAgICAgICAgICAgICAgZGF0YTogZnVuY3Rpb24oKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZhciBvdXRzdHI7CiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICBmb3IgKGk9MztpJmx0O2UudnNjcERhdGEubGVuZ3RoO2krKykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEubGVuZ3RoJmd0OzEpIG91dHN0ciArPSAoXCIwMFwiICsgZS52c2NwRGF0YVtpXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiBcIjsKICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG91dHN0cjsgCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
                     {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
@@ -939,11 +761,11 @@
         <render>
             <vscpworks 
                 variables="  
-                    zone: function() { return e.vscpData[0]; },
-                    subzone: function() { return e.vscpData[1]; },
-                    frame: function() { return e.vscpData[2]; },
-                    vscpclass: function() { (return e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); },
-                    vscptype: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }                   
+                    zone: function() { return e.vscpData[0]; }      {{newline}}
+                    subzone: function() { return e.vscpData[1]; }   {{newline}}
+                    frame: function() { return e.vscpData[2]; }     {{newline}}
+                    vscpclass: function() { (return e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); }  {{newline}}
+                    vscptype: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }   {{newline}}                
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -964,9 +786,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }                
+                    reserved: function() { return e.vscpData[0]; }   {{newline}}
+                    zone: function() { return e.vscpData[1]; }       {{newline}}
+                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -985,9 +807,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }, 
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }                
+                    reserved: function() { return e.vscpData[0]; }   {{newline}} 
+                    zone: function() { return e.vscpData[1]; }       {{newline}}
+                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1006,11 +828,11 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } ,
-                    from: function() { return e.vscpData[3]; },
-                    to: function() { return e.vscpData[4]; }               
+                    reserved: function() { return e.vscpData[0]; }   {{newline}}
+                    zone: function() { return e.vscpData[1]; }       {{newline}}
+                    subzone: function() { return e.vscpData[2]; }    {{newline}}
+                    from: function() { return e.vscpData[3]; }       {{newline}}
+                    to: function() { return e.vscpData[4]; }         {{newline}}      
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1029,9 +851,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    id: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }                
+                    id: function() { return e.vscpData[0]; }       {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}              
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1050,9 +872,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }                
+                    reserved: function() { return e.vscpData[0]; }   {{newline}}
+                    zone: function() { return e.vscpData[1]; }       {{newline}}
+                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1071,9 +893,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }                
+                    reserved: function() { return e.vscpData[0]; }   {{newline}}
+                    zone: function() { return e.vscpData[1]; }       {{newline}}
+                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1091,20 +913,7 @@
         token="VSCP_TYPE_INFORMATION_START_OF_RECORD" >
         <render>
             <vscpworks 
-                variables=" 
-                    frame: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } ,
-                    framecount: function() { return e.vscpData[2]; }
-                    framecounttxt: function() { 
-                        if ( e.vscpData[2] ) {
-                            return &quot;&quot;;
-                        }
-                        else {
-                            return &quot;Not used&quot;; 
-                        }
-                    }
-                "
+                variables="BASE64:ZnJhbWU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSAsCiAgICAgICAgICAgICAgICAgICAgem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzFdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsyXTsgfSAsCiAgICAgICAgICAgICAgICAgICAgZnJhbWVjb3VudDogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9CiAgICAgICAgICAgICAgICAgICAgZnJhbWVjb3VudHR4dDogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBpZiAoIGUudnNjcERhdGFbMl0gKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJcIjsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk5vdCB1c2VkXCI7IAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
                     {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
@@ -1123,9 +932,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    frame: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    frame: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1144,10 +953,10 @@
         <render>
             <vscpworks 
                 variables=" 
-                    user: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    preset: function() { return e.vscpData[3]; } 
+                    user: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    preset: function() { return e.vscpData[3]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1167,10 +976,10 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    preset: function() { return e.vscpData[3]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    preset: function() { return e.vscpData[3]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1189,10 +998,10 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    preset: function() { return e.vscpData[3]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    preset: function() { return e.vscpData[3]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1211,10 +1020,10 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    cvalue: function() { return e.vscpData[3]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    cvalue: function() { return e.vscpData[3]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1234,9 +1043,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1254,9 +1063,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1274,9 +1083,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1294,9 +1103,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1314,9 +1123,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1334,9 +1143,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1354,9 +1163,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1374,9 +1183,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1394,9 +1203,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; } ,
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1414,9 +1223,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1434,9 +1243,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1454,9 +1263,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1474,9 +1283,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1494,9 +1303,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1514,9 +1323,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1534,9 +1343,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1554,9 +1363,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1574,9 +1383,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1595,9 +1404,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1616,9 +1425,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1637,13 +1446,13 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    century: function() { return e.vscpData[3]; },
-                    year: function() { return e.vscpData[4]; },
-                    month: function() { return e.vscpData[5]; },
-                    day: function() { return e.vscpData[6]; }
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    century: function() { return e.vscpData[3]; }   {{newline}}
+                    year: function() { return e.vscpData[4]; }      {{newline}}
+                    month: function() { return e.vscpData[5]; }     {{newline}}
+                    day: function() { return e.vscpData[6]; }       {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1662,12 +1471,12 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    hour: function() { return e.vscpData[3]; },
-                    minute: function() { return e.vscpData[4]; },
-                    second: function() { return e.vscpData[5]; }
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    hour: function() { return e.vscpData[3]; }      {{newline}}
+                    minute: function() { return e.vscpData[4]; }    {{newline}}
+                    second: function() { return e.vscpData[5]; }    {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1685,44 +1494,7 @@
         token="VSCP_TYPE_INFORMATION_WEEKDAY" >
         <render>
             <vscpworks 
-                variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    weekday: function() { return e.vscpData[3]; },
-                    weekdaystr: function() {
-                        switch (e.vscpData[4]) {
-
-                            case 0:
-                                return &quot;Monday&quot;;
-                                break;
-
-                            case 1:
-                                return &quot;Tuesday&quot;;
-                                break;
-
-                            case 2:
-                                return &quot;Wednesday&quot;;
-                                break;
-
-                            case 3:
-                                return &quot;Thursday&quot;;
-                                break;
-
-                            case 4:
-                                return &quot;Friday&quot;;
-                                break;
-
-                            case 5:
-                                return &quot;Saturday&quot;;
-                                break;
-
-                            case 6:
-                                return &quot;Sunday&quot;;
-                                break;                        
-                        } 
-                    }
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICB6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMV07IH0sCiAgICAgICAgICAgICAgICAgICAgc3Viem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9LAogICAgICAgICAgICAgICAgICAgIHdlZWtkYXk6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVszXTsgfSwKICAgICAgICAgICAgICAgICAgICB3ZWVrZGF5c3RyOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoIChlLnZzY3BEYXRhWzRdKSB7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk1vbmRheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJUdWVzZGF5XCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIldlZG5lc2RheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJUaHVyc2RheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJGcmlkYXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDU6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiU2F0dXJkYXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDY6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiU3VuZGF5XCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0gCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
@@ -1740,9 +1512,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1760,9 +1532,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1780,15 +1552,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }, 
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    sec     : e.vscpData[7] &amp; 0x3f; },
-                    minute  : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 6 &amp; 0x3f); },
-                    hour    : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 12 &amp; 0x1f); },
-                    day     : function() { return((e.vscpData[5] &gt;&gt; 1) &amp; 0x1f); },
-                    month   : function() { return((e.vscpData[4] &lt;&lt; 8 + e.vscpData[5]) &gt;&gt; 6 &amp; 0x0f); },
-                    year    : function() { return((e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]) &gt;&gt; 2 &amp; 0xfff); },
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    sec     : e.vscpData[7] &amp; 0x3f; },          {{newline}}
+                    minute  : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 6 &amp; 0x3f); }   {{newline}}
+                    hour    : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 12 &amp; 0x1f); }  {{newline}}
+                    day     : function() { return((e.vscpData[5] &gt;&gt; 1) &amp; 0x1f); }                              {{newline}}
+                    month   : function() { return((e.vscpData[4] &lt;&lt; 8 + e.vscpData[5]) &gt;&gt; 6 &amp; 0x0f); }   {{newline}}
+                    year    : function() { return((e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]) &gt;&gt; 2 &amp; 0xfff); }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1807,9 +1579,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1827,9 +1599,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1847,9 +1619,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1867,9 +1639,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1887,9 +1659,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }     {{newline}}
+                    zone: function() { return e.vscpData[1]; }      {{newline}}
+                    subzone: function() { return e.vscpData[2]; }   {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1907,9 +1679,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1927,9 +1699,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }, 
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; } 
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1947,9 +1719,9 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; }
+                    index: function() { return e.vscpData[0]; }    {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
                 "
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
@@ -1967,17 +1739,17 @@
         <render>
             <vscpworks 
                 variables=" 
-                    opt: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    value: function() {
-                        var rval = 0;
-                        for ( i=3;i&lt;e.vscpData.length;i++) {
-                            rval = val &lt;&lt; 8;
-                            rval += e.vscpData[i];
-                        }
-                        return rval;
-                    }
+                    opt: function() { return e.vscpData[0]; }      {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    value: function() {                            {{newline}}
+                        var rval = 0;                              {{newline}}
+                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{newline}}
+                            rval = val &lt;&lt; 8;                 {{newline}}
+                            rval += e.vscpData[i];                 {{newline}}  
+                        }                                          {{newline}}
+                        return rval;                               {{newline}} 
+                    }                                              {{newline}} 
                 "
                 template="
                     {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
@@ -1996,17 +1768,17 @@
         <render>
             <vscpworks 
                 variables=" 
-                    opt: function() { return e.vscpData[0]; },
-                    zone: function() { return e.vscpData[1]; },
-                    subzone: function() { return e.vscpData[2]; },
-                    value: function() {
-                        var rval = 0;
-                        for ( i=3;i&lt;e.vscpData.length;i++) {
-                            rval = val &lt;&lt; 8;
-                            rval += e.vscpData[i];
-                        }
-                        return rval;
-                    }
+                    opt: function() { return e.vscpData[0]; }      {{newline}}
+                    zone: function() { return e.vscpData[1]; }     {{newline}}
+                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    value: function() {                            {{newline}}
+                        var rval = 0;                              {{newline}} 
+                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{newline}}
+                            rval = val &lt;&lt; 8;                 {{newline}}
+                            rval += e.vscpData[i];                 {{newline}}
+                        }                                          {{newline}}
+                        return rval;                               {{newline}}
+                    }                                              {{newline}}
                 "
                 template="
                     {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}

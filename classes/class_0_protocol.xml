@@ -20,15 +20,10 @@
         token="VSCP_TYPE_PROTOCOL_SEGCTRL_HEARTBEAT" >
         <render>
             <vscpworks 
-                variables="
-                 crc8:      : function() { return (e.vscpData[0]); }
-                 time_epoch : function() { return (e.vscpData[1]&lt;&lt;24 +
-   				                                  e.vscpData[2]&lt;&lt;16 +
-   				                                  e.vscpData[3]&lt;&lt;8 +
-   				                                  e.vscpData[4]); }"
-                template="
-                 {{lbl-start}}CRC8: {{lbl-end}} {{val-start}}{{crc8}}{{val-end}}{{newline}}
-                 {{lbl-start}}Time(UTC): {{lbl-end}} {{val-start}}{{time_epoch}{{val-end}}{{newline}}"
+                variables="crc8:        function() { return (e.vscpData[0]); }   {{newline}}
+                           time_epoch:  function() { return (e.vscpData[1]&lt;&lt;24 + e.vscpData[2]&lt;&lt;16 + e.vscpData[3]&lt;&lt;8 + e.vscpData[4]); } {{newline}}"
+                template="{{lbl-start}}CRC8: {{lbl-end}} {{val-start}}{{crc8}}{{val-end}}{{newline}}
+                          {{lbl-start}}Time(UTC): {{lbl-end}} {{val-start}}{{time_epoch}{{val-end}}{{newline}}"
             />
         </render> 
     </type>
@@ -38,10 +33,8 @@
         token="VSCP_TYPE_PROTOCOL_NEW_NODE_ONLINE" >
         <render>
             <vscpworks 
-                variables="
-                 nickname: function() { return (e.vscpData[0]); }"
-                template="
-                 {{lbl-start}}Target id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}"
+                variables="nickname: function() { return (e.vscpData[0]); }"
+                template="{{lbl-start}}Target id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -84,10 +77,10 @@
         token="VSCP_TYPE_PROTOCOL_SET_NICKNAME" >
         <render>
             <vscpworks 
-                variables="old-nickname: function() { return (e.vscpData[0]); }
-                           new-nickname: function() { return (e.vscpData[1]); }"
+                variables="old-nickname: function() { return (e.vscpData[0]); } {{newline}}
+                           new-nickname: function() { return (e.vscpData[1]); } {{newline}}"
                 template="{{lbl-start}}Old id: {{lbl-end}} {{val-start}}{{old-nickname}}{{val-end}}{{newline}}
-                 {{lbl-start}}New id(UTC): {{lbl-end}} {{val-start}}{{new-nickname}{{val-end}}{{newline}}"
+                          {{lbl-start}}New id(UTC): {{lbl-end}} {{val-start}}{{new-nickname}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -108,24 +101,19 @@
         token="VSCP_TYPE_PROTOCOL_DROP_NICKNAME" >
         <render>
             <vscpworks 
-                variables="
-                    nickname: function() { return e.vscpData[0]; }
-                    flags: function() { if (e.vscpData.length>1) return e.vscpData[1]; }
-                    time-restart: function() { if (e.vscpData.length>2) return e.vscpData[2]; }
-                    flag_reset_keep_nickname: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x20) ) 
-                                                                return &quot;Reset device, keep id&quot;; else return &quot;Reset device, nickname discovery&quot; }
-                    restore-default: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x40) ) 
-                                                                return &quot;Set persistent storage to default&quot;; else return &quot;Keep persistent storage&quot;; }
-                    go-idle:  function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x80) ) 
-                                                                return &quot;Go idle. Do not start up again.&quot;; else return &quot;Start normal&quot;; }
+                variables="nickname: function() { return e.vscpData[0]; }                         {{newline}}
+                    flags: function() { if (e.vscpData.length>1) return e.vscpData[1]; }          {{newline}}
+                    time-restart: function() { if (e.vscpData.length>2) return e.vscpData[2]; }   {{newline}}
+                    flag_reset_keep_nickname: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x20) ) return &quot;Reset device, keep id&quot;; else return &quot;Reset device, nickname discovery&quot; } {{newline}}
+                    restore-default: function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x40) ) return &quot;Set persistent storage to default&quot;; else return &quot;Keep persistent storage&quot;; }      {{newline}}
+                    go-idle:  function() { if ( (e.vscpData.length > 2) &amp;&amp; (e.vscpData[2] &amp; 0x80) ) return &quot;Go idle. Do not start up again.&quot;; else return &quot;Start normal&quot;; }                          {{newline}}
                 "
-                template="
-                    {{lbl-start}}Current id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
-                    {{lbl-start}}Flags [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}}{{newline}}
-                    {{ident}}{{lbl-start}}Flag bit 5: {{val-start}}{{lbl-end}}{{flag_reset_keep_nickname}}{{val-end}}{{newline}}
-                    {{ident}}{{lbl-start}}Flag bit 6: {{val-start}}{{lbl-end}}{{restore-default}}{{val-end}}{{newline}}
-                    {{ident}}{{lbl-start}}Flag bit 7: {{val-start}}{{lbl-end}}{{go-idle}}{{val-end}}{{newline}}
-                    {{lbl-start}}Delay [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}} seconds{{newline}}
+                template="{{lbl-start}}Current id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                          {{lbl-start}}Flags [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}}{{newline}}
+                          {{ident}}{{lbl-start}}Flag bit 5: {{val-start}}{{lbl-end}}{{flag_reset_keep_nickname}}{{val-end}}{{newline}}
+                          {{ident}}{{lbl-start}}Flag bit 6: {{val-start}}{{lbl-end}}{{restore-default}}{{val-end}}{{newline}}
+                          {{ident}}{{lbl-start}}Flag bit 7: {{val-start}}{{lbl-end}}{{go-idle}}{{val-end}}{{newline}}
+                          {{lbl-start}}Delay [opt]: {{lbl-end}} {{val-start}}{{flags}}{{val-end}} seconds{{newline}}
                 "
             />
         </render>
@@ -136,13 +124,11 @@
         token="VSCP_TYPE_PROTOCOL_READ_REGISTER" >
         <render>
             <vscpworks 
-                variables="
-                    nickname: function() { return e.vscpData[0]; }
-                    register: function() { return e.vscpData[1]; }
+                variables="nickname: function() { return e.vscpData[0]; }     {{newline}}
+                           register: function() { return e.vscpData[1]; }     {{newline}}
                 "
-                template="
-                    {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
-                    {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
+                template="{{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
+                          {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
                 "
             />
         </render>
@@ -154,8 +140,8 @@
         <render>
             <vscpworks 
                 variables="
-                    register: function() { return e.vscpData[0]; }
-                    content: function() { return e.vscpData[1]; }
+                    register: function() { return e.vscpData[0]; }     {{newline}}
+                    content: function() { return e.vscpData[1]; }      {{newline}}
                 "
                 template="
                     {{lbl-start}}Register: {{lbl-end}} {{val-start}}{{register}}{{val-end}}{{newline}}
@@ -171,9 +157,9 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return e.vscpData[0]; }
-                    register: function() { return e.vscpData[1]; }
-                    content: function() { return e.vscpData[2]; }
+                    nickname: function() { return e.vscpData[0]; }    {{newline}}
+                    register: function() { return e.vscpData[1]; }    {{newline}}
+                    content: function() { return e.vscpData[2]; }     {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -189,44 +175,7 @@
         token="VSCP_TYPE_PROTOCOL_ENTER_BOOT_LOADER" >
         <render>
             <vscpworks 
-                variables="
-                    nickname: function() { return e.vscpData[0]; }
-                    algorithm: function() { return e.vscpData[1]; }
-                    guid0: function() { return e.vscpData[2]; }
-                    guid3: function() { return e.vscpData[3]; }
-                    guid5: function() { return e.vscpData[4]; }
-                    guid7: function() { return e.vscpData[5]; }
-                    pageselect-msb: function() { return e.vscpData[6]; }
-                    pageselect-lsb: function() { return e.vscpData[7]; }
-                    pageselect: function() { return (e.vscpData[6]&amp;&amp;8 + e.vscpData[7]); }
-                    algorithm-str: function() { 
-                        switch (e.vscpData[1]) {
-
-                            case 0x00: 	
-                                str = &quot;VSCP algorithm&quot; ;
-                                break;
-
-                            case 0x01: 	
-                                str = &quot;Microchip PIC algorithm&quot; ;
-                                break;
-
-                            case 0x10: 	
-                                str = &quot;Atmel AVR algorithm 0&quot; ;
-                                break;
-
-                            case 0x20: 	
-                                str = &quot;NXP ARM algorithm 0&quot; ;
-                                break;
-
-                            case 0x30: 	
-                                str = &quot;ST ARM algorithm 0&quot; ;
-                                break;
-
-                            default:
-                                str = &quot;Unknown&quot; ;   
-                        }
-                        return str; }
-                "
+                variables="BASE64:bmlja25hbWU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfQogICAgICAgICAgICAgICAgICAgIGFsZ29yaXRobTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzFdOyB9CiAgICAgICAgICAgICAgICAgICAgZ3VpZDA6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsyXTsgfQogICAgICAgICAgICAgICAgICAgIGd1aWQzOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbM107IH0KICAgICAgICAgICAgICAgICAgICBndWlkNTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzRdOyB9CiAgICAgICAgICAgICAgICAgICAgZ3VpZDc6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVs1XTsgfQogICAgICAgICAgICAgICAgICAgIHBhZ2VzZWxlY3QtbXNiOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbNl07IH0KICAgICAgICAgICAgICAgICAgICBwYWdlc2VsZWN0LWxzYjogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzddOyB9CiAgICAgICAgICAgICAgICAgICAgcGFnZXNlbGVjdDogZnVuY3Rpb24oKSB7IHJldHVybiAoZS52c2NwRGF0YVs2XSZhbXA7JmFtcDs4ICsgZS52c2NwRGF0YVs3XSk7IH0KICAgICAgICAgICAgICAgICAgICBhbGdvcml0aG0tc3RyOiBmdW5jdGlvbigpIHsgCiAgICAgICAgICAgICAgICAgICAgICAgIHN3aXRjaCAoZS52c2NwRGF0YVsxXSkgewoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMHgwMDogCQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ciA9ICZxdW90O1ZTQ1AgYWxnb3JpdGhtJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDB4MDE6IAkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtNaWNyb2NoaXAgUElDIGFsZ29yaXRobSZxdW90OyA7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAweDEwOiAJCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7QXRtZWwgQVZSIGFsZ29yaXRobSAwJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDB4MjA6IAkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtOWFAgQVJNIGFsZ29yaXRobSAwJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDB4MzA6IAkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtTVCBBUk0gYWxnb3JpdGhtIDAmcXVvdDsgOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7VW5rbm93biZxdW90OyA7ICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHN0cjsgfQ=="
                 template="
                     {{lbl-start}}Node id: {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
                     {{lbl-start}}Algorithm: {{lbl-end}} {{val-start}}{{algorithm-str}} [{{algorithm}}]{{val-end}}{{newline}}
@@ -245,16 +194,7 @@
         token="VSCP_TYPE_PROTOCOL_ACK_BOOT_LOADER" >
         <render>
             <vscpworks 
-                variables="
-                    flash-block-size: function() { return ( e.vscpData[0]&amp;&amp;24 +
-                                                            e.vscpData[1]&amp;&amp;16 +
-                                                            e.vscpData[2]&amp;&amp;8 +
-                                                            e.vscpData[3] ); }
-                    number-blocks: function() { return (    e.vscpData[4]&amp;&amp;24 +
-                                                            e.vscpData[5]&amp;&amp;16 +
-                                                            e.vscpData[6]&amp;&amp;8 +
-                                                            e.vscpData[7] ); }
-                "
+                variables="BASE64:Zmxhc2gtYmxvY2stc2l6ZTogZnVuY3Rpb24oKSB7IHJldHVybiAoIGUudnNjcERhdGFbMF0mYW1wOyZhbXA7MjQgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzFdJmFtcDsmYW1wOzE2ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVsyXSZhbXA7JmFtcDs4ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVszXSApOyB9CiAgICAgICAgICAgICAgICAgICAgbnVtYmVyLWJsb2NrczogZnVuY3Rpb24oKSB7IHJldHVybiAoICAgIGUudnNjcERhdGFbNF0mYW1wOyZhbXA7MjQgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzVdJmFtcDsmYW1wOzE2ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVs2XSZhbXA7JmFtcDs4ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVs3XSApOyB9"
                 template="
                     {{lbl-start}}Flash block size: {{lbl-end}} {{val-start}}{{flash-block-size}}{{val-end}}{{newline}}
                     {{lbl-start}}Available blocks: {{lbl-end}} {{val-start}}{{number-blocks}}{{val-end}}{{newline}}
@@ -268,12 +208,8 @@
         token="VSCP_TYPE_PROTOCOL_NACK_BOOT_LOADER" >
         <render>
             <vscpworks 
-                variables="
-                    error: function() { if (e.vscpData.length) return e.vscpData[0]; }
-                "
-                template="
-                    {{lbl-start}}Error [opt]: {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}
-                "
+                variables="error: function() { if (e.vscpData.length) return e.vscpData[0]; }"
+                template="{{lbl-start}}Error [opt]: {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -283,14 +219,7 @@
         token="VSCP_TYPE_PROTOCOL_START_BLOCK" >
         <render>
             <vscpworks 
-                variables="
-                    block: function() { if (e.vscpData.length) return ( e.vscpData[0]&amp;&amp;24 +
-                                                                        e.vscpData[1]&amp;&amp;16 +
-                                                                        e.vscpData[2]&amp;&amp;8 +
-                                                                        e.vscpData[3] ); }
-                    memtype: function() { if (e.vscpData.length>4) return e.vscpData[4]; }
-                    bank: function() { if (e.vscpData.length>5) return e.vscpData[5]; }
-                "
+                variables="BASE64:YmxvY2s6IGZ1bmN0aW9uKCkgeyBpZiAoZS52c2NwRGF0YS5sZW5ndGgpIHJldHVybiAoIGUudnNjcERhdGFbMF0mYW1wOyZhbXA7MjQgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzFdJmFtcDsmYW1wOzE2ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVsyXSZhbXA7JmFtcDs4ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVszXSApOyB9CiAgICAgICAgICAgICAgICAgICAgbWVtdHlwZTogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhLmxlbmd0aD40KSByZXR1cm4gZS52c2NwRGF0YVs0XTsgfQogICAgICAgICAgICAgICAgICAgIGJhbms6IGZ1bmN0aW9uKCkgeyBpZiAoZS52c2NwRGF0YS5sZW5ndGg+NSkgcmV0dXJuIGUudnNjcERhdGFbNV07IH0="
                 template="
                     {{lbl-start}}Block : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
                     {{lbl-start}}Memory type [opt]: {{lbl-end}} {{val-start}}{{memtype}}{{val-end}}{{newline}}
@@ -305,19 +234,8 @@
         token="VSCP_TYPE_PROTOCOL_BLOCK_DATA" >
         <render>
             <vscpworks 
-                variables="
-                    data0: function() { return ( e.vscpData[0] ); }
-                    data1: function() { return ( e.vscpData[1] ); }
-                    data2: function() { return ( e.vscpData[2] ); }
-                    data3: function() { return ( e.vscpData[3] ); }
-                    data4: function() { return ( e.vscpData[4] ); }
-                    data5: function() { return ( e.vscpData[5] ); }
-                    data6: function() { return ( e.vscpData[6] ); }
-                    data7: function() { return ( e.vscpData[7] ); }
-                "
-                template="
-                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data0}} {{data1}} {{data2}} {{data3}} {{data4}} {{data5}} {{data6}} {{data7}}{{val-end}}{{newline}}
-                "
+                variables="BASE64:ZGF0YTA6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdICk7IH0KICAgICAgICAgICAgICAgICAgICBkYXRhMTogZnVuY3Rpb24oKSB7IHJldHVybiAoIGUudnNjcERhdGFbMV0gKTsgfQogICAgICAgICAgICAgICAgICAgIGRhdGEyOiBmdW5jdGlvbigpIHsgcmV0dXJuICggZS52c2NwRGF0YVsyXSApOyB9CiAgICAgICAgICAgICAgICAgICAgZGF0YTM6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzNdICk7IH0KICAgICAgICAgICAgICAgICAgICBkYXRhNDogZnVuY3Rpb24oKSB7IHJldHVybiAoIGUudnNjcERhdGFbNF0gKTsgfQogICAgICAgICAgICAgICAgICAgIGRhdGE1OiBmdW5jdGlvbigpIHsgcmV0dXJuICggZS52c2NwRGF0YVs1XSApOyB9CiAgICAgICAgICAgICAgICAgICAgZGF0YTY6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzZdICk7IH0KICAgICAgICAgICAgICAgICAgICBkYXRhNzogZnVuY3Rpb24oKSB7IHJldHVybiAoIGUudnNjcERhdGFbN10gKTsgfQ=="
+                template="{{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data0}} {{data1}} {{data2}} {{data3}} {{data4}} {{data5}} {{data6}} {{data7}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -327,15 +245,7 @@
         token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_ACK" >
         <render>
             <vscpworks 
-                variables="
-                    crc: function() { return ( e.vscpData[0]&amp;&amp;8 +
-                                               e.vscpData[1] ); }
-                    write-pointer: function() { return ( e.vscpData[0]&amp;&amp;24 +
-                                                         e.vscpData[1]&amp;&amp;16 +
-                                                         e.vscpData[2]&amp;&amp;8 +
-                                                         e.vscpData[3] ); }
-  
-                "
+                variables="BASE64:Y3JjOiBmdW5jdGlvbigpIHsgcmV0dXJuICggZS52c2NwRGF0YVswXSZhbXA7JmFtcDs4ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzFdICk7IH0KICAgICAgICAgICAgICAgICAgICB3cml0ZS1wb2ludGVyOiBmdW5jdGlvbigpIHsgcmV0dXJuICggZS52c2NwRGF0YVswXSZhbXA7JmFtcDsyNCArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbMV0mYW1wOyZhbXA7MTYgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzJdJmFtcDsmYW1wOzggKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzNdICk7IH0="
                 template="
                     {{lbl-start}}CRC16 : {{lbl-end}} {{val-start}}{{crc}}{{val-end}}{{newline}}
                     {{lbl-start}}Write pointer: {{lbl-end}} {{val-start}}{{write-pointer}}{{val-end}}{{newline}}
@@ -349,14 +259,7 @@
         token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_NACK" >
         <render>
             <vscpworks 
-                variables="
-                    error: function() { return ( e.vscpData[0]; }                 
-                    write-pointer: function() { return ( e.vscpData[1]&amp;&amp;24 +
-                                                         e.vscpData[2]&amp;&amp;16 +
-                                                         e.vscpData[3]&amp;&amp;8 +
-                                                         e.vscpData[4] ); }
-                    
-                "
+                variables="BASE64:ZXJyb3I6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdOyB9ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICB3cml0ZS1wb2ludGVyOiBmdW5jdGlvbigpIHsgcmV0dXJuICggZS52c2NwRGF0YVsxXSZhbXA7JmFtcDsyNCArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbMl0mYW1wOyZhbXA7MTYgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzNdJmFtcDsmYW1wOzggKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlLnZzY3BEYXRhWzRdICk7IH0="
                 template="
                     {{lbl-start}}Error code : {{lbl-end}} {{val-start}}{{error}}{{val-end}}{{newline}}
                     {{lbl-start}}Write pointer: {{lbl-end}} {{val-start}}{{write-pointer}}{{val-end}}{{newline}}
@@ -370,16 +273,8 @@
         token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA" >
         <render>
             <vscpworks 
-                variables="                
-                    block: function() { return ( e.vscpData[0]&amp;&amp;24 +
-                                                         e.vscpData[1]&amp;&amp;16 +
-                                                         e.vscpData[2]&amp;&amp;8 +
-                                                         e.vscpData[3] ); }
-                    
-                "
-                template="
-                    {{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
-                "
+                variables="BASE64:YmxvY2s6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdJmFtcDsmYW1wOzI0ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVsxXSZhbXA7JmFtcDsxNiArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbMl0mYW1wOyZhbXA7OCArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbM10gKTsgfQ=="
+                template="{{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -389,16 +284,8 @@
         token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_ACK" >
         <render>
             <vscpworks 
-                variables="                
-                    block: function() { return ( e.vscpData[0]&amp;&amp;24 +
-                                                         e.vscpData[1]&amp;&amp;16 +
-                                                         e.vscpData[2]&amp;&amp;8 +
-                                                         e.vscpData[3] ); }
-                    
-                "
-                template="
-                    {{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}
-                "
+                variables="BASE64:YmxvY2s6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdJmFtcDsmYW1wOzI0ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS52c2NwRGF0YVsxXSZhbXA7JmFtcDsxNiArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbMl0mYW1wOyZhbXA7OCArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGUudnNjcERhdGFbM10gKTsgfQ=="
+                template="{{lbl-start}}Block # : {{lbl-end}} {{val-start}}{{block}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -408,12 +295,11 @@
         token="VSCP_TYPE_PROTOCOL_PROGRAM_BLOCK_DATA_NACK" >
         <render>
             <vscpworks 
-                variables="  
-                    error: block: function() { return e.vscpData[0]; }
-                    block: function() { return ( e.vscpData[1]&amp;&amp;24 +
-                                                 e.vscpData[2]&amp;&amp;16 +
-                                                 e.vscpData[3]&amp;&amp;8 +
-                                                 e.vscpData[4] ); }
+                variables="error: block: function() { return e.vscpData[0]; }         {{newline}}
+                           block: function() { return ( e.vscpData[1]&amp;&amp;24 +   {{newline}}
+                                                        e.vscpData[2]&amp;&amp;16 +   {{newline}}
+                                                        e.vscpData[3]&amp;&amp;8 +    {{newline}}
+                                                        e.vscpData[4] ); }            {{newline}}
                     
                 "
                 template="
@@ -429,13 +315,10 @@
         token="VSCP_TYPE_PROTOCOL_ACTIVATE_NEW_IMAGE" >
         <render>
             <vscpworks 
-                variables="  
-                    crc: function() { return ( e.vscpData[0]&amp;&amp;8 +
-                                                 e.vscpData[1]; }                    
+                variables="crc: function() { return ( e.vscpData[0]&amp;&amp;8 +   {{newline}}
+                                                        e.vscpData[1]; }           {{newline}}         
                 "
-                template="
-                    {{lbl-start}}CRC16 : {{lbl-end}} {{val-start}}{{crc}}{{val-end}}{{newline}}
-                "
+                template="{{lbl-start}}CRC16 : {{lbl-end}} {{val-start}}{{crc}}{{val-end}}{{newline}}"
             />
         </render>
     </type>
@@ -445,48 +328,7 @@
         token="VSCP_TYPE_PROTOCOL_RESET_DEVICE" >
         <render>
             <vscpworks 
-                variables="  
-                    index: function() { return e.vscpData[0]; }
-                    guid4: function() { 
-                        var str = &quot;&quot;
-                        switch(e.vscpData[0])  {
-
-                            case 0:
-                                str = &quot;GUID[0]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
-                                      &quot; GUID[1]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
-                                      &quot; GUID[2]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
-                                      &quot; GUID[3]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2); 
-                                break;
-
-                            case 1:
-                                str = &quot;GUID[4]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
-                                      &quot; GUID[5]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
-                                      &quot; GUID[6]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
-                                      &quot; GUID[7]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
-                                break;
-
-                            case 2:
-                                str = &quot;GUID[8]=&quot;   + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
-                                      &quot; GUID[9]=&quot;  + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
-                                      &quot; GUID[10]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
-                                      &quot; GUID[11]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
-                                break;
-
-                            case 3:
-                                str = &quot;GUID[12]=&quot;  + (&quot;00&quot; + e.vscpData[1].toString(16)).substr(-2) +
-                                      &quot; GUID[13]=&quot; + (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2) +
-                                      &quot; GUID[14]=&quot; + (&quot;00&quot; + e.vscpData[3].toString(16)).substr(-2) +
-                                      &quot; GUID[15]=&quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
-                                break;
-
-                            default:  
-                                str = &quot;Invalid index&quot;;
-                                break;              
-                        }
-
-                        return str; 
-                    }                    
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfQogICAgICAgICAgICAgICAgICAgIGd1aWQ0OiBmdW5jdGlvbigpIHsgCiAgICAgICAgICAgICAgICAgICAgICAgIHZhciBzdHIgPSAmcXVvdDsmcXVvdDsKICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoKGUudnNjcERhdGFbMF0pICB7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ciA9ICZxdW90O0dVSURbMF09JnF1b3Q7ICArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgR1VJRFsxXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMl09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVszXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBHVUlEWzNdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpOyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7R1VJRFs0XT0mcXVvdDsgICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVsxXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBHVUlEWzVdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgR1VJRFs2XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbN109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs0XS50b1N0cmluZygxNikpLnN1YnN0cigtMik7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ciA9ICZxdW90O0dVSURbOF09JnF1b3Q7ICAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbOV09JnF1b3Q7ICArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgR1VJRFsxMF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVszXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBHVUlEWzExXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzRdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDM6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7R1VJRFsxMl09JnF1b3Q7ICArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgR1VJRFsxM109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVsyXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBHVUlEWzE0XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTVdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtJbnZhbGlkIGluZGV4JnF1b3Q7OwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOyAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBzdHI7IAogICAgICAgICAgICAgICAgICAgIH0gIA=="
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}GUID quartet : {{lbl-end}} {{val-start}}{{guid4}}{{val-end}}{{newline}}
@@ -501,9 +343,9 @@
         <render>
             <vscpworks 
                 variables="  
-                    nickname: function() { return e.vscpData[0]; }
-                    offset: function() { return e.vscpData[1]; }
-                    count: function() { return e.vscpData[2]; }
+                    nickname: function() { return e.vscpData[0]; }    {{newline}}
+                    offset: function() { return e.vscpData[1]; }      {{newline}}
+                    count: function() { return e.vscpData[2]; }       {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -520,16 +362,16 @@
         <render>
             <vscpworks 
                 variables="  
-                    nickname: function() { return e.vscpData[0]; }
-                    offset: function() { return e.vscpData[1]; }
-                    data: function() { 
-                        var str = &quot;&quot;;
-                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);
+                    nickname: function() { return e.vscpData[0]; }    {{newline}}
+                    offset: function() { return e.vscpData[1]; }      {{newline}}
+                    data: function() {                                {{newline}}
+                        var str = &quot;&quot;;                       {{newline}}
+                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);                  {{newline}}
+                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);                    {{newline}}
+                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);  {{newline}}
                         return str; 
                     }
                 "
@@ -548,15 +390,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    seqno: function() { return e.vscpData[0]; }
-                    data: function() { 
-                        var str = &quot;&quot;;
-                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);
-                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);
+                    seqno: function() { return e.vscpData[0]; }   {{newline}}
+                    data: function() {                            {{newline}}
+                        var str = &quot;&quot;;                   {{newline}}
+                        if ( e.vscpData.length > 2 ) str += (&quot;00&quot; + e.vscpData[2].toString(16)).substr(-2);                  {{newline}}
+                        if ( e.vscpData.length > 3 ) str += &quot; &quot; + e.vscpData[3].toString(16)).substr(-2);                    {{newline}}
+                        if ( e.vscpData.length > 4 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[4].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 5 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[5].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 6 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[6].toString(16)).substr(-2);  {{newline}}
+                        if ( e.vscpData.length > 7 ) str += &quot; &quot; + (&quot;00&quot; + e.vscpData[7].toString(16)).substr(-2);  {{newline}}
                         return str; 
                     }
                 "
@@ -584,17 +426,17 @@
         token="VSCP_TYPE_PROTOCOL_HIGH_END_SERVER_RESPONSE" >
         <render>
             <vscpworks variables="
-                capability: function() { return ((&quot;0000&quot; + (e.vscpData[0]&amp;&amp;8 +
-                                                 e.vscpData[1]).toString(16)).substr(-4) ); },
-                ipv4: function() { 
-                    let str = e.vscpData[2].toString() + &quot;.&quot; +
-                              e.vscpData[3].toString() + &quot;.&quot; +
-                              e.vscpData[4].toString() + &quot;.&quot; +
-                              e.vscpData[5].toString();         
-                    return str; },
-                port: function() { return (e.vscpData[6]&amp;&amp;8 +
-                                           e.vscpData[6]); }
-                "                                         
+                capability: function() { return ((&quot;0000&quot; + (e.vscpData[0]&amp;&amp;8 +  {{newline}}
+                                                 e.vscpData[1]).toString(16)).substr(-4) ); },    {{newline}}
+                ipv4: function() {                                                                {{newline}}
+                    let str = e.vscpData[2].toString() + &quot;.&quot; +                          {{newline}}
+                              e.vscpData[3].toString() + &quot;.&quot; +                          {{newline}}
+                              e.vscpData[4].toString() + &quot;.&quot; +                          {{newline}}
+                              e.vscpData[5].toString();                                           {{newline}}
+                    return str; },                                                                {{newline}}
+                port: function() { return (e.vscpData[6]&amp;&amp;8 +                             {{newline}}
+                                           e.vscpData[6]); }                                      {{newline}}
+                "                                                                                 
                 template="
                     {{lbl-start}}Server caps : {{lbl-end}} {{val-start}}{{capability}}{{val-end}}{{newline}}
                     {{lbl-start}}IPv4 : {{lbl-end}} {{val-start}}{{ipv4}}{{val-end}}{{newline}}
@@ -610,8 +452,8 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return (e.vscpData[0]) };,
-                    register: function() { return (e.vscpData[1]) };,
+                    nickname: function() { return (e.vscpData[0]) };  {{newline}}
+                    register: function() { return (e.vscpData[1]) };  {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -627,8 +469,8 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return (e.vscpData[0]) };,
-                    register: function() { return (e.vscpData[1]) };,
+                    nickname: function() { return (e.vscpData[0]) };  {{newline}}
+                    register: function() { return (e.vscpData[1]) };  {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -658,8 +500,7 @@
         token="VSCP_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" >
         <render>
             <vscpworks 
-                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfQogICAgICAgICAgICAgICAgICAgIGRhdGE6IGZ1bmN0aW9uKCkgeyAKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIHN0ciA9ICZxdW90OyZxdW90OwogICAgICAgICAgICAgICAgICAgICAgICBzd2l0Y2goZS52c2NwRGF0YVswXSkgIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7R1VJRFsxNV09JnF1b3Q7ICArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTRdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTNdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbM10udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbM10pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTJdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNF0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTFdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMTBdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbOV09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs3XSkgKyAmcXVvdDsnJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyID0gJnF1b3Q7R1VJRFs4XT0mcXVvdDsgICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVsxXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbN109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVsyXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbNl09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVszXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbM10pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbNV09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs0XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNF0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbNF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbM109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs2XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IEdVSURbMl09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbN10pICsgJnF1b3Q7JyZxdW90OyArOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSBzdHIgPSAmcXVvdDtHVUlEWzJdPSZxdW90OyAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgR1VJRFsxXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsyXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzBdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbM10udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzNdKSArICZxdW90OycmcXVvdDsgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBNREZbMV09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs0XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNF0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsyXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzVdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs1XSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzNdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzZdKSArICZxdW90OycmcXVvdDsgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBNREZbNF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbN10pICsgJnF1b3Q7JyZxdW90OyArOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtNREZbNV09JnF1b3Q7ICArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzFdKSArICZxdW90OycmcXVvdDsgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBNREZbNl09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVsyXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERls3XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVszXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzhdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzRdKSArICZxdW90OycmcXVvdDsgKyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzldPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzVdKSArICZxdW90OycmcXVvdDsgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBNREZbMTBdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbNl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzZdKSArICZxdW90OycmcXVvdDsgKwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZxdW90OyBNREZbMTFdPSZxdW90OyArICgmcXVvdDswMCZxdW90OyArIGUudnNjcERhdGFbN10udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzddKSArICZxdW90OycmcXVvdDsgOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtNREZbMTJdPSZxdW90OyAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzEzXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsyXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzE0XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVszXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzE1XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzRdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyAmcXVvdDsnJnF1b3Q7ICsgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsxNl09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsxN109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs2XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsxOF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzddKSArICZxdW90OycmcXVvdDsgOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtNREZbMTldPSZxdW90OyAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzIwXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsyXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzIxXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVszXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzIyXT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzRdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyAmcXVvdDsnJnF1b3Q7ICsgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsyM109JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsyNF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs2XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlsyNV09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAgJnF1b3Q7ICcmcXVvdDsgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzddKSArICZxdW90OycmcXVvdDsgOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHIgPSAmcXVvdDtNREZbMjZdPSZxdW90OyAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzI3XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsyXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzI4XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVszXSkgKyAmcXVvdDsnJnF1b3Q7ICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDsgTURGWzI5XT0mcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzRdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyAmcXVvdDsnJnF1b3Q7ICsgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlszMF09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IE1ERlszMV09JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs2XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJnF1b3Q7IFplcm89JnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs3XS50b1N0cmluZygxNikpLnN1YnN0cigtMik7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZGVmYXVsdDogIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ciA9ICZxdW90O0ludmFsaWQgaW5kZXgmcXVvdDs7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHN0cjsgCiAgICAgICAgICAgICAgICAgICAgfQ                   
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbMF0mYW1wOyZhbXA7OCArIGUudnNjcERhdGFbMV0pIH07CiAgICAgICAgICAgICAgICAgICAgZGF0YTogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBsZXQgc3RyID0gXCJbMF09XCIgICsgKFwiMDBcIiArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgXCIgJ1wiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyBcIidcIiA7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChlLnZzY3BEYXRhLWxlbmd0aCA+IDMpIHN0ciArPSBcIiBcIiArIChcIjAwXCIgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiICdcIiArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMl0pICsgXCInXCIgOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS1sZW5ndGggPiA0KSBzdHIgKz0gXCIgXCIgKyAoXCIwMFwiICsgZS52c2NwRGF0YVszXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiAnXCIgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzNdKSArIFwiJ1wiIDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNSkgc3RyICs9IFwiIFwiICsgKFwiMDBcIiArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgXCIgJ1wiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyBcIidcIiA7IAogICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS1sZW5ndGggPiA2KSBzdHIgKz0gXCIgXCIgKyAoXCIwMFwiICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiAnXCIgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzVdKSArIFwiJ1wiIDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNykgc3RyICs9IFxcIiBcXCIgKyAoXFwiMDBcXCIgKyBlLnZzY3BEYXRhWzZdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFxcIiAnXFwiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs2XSkgKyBcXCInXFwiIDs="
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
@@ -689,10 +530,10 @@
         <render>
             <vscpworks 
                 variables="
-                    size: function() { return (e.vscpData[0]) };,
-                    offset: function() { return (e.vscpData[1]) };,
-                    page-start: function() { return (e.vscpData[2]&amp;&amp;8 + e.vscpData[3]) };
-                    page-end: function() { return (e.vscpData[4]&amp;&amp;8 + e.vscpData[5]) };
+                    size: function() { return (e.vscpData[0]) };                                   {{newline}}
+                    offset: function() { return (e.vscpData[1]) };                                 {{newline}}
+                    page-start: function() { return (e.vscpData[2]&amp;&amp;8 + e.vscpData[3]) };  {{newline}}
+                    page-end: function() { return (e.vscpData[4]&amp;&amp;8 + e.vscpData[5]) };    {{newline}}
                     row-size: function() { return (e.vscpData[6]) };
                 "
                 template="
@@ -726,7 +567,7 @@
         token="VSCP_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" >
         <render>
             <vscpworks 
-                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbMF0mYW1wOyZhbXA7OCArIGUudnNjcERhdGFbMV0pIH07CiAgICAgICAgICAgICAgICAgICAgZGF0YTogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBsZXQgc3RyID0gJnF1b3Q7WzBdPSZxdW90OyAgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzFdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyAmcXVvdDsnJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gMykgc3RyICs9ICZxdW90OyAmcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsyXSkgKyAmcXVvdDsnJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNCkgc3RyICs9ICZxdW90OyAmcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzNdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVszXSkgKyAmcXVvdDsnJnF1b3Q7IDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNSkgc3RyICs9ICZxdW90OyAmcXVvdDsgKyAoJnF1b3Q7MDAmcXVvdDsgKyBlLnZzY3BEYXRhWzRdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArICZxdW90OyAnJnF1b3Q7ICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyAmcXVvdDsnJnF1b3Q7IDsgCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChlLnZzY3BEYXRhLWxlbmd0aCA+IDYpIHN0ciArPSAmcXVvdDsgJnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNV0pICsgJnF1b3Q7JyZxdW90OyA7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChlLnZzY3BEYXRhLWxlbmd0aCA+IDcpIHN0ciArPSAmcXVvdDsgJnF1b3Q7ICsgKCZxdW90OzAwJnF1b3Q7ICsgZS52c2NwRGF0YVs2XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyAmcXVvdDsgJyZxdW90OyArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbNl0pICsgJnF1b3Q7JyZxdW90OyA7"
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbMF0mYW1wOyZhbXA7OCArIGUudnNjcERhdGFbMV0pIH07CiAgICAgICAgICAgICAgICAgICAgZGF0YTogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBsZXQgc3RyID0gXCJbMF09XCIgICsgKFwiMDBcIiArIGUudnNjcERhdGFbMV0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgXCIgJ1wiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVsxXSkgKyBcIidcIiA7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChlLnZzY3BEYXRhLWxlbmd0aCA+IDMpIHN0ciArPSBcIiBcIiArIChcIjAwXCIgKyBlLnZzY3BEYXRhWzJdLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiICdcIiArICBTdHJpbmcuZnJvbUNoYXJDb2RlKGUudnNjcERhdGFbMl0pICsgXCInXCIgOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS1sZW5ndGggPiA0KSBzdHIgKz0gXCIgXCIgKyAoXCIwMFwiICsgZS52c2NwRGF0YVszXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiAnXCIgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzNdKSArIFwiJ1wiIDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNSkgc3RyICs9IFwiIFwiICsgKFwiMDBcIiArIGUudnNjcERhdGFbNF0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgXCIgJ1wiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs0XSkgKyBcIidcIiA7IAogICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS1sZW5ndGggPiA2KSBzdHIgKz0gXCIgXCIgKyAoXCIwMFwiICsgZS52c2NwRGF0YVs1XS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiAnXCIgKyAgU3RyaW5nLmZyb21DaGFyQ29kZShlLnZzY3BEYXRhWzVdKSArIFwiJ1wiIDsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEtbGVuZ3RoID4gNykgc3RyICs9IFwiIFwiICsgKFwiMDBcIiArIGUudnNjcERhdGFbNl0udG9TdHJpbmcoMTYpKS5zdWJzdHIoLTIpICsgXCIgJ1wiICsgIFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVs2XSkgKyBcIidcIiA7"
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
@@ -741,10 +582,10 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return e.vscpData[0]) };
-                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
-                    register: function() { return e.vscpData[3]) };
-                    count: function() { if (e.vscpData[3].length>3) return e.vscpData[4]) else return 1; };
+                    nickname: function() { return e.vscpData[0]) };                                          {{newline}}
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };                  {{newline}}
+                    register: function() { return e.vscpData[3]) };                                          {{newline}}
+                    count: function() { if (e.vscpData[3].length>3) return e.vscpData[4]) else return 1; };  {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -762,13 +603,13 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return e.vscpData[0]) };
-                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
-                    register: function() { return e.vscpData[3]) };
-                    content: function() { return e.vscpData[4]) };
-                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) };
-                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) };
-                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) };
+                    nickname: function() { return e.vscpData[0]) };                          {{newline}}
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };  {{newline}}
+                    register: function() { return e.vscpData[3]) };                          {{newline}}
+                    content: function() { return e.vscpData[4]) };                           {{newline}}
+                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) }; {{newline}}
+                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) }; {{newline}}
+                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) }; {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -786,13 +627,13 @@
         <render>
             <vscpworks 
                 variables="
-                    nickname: function() { return e.vscpData[0]) };
-                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };
-                    register: function() { return e.vscpData[3]) };
-                    content: function() { return e.vscpData[4]) };
-                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) };
-                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) };
-                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) };
+                    nickname: function() { return e.vscpData[0]) };                          {{newline}}
+                    page: function() { return (e.vscpData[1]&amp;&amp;8 + e.vscpData[2]) };  {{newline}}
+                    register: function() { return e.vscpData[3]) };                          {{newline}}
+                    content: function() { return e.vscpData[4]) };                           {{newline}}
+                    content1: function() { (e.vscpData[5].length>4) return e.vscpData[5]) }; {{newline}}
+                    content2: function() { (e.vscpData[6].length>5) return e.vscpData[6]) }; {{newline}}
+                    content3: function() { (e.vscpData[7].length>6) return e.vscpData[7]) }; {{newline}}
                 "
                 template="
                     {{lbl-start}}Node id : {{lbl-end}} {{val-start}}{{nickname}}{{val-end}}{{newline}}
@@ -809,19 +650,7 @@
         token="VSCP_TYPE_PROTOCOL_GET_EVENT_INTEREST" >
         <render>
             <vscpworks 
-                variables="
-                    index: function() { return e.vscpData[0]) };
-                    classbit9: function() { return e.vscpData[1]) };
-                    flag1: function() { if (e.vscpData[1] &amp; 8) return &quot;- all types&quot; else &quot;- one type&quot; };
-                    flag2: function() { if (e.vscpData[1] &amp; 16) return &quot;- all types&quot; else &quot;- one type&quot; };
-                    flag3: function() { if (e.vscpData[1] &amp; 32) return &quot;- all types&quot; else &quot;- one type&quot; };
-                    class1: function() { if (e.vscpData.length > 2) return e.vscpData[2]) };
-                    type1: function() { if (e.vscpData.length > 3) return ((e.vscpData[1] &amp; 1)*512 + e.vscpData[3]) };
-                    class2: function() { if (e.vscpData.length > 4) return e.vscpData[4]) };
-                    type2: function() { if (e.vscpData.length > 5) return ((e.vscpData[1] &amp; 2)*512 + e.vscpData[5]) };
-                    class3: function() { if (e.vscpData.length > 6) return e.vscpData[6]) };
-                    type3: function() { if (e.vscpData.length > 7) return ((e.vscpData[1] &amp; 4)*512 + e.vscpData[7]) };
-                "
+                variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXSkgfTsKICAgICAgICAgICAgICAgICAgICBjbGFzc2JpdDk6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXSkgfTsKICAgICAgICAgICAgICAgICAgICBmbGFnMTogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhWzFdICZhbXA7IDgpIHJldHVybiAmcXVvdDstIGFsbCB0eXBlcyZxdW90OyBlbHNlICZxdW90Oy0gb25lIHR5cGUmcXVvdDsgfTsKICAgICAgICAgICAgICAgICAgICBmbGFnMjogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhWzFdICZhbXA7IDE2KSByZXR1cm4gJnF1b3Q7LSBhbGwgdHlwZXMmcXVvdDsgZWxzZSAmcXVvdDstIG9uZSB0eXBlJnF1b3Q7IH07CiAgICAgICAgICAgICAgICAgICAgZmxhZzM6IGZ1bmN0aW9uKCkgeyBpZiAoZS52c2NwRGF0YVsxXSAmYW1wOyAzMikgcmV0dXJuICZxdW90Oy0gYWxsIHR5cGVzJnF1b3Q7IGVsc2UgJnF1b3Q7LSBvbmUgdHlwZSZxdW90OyB9OwogICAgICAgICAgICAgICAgICAgIGNsYXNzMTogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhLmxlbmd0aCA+IDIpIHJldHVybiBlLnZzY3BEYXRhWzJdKSB9OwogICAgICAgICAgICAgICAgICAgIHR5cGUxOiBmdW5jdGlvbigpIHsgaWYgKGUudnNjcERhdGEubGVuZ3RoID4gMykgcmV0dXJuICgoZS52c2NwRGF0YVsxXSAmYW1wOyAxKSo1MTIgKyBlLnZzY3BEYXRhWzNdKSB9OwogICAgICAgICAgICAgICAgICAgIGNsYXNzMjogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhLmxlbmd0aCA+IDQpIHJldHVybiBlLnZzY3BEYXRhWzRdKSB9OwogICAgICAgICAgICAgICAgICAgIHR5cGUyOiBmdW5jdGlvbigpIHsgaWYgKGUudnNjcERhdGEubGVuZ3RoID4gNSkgcmV0dXJuICgoZS52c2NwRGF0YVsxXSAmYW1wOyAyKSo1MTIgKyBlLnZzY3BEYXRhWzVdKSB9OwogICAgICAgICAgICAgICAgICAgIGNsYXNzMzogZnVuY3Rpb24oKSB7IGlmIChlLnZzY3BEYXRhLmxlbmd0aCA+IDYpIHJldHVybiBlLnZzY3BEYXRhWzZdKSB9OwogICAgICAgICAgICAgICAgICAgIHR5cGUzOiBmdW5jdGlvbigpIHsgaWYgKGUudnNjcERhdGEubGVuZ3RoID4gNykgcmV0dXJuICgoZS52c2NwRGF0YVsxXSAmYW1wOyA0KSo1MTIgKyBlLnZzY3BEYXRhWzddKSB9Ow=="
                 template="
                     {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
                     {{lbl-start}}Class bits : {{lbl-end}} {{val-start}}{{classbit9}}{{val-end}}{{newline}}
