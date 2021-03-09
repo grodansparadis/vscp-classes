@@ -16,12 +16,12 @@
             <vscpworks 
                 variables="BASE64:c3RhdGViaXRzOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF0gJmFtcDsgNzsgfSwKICAgICAgICAgICAgICAgICAgICBzdGF0ZXR4dDogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBzd2l0Y2goIGUudnNjcERhdGFbMF0gJmFtcDsgNyApIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiQnV0dG9uIHJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiBwcmVzc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiBrZXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZWZhdWx0OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJ1dHRvbiB1bmtub3duIHN0YXRlXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgIHJlcGVhdHM6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKCBlLnZzY3BEYXRhWzBdICZsdDsmbHQ7IDMgJmFtcDsgMHgxZik7IH0sCiAgICAgICAgICAgICAgICAgICAgem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzFdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsyXTsgfSwKICAgICAgICAgICAgICAgICAgICBidXR0b25fY29kZTogZnVuY3Rpb24oKSB7IHJldHVybiAoZS52c2NwRGF0YVszXSAmbHQ7Jmx0OyA4ICsgZS52c2NwRGF0YVs0XSk7IH0sCiAgICAgICAgICAgICAgICAgICAgYnV0dG9uX2NvZGVfcGFnZTogZnVuY3Rpb24oKSB7IGlmICggZS52c2NwRGF0YSAmZ3Q7PSA3ICkgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAoZS52c2NwRGF0YVs1XSAmbHQ7Jmx0OyA4ICsgZS52c2NwRGF0YVs2XSk7IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk5vIGNvZGUtcGFnZVwiOyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
-                    {{lbl-start}}State : {{lbl-end}} {{val-start}}{{statetxt}} [{{statebits}}]{{val-end}}{{newline}}
-                    {{lbl-start}}Repeats : {{lbl-end}} {{val-start}}{{repeats}}{{val-end}}{{newline}}
-                    {{lbl-start}}button_code : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}button_code_page : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}                    
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}{{{newline}}}
+                    {{{lbl-start}}}State : {{{lbl-end}}} {{{val-start}}}{{{statetxt}}} [{{{statebits}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Repeats : {{{lbl-end}}} {{{val-start}}}{{{repeats}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}button_code : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}button_code_page : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}                    
                 "
             />
         </render>
@@ -34,11 +34,11 @@
             <vscpworks 
                 variables="BASE64:ICAgICAgICAgICAgICAgICAgICB0eXBlOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF07IH0KICAgICAgICAgICAgICAgICAgICB0eXBldHh0OiBmdW5jdGlvbigpIHsgCiAgICAgICAgICAgICAgICAgICAgICAgIHN3aXRjaCggZS52c2NwRGF0YVswXSApIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiQWJzb2x1dGUgY29vcmRpbmF0ZXNcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUmVsYXRpdmUgY29vcmRpbmF0ZXNcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5rbm93biBjb29yZGluYXRlIGNvZGluZ1wiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOyAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIHpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBzdWJ6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMl07IH0sCiAgICAgICAgICAgICAgICAgICAgY29vcmluYXRlX3g6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbM10gJmx0OyZsdDsgOCArIGUudnNjcERhdGFbNF0pOyB9CiAgICAgICAgICAgICAgICAgICAgY29vcmluYXRlX3k6IGZ1bmN0aW9uKCkgeyByZXR1cm4gKGUudnNjcERhdGFbNV0gJmx0OyZsdDsgOCArIGUudnNjcERhdGFbNl0pOyB9"
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}{{newline}}
-                    {{lbl-start}}Type : {{lbl-end}} {{val-start}}{{typetxt}} [{{type}}]{{val-end}}{{newline}}
-                    {{lbl-start}}x-coordinates : {{lbl-end}} {{val-start}}{{coorinate_x}}{{val-end}}{{newline}}
-                    {{lbl-start}}y-coordinates : {{lbl-end}} {{val-start}}{{coorinate_y}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}{{{newline}}}
+                    {{{lbl-start}}}Type : {{{lbl-end}}} {{{val-start}}}{{{typetxt}}} [{{{type}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}x-coordinates : {{{lbl-end}}} {{{val-start}}}{{{coorinate_x}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}y-coordinates : {{{lbl-end}}} {{{val-start}}}{{{coorinate_y}}}{{{val-end}}}{{{newline}}}
                     
                 "
             />
@@ -51,15 +51,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Turned on{{newline}}{{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Turned on{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -71,15 +71,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Turned off{{newline}}{{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Turned off{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -91,15 +91,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is alive{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is alive{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -111,15 +111,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is terminating{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is terminating{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -131,15 +131,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is open{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is open{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -151,15 +151,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is closed{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is closed{{{newline}}}{{{newline}}}
                 "
             />
         </render>    
@@ -171,15 +171,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Node heartbeat{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Node heartbeat{{{newline}}}{{{newline}}}
                 "
             />
         </render>    
@@ -191,15 +191,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is below set limit{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is below set limit{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -211,15 +211,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is above set limit{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is above set limit{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -231,15 +231,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Pulse{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Pulse{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -251,15 +251,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    An errod occured{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    An errod occured{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -271,15 +271,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Has resumed{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Has resumed{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -291,15 +291,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Has paused{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Has paused{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -311,15 +311,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is sleeping{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is sleeping{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -331,15 +331,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Good morning{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Good morning{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -351,15 +351,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Good day{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Good day{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -371,15 +371,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Good afternoon{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Good afternoon{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -391,15 +391,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Good evening{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Good evening{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -411,15 +411,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Good night{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Good night{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -431,15 +431,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    See you soon{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    See you soon{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -451,15 +451,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Bye bye{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Bye bye{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -471,15 +471,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is stopped{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is stopped{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -491,15 +491,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is started{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is started{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -511,15 +511,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Reset completed{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Reset completed{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -531,15 +531,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Interrupted{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Interrupted{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -551,15 +551,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Preparing to sleep{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Preparing to sleep{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -571,15 +571,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Woken up{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Woken up{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -591,15 +591,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }   {{newline}}
-                    zone: function() { return e.vscpData[1]; }    {{newline}}
-                    subzone: function() { return e.vscpData[2]; } {{newline}}
+                    index: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }    {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Dusk{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Dusk{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -611,15 +611,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Dawn{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Dawn{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -631,15 +631,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is active{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is active{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -651,15 +651,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is inactive{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is inactive{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -671,15 +671,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is busy{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is busy{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -691,15 +691,15 @@
         <render>
             <vscpworks 
                 variables="  
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Userbyte : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    Is idle{{newline}}{{newline}}
+                    {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    Is idle{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -712,8 +712,8 @@
             <vscpworks 
                 variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IChcIjAwXCIgKyBlLnZzY3BEYXRhW2ldLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiIFwiOwogICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICBvdXRzdHIgKz0gXCInXCI7CiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT0xO2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IFN0cmluZy5mcm9tQ2hhckNvZGUoZS52c2NwRGF0YVtpXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgb3V0c3RyICs9IFwiJ1wiOwoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG91dHN0cjsgCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}{{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Data : {{{lbl-end}}} {{{val-start}}}{{{data}}}{{{val-end}}}{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -726,13 +726,13 @@
             <vscpworks 
                 variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfQogICAgICAgICAgICAgICAgICAgIHR5cGVjb2RlOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMF0gJmFtcDsgMzsgfQogICAgICAgICAgICAgICAgICAgIGV2ZW50Y29kZXR4dDogZnVuY3Rpb24oKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHN3aXRjaCAoZS52c2NwRGF0YVswXSAmYW1wOyAzKSB7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlRvdWNoZWQgYW5kIHJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlRvdWNoZWRcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJlbGVhc2VkXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5rbm93biBjb2RlXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICB0eXBlY29kZTogZnVuY3Rpb24oKSB7IHJldHVybiAoKGUudnNjcERhdGFbMF0gJmd0OyZndDsgMikgJmFtcDsgMHgzZiApOyB9LAogICAgICAgICAgICAgICAgICAgIHR5cGVjb2RldHh0OiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoICgoZS52c2NwRGF0YVswXSAmZ3Q7Jmd0OyAyKSAmYW1wOyAweDNmICkgewoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJVbmtub3duIFRva2VuICgxMjgtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcImlCdXR0b24gNjQtYml0IHRva2VuICg2NC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJGSUQgdG9rZW4gKDY0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOyAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDM6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoMTI4LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICgyNTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgICAKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiSWQvY3JlZGl0IGNhcmQgdG9rZW4gKDEyOC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiSWQvY3JlZGl0IGNhcmQgdG9rZW4gKDEyOC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE2OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkJpb21ldHJpYyBkZXZpY2UgdG9rZW4uICgyNTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxNzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJCaW9tZXRyaWMgZGV2aWNlIHRva2VuLiAoNjQtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAxODoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJCbHVldG9vdGggZGV2aWNlIHRva2VuICg0OC1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE5OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIkdTTSBJTUVJIGNvZGUgdG9rZW4gKDY0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiR1NNIElNU0kgY29kZSB0b2tlbiAoNjQtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgIAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoNDAtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyMjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICgzMi1iaXRzKS5cIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDIzOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIlJGSUQgdG9rZW4gKDI0LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiUkZJRCB0b2tlbiAoMTYtYml0cykuXCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyNToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJSRklEIHRva2VuICg4LWJpdHMpLlwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiVW5kZWZpbmVkIHRva2VuIGNvZGVcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgIHpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBzdWJ6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMl07IH0sCiAgICAgICAgICAgICAgICAgICAgZnJhbWU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVszXTsgfSwKICAgICAgICAgICAgICAgICAgICBkYXRhOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG91dHN0cjsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaT00O2kmbHQ7ZS52c2NwRGF0YS5sZW5ndGg7aSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZS52c2NwRGF0YS5sZW5ndGg+MSkgb3V0c3RyICs9IChcIjAwXCIgKyBlLnZzY3BEYXRhW2ldLnRvU3RyaW5nKDE2KSkuc3Vic3RyKC0yKSArIFwiIFwiOwogICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb3V0c3RyOyAKICAgICAgICAgICAgICAgICAgICB9"
                 template="
-                    {{lbl-start}}Event code : {{lbl-end}} {{val-start}}{{eventcodetxt}} [{{eventcode}}]{{val-end}}{{newline}}
-                    {{lbl-start}}Type : {{lbl-end}} {{val-start}}{{typecodetxt}} [{{typecode}}]{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
-                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Event code : {{{lbl-end}}} {{{val-start}}}{{{eventcodetxt}}} [{{{eventcode}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Type : {{{lbl-end}}} {{{val-start}}}{{{typecodetxt}}} [{{{typecode}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Data : {{{lbl-end}}} {{{val-start}}}{{{data}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -745,11 +745,11 @@
             <vscpworks 
                 variables="BASE64:em9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzBdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsxXTsgfSwKICAgICAgICAgICAgICAgICAgICBmcmFtZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9CiAgICAgICAgICAgICAgICAgICAgZGF0YTogZnVuY3Rpb24oKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZhciBvdXRzdHI7CiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICBmb3IgKGk9MztpJmx0O2UudnNjcERhdGEubGVuZ3RoO2krKykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUudnNjcERhdGEubGVuZ3RoJmd0OzEpIG91dHN0ciArPSAoXCIwMFwiICsgZS52c2NwRGF0YVtpXS50b1N0cmluZygxNikpLnN1YnN0cigtMikgKyBcIiBcIjsKICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG91dHN0cjsgCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
-                    {{lbl-start}}Data : {{lbl-end}} {{val-start}}{{data}}{{val-end}}{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Data : {{{lbl-end}}} {{{val-start}}}{{{data}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -761,20 +761,20 @@
         <render>
             <vscpworks 
                 variables="  
-                    zone: function() { return e.vscpData[0]; }      {{newline}}
-                    subzone: function() { return e.vscpData[1]; }   {{newline}}
-                    frame: function() { return e.vscpData[2]; }     {{newline}}
-                    vscpclass: function() { (return e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); }  {{newline}}
-                    vscptype: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }   {{newline}}                
+                    zone: function() { return e.vscpData[0]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[1]; }   {{{newline}}}
+                    frame: function() { return e.vscpData[2]; }     {{{newline}}}
+                    vscpclass: function() { (return e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]); }  {{{newline}}}
+                    vscptype: function() { return (e.vscpData[5] &lt;&lt; 8 + e.vscpData[6]); }   {{{newline}}}                
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
-                    {{lbl-start}}VSCP class : {{lbl-end}} {{val-start}}{{vscpclass}}{{val-end}}{{newline}}
-                    {{lbl-start}}VSCP type : {{lbl-end}} {{val-start}}{{vscptype}}{{val-end}}{{newline}}
-                    Event confirmed{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}VSCP class : {{{lbl-end}}} {{{val-start}}}{{{vscpclass}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}VSCP type : {{{lbl-end}}} {{{val-start}}}{{{vscptype}}}{{{val-end}}}{{{newline}}}
+                    Event confirmed{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -786,16 +786,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }   {{newline}}
-                    zone: function() { return e.vscpData[1]; }       {{newline}}
-                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
+                    reserved: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }       {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }    {{{newline}}}            
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
-                    Level has changed{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
+                    Level has changed{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>    
@@ -807,16 +807,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }   {{newline}} 
-                    zone: function() { return e.vscpData[1]; }       {{newline}}
-                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
+                    reserved: function() { return e.vscpData[0]; }   {{{newline}}} 
+                    zone: function() { return e.vscpData[1]; }       {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }    {{{newline}}}            
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
-                    WARNING{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
+                    WARNING{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -828,18 +828,18 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }   {{newline}}
-                    zone: function() { return e.vscpData[1]; }       {{newline}}
-                    subzone: function() { return e.vscpData[2]; }    {{newline}}
-                    from: function() { return e.vscpData[3]; }       {{newline}}
-                    to: function() { return e.vscpData[4]; }         {{newline}}      
+                    reserved: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }       {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }    {{{newline}}}
+                    from: function() { return e.vscpData[3]; }       {{{newline}}}
+                    to: function() { return e.vscpData[4]; }         {{{newline}}}      
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
-                    State change from {{from}} to {{to}} {{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
+                    State change from {{{from}}} to {{{to}}} {{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -851,16 +851,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    id: function() { return e.vscpData[0]; }       {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}              
+                    id: function() { return e.vscpData[0]; }       {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}              
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Action id : {{lbl-end}} {{val-start}}{{id}}{{val-end}}{{newline}}
-                    Action trigger{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Action id : {{{lbl-end}}} {{{val-start}}}{{{id}}}{{{val-end}}}{{{newline}}}
+                    Action trigger{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -872,16 +872,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }   {{newline}}
-                    zone: function() { return e.vscpData[1]; }       {{newline}}
-                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
+                    reserved: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }       {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }    {{{newline}}}            
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
-                    Sunrise{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
+                    Sunrise{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -893,16 +893,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    reserved: function() { return e.vscpData[0]; }   {{newline}}
-                    zone: function() { return e.vscpData[1]; }       {{newline}}
-                    subzone: function() { return e.vscpData[2]; }    {{newline}}            
+                    reserved: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }       {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }    {{{newline}}}            
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}reserved : {{lbl-end}} {{val-start}}{{reserved}}{{val-end}}{{newline}}
-                    Sunset{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
+                    Sunset{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -915,12 +915,12 @@
             <vscpworks 
                 variables="BASE64:ZnJhbWU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSAsCiAgICAgICAgICAgICAgICAgICAgem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzFdOyB9LAogICAgICAgICAgICAgICAgICAgIHN1YnpvbmU6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVsyXTsgfSAsCiAgICAgICAgICAgICAgICAgICAgZnJhbWVjb3VudDogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9CiAgICAgICAgICAgICAgICAgICAgZnJhbWVjb3VudHR4dDogZnVuY3Rpb24oKSB7IAogICAgICAgICAgICAgICAgICAgICAgICBpZiAoIGUudnNjcERhdGFbMl0gKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJcIjsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk5vdCB1c2VkXCI7IAogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
-                    {{lbl-start}}Frame count: {{lbl-end}} {{val-start}}{{framecount}} {{framecounttxt}}{{val-end}}{{newline}}
-                    Multi frame start{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Frame count: {{{lbl-end}}} {{{val-start}}}{{{framecount}}} {{{framecounttxt}}}{{{val-end}}}{{{newline}}}
+                    Multi frame start{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -932,16 +932,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    frame: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    frame: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Frame : {{lbl-end}} {{val-start}}{{frame}}{{val-end}}{{newline}}
-                    Multi frame end{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
+                    Multi frame end{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -953,18 +953,18 @@
         <render>
             <vscpworks 
                 variables=" 
-                    user: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    preset: function() { return e.vscpData[3]; }   {{newline}}
+                    user: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    preset: function() { return e.vscpData[3]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}User : {{lbl-end}} {{val-start}}{{user}}{{val-end}}{{newline}}
-                    {{lbl-start}}Preset code: {{lbl-end}} {{val-start}}{{preset}} {{framecounttxt}}{{val-end}}{{newline}}
-                    Activate preset{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}User : {{{lbl-end}}} {{{val-start}}}{{{user}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Preset code: {{{lbl-end}}} {{{val-start}}}{{{preset}}} {{{framecounttxt}}}{{{val-end}}}{{{newline}}}
+                    Activate preset{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -976,17 +976,17 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    preset: function() { return e.vscpData[3]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    preset: function() { return e.vscpData[3]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    Detection{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    Detection{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -998,17 +998,17 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    preset: function() { return e.vscpData[3]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    preset: function() { return e.vscpData[3]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    Overflow{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    Overflow{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1020,18 +1020,18 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    cvalue: function() { return e.vscpData[3]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    cvalue: function() { return e.vscpData[3]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}} 
-                    {{lbl-start}}Change value : {{lbl-end}} {{val-start}}{{cvalue}}{{val-end}}{{newline}}                   
-                    Change{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}} 
+                    {{{lbl-start}}}Change value : {{{lbl-end}}} {{{val-start}}}{{{cvalue}}}{{{val-end}}}{{{newline}}}                   
+                    Change{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1043,15 +1043,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1063,15 +1063,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1083,15 +1083,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1103,15 +1103,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1123,15 +1123,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1143,15 +1143,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1163,15 +1163,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1183,15 +1183,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1203,15 +1203,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1223,15 +1223,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1243,15 +1243,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1263,15 +1263,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1283,15 +1283,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1303,15 +1303,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1323,15 +1323,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1343,15 +1343,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1363,15 +1363,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1383,16 +1383,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    Long click{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    Long click{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1404,16 +1404,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    Single click{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    Single click{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1425,16 +1425,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    Double click{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    Double click{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1446,20 +1446,20 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
-                    century: function() { return e.vscpData[3]; }   {{newline}}
-                    year: function() { return e.vscpData[4]; }      {{newline}}
-                    month: function() { return e.vscpData[5]; }     {{newline}}
-                    day: function() { return e.vscpData[6]; }       {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
+                    century: function() { return e.vscpData[3]; }   {{{newline}}}
+                    year: function() { return e.vscpData[4]; }      {{{newline}}}
+                    month: function() { return e.vscpData[5]; }     {{{newline}}}
+                    day: function() { return e.vscpData[6]; }       {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Date : {{lbl-end}}{{century}}{{year}}-{{month}}-{{day}} {{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Date : {{{lbl-end}}}{{{century}}}{{{year}}}-{{{month}}}-{{{day}}} {{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1471,19 +1471,19 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
-                    hour: function() { return e.vscpData[3]; }      {{newline}}
-                    minute: function() { return e.vscpData[4]; }    {{newline}}
-                    second: function() { return e.vscpData[5]; }    {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
+                    hour: function() { return e.vscpData[3]; }      {{{newline}}}
+                    minute: function() { return e.vscpData[4]; }    {{{newline}}}
+                    second: function() { return e.vscpData[5]; }    {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Time : {{lbl-end}} {{val-start}}{{hour}}:{{minute}}:{{second}}{{val-end}}{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Time : {{{lbl-end}}} {{{val-start}}}{{{hour}}}:{{{minute}}}:{{{second}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1496,11 +1496,11 @@
             <vscpworks 
                 variables="BASE64:aW5kZXg6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVswXTsgfSwKICAgICAgICAgICAgICAgICAgICB6b25lOiBmdW5jdGlvbigpIHsgcmV0dXJuIGUudnNjcERhdGFbMV07IH0sCiAgICAgICAgICAgICAgICAgICAgc3Viem9uZTogZnVuY3Rpb24oKSB7IHJldHVybiBlLnZzY3BEYXRhWzJdOyB9LAogICAgICAgICAgICAgICAgICAgIHdlZWtkYXk6IGZ1bmN0aW9uKCkgeyByZXR1cm4gZS52c2NwRGF0YVszXTsgfSwKICAgICAgICAgICAgICAgICAgICB3ZWVrZGF5c3RyOiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoIChlLnZzY3BEYXRhWzRdKSB7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIk1vbmRheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJUdWVzZGF5XCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAyOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBcIldlZG5lc2RheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJUaHVyc2RheVwiOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgNDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gXCJGcmlkYXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDU6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiU2F0dXJkYXlcIjsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDY6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIFwiU3VuZGF5XCI7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIH0gCiAgICAgICAgICAgICAgICAgICAgfQ=="
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Weekday : {{lbl-end}} {{val-start}}{{weekday}} [{{weekdaystr}}]{{val-end}}{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Weekday : {{{lbl-end}}} {{{val-start}}}{{{weekday}}} [{{{weekdaystr}}}]{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1512,15 +1512,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1532,15 +1532,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1552,22 +1552,22 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
-                    sec     : e.vscpData[7] &amp; 0x3f; },          {{newline}}
-                    minute  : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 6 &amp; 0x3f); }   {{newline}}
-                    hour    : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 12 &amp; 0x1f); }  {{newline}}
-                    day     : function() { return((e.vscpData[5] &gt;&gt; 1) &amp; 0x1f); }                              {{newline}}
-                    month   : function() { return((e.vscpData[4] &lt;&lt; 8 + e.vscpData[5]) &gt;&gt; 6 &amp; 0x0f); }   {{newline}}
-                    year    : function() { return((e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]) &gt;&gt; 2 &amp; 0xfff); }  {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
+                    sec     : e.vscpData[7] &amp; 0x3f; },          {{{newline}}}
+                    minute  : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 6 &amp; 0x3f); }   {{{newline}}}
+                    hour    : function() { return((e.vscpData[6] &lt;&lt; 8 + e.vscpData[7]) &gt;&gt; 12 &amp; 0x1f); }  {{{newline}}}
+                    day     : function() { return((e.vscpData[5] &gt;&gt; 1) &amp; 0x1f); }                              {{{newline}}}
+                    month   : function() { return((e.vscpData[4] &lt;&lt; 8 + e.vscpData[5]) &gt;&gt; 6 &amp; 0x0f); }   {{{newline}}}
+                    year    : function() { return((e.vscpData[3] &lt;&lt; 8 + e.vscpData[4]) &gt;&gt; 2 &amp; 0xfff); }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{lbl-start}}Date/Time : {{lbl-end}} {{val-start}}{{year}}-{{month}}-{{day}} {{hour}}:{{minute}}:{{sec}}{{val-end}}{{newline}}
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{lbl-start}}}Date/Time : {{{lbl-end}}} {{{val-start}}}{{{year}}}-{{{month}}}-{{{day}}} {{{hour}}}:{{{minute}}}:{{{sec}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1579,15 +1579,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1599,15 +1599,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1619,15 +1619,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1639,15 +1639,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1659,15 +1659,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }     {{newline}}
-                    zone: function() { return e.vscpData[1]; }      {{newline}}
-                    subzone: function() { return e.vscpData[2]; }   {{newline}}
+                    index: function() { return e.vscpData[0]; }     {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }      {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>      
@@ -1679,15 +1679,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1699,15 +1699,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1719,15 +1719,15 @@
         <render>
             <vscpworks 
                 variables=" 
-                    index: function() { return e.vscpData[0]; }    {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
+                    index: function() { return e.vscpData[0]; }    {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Index : {{lbl-end}} {{val-start}}{{index}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}                    
-                    {{newline}}
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1739,24 +1739,24 @@
         <render>
             <vscpworks 
                 variables=" 
-                    opt: function() { return e.vscpData[0]; }      {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    value: function() {                            {{newline}}
-                        var rval = 0;                              {{newline}}
-                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{newline}}
-                            rval = val &lt;&lt; 8;                 {{newline}}
-                            rval += e.vscpData[i];                 {{newline}}  
-                        }                                          {{newline}}
-                        return rval;                               {{newline}} 
-                    }                                              {{newline}} 
+                    opt: function() { return e.vscpData[0]; }      {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    value: function() {                            {{{newline}}}
+                        var rval = 0;                              {{{newline}}}
+                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{{newline}}}
+                            rval = val &lt;&lt; 8;                 {{{newline}}}
+                            rval += e.vscpData[i];                 {{{newline}}}  
+                        }                                          {{{newline}}}
+                        return rval;                               {{{newline}}} 
+                    }                                              {{{newline}}} 
                 "
                 template="
-                    {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}} 
-                    {{lbl-start}}Incremented value : {{lbl-end}} {{val-start}}{{value}}{{val-end}}{{newline}}                   
-                    {{newline}}
+                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}} 
+                    {{{lbl-start}}}Incremented value : {{{lbl-end}}} {{{val-start}}}{{{value}}}{{{val-end}}}{{{newline}}}                   
+                    {{{newline}}}
                 "
             />
         </render>
@@ -1768,24 +1768,24 @@
         <render>
             <vscpworks 
                 variables=" 
-                    opt: function() { return e.vscpData[0]; }      {{newline}}
-                    zone: function() { return e.vscpData[1]; }     {{newline}}
-                    subzone: function() { return e.vscpData[2]; }  {{newline}}
-                    value: function() {                            {{newline}}
-                        var rval = 0;                              {{newline}} 
-                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{newline}}
-                            rval = val &lt;&lt; 8;                 {{newline}}
-                            rval += e.vscpData[i];                 {{newline}}
-                        }                                          {{newline}}
-                        return rval;                               {{newline}}
-                    }                                              {{newline}}
+                    opt: function() { return e.vscpData[0]; }      {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    value: function() {                            {{{newline}}}
+                        var rval = 0;                              {{{newline}}} 
+                        for ( i=3;i&lt;e.vscpData.length;i++) {    {{{newline}}}
+                            rval = val &lt;&lt; 8;                 {{{newline}}}
+                            rval += e.vscpData[i];                 {{{newline}}}
+                        }                                          {{{newline}}}
+                        return rval;                               {{{newline}}}
+                    }                                              {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}Opt : {{lbl-end}} {{val-start}}{{opt}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone : {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone : {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}} 
-                    {{lbl-start}}Decremented value : {{lbl-end}} {{val-start}}{{value}}{{val-end}}{{newline}}                   
-                    {{newline}}
+                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}} 
+                    {{{lbl-start}}}Decremented value : {{{lbl-end}}} {{{val-start}}}{{{value}}}{{{val-end}}}{{{newline}}}                   
+                    {{{newline}}}
                 "
             />
         </render>

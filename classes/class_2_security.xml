@@ -21,14 +21,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 " 
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -40,14 +40,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -59,14 +59,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -78,14 +78,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -97,14 +97,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -116,14 +116,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -135,14 +135,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -154,14 +154,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -173,14 +173,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -192,14 +192,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -211,14 +211,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -230,14 +230,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -249,14 +249,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -268,14 +268,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render> 
@@ -287,14 +287,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -306,14 +306,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -325,14 +325,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -344,14 +344,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -363,14 +363,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -382,14 +382,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -401,14 +401,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -420,14 +420,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -439,14 +439,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -458,14 +458,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -477,14 +477,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -496,14 +496,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -515,14 +515,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -534,14 +534,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -553,14 +553,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -572,14 +572,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -591,14 +591,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -610,14 +610,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -629,14 +629,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -648,14 +648,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -667,14 +667,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -686,14 +686,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
@@ -705,14 +705,14 @@
         <render>
             <vscpworks 
                 variables="
-                    userdef:    : function() { return (e.vscpData[0]); } {{newline}}
-                    zone:       : function() { return (e.vscpData[1]); } {{newline}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{newline}}
+                    userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
+                    zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
+                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
-                    {{lbl-start}}User defined: {{lbl-end}} {{val-start}}{{userdef}}{{state}}{{val-end}}{{newline}}
-                    {{lbl-start}}Zone: {{lbl-end}} {{val-start}}{{zone}}{{val-end}}{{newline}}
-                    {{lbl-start}}Subzone: {{lbl-end}} {{val-start}}{{subzone}}{{val-end}}{{newline}}
+                    {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone: {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone: {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                 "
             />
         </render>        
