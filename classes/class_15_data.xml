@@ -7,9 +7,10 @@
         <render>
             <vscpworks 
                 template="
-                    {{{lbl-start}}}Unit: {{{lbl-end}}} = {{{unitstr}}} [{{{unit}}}]{{{newline}}}  {{{newline}}}
-                    {{{lbl-start}}}Sensorindex: {{{lbl-end}}} = {{{sensorindex}}}{{{newline}}}  {{{newline}}}
-                    {{{lbl-start}}}Value: {{{lbl-end}}} = {{{val}}}{{{symbol}}}{{{newline}}}      {{{newline}}}
+                    {{{lbl-start}}}Unit: {{{lbl-end}}} = {{{unitstr}}} [{{{unit}}}]{{{newline}}}
+                    {{{lbl-start}}}Sensorindex: {{{lbl-end}}} = {{{sensorindex}}}{{{newline}}}
+                    {{{lbl-start}}}Value: {{{lbl-end}}} = {{{val}}}{{{symbol}}}{{{newline}}}
+                    {{{lbl-start}}}Coding: {{{lbl-end}}} = {{{datacodingstr}}} [{{{datacoding}}}]{{{newline}}}
                 "
             />
         </render>
