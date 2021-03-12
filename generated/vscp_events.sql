@@ -2,7 +2,7 @@
 --              !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 --                             This file is auto-generated
 --                  see https://github.com/grodansparadis/vscp-classes
---                          Generated: 2021-03-09 23:43:29.311100
+--                          Generated: 2021-03-12 11:10:35.414638
  
 -- Create the VSCP class table
 CREATE TABLE "vscp_class" ( `class` INTEGER NOT NULL UNIQUE, `name` TEXT NOT NULL, `token` TEXT NOT NULL UNIQUE, `description` TEXT NOT NULL, PRIMARY KEY(class) ); ;
