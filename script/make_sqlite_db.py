@@ -174,16 +174,28 @@ for vscp_class in order_list:
                         conversion = unit.attrib["conversion"]
                     except:
                         conversion = "{{val}}"
+
+                    try:
+                        conversion0 = unit.attrib["conversion0"]
+                    except:
+                        conversion0 = "{{val}}"
+
+                    try:
+                        comment = unit.attrib["comment"]
+                    except:
+                        comment = ""    
                     
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (" + \
+                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
                         type_root.attrib["id"] + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
                         "'" + unit.attrib["name"].strip() + "'," + \
                         "'" + unit.attrib["description"].strip() + "'," + \
+                        "'" + conversion0 + "'," + \
+                        "'" + conversion + "'," + \
                         "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
                         "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
-                        "'" + conversion + "');"
+                        "'" + comment + "');"
                     print(outstr)
     else:
         classid = type_root.attrib["id"]
@@ -205,15 +217,17 @@ for vscp_class in order_list:
                         conversion = unit.attrib["conversion"]
                     except:
                         conversion = "val"
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion,symbolascii,symbolutf8) VALUES (" + \
+                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
                         classid + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
                         "'" + unit.attrib["name"].strip() + "'," + \
                         "'" + unit.attrib["description"].strip() + "'," + \
+                        "'" + conversion0 + "'," + \
+                        "'" + conversion + "'," + \
                         "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
                         "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
-                        "'" + conversion + "');"
+                        "'" + comment + "');"
                     print(outstr)
 
 #  * * * RENDER * * *
