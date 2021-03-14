@@ -39,7 +39,6 @@
                     {{{lbl-start}}}Type : {{{lbl-end}}} {{{val-start}}}{{{typetxt}}} [{{{type}}}]{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}x-coordinates : {{{lbl-end}}} {{{val-start}}}{{{coorinate_x}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}y-coordinates : {{{lbl-end}}} {{{val-start}}}{{{coorinate_y}}}{{{val-end}}}{{{newline}}}
-                    
                 "
             />
         </render>
@@ -59,7 +58,6 @@
                     {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Turned on{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -119,7 +117,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is terminating{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -139,7 +136,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is open{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -159,7 +155,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is closed{{{newline}}}{{{newline}}}
                 "
             />
         </render>    
@@ -179,7 +174,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Node heartbeat{{{newline}}}{{{newline}}}
                 "
             />
         </render>    
@@ -199,7 +193,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is below set limit{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -219,7 +212,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is above set limit{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -239,7 +231,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Pulse{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -259,7 +250,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    An errod occured{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -279,7 +269,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Has resumed{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -299,7 +288,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Has paused{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -319,7 +307,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is sleeping{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -339,7 +326,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Good morning{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -359,7 +345,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Good day{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -379,7 +364,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Good afternoon{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -399,7 +383,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Good evening{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -419,7 +402,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Good night{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -439,7 +421,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    See you soon{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -459,7 +440,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Bye bye{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -479,7 +459,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is stopped{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -499,7 +478,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is started{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -519,7 +497,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Reset completed{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -539,7 +516,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Interrupted{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -559,7 +535,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Preparing to sleep{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -579,7 +554,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Woken up{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -599,7 +573,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Dusk{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -619,7 +592,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Dawn{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -639,7 +611,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is active{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -659,7 +630,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is inactive{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -679,7 +649,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is busy{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -699,7 +668,6 @@
                     {{{lbl-start}}}Userbyte : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    Is idle{{{newline}}}{{{newline}}}
                 "
             />
         </render>
@@ -773,8 +741,6 @@
                     {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}VSCP class : {{{lbl-end}}} {{{val-start}}}{{{vscpclass}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}VSCP type : {{{lbl-end}}} {{{val-start}}}{{{vscptype}}}{{{val-end}}}{{{newline}}}
-                    Event confirmed{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -794,8 +760,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
-                    Level has changed{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>    
@@ -815,8 +779,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
-                    WARNING{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -859,8 +821,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}Action id : {{{lbl-end}}} {{{val-start}}}{{{id}}}{{{val-end}}}{{{newline}}}
-                    Action trigger{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -880,8 +840,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
-                    Sunrise{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -901,8 +859,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}reserved : {{{lbl-end}}} {{{val-start}}}{{{reserved}}}{{{val-end}}}{{{newline}}}
-                    Sunset{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -919,8 +875,6 @@
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Frame count: {{{lbl-end}}} {{{val-start}}}{{{framecount}}} {{{framecounttxt}}}{{{val-end}}}{{{newline}}}
-                    Multi frame start{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -940,8 +894,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}Frame : {{{lbl-end}}} {{{val-start}}}{{{frame}}}{{{val-end}}}{{{newline}}}
-                    Multi frame end{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -963,8 +915,6 @@
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{lbl-start}}}User : {{{lbl-end}}} {{{val-start}}}{{{user}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Preset code: {{{lbl-end}}} {{{val-start}}}{{{preset}}} {{{framecounttxt}}}{{{val-end}}}{{{newline}}}
-                    Activate preset{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -985,8 +935,6 @@
                     {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
-                    Detection{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -1007,8 +955,6 @@
                     {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{index}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
-                    Overflow{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
@@ -1030,8 +976,6 @@
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}} 
                     {{{lbl-start}}}Change value : {{{lbl-end}}} {{{val-start}}}{{{cvalue}}}{{{val-end}}}{{{newline}}}                   
-                    Change{{{newline}}}
-                    {{{newline}}}
                 "
             />
         </render>
