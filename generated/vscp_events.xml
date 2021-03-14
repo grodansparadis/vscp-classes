@@ -3,7 +3,7 @@
               !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                              This file is auto-generated
                   see https://github.com/grodansparadis/vscp-classes
-                          Generated: 2021-03-12 12:31:59.418672
+                          Generated: 2021-03-14 23:08:05.199723
 -->
 <vscpevents>
 <class id="0" name="VSCP Protocol Functionality" token="CLASS1.PROTOCOL" description="## Description\n\nThis class defines some types that must be implemented by every node that implements the VSCP protocol. The types in this class must be handled by all level I and Level II nodes. Note also that this class is repeated as Level II class=512 with the only difference that GUID&amp;apos;s are used instead of nicknames. This means that for all Level II class=512 events the data described here is preceded by the 16-bit destination GUID (address of receiver) stored with MSB first followed by the data specified here. Nickname is present also if documented below but have no meaning and should be discarded.\n\nAll other events are optional except for **one exception**. All nodes should send [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](./class1.information.md#type9) at least once every minute.\n" >
