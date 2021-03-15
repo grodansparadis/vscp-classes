@@ -26,9 +26,9 @@
                     subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Mute : {{{lbl-end}}} {{{val-start}}}{{{optstr}}} [{{{opt}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -52,9 +52,9 @@
                     subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}All lamps : {{{lbl-end}}} {{{val-start}}}{{{optstr}}} [{{{opt}}}]{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -72,9 +72,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -92,9 +92,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -112,9 +112,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -132,9 +132,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -152,9 +152,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                  
                     {{{newline}}}
                 "
             />
@@ -172,9 +172,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -192,9 +192,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -212,9 +212,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Interrupt level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Interrupt level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -252,9 +252,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -272,9 +272,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -292,9 +292,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -312,9 +312,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -332,9 +332,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -367,9 +367,9 @@
                     subzone: function() { return e.vscpData[2]; } {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Dim lamps : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Dim lamps : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -387,9 +387,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Channel : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Channel : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -407,9 +407,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Absolute level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Absolute level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -427,9 +427,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Relative level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Relative level : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -453,9 +453,9 @@
                     subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
                 template="
+                    {{{lbl-start}}}Req. message : {{{lbl-end}}} {{{val-start}}}{{{opt}}} {{{optstr}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Req. message : {{{lbl-end}}} {{{val-start}}}{{{opt}}} {{{optstr}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -506,10 +506,11 @@
                     zone: function() { return e.vscpData[1]; },     {{{newline}}}
                     subzone: function() { return e.vscpData[2]; }   {{{newline}}}
                 "
-                template="                    
+                template="        
+                    {{{lbl-start}}}Sequence number : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}            
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Sequence number : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    Bytes 3-7 is stream data
                     {{{newline}}}
                 "
             />
@@ -527,9 +528,9 @@
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
                 template="                    
-                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Preset code : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}                    
                     {{{newline}}}
                 "
             />
@@ -546,10 +547,10 @@
                     zone: function() { return e.vscpData[1]; }     {{{newline}}}
                     subzone: function() { return e.vscpData[2]; }  {{{newline}}}
                 "
-                template="                    
+                template=" 
+                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}                   
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Option : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
@@ -613,10 +614,10 @@
                                                e.vscpData[6] &amp;&amp; 8 +     {{{newline}}}
                                                e.vscpData[7] ); }               {{{newline}}}
                 "
-                template="                    
+                template="   
+                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}                 
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Control : {{{lbl-end}}} {{{val-start}}}{{{control}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Send on event : {{{lbl-end}}} {{{val-start}}}{{{sendon}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Send off event : {{{lbl-end}}} {{{val-start}}}{{{sendoff}}}{{{val-end}}}{{{newline}}}
@@ -684,10 +685,10 @@
                                                e.vscpData[6] &amp;&amp; 8 +        {{{newline}}}
                                                e.vscpData[7] ); }                  {{{newline}}}
                 "
-                template="                    
+                template=" 
+                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}                   
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Control : {{{lbl-end}}} {{{val-start}}}{{{control}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Send on event : {{{lbl-end}}} {{{val-start}}}{{{sendon}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Send off event : {{{lbl-end}}} {{{val-start}}}{{{sendoff}}}{{{val-end}}}{{{newline}}}
@@ -733,10 +734,10 @@
                     zone: function() { return e.vscpData[1]; }                        {{{newline}}}
                     subzone: function() { return e.vscpData[2]; }                     {{{newline}}}
                 "
-                template="                    
+                template="         
+                    {{{lbl-start}}}Country : {{{lbl-end}}} {{{val-start}}}{{{country}}} {{{countrystr}}}{{{val-end}}}{{{newline}}}           
                     {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Country : {{{lbl-end}}} {{{val-start}}}{{{country}}} {{{countrystr}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />
