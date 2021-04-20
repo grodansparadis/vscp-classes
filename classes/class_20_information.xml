@@ -1734,5 +1734,21 @@
             />
         </render>
     </type>
+
+    <type id="88" 
+        name="Proximity detected"
+        token="VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED" >
+        <render>
+            <vscpworks 
+                variables=" 
+                    proxlevel: function() { return e.vscpData[0]<<16 + e.vscpData[1]; }      {{{newline}}}
+                "
+                template="
+                    {{{lbl-start}}}Optionaldata : {{{lbl-end}}} {{{val-start}}}{{{proxlevel}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
+                "
+            />
+        </render>
+    </type>
     
 </class>

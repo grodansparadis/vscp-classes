@@ -1075,13 +1075,55 @@
     <type id="63" name="Power factor" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" >
         <units>
             <unit id="0" 
-                    name="Percent" 
+                    name="cos(a)" 
                     description="Ratio between power in kW and apperant power in kVA"
                     symbol-ascii="PF"
                     symbol-utf8="PF"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}"
                     comment="" />               
+        </units>    
+    </type>
+
+    <type id="64" name="Reactive Power" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" >
+        <units>
+            <unit id="0" 
+                    name="kVAr" 
+                    description="Reactive effect in kilo V*A"
+                    symbol-ascii="kVAr"
+                    symbol-utf8="kVAr"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}"
+                    comment="" /> 
+            <unit id="1" 
+                    name="MVAr" 
+                    description="Reactive effect in mega V*A"
+                    symbol-ascii="kVAr"
+                    symbol-utf8="kVAr"
+                    conversion0="{{{val}}}/1000"
+                    conversion="{{{val}}}*1000"
+                    comment="" />                       
+        </units>    
+    </type>
+
+    <type id="65" name="Reactive Energy" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" >
+        <units>
+            <unit id="0" 
+                    name="kVArh" 
+                    description="Reactive energy in kilo V*A*h"
+                    symbol-ascii="kVArh"
+                    symbol-utf8="kVArh"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}"
+                    comment="" /> 
+            <unit id="1" 
+                    name="MVArh" 
+                    description="Reactive energy in mega V*A*h"
+                    symbol-ascii="kVArh"
+                    symbol-utf8="kVArh"
+                    conversion0="{{{val}}}/1000"
+                    conversion="{{{val}}}*1000"
+                    comment="" />                     
         </units>    
     </type>
 
