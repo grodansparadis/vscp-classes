@@ -3,7 +3,7 @@
               !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                              This file is auto-generated
                   see https://github.com/grodansparadis/vscp-classes
-                          Generated: 2021-03-15 09:19:18.718785
+                          Generated: 2021-04-21 07:24:39.580696
 -->
 <vscpevents>
 <class id="0" name="VSCP Protocol Functionality" token="CLASS1.PROTOCOL" description="## Description\n\nThis class defines some types that must be implemented by every node that implements the VSCP protocol. The types in this class must be handled by all level I and Level II nodes. Note also that this class is repeated as Level II class=512 with the only difference that GUID&amp;apos;s are used instead of nicknames. This means that for all Level II class=512 events the data described here is preceded by the 16-bit destination GUID (address of receiver) stored with MSB first followed by the data specified here. Nickname is present also if documented below but have no meaning and should be discarded.\n\nAll other events are optional except for **one exception**. All nodes should send [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](./class1.information.md#type9) at least once every minute.\n" >
@@ -455,9 +455,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -571,6 +583,7 @@
 <type id="85" token="VSCP_TYPE_INFORMATION_EXIT" name="Exit" description="Exit, something has been exited.\n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0 | Index for device. Set to zero if not used.| \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n " />
 <type id="86" token="VSCP_TYPE_INFORMATION_INCREMENTED" name="Incremented" description="This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=52 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Incremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n" />
 <type id="87" token="VSCP_TYPE_INFORMATION_DECREMENTED" name="Decremented" description="This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n" />
+<type id="88" token="VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED" name="Proximity detected" description="Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0, 1 | Optional uint16 that sets proximity level if present. | \n \n" />
 </class>
 <class id="30" name="Control" token="CLASS1.CONTROL" description="## Description\n\nControl functionality. One of the main concepts of VSCP is that it is an event driven protocol. Commands are sent out as events to the network not as events to specific devices. A device can belong to a zone which select limit events of interest for the particular node.. If there is a need to control a specific device the registry model should be used. This is the only way to directly control a device. \n" >
 <type id="0" token="VSCP_TYPE_CONTROL_GENERAL" name="General event" description="General Event." />
@@ -1035,9 +1048,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -1399,9 +1424,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -1763,9 +1800,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -2127,9 +2176,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -2903,9 +2964,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -3019,6 +3092,7 @@
 <type id="85" token="VSCP_TYPE_INFORMATION_EXIT" name="Exit" description="Exit, something has been exited.\n\n | Data byte | Description | \n | :---------: | ----------- | \n | 0 | Index for device. Set to zero if not used.| \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n " />
 <type id="86" token="VSCP_TYPE_INFORMATION_INCREMENTED" name="Incremented" description="This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=52 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Incremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n" />
 <type id="87" token="VSCP_TYPE_INFORMATION_DECREMENTED" name="Decremented" description="This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 events.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0         | Optional byte that have a meaning given by the issuer of the event.        | \n | 1         | Zone for which event applies to (0-255). 255 is all zones.        | \n | 2         | Sub-zone for which event applies to (0-255). 255 is all sub-zones.   | \n | 3-7       | Decremented value. The range can be adjusted by the user by sending just the needed number of bytes 1-5. | \n" />
+<type id="88" token="VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED" name="Proximity detected" description="Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0, 1 | Optional uint16 that sets proximity level if present. | \n \n" />
 </class>
 <class id="542" name="Class2 Level I Control" token="CLASS2.LEVEL1.CONTROL" description="## Description\n\nThis class mirrors the [CLASS1.CONTROL](./class1.control.md) class but use a different data format with a GUID stored in the first 16 bytes of the data followed by the standard data thus offset with 16-bytes.\n\nSee [CLASS2.PROTOCOL1](./class2.protocol1.md) for more information on the data format." >
 <type id="0" token="VSCP_TYPE_CONTROL_GENERAL" name="General event" description="General Event." />
@@ -3483,9 +3557,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -3847,9 +3933,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -4211,9 +4309,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -4575,9 +4685,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -5259,9 +5381,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>
@@ -5611,9 +5745,21 @@
 <unit id="1" name="röntgen" description="Röntgen" symbol-ascii="R" symbol-utf8="R" conversion= "{{{val}}}/(2.58*10^-4)" />
 </units>
 </type>
-<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** percent.   \n\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units." >
+<type id="63" token="VSCP_TYPE_MEASUREMENT_POWER_FACTOR" name="Power factor" description="**Default unit:** cos of phase angle.\n\nThis is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.\n\nPower factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.\n\n\n" >
 <units>
-<unit id="0" name="Percent" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+<unit id="0" name="cos(a)" description="Ratio between power in kW and apperant power in kVA" symbol-ascii="PF" symbol-utf8="PF" conversion= "{{{val}}}" />
+</units>
+</type>
+<type id="64" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" name="Reactive Power" description="**Default unit:** kVAr\n\nIn electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit &amp;quot;var&amp;quot; is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the &amp;quot;metric directive&amp;quot;), the correct symbol is lower-case &amp;quot;var&amp;quot;, although the spellings &amp;quot;Var&amp;quot; and &amp;quot;VAr&amp;quot; are commonly seen, and &amp;quot;VAR&amp;quot; is widely used throughout the power industry.\n\nDefinition from Wikipedia\n" >
+<units>
+<unit id="0" name="kVAr" description="Reactive effect in kilo V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}" />
+<unit id="1" name="MVAr" description="Reactive effect in mega V*A" symbol-ascii="kVAr" symbol-utf8="kVAr" conversion= "{{{val}}}*1000" />
+</units>
+</type>
+<type id="65" token="VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY" name="Reactive Energy" description="**Default unit:** kVArh\n\nReactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.\n\n" >
+<units>
+<unit id="0" name="kVArh" description="Reactive energy in kilo V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}" />
+<unit id="1" name="MVArh" description="Reactive energy in mega V*A*h" symbol-ascii="kVArh" symbol-utf8="kVArh" conversion= "{{{val}}}*1000" />
 </units>
 </type>
 </class>

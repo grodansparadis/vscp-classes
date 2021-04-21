@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2021-03-15 09:19:20.610928
+                        Generated: 2021-04-21 07:24:41.613572
 */
 
 /** Namespace for all functionality of the VSCP provided libraries.
@@ -223,6 +223,8 @@ vscp.constants.types = {
     VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ: 61,
     VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EXPOSURE: 62,
     VSCP_TYPE_MEASUREMENT_POWER_FACTOR: 63,
+    VSCP_TYPE_MEASUREMENT_REACTIVE_POWER: 64,
+    VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY: 65,
  
 //  CLASS1.MEASUREMENTX1 = 11  -  Measurement
     VSCP_TYPE_MEASUREMENTX1_GENERAL: 0,
@@ -334,6 +336,7 @@ vscp.constants.types = {
     VSCP_TYPE_INFORMATION_EXIT: 85,
     VSCP_TYPE_INFORMATION_INCREMENTED: 86,
     VSCP_TYPE_INFORMATION_DECREMENTED: 87,
+    VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED: 88,
  
 //  CLASS1.CONTROL = 30  -  Control
     VSCP_TYPE_CONTROL_GENERAL: 0,

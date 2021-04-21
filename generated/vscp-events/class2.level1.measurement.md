@@ -1028,12 +1028,45 @@ This is a measurement of a radiation dose (Exposed dose of ionizing radiation).
 ```
 VSCP_TYPE_MEASUREMENT_POWER_FACTOR
 ```
-**Default unit:** percent.   
-
+**Default unit:** cos of phase angle.
 
 This is a measurement of a power factor. Power factor is an expression of energy efficiency. It is usually expressed as a percentage—and the lower the percentage, the less efficient power usage is.
 
 Power factor (PF) is the ratio of working power, measured in kilowatts (kW), to apparent power, measured in kilovolt amperes (kVA). Apparent power, also known as demand, is the measure of the amount of power used to run machinery and equipment during a certain period. It is found by multiplying (kVA = V x A). The result is expressed as kVA units.
+
+
+
+
+
+----
+
+
+## Type=64 (0x40) - Reactive Power :id=type64
+
+```
+VSCP_TYPE_MEASUREMENT_REACTIVE_POWER
+```
+**Default unit:** kVAr
+
+In electric power transmission and distribution, volt-ampere reactive (VAr) is a unit of measurement of reactive power. Reactive power exists in an AC circuit when the current and voltage are not in phase. The term var was proposed by the Romanian electrical engineer Constantin Budeanu and introduced in 1930 by the IEC in Stockholm, which has adopted it as the unit for reactive power. Special instruments called varmeters are available to measure the reactive power in a circuit. The unit "var" is allowed by the International System of Units (SI) even though the unit var is representative of a form of power. SI allows one to specify units to indicate common sense physical considerations. Per EU directive 80/181/EEC (the "metric directive"), the correct symbol is lower-case "var", although the spellings "Var" and "VAr" are commonly seen, and "VAR" is widely used throughout the power industry.
+
+Definition from Wikipedia
+
+
+
+----
+
+
+## Type=65 (0x41) - Reactive Energy :id=type65
+
+```
+VSCP_TYPE_MEASUREMENT_REACTIVE_ENERGY
+```
+**Default unit:** kVArh
+
+Reactive Energy is the electrical Energy produced, flowing or supplied by an electric circuit during a time interval, measured in units of kVArh or standard multiples thereof.
+
+
 
 
 ----

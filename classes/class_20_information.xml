@@ -1741,7 +1741,7 @@
         <render>
             <vscpworks 
                 variables=" 
-                    proxlevel: function() { return e.vscpData[0]<<16 + e.vscpData[1]; }      {{{newline}}}
+                    proxlevel: function() { return e.vscpData[0]&lt;&lt;16 + e.vscpData[1]; }      {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}Optionaldata : {{{lbl-end}}} {{{val-start}}}{{{proxlevel}}}{{{val-end}}}{{{newline}}}

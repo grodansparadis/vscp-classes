@@ -1375,4 +1375,17 @@ This is meant to be used as a confirmation event for CLASS1.CONTROL, Type=53 eve
 
 ----
 
+## Type=88 (0x58) - Proximity detected :id=type88
+```
+VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED
+```
+Proximity detected.
+
+ | Data byte | Description  | 
+ | :---------: | -----------   | 
+ | 0, 1 | Optional uint16 that sets proximity level if present. | 
+ 
+
+----
+
 [filename](./bottom_copyright.md ':include')
