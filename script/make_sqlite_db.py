@@ -5,7 +5,7 @@
 # The MIT License (MIT)
 #
 # Copyright (C) 2000-2021 Ake Hedman,
-# Grodans Paradis AB <info@grodansparadis.com>
+# The VSCP Project <info@grodansparadis.com>
 #
 # Make records for the sqlite3 database
 #
