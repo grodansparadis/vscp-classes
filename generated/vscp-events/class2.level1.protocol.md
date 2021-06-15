@@ -383,7 +383,9 @@ The following format can be used for nodes on a Level II segment as a midway bet
  | 0x01 | Microchip PIC algorithm | 
  | 0x10 | Atmel AVR algorithm 0   | 
  | 0x20 | NXP ARM algorithm 0     | 
- | 0x30 | ST ARM algorithm 0      | 
+ | 0x30 | ST ARM algorithm 0      |
+ | 0xF0-FE | User defined algorithms |
+ | 0xFF | No bootloader available |
 
 All other codes reserved.
 
