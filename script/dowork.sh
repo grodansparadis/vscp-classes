@@ -257,7 +257,7 @@ curl -T ../generated/vscp_events.sql ftp://"$2:$3"@$1/vscp.org/public_html/event
 curl -T ../generated/vscp_events.sql.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T ../generated/vscp_events.sqlite3 ftp://"$2:$3"@$1/vscp.org/public_html/events/
 curl -T ../generated/vscp_events.sqlite3.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
-cp ../generated/vscp_events.sqlite3 ../../vscp/resources/
+cp ../generated/vscp_events.sqlite3 ../../vscp/resources/database
 if [ "$4" != "save" ]
 then
 rm ../generated/vscp_events.sql
