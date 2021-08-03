@@ -1,6 +1,6 @@
 myFunc(
 {
-"Generated" : " 2021-06-21 13:25:19.875534 ",
+"Generated" : " 2021-08-03 15:32:31.358471 ",
 "events": [
 {
 	"class": 0,
@@ -1926,7 +1926,7 @@ myFunc(
 		"token": "VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED",
 		"name": "Proximity detected",
 		"units": [],
-		"description": "Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0, 1 | Optional uint16 that sets proximity level if present. | \n \n"
+		"description": "Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0 | Optional byte that have a meaning given by the issuer of the event. | \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n | 3, 4 | Optional uint16 that sets proximity level if present. | \n \n"
 	}
 	]
 },
@@ -8860,7 +8860,7 @@ myFunc(
 		"token": "VSCP_TYPE_INFORMATION_PROXIMITY_DETECTED",
 		"name": "Proximity detected",
 		"units": [],
-		"description": "Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0, 1 | Optional uint16 that sets proximity level if present. | \n \n"
+		"description": "Proximity detected.\n\n | Data byte | Description  | \n | :---------: | -----------   | \n | 0 | Optional byte that have a meaning given by the issuer of the event. | \n | 1 | Zone for which event applies to (0-255). 255 is all zones. | \n | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | \n | 3, 4 | Optional uint16 that sets proximity level if present. | \n \n"
 	}
 	]
 },

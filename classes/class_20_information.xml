@@ -1741,10 +1741,16 @@
         <render>
             <vscpworks 
                 variables=" 
-                    proxlevel: function() { return e.vscpData[0]&lt;&lt;16 + e.vscpData[1]; }      {{{newline}}}
+                    opt: function() { return e.vscpData[0]; }      {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }     {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; }  {{{newline}}}
+                    proxlevel: function() { return e.vscpData[3]&lt;&lt;16 + e.vscpData[4]; }      {{{newline}}}
                 "
                 template="
-                    {{{lbl-start}}}Optionaldata : {{{lbl-end}}} {{{val-start}}}{{{proxlevel}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Opt : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}} 
+                    {{{lbl-start}}}Proximity level : {{{lbl-end}}} {{{val-start}}}{{{proxlevel}}}{{{val-end}}}{{{newline}}}
                     {{{newline}}}
                 "
             />

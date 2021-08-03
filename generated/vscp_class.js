@@ -39,7 +39,7 @@
             !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                            This file is auto-generated
                 see https://github.com/grodansparadis/vscp-classes
-                        Generated: 2021-06-21 13:25:21.476704
+                        Generated: 2021-08-03 15:32:33.069763
 */
 
 /** Namespace for all functionality of the VSCP provided libraries.

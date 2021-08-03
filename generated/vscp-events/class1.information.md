@@ -1383,7 +1383,10 @@ Proximity detected.
 
  | Data byte | Description  | 
  | :---------: | -----------   | 
- | 0, 1 | Optional uint16 that sets proximity level if present. | 
+ | 0 | Optional byte that have a meaning given by the issuer of the event. | 
+ | 1 | Zone for which event applies to (0-255). 255 is all zones. | 
+ | 2 | Sub-zone for which event applies to (0-255). 255 is all sub-zones. | 
+ | 3, 4 | Optional uint16 that sets proximity level if present. | 
  
 
 ----
