@@ -548,7 +548,7 @@
         </units>    
     </type>
     
-    <type id="30" name="Angle" token="VSCP_TYPE_MEASUREMENT_ANGLE" >
+    <type id="30" name="Angle, direction or similar" token="VSCP_TYPE_MEASUREMENT_ANGLE" >
         <units>
             <unit id="0" 
                     name="radian" 

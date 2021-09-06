@@ -490,7 +490,7 @@ This is a measurement of sound intensity (acoustic intensity).
 ----
 
 
-## Type=30 (0x1E) - Angle :id=type30
+## Type=30 (0x1E) - Angle, direction or similar :id=type30
 
 ```
 VSCP_TYPE_MEASUREMENT_ANGLE
@@ -500,7 +500,7 @@ VSCP_TYPE_MEASUREMENT_ANGLE
 * **Opt Unit:** arcminute (2).
 * **Opt Unit:** arcseconds (3).
 
-This is a measurement of an angle. 
+This is a measurement of an angle or a direction or similar. 
 
   
 

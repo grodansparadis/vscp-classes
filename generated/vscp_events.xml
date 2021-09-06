@@ -3,7 +3,7 @@
               !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
                              This file is auto-generated
                   see https://github.com/grodansparadis/vscp-classes
-                          Generated: 2021-08-03 15:32:32.236422
+                          Generated: 2021-09-06 15:01:55.523157
 -->
 <vscpevents>
 <class id="0" name="VSCP Protocol Functionality" token="CLASS1.PROTOCOL" description="## Description\n\nThis class defines some types that must be implemented by every node that implements the VSCP protocol. The types in this class must be handled by all level I and Level II nodes. Note also that this class is repeated as Level II class=512 with the only difference that GUID&amp;apos;s are used instead of nicknames. This means that for all Level II class=512 events the data described here is preceded by the 16-bit destination GUID (address of receiver) stored with MSB first followed by the data specified here. Nickname is present also if documented below but have no meaning and should be discarded.\n\nAll other events are optional except for **one exception**. All nodes should send [CLASS1.INFORMATION, Type=9 (HEARTBEAT)](./class1.information.md#type9) at least once every minute.\n" >
@@ -279,7 +279,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -872,7 +872,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -1248,7 +1248,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -1624,7 +1624,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -2000,7 +2000,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -2789,7 +2789,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -3382,7 +3382,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -3758,7 +3758,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -4134,7 +4134,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -4510,7 +4510,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -5206,7 +5206,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />
@@ -5570,7 +5570,7 @@
 <unit id="0" name="watt per square meter" description="watt per square meter" symbol-ascii="W/m2" symbol-utf8="W/m²" conversion= "{{{val}}}" />
 </units>
 </type>
-<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n" >
+<type id="30" token="VSCP_TYPE_MEASUREMENT_ANGLE" name="Angle, direction or similar" description="* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n" >
 <units>
 <unit id="0" name="radian" description="Radian" symbol-ascii="rad" symbol-utf8="rad" conversion= "{{{val}}}" />
 <unit id="1" name="degree" description="Degree" symbol-ascii="deg" symbol-utf8="°" conversion= "{{{val}}}*pi/180" />

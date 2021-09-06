@@ -19,7 +19,7 @@
 #            !!!!!!!!!!!!!!!!!!!!  W A R N I N G  !!!!!!!!!!!!!!!!!!!!
 #                           This file is auto-generated
 #                see https://github.com/grodansparadis/vscp-classes
-#                        Generated: 2021-08-03 15:32:29.362394
+#                        Generated: 2021-09-06 15:01:51.954349
 #
  
  
@@ -160,7 +160,7 @@ VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_ABSORBED        = 26 # Radiation dose (abso
 VSCP_TYPE_MEASUREMENT_CATALYTIC_ACITIVITY            = 27 # Catalytic activity
 VSCP_TYPE_MEASUREMENT_VOLUME                         = 28 # Volume
 VSCP_TYPE_MEASUREMENT_SOUND_INTENSITY                = 29 # Sound intensity
-VSCP_TYPE_MEASUREMENT_ANGLE                          = 30 # Angle
+VSCP_TYPE_MEASUREMENT_ANGLE                          = 30 # Angle, direction or similar
 VSCP_TYPE_MEASUREMENT_POSITION                       = 31 # Position WGS 84
 VSCP_TYPE_MEASUREMENT_SPEED                          = 32 # Speed
 VSCP_TYPE_MEASUREMENT_ACCELERATION                   = 33 # Acceleration

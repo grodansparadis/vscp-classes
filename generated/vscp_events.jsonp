@@ -1,6 +1,6 @@
 myFunc(
 {
-"Generated" : " 2021-08-03 15:32:31.358471 ",
+"Generated" : " 2021-09-06 15:01:54.623077 ",
 "events": [
 {
 	"class": 0,
@@ -931,9 +931,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -2950,9 +2950,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -3480,9 +3480,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -4010,9 +4010,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -4540,9 +4540,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -7865,9 +7865,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -9884,9 +9884,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -10414,9 +10414,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -10944,9 +10944,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -11474,9 +11474,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -14130,9 +14130,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
@@ -14600,9 +14600,9 @@ myFunc(
 	{
 		"type": 30,
 		"token": "VSCP_TYPE_MEASUREMENT_ANGLE",
-		"name": "Angle",
+		"name": "Angle, direction or similar",
 		"units": [{"id":0,"name": "radian","description": "Radian","symbol-ascii": "rad","symbol-utf8": "rad","conversion": "{{{val}}}"},{"id":1,"name": "degree","description": "Degree","symbol-ascii": "deg","symbol-utf8": "°","conversion": "{{{val}}}*pi/180"},{"id":2,"name": "arcminute","description": "Arcminute","symbol-ascii": "arcmin","symbol-utf8": "arcmin","conversion": "{{{val}}}*pi/10800"},{"id":3,"name": "arcsecond","description": "Arcsecond","symbol-ascii": "arcsec","symbol-utf8": "arcsec","conversion": "{{{val}}}*pi/648000"}],
-		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle. \n\n  \n"
+		"description": "* **Default unit:** radian (rad) (Plane angles).   \n* **Opt Unit:** degree (1).\n* **Opt Unit:** arcminute (2).\n* **Opt Unit:** arcseconds (3).\n\nThis is a measurement of an angle or a direction or similar. \n\n  \n"
 	},
 	{
 		"type": 31,
