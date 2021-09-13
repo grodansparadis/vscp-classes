@@ -150,6 +150,7 @@ print(" ")
 for vscp_class in order_list:
 
     fname = '../classes/' + vscp_class
+
     type_tree = ET.parse(fname)
     type_root = type_tree.getroot()
 
@@ -157,9 +158,10 @@ for vscp_class in order_list:
     try:
         events = type_root.attrib["events"]
     except:
-        # 'events' tag does not exist
+        # Class without events
         for child in type_root.iter('type'):
             classid = int(type_root.attrib["id"])
+            
             if (10 == classid or
                 60 == classid or
                 65 == classid or
@@ -169,7 +171,7 @@ for vscp_class in order_list:
                 1060 == classid):
 
                 for unit in child.iter('unit'):
-
+                    
                     try:
                         conversion = unit.attrib["conversion"]
                     except:
@@ -198,13 +200,13 @@ for vscp_class in order_list:
                         "'" + comment + "');"
                     print(outstr)
     else:
-        classid = type_root.attrib["id"]
+        classid = int(type_root.attrib["id"])
         fname = '../classes/' + events
         type_tree = ET.parse(fname)
         type_root = type_tree.getroot()
 
         for child in type_root.iter('type'):
-            classid = type_root.attrib["id"]
+
             if (10 == classid or
                 60 == classid or
                 65 == classid or
@@ -212,23 +214,35 @@ for vscp_class in order_list:
                 85 == classid or
                 1040 == classid or
                 1060 == classid):
-                for unit in child.iter('unit'):
-                    try:
-                        conversion = unit.attrib["conversion"]
-                    except:
-                        conversion = "val"
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
-                        classid + "," + \
-                        child.attrib["id"] + "," + \
-                        unit.attrib["id"] + "," + \
-                        "'" + unit.attrib["name"].strip() + "'," + \
-                        "'" + unit.attrib["description"].strip() + "'," + \
-                        "'" + conversion0 + "'," + \
-                        "'" + conversion + "'," + \
-                        "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
-                        "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
-                        "'" + comment + "');"
-                    print(outstr)
+              for unit in child.iter('unit'):
+                  
+                try:
+                    conversion = unit.attrib["conversion"]
+                except:
+                    conversion = "{{val}}"
+
+                try:
+                    conversion0 = unit.attrib["conversion0"]
+                except:
+                    conversion0 = "{{val}}"
+
+                try:
+                    comment = unit.attrib["comment"]
+                except:
+                    comment = ""    
+                  
+                outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
+                    str(classid) + "," + \
+                    child.attrib["id"] + "," + \
+                    unit.attrib["id"] + "," + \
+                    "'" + unit.attrib["name"].strip() + "'," + \
+                    "'" + unit.attrib["description"].strip() + "'," + \
+                    "'" + conversion0 + "'," + \
+                    "'" + conversion + "'," + \
+                    "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
+                    "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
+                    "'" + comment + "');"
+                print(outstr)
 
 #  * * * RENDER * * *
 
