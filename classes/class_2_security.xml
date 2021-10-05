@@ -23,7 +23,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 " 
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -42,7 +42,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -61,7 +61,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -80,7 +80,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -99,7 +99,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -118,7 +118,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -137,7 +137,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -156,7 +156,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -175,7 +175,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -194,7 +194,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -213,7 +213,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -232,7 +232,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -251,7 +251,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -270,7 +270,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -289,7 +289,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -308,7 +308,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -327,7 +327,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -346,7 +346,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -365,7 +365,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -384,7 +384,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -403,7 +403,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -422,7 +422,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -441,7 +441,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -460,7 +460,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -479,7 +479,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -498,7 +498,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -517,7 +517,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -536,7 +536,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -555,7 +555,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -574,7 +574,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -593,7 +593,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -612,7 +612,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -631,7 +631,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -650,7 +650,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -669,7 +669,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -688,7 +688,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
@@ -707,7 +707,7 @@
                 variables="
                     userdef:    : function() { return (e.vscpData[0]); } {{{newline}}}
                     zone:       : function() { return (e.vscpData[1]); } {{{newline}}}
-                    zubzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
+                    subzone:    : function() { return (e.vscpData[2]); } {{{newline}}}
                 "
                 template="
                     {{{lbl-start}}}User defined: {{{lbl-end}}} {{{val-start}}}{{{userdef}}}{{{state}}}{{{val-end}}}{{{newline}}}
