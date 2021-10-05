@@ -1088,20 +1088,28 @@
     <type id="64" name="Reactive Power" token="VSCP_TYPE_MEASUREMENT_REACTIVE_POWER" >
         <units>
             <unit id="0" 
-                    name="kVAr" 
+                    name="VAr" 
                     description="Reactive effect in kilo V*A"
-                    symbol-ascii="kVAr"
-                    symbol-utf8="kVAr"
+                    symbol-ascii="VAr"
+                    symbol-utf8="VAr"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}"
                     comment="" /> 
             <unit id="1" 
-                    name="MVAr" 
-                    description="Reactive effect in mega V*A"
+                    name="kVAr" 
+                    description="Reactive effect in kilo V*A"
                     symbol-ascii="kVAr"
                     symbol-utf8="kVAr"
                     conversion0="{{{val}}}/1000"
                     conversion="{{{val}}}*1000"
+                    comment="" /> 
+            <unit id="1" 
+                    name="MVAr" 
+                    description="Reactive effect in mega V*A"
+                    symbol-ascii="MVAr"
+                    symbol-utf8="MVAr"
+                    conversion0="{{{val}}}/1000000"
+                    conversion="{{{val}}}*1000000"
                     comment="" />                       
         </units>    
     </type>
