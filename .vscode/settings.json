@@ -17,5 +17,6 @@
     "cSpell.words": [
         "conversion",
         "strip"
-    ]
+    ],
+    "C_Cpp.default.configurationProvider": "nrf-connect"
 }

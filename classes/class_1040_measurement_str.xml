@@ -4,6 +4,18 @@
     name="Level II Measurement string" 
     token="CLASS2.MEASUREMENT_STR" 
     events="class_10_measurement.xml" >
+
+    <render>
+        <vscpworks 
+            variables=""
+            template="
+                {{{lbl-start}}}Unit: {{{lbl-end}}} = {{{unitstr}}} [{{{unit}}}]{{{newline}}} 
+                {{{lbl-start}}}Sensorindex: {{{lbl-end}}} = {{{sensorindex}}}{{{newline}}} 
+                {{{lbl-start}}}Value: {{{lbl-end}}} = {{{val}}}{{{symbol}}}{{{newline}}}
+                {{{lbl-start}}}Coding: {{{lbl-end}}} = {{{datacodingstr}}} [{{{datacoding}}}]{{{newline}}}
+            "
+        />
+    </render>
 </class>
 
 
