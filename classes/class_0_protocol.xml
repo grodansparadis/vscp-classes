@@ -403,7 +403,7 @@
                     }
                 "
                 template="
-                    {{{lbl-start}}}Sequence no : {{{lbl-end}}} {{{val-start}}}{{{nickname}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Sequence no : {{{lbl-end}}} {{{val-start}}}{{{seqno}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Data : {{{lbl-end}}} {{{val-start}}}{{{data}}}{{{val-end}}}{{{newline}}}
                 "
             />
