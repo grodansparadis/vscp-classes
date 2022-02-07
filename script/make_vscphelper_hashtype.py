@@ -4,7 +4,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (C) 2000-2021 Ake Hedman, The VSCP Project <info@grodansparadis.com>
+# Copyright (C) 2000-2022 Ake Hedman, The VSCP Project <info@grodansparadis.com>
 #
 # Make hashtype definitions, vscp/src/vscp/common/vscphelper.cpp 
 #
