@@ -35,6 +35,10 @@
     <type id="36"
         name="Level II get embedded MDF response"
         token="VSCP2_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" />
+
+    <type id="41"
+        name="Level II events of interest response"
+        token="VSCP2_TYPE_PROTOCOL_GET_EVENT_INTEREST_RESPONSE" />    
             
     <!-- Type=42 Reserved -->
 
