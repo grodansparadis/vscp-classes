@@ -41,7 +41,6 @@ A structure
 ```
 
 holds one or more mustache named templates used to display information about an events dynamic data content. The first template defined is **vscpworks**. This template is used to display HTML based info about an event. The event is used as argument when the mustache expression is parsed. Meaning all parts of the event can be used. So for example {{vscpData[0]}} is data byte 0, vscpClass is the class, vscpGuid is the GUID and so on.
-
 A typical example is this visualization for CLASS1.MEASUREMENT
 
 ```xml
