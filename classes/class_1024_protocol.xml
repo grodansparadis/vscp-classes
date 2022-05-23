@@ -28,6 +28,14 @@
         name="Level II who is there response"
         token="VSCP2_TYPE_PROTOCOL_WHO_IS_THERE_RESPONSE" />
 
+    <type id="34"
+        name="Level II get DM info response"
+        token="VSCP2_TYPE_PROTOCOL_GET_MATRIX_INFO_RESPONSE" />
+
+    <type id="36"
+        name="Level II get embedded MDF response"
+        token="VSCP2_TYPE_PROTOCOL_GET_EMBEDDED_MDF_RESPONSE" />
+            
     <!-- Type=42 Reserved -->
 
 </class>
