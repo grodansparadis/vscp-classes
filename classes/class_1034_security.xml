@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class id="1034" 
+    name="Level II Security" 
+    token="CLASS2.SECURITY" >
+
+    <type id="0" 
+        name="General event"
+        token="VSCP2_TYPE_SECURITY_GENERAL" />
+
+    <type id="1" 
+        name="Set key"
+        token="VSCP2_TYPE_SECURITY_SETKEY" />
+
+</class>
+
