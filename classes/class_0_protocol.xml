@@ -533,14 +533,12 @@
                     size: function() { return (e.vscpData[0]) };                                   {{{newline}}}
                     offset: function() { return (e.vscpData[1]) };                                 {{{newline}}}
                     page-start: function() { return (e.vscpData[2]&amp;&amp;8 + e.vscpData[3]) };  {{{newline}}}
-                    page-end: function() { return (e.vscpData[4]&amp;&amp;8 + e.vscpData[5]) };    {{{newline}}}
                     row-size: function() { return (e.vscpData[6]) };
                 "
                 template="
                     {{{lbl-start}}}Size : {{{lbl-end}}} {{{val-start}}}{{{size}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Offset : {{{lbl-end}}} {{{val-start}}}{{{offset}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}Page start [opt] : {{{lbl-end}}} {{{val-start}}}{{{page-start}}}{{{val-end}}}{{{newline}}}
-                    {{{lbl-start}}}Page end [opt] : {{{lbl-end}}} {{{val-start}}}{{{page-end}}}{{{val-end}}}{{{newline}}}
                     {{{lbl-start}}}LII Row size [opt] : {{{lbl-end}}} {{{val-start}}}{{{row-size}}}{{{val-end}}}{{{newline}}}
                 "
             />
