@@ -38,10 +38,10 @@
 
     <type id="48"
         name="Set LED"
-        token="VSCP_TYPE_DISPLAY_SHOW_LED" />
+        token="VSCP_TYPE_DISPLAY_SET_LED" />
 
     <type id="49"
         name="Set RGB Color"
-        token="VSCP_TYPE_DISPLAY_SHOW_LED_COLOR" />
+        token="VSCP_TYPE_DISPLAY_SET_COLOR" />
 
 </class>
