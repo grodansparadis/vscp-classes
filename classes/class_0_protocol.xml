@@ -697,8 +697,8 @@
     </type>
 
     <type id="50" 
-        name="Block data transfer ACK." 
-        token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK" >
+        name="Block data ACK." 
+        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_ACK" >
         <render>
             <vscpworks 
                 variables=""
@@ -708,8 +708,8 @@
     </type>
 
     <type id="51" 
-        name="Block data transfer NACK." 
-        token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" >
+        name="Block data NACK." 
+        token="VSCP_TYPE_PROTOCOL_BLOCK_DATA_NACK" >
         <render>
             <vscpworks 
                 variables=""
