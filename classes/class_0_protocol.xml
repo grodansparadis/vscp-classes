@@ -697,8 +697,8 @@
     </type>
 
     <type id="50" 
-        name="Block data chunk ACK." 
-        token="VSCP_TYPE_PROTOCOL_BLOCK_CHUNK_ACK" >
+        name="Start Block ACK." 
+        token="VSCP_TYPE_PROTOCOL_START_BLOCK_ACK " >
         <render>
             <vscpworks 
                 variables=""
@@ -708,8 +708,8 @@
     </type>
 
     <type id="51" 
-        name="Block data chunk NACK." 
-        token="VSCP_TYPE_PROTOCOL_BLOCK_CHUNK_NACK" >
+        name="Start Block NACK." 
+        token="VSCP_TYPE_PROTOCOL_START_BLOCK_NACK" >
         <render>
             <vscpworks 
                 variables=""
@@ -718,4 +718,25 @@
         </render>
     </type>
 
+    <type id="52" 
+        name="Block Data Chunk ACK." 
+        token="VSCP_TYPE_PROTOCOL_BLOCK_CHUNK_ACK " >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
+
+    <type id="53" 
+        name="Block Data Chunk NACK." 
+        token="VSCP_TYPE_PROTOCOL_BLOCK_CHUNK_NACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 </class>
