@@ -739,4 +739,15 @@
             />
         </render>
     </type>
+
+    <type id="54" 
+        name="Bootloader CHECK." 
+        token="VSCP_TYPE_PROTOCOL_BOOT_LOADER_CHECK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 </class>
