@@ -824,7 +824,7 @@
         </units>    
     </type>
     
-    <type id="47" name="Reserved" token="VSCP_TYPE_MEASUREMENT_DOSE_EQVIVALENT" >   
+    <type id="47" name="Reserved" token="VSCP_TYPE_MEASUREMENT_RESERVED47" >   
     </type>
     
     <type id="48" name="Reserved" token="VSCP_TYPE_MEASUREMENT_RESERVED48" >   
@@ -1030,7 +1030,7 @@
         </units>    
     </type>
     
-    <type id="61" name="Radiation dose (equivalent)" token="VSCP_TYPE_MEASUREMENT_RADIATION_DOSE_EQ" >
+    <type id="61" name="Radiation dose (equivalent)" token="VSCP_TYPE_MEASUREMENT_DOSE_EQVIVALENT" >
         <units>
             <unit id="0" 
                     name="sievert" 
