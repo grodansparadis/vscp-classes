@@ -342,18 +342,65 @@
     </type>
 
     <type  id="17"
-        name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED17" >
+        name="Set all devices off"
+        token="VSCP_TYPE_CONTROL_TURN_ALL_OFF" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }    {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; } {{{newline}}}
+                "
+                template="
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
+                "
+            />
+        </render>
     </type>
 
     <type  id="18"
-        name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED18" >
+        name="Set all devices on"
+        token="VSCP_TYPE_CONTROL_TURN_ALL_ON" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }    {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; } {{{newline}}}
+                "
+                template="
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
+                "
+            />
+        </render>
     </type>
 
     <type  id="19"
-        name="Reserved for future use"
-        token="VSCP_TYPE_CONTROL_RESERVED19" >
+        name="Set all device on/off as of argument"
+        token="VSCP_TYPE_CONTROL_TURN_ALL_X" >
+        <render>
+            <vscpworks 
+                variables="  
+                    index: function() { return e.vscpData[0]; }   {{{newline}}}
+                    zone: function() { return e.vscpData[1]; }    {{{newline}}}
+                    subzone: function() { return e.vscpData[2]; } {{{newline}}}
+                    state: function() { return e.vscpData[3]; } {{{newline}}}
+                "
+                template="
+                    {{{lbl-start}}}Index : {{{lbl-end}}} {{{val-start}}}{{{opt}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Zone : {{{lbl-end}}} {{{val-start}}}{{{zone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}Subzone : {{{lbl-end}}} {{{val-start}}}{{{subzone}}}{{{val-end}}}{{{newline}}}
+                    {{{lbl-start}}}State : {{{lbl-end}}} {{{val-start}}}{{{state}}}{{{val-end}}}{{{newline}}}
+                    {{{newline}}}
+                "
+            />
+        </render>
     </type>
 
     <type  id="20"
@@ -774,7 +821,7 @@
     </type>
 
     <type  id="34"
-        name="Move shutter up"
+        name="Move (shutter) up"
         token="VSCP_TYPE_CONTROL_SHUTTER_UP" >
         <render>
             <vscpworks 
@@ -794,7 +841,7 @@
     </type>
 
     <type  id="35"
-        name="Move shutter down"
+        name="Move (shutter) down"
         token="VSCP_TYPE_CONTROL_SHUTTER_DOWN" >
         <render>
             <vscpworks 
@@ -814,7 +861,7 @@
     </type>
 
     <type  id="36"
-        name="Move shutter left"
+        name="Move (shutter) left"
         token="VSCP_TYPE_CONTROL_SHUTTER_LEFT" >
         <render>
             <vscpworks 
@@ -834,7 +881,7 @@
     </type>
 
     <type  id="37"
-        name="Move shutter right"
+        name="Move (shutter) right"
         token="VSCP_TYPE_CONTROL_SHUTTER_RIGHT" >
         <render>
             <vscpworks 
@@ -854,7 +901,7 @@
     </type>
 
     <type  id="38"
-        name="Move shutter to middle position"
+        name="Move (shutter) to middle position"
         token="VSCP_TYPE_CONTROL_SHUTTER_MIDDLE" >
         <render>
             <vscpworks 
@@ -874,7 +921,7 @@
     </type>
 
     <type  id="39"
-        name="Move shutter to preset position"
+        name="Move (shutter) to preset position"
         token="VSCP_TYPE_CONTROL_SHUTTER_PRESET" >
         <render>
             <vscpworks 
