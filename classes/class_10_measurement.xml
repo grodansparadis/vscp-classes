@@ -296,7 +296,7 @@
                     symbol-utf8="eV"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*1.60217663e-19"
-                    comment="" />        
+                    comment="" />
         </units>    
     </type>
     
@@ -316,7 +316,7 @@
                     symbol-utf8="cv"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*735.49875"
-                    comment="DIN 66036 defines one metric horsepower as the power to raise a mass of 75 kilograms against the Earth's gravitational force over a distance of one metre in one second" />
+                    comment="DIN 66036 defines one metric horsepower as the power to raise a mass of 75 kilograms against the Earths gravitational force over a distance of one metre in one second" />
             <unit id="2" 
                     name="Horsepower Imperial" 
                     description="Horsepower Imperial"
