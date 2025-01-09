@@ -288,7 +288,15 @@
                     symbol-utf8="Wh"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*3600"
-                    comment="" />            
+                    comment="" />
+            <unit id="3" 
+                    name="eV" 
+                    description="electron Volt"
+                    symbol-ascii="eV"
+                    symbol-utf8="eV"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*1.60217663e-19"
+                    comment="" />        
         </units>    
     </type>
     
@@ -302,13 +310,21 @@
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}" />
             <unit id="1" 
-                    name="Horsepower" 
-                    description="Horsepower"
-                    symbol-ascii="W"
-                    symbol-utf8="W"
+                    name="Horsepower Metric" 
+                    description="Horsepower Metic"
+                    symbol-ascii="cv"
+                    symbol-utf8="cv"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*735.49875"
+                    comment="DIN 66036 defines one metric horsepower as the power to raise a mass of 75 kilograms against the Earth's gravitational force over a distance of one metre in one second" />
+            <unit id="2" 
+                    name="Horsepower Imperial" 
+                    description="Horsepower Imperial"
+                    symbol-ascii="hp"
+                    symbol-utf8="hp"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*745.699872"
-                    comment="One horsepower equals 33,000 foot-pounds of work per minute" />                    
+                    comment="One horsepower equals 33,000 foot-pounds of work per minute" />                            
         </units>    
     </type>
     
