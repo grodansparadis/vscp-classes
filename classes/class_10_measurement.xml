@@ -927,6 +927,27 @@
                     symbol-utf8="m²"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}" />
+            <unit id="1" 
+                    name="are" 
+                    description="1  are = 100 m2;"
+                    symbol-ascii="a"
+                    symbol-utf8="a"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*100" />        
+            <unit id="2" 
+                    name="hectare" 
+                    description="1 hectare = 100 ares = 10000 m2 = 0.01 km2"
+                    symbol-ascii="ha"
+                    symbol-utf8="ha"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*10000" />
+            <unit id="3" 
+                    name="square kilometer" 
+                    description="Square kilometer"
+                    symbol-ascii="km2"
+                    symbol-utf8="km²"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*1000000" />                
         </units>    
     </type>
     
