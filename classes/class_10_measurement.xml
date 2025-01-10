@@ -529,26 +529,27 @@
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*10^3" />
             <unit id="2" 
+                    name="millilitre" 
+                    description="Millilitre"
+                    symbol-ascii="ml"
+                    symbol-utf8="cm³"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*10^6" />        
+            <unit id="3" 
                     name="decilitre" 
                     description="Decilitre"
                     symbol-ascii="dl"
                     symbol-utf8="dl"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*10^4" />
-            <unit id="3" 
+            <unit id="4" 
                     name="centilitre" 
                     description="Centilitre"
                     symbol-ascii="cl"
                     symbol-utf8="cl"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}*10^5" />
-            <unit id="4" 
-                    name="millilitre" 
-                    description="Millilitre"
-                    symbol-ascii="ml"
-                    symbol-utf8="cm³"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^6" />                                                        
+                                                                    
         </units>    
     </type>
     
@@ -638,15 +639,22 @@
                     symbol-ascii="mph"
                     symbol-utf8="mph"
                     conversion0="{{{val}}}"
-                    conversion="{{{val}}}*0.44704" />                
+                    conversion="{{{val}}}*0.44704" />  
+            <unit id="3" 
+                    name="knot" 
+                    description="International nautical mile per hour [1 kt = 1 INM/h]"
+                    symbol-ascii="kt"
+                    symbol-utf8="kt"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}*0.514444444 " />
         </units>    
     </type>
     
     <type id="33" name="Acceleration" token="VSCP_TYPE_MEASUREMENT_ACCELERATION" >
         <units>
             <unit id="0" 
-                    name="meters per second/second " 
-                    description="Meters per second/second "
+                    name="Metre per second squared" 
+                    description="Metre per second squared"
                     symbol-ascii="m/s2"
                     symbol-utf8="m/s²"
                     conversion0="{{{val}}}"
