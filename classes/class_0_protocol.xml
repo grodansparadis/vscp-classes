@@ -750,4 +750,36 @@
             />
         </render>
     </type>
+
+    <type id="55" 
+        name="Bootloader abort" 
+        token="VSCP_TYPE_PROTOCOL_BOOT_LOADER_ABORT" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
+
+    <type id="56" 
+        name="Bootloader abort ACK" 
+        token="VSCP_TYPE_PROTOCOL_BOOT_LOADER_ABORT_ACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
+    <type id="57" 
+        name="Bootloader abort NACK" 
+        token="VSCP_TYPE_PROTOCOL_BOOT_LOADER_ABORT_NACK" >
+        <render>
+            <vscpworks 
+                variables=""
+                template="No data"
+            />
+        </render>
+    </type>
 </class>
