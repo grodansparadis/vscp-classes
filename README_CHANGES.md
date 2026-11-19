@@ -7,6 +7,7 @@ tagged, rename **Unreleased** to the version and date, and start a new
 
 ## Unreleased
 
+- The generated JSON/JSONP (make_json.py) and XML (make_xml.py) give both conversions of each measurement unit: `conversion0` (unit to unit 0) and `conversion` (unit 0 to unit); before, only `conversion` was given. A missing conversion is given as `{{{val}}}` (was `val`)
 - Measurement units (class 10): every unit now has both conversions, as plain JavaScript/math.js expressions (no `^`, `pi` or `×`). `conversion` converts a unit 0 value to the unit and `conversion0` a value in the unit to unit 0 (README updated; it described `conversion` the other way round). Fixed: wrong direction for Fahrenheit (temperature), milliseconds, curie, litre/millilitre/decilitre/centilitre, mol per litre and röntgen; syntax errors for rutherford and gauss; Oersted factor (79.58, was 79.77); added the missing litres per second conversion and all the missing inverse conversions
 - Measurement units: reactive power (type 64) MVAr is unit 2 (it had the same id as kVAr, unit 1); kVAr (1) and MVAr (2) are documented
 - Measurement units: dynamic viscosity (type 39) poiseuille is unit 1 and poise unit 2, as in the specification (they were swapped); the poiseuille symbol is Pl (was PI)

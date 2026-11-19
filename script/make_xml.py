@@ -119,10 +119,9 @@ for vscp_class in order_list:
                         unitstr += "description=\"" + unit.attrib["description"] + "\" "
                         unitstr += "symbol-ascii=\"" + unit.attrib["symbol-ascii"] + "\" "
                         unitstr += "symbol-utf8=\"" + unit.attrib["symbol-utf8"] + "\" "
-                        try:
-                            unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
-                        except:
-                            unitstr += "conversion=\"val\" />\n"
+                        # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                        unitstr += "conversion0=\"" + unit.attrib.get("conversion0", "{{{val}}}") + "\" "
+                        unitstr += "conversion=\"" + unit.attrib.get("conversion", "{{{val}}}") + "\" />\n"
 
             if ( len(unitstr) ) :
                 outstr += "<type id=\"" + child.attrib["id"] + "\" " + \
@@ -175,10 +174,9 @@ for vscp_class in order_list:
                         unitstr += "description=\"" + unit.attrib["description"] + "\" "
                         unitstr += "symbol-ascii=\"" + unit.attrib["symbol-ascii"] + "\" "
                         unitstr += "symbol-utf8=\"" + unit.attrib["symbol-utf8"] + "\" "
-                        try:
-                            unitstr += "conversion= \"" + unit.attrib["conversion"] + "\" />\n"
-                        except:
-                            unitstr += "conversion=\"val\" />\n"
+                        # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                        unitstr += "conversion0=\"" + unit.attrib.get("conversion0", "{{{val}}}") + "\" "
+                        unitstr += "conversion=\"" + unit.attrib.get("conversion", "{{{val}}}") + "\" />\n"
 
             if ( len(unitstr) ) :
                 outstr += "<type id=\"" + child.attrib["id"] + "\" " + \

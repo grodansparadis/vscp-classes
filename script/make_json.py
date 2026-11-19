@@ -104,11 +104,11 @@ for vscp_class in order_list:
                         unit.attrib["description"] + "\","
                     unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
                     unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
-                    try:
-                        unitstr += "\"conversion\": \"" + \
-                            unit.attrib["conversion"] + "\""
-                    except:
-                        unitstr += "\"conversion\": \"val\""
+                    # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                    unitstr += "\"conversion0\": \"" + \
+                        unit.attrib.get("conversion0", "{{{val}}}") + "\","
+                    unitstr += "\"conversion\": \"" + \
+                        unit.attrib.get("conversion", "{{{val}}}") + "\""
                     unitstr += "},"
             if (',' == unitstr[len(unitstr)-1]):
                 unitstr = unitstr[0:len(unitstr)-1]
@@ -164,11 +164,11 @@ for vscp_class in order_list:
                         unit.attrib["description"] + "\","
                     unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
                     unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
-                    try:
-                        unitstr += "\"conversion\": \"" + \
-                            unit.attrib["conversion"] + "\""
-                    except:
-                        unitstr += "\"conversion\": \"val\""
+                    # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                    unitstr += "\"conversion0\": \"" + \
+                        unit.attrib.get("conversion0", "{{{val}}}") + "\","
+                    unitstr += "\"conversion\": \"" + \
+                        unit.attrib.get("conversion", "{{{val}}}") + "\""
                     unitstr += "},"
             if (',' == unitstr[len(unitstr)-1]):
                 unitstr = unitstr[0:len(unitstr)-1]
