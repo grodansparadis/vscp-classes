@@ -106,5 +106,6 @@
     <item name="class_1034_security.xml" />
     <item name="class_1040_measurement_str.xml" />
     <item name="class_1060_measurement_float.xml" />
+    <item name="class_1080_timed_weather_forecast.xml" />
     <item name="class_65535_vscpd.xml" />
 </classlist>

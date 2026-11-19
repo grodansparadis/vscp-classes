@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <class id="1080"
-    name="Timed weater forecast"
+    name="Timed weather forecast"
     token="CLASS2.TIMED_WEATHER_FORECAST"
-</class>
+    events="class_90_weather.xml" />

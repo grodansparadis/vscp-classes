@@ -60,9 +60,9 @@
             name="Signal Quality"
             token="VSCP_TYPE_DATA_SIGNAL_QUALITY" >
             <units>
-                <unit id="0" name="Percent" description="Level 0-100 percent." conversion="val"/>
-                <unit id="1" name="Integer" description="Integer value." conversion="val"/>
-                <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion="val"/>
+                <unit id="0" name="Percent" description="Level 0-100 percent." conversion0="{{{val}}}" conversion="{{{val}}}"/>
+                <unit id="1" name="Integer" description="Integer value." conversion0="{{{val}}}" conversion="{{{val}}}"/>
+                <unit id="2" name="RSSI" description="Receive Signal Strength in dBm." conversion0="{{{val}}}" conversion="{{{val}}}"/>
             </units>
         </type>
 

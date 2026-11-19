@@ -56,8 +56,10 @@ The measurement class (10) has a **\<unit\>** token that is used to describe uni
 * **description** Description of the unit.
 * **symbol-ascii** Symbol in ASCII format
 * **symbol-utf8** Symbol in UTF8 format
-* **conversion** Conversion code to convert a value of the specific unit to a value of unit 0. Javascript [mustache](https://github.com/janl/mustache.js/) format is used as pseudo code for the conversion and value is specified as **{{val}}** in this code. [mathjs]() is used to parse the expression after mustache parser is run.
-Set to **{{val}}** if a conversion is not possible.
+* **conversion** Expression that converts a value in unit 0 to a value in this unit.
+* **conversion0** Expression that converts a value in this unit to a value in unit 0 (the inverse of **conversion**).
+
+The value is written as **{{{val}}}** ([mustache](https://github.com/janl/mustache.js/)). After the mustache expansion the expression is evaluated as JavaScript or with [math.js](https://mathjs.org/), so only numbers (also `1e-4` form), `+ - * /` and parentheses are used: not `^` (XOR in JavaScript), `pi` or other functions. Unit 0 and units that can not be converted (for example latitude/longitude) use **{{{val}}}** for both.
 
 This is how this looks for the temperature measurement type
 
@@ -69,19 +71,22 @@ This is how this looks for the temperature measurement type
                     description="Degrees Kelvin"
                     symbol-ascii="K"
                     symbol-utf8="K"
-                    conversion="{{val}}"/>
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}"/>
             <unit id="1" 
                     name="celsius"
                     description="Degrees Celsius"
                     symbol-ascii="C"
-                    symbol-utf8="°C"        
-                    conversion="{{val}} + 273.15 "/>
+                    symbol-utf8="°C"
+                    conversion0="{{{val}}} + 273.15"
+                    conversion="{{{val}}} - 273.15"/>
             <unit id="2" 
                     name="fahrenheit"
                     description="Degrees Fahrenheit"
                     symbol-ascii="F"
-                    symbol-utf8="°F" 
-                    conversion="({{val}} + 459.67) * 5/9"/>
+                    symbol-utf8="°F"
+                    conversion0="({{{val}}} + 459.67) * 5/9"
+                    conversion="{{{val}}} * 9/5 - 459.67"/>
         </units>
 </type>
 ```
@@ -277,11 +282,11 @@ print( o['class']['type'][6]['units']['unit'][1])
 print( o['class']['type'][6]
 ['units']['unit'][1]['@symbol-utf8'])  
 
-# - Conversion formula to unit = 0
+# - Conversion formula from unit 0 to this unit (@conversion0 converts to unit 0)
 print( o['class']['type'][6]['units']['unit'][1]['@conversion'])
 ```
 
-for conversions a mustache template is used where {{val}} is the floating point value.
+for conversions a mustache template is used where {{{val}}} is the floating point value.
 
 etc..
 

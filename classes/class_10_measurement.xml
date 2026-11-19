@@ -68,7 +68,7 @@
                     description="Time in milliseconds."
                     symbol-ascii="ms"
                     symbol-utf8="ms"
-                    conversion0="{{{val}}}" 
+                    conversion0="{{{val}}}/1000" 
                     conversion="{{{val}}}*1000"/>
             <unit id="2" 
                     name="yymdhms"                    
@@ -113,15 +113,15 @@
                     description="Degrees Celsius"
                     symbol-ascii="C"
                     symbol-utf8="°C"
-                    conversion0="{{{val}}} - 273.15"
-                    conversion="{{{val}}} + 273.15"/>                    
+                    conversion0="{{{val}}} + 273.15"
+                    conversion="{{{val}}} - 273.15"/>                    
             <unit id="2" 
                     name="Fahrenheit"
                     description="Degrees Fahrenheit"
                     symbol-ascii="F"
                     symbol-utf8="°F" 
-                    conversion0="({{{val}}} + 459.67)× 5/9"
-                    conversion="({{{val}}} - 273.15) * 1.8 + 32.0"/>
+                    conversion0="({{{val}}} + 459.67) * 5/9"
+                    conversion="{{{val}}} * 9/5 - 459.67"/>
         </units>
     </type>
     
@@ -175,16 +175,16 @@
                     description="Curie"
                     symbol-ascii="Ci"
                     symbol-utf8="Ci"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/(3.7*10^10)"
+                    conversion0="{{{val}}}*3.7e10"
+                    conversion="{{{val}}}/3.7e10"
                     Comment="Derived from 37 GBq" /> 
             <unit id="2" 
                     name="rutherford" 
                     description="Rutherford"
                     symbol-ascii="Rd"
                     symbol-utf8="Rd"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/10^6)"
+                    conversion0="{{{val}}}*1e6"
+                    conversion="{{{val}}}/1e6"
                     Comment="Derived from 37 GBq" />                                       
         </units>    
     </type>
@@ -215,50 +215,50 @@
             <unit id="1" 
                     name="bar" 
                     description="Bar"
-                    symbol-ascii="Pa"
-                    symbol-utf8="Pa"
-                    conversion0="{{{val}}}/10^5"
-                    conversion="{{{val}}}*10^5"
+                    symbol-ascii="bar"
+                    symbol-utf8="bar"
+                    conversion0="{{{val}}}*1e5"
+                    conversion="{{{val}}}/1e5"
                     comment="" /> 
             <unit id="2" 
                     name="psi" 
                     description="Psi"
-                    symbol-ascii="Pa"
-                    symbol-utf8="Pa"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*6.8948*10^3"
+                    symbol-ascii="psi"
+                    symbol-utf8="psi"
+                    conversion0="{{{val}}}*6894.757293168"
+                    conversion="{{{val}}}/6894.757293168"
                     comment="" />
             <unit id="3" 
                     name="atm" 
                     description="Standard atmosphere"
                     symbol-ascii="atm"
                     symbol-utf8="atm"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*101.325*10^3"
+                    conversion0="{{{val}}}*101325"
+                    conversion="{{{val}}}/101325"
                     comment="" />
             <unit id="4" 
                     name="torr" 
                     description="Torr"
                     symbol-ascii="torr"
                     symbol-utf8="torr"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*133.322368"
+                    conversion0="{{{val}}}*133.322368421"
+                    conversion="{{{val}}}/133.322368421"
                     comment="[Torr]≈[mmHg]" />
             <unit id="5" 
                     name="at" 
                     description="Technical atmosphere"
                     symbol-ascii="at"
                     symbol-utf8="at"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*98.0665*10^3"
+                    conversion0="{{{val}}}*98066.5"
+                    conversion="{{{val}}}/98066.5"
                     comment="" />
             <unit id="6" 
-                    name="at" 
+                    name="cmH2O" 
                     description="Centimeters of water column"
                     symbol-ascii="cmH2O"
                     symbol-utf8="cmH2O"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*98.0665"
+                    conversion0="{{{val}}}*98.0665"
+                    conversion="{{{val}}}/98.0665"
                     comment="" />                                                                                   
         </units>    
     </type>
@@ -278,24 +278,24 @@
                     description="Kilowatt-hour"
                     symbol-ascii="kWh"
                     symbol-utf8="kWh"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*3600000"
+                    conversion0="{{{val}}}*3600000"
+                    conversion="{{{val}}}/3600000"
                     comment="" />
             <unit id="2" 
                     name="wh" 
                     description="watt-hour"
                     symbol-ascii="Wh"
                     symbol-utf8="Wh"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*3600"
+                    conversion0="{{{val}}}*3600"
+                    conversion="{{{val}}}/3600"
                     comment="" />
             <unit id="3" 
                     name="eV" 
                     description="electron Volt"
                     symbol-ascii="eV"
                     symbol-utf8="eV"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*1.60217663e-19"
+                    conversion0="{{{val}}}*1.602176634e-19"
+                    conversion="{{{val}}}/1.602176634e-19"
                     comment="" />
         </units>    
     </type>
@@ -314,16 +314,16 @@
                     description="Horsepower Metic"
                     symbol-ascii="cv"
                     symbol-utf8="cv"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*735.49875"
+                    conversion0="{{{val}}}*735.49875"
+                    conversion="{{{val}}}/735.49875"
                     comment="DIN 66036 defines one metric horsepower as the power to raise a mass of 75 kilograms against the Earths gravitational force over a distance of one metre in one second" />
             <unit id="2" 
                     name="Horsepower Imperial" 
                     description="Horsepower Imperial"
                     symbol-ascii="hp"
                     symbol-utf8="hp"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*745.699872"
+                    conversion0="{{{val}}}*745.69987158227"
+                    conversion="{{{val}}}/745.69987158227"
                     comment="One horsepower equals 33,000 foot-pounds of work per minute" />                            
         </units>    
     </type>
@@ -359,8 +359,8 @@
             <unit id="0" 
                     name="farad" 
                     description="Farad"
-                    symbol-ascii="C"
-                    symbol-utf8="C"
+                    symbol-ascii="F"
+                    symbol-utf8="F"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}"
                     comment="F = A2 s4 kg−1 m−2" />
@@ -407,8 +407,8 @@
                     description="Oersted"
                     symbol-ascii="oe"
                     symbol-utf8="oe"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*79.77"
+                    conversion0="{{{val}}}*1000/(4*3.141592653589793)"
+                    conversion="{{{val}}}*4*3.141592653589793/1000"
                     comment="" />                                        
         </units>    
     </type>
@@ -434,8 +434,8 @@
             <unit id="0" 
                     name="tesla" 
                     description="Tesla (B)"
-                    symbol-ascii="A"
-                    symbol-utf8="A"
+                    symbol-ascii="T"
+                    symbol-utf8="T"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}"
                     comment="kilogram per second2 per ampere" />
@@ -444,8 +444,8 @@
                     description="Gauss"
                     symbol-ascii="Gs"
                     symbol-utf8="Gs"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^−4"
+                    conversion0="{{{val}}}*1e-4"
+                    conversion="{{{val}}}*1e4"
                     comment="" />        
         </units>    
     </type>
@@ -465,10 +465,10 @@
     <type id="24" name="Luminous Flux" token="VSCP_TYPE_MEASUREMENT_FLUX_OF_LIGHT" >
         <units>
             <unit id="0" 
-                    name="Ampere" 
-                    description="Ampere"
+                    name="lumen" 
+                    description="Lumen"
                     symbol-ascii="lm"
-                    symbol-utf8="Φv"
+                    symbol-utf8="lm"
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}" />
         </units>    
@@ -526,29 +526,29 @@
                     description="Litre"
                     symbol-ascii="L"
                     symbol-utf8="dm³"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^3" />
+                    conversion0="{{{val}}}/1e3"
+                    conversion="{{{val}}}*1e3" />
             <unit id="2" 
                     name="millilitre" 
                     description="Millilitre"
                     symbol-ascii="ml"
                     symbol-utf8="cm³"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^6" />        
+                    conversion0="{{{val}}}/1e6"
+                    conversion="{{{val}}}*1e6" />        
             <unit id="3" 
                     name="decilitre" 
                     description="Decilitre"
                     symbol-ascii="dl"
                     symbol-utf8="dl"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^4" />
+                    conversion0="{{{val}}}/1e4"
+                    conversion="{{{val}}}*1e4" />
             <unit id="4" 
                     name="centilitre" 
                     description="Centilitre"
                     symbol-ascii="cl"
                     symbol-utf8="cl"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10^5" />
+                    conversion0="{{{val}}}/1e5"
+                    conversion="{{{val}}}*1e5" />
                                                                     
         </units>    
     </type>
@@ -579,22 +579,22 @@
                     description="Degree"
                     symbol-ascii="deg"
                     symbol-utf8="°"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*pi/180" />
+                    conversion0="{{{val}}}*3.141592653589793/180"
+                    conversion="{{{val}}}*180/3.141592653589793" />
             <unit id="2" 
                     name="arcminute" 
                     description="Arcminute"
                     symbol-ascii="arcmin"
                     symbol-utf8="arcmin"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*pi/10800" /> 
+                    conversion0="{{{val}}}*3.141592653589793/10800"
+                    conversion="{{{val}}}*10800/3.141592653589793" /> 
             <unit id="3" 
                     name="arcsecond" 
                     description="Arcsecond"
                     symbol-ascii="arcsec"
                     symbol-utf8="arcsec"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*pi/648000" />                                               
+                    conversion0="{{{val}}}*3.141592653589793/648000"
+                    conversion="{{{val}}}*648000/3.141592653589793" />                                               
         </units>    
     </type>
     
@@ -631,22 +631,22 @@
                     description="Kilometers per hour"
                     symbol-ascii="km/h"
                     symbol-utf8="km/h"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/3.6" /> 
+                    conversion0="{{{val}}}/3.6"
+                    conversion="{{{val}}}*3.6" /> 
             <unit id="2" 
                     name="miles per hour" 
                     description="Miles per hour"
                     symbol-ascii="mph"
                     symbol-utf8="mph"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*0.44704" />  
+                    conversion0="{{{val}}}*0.44704"
+                    conversion="{{{val}}}/0.44704" />  
             <unit id="3" 
                     name="knot" 
                     description="International nautical mile per hour [1 kt = 1 INM/h]"
                     symbol-ascii="kt"
                     symbol-utf8="kt"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*0.514444444 " />
+                    conversion0="{{{val}}}*1852/3600"
+                    conversion="{{{val}}}*3600/1852" />
         </units>    
     </type>
     
@@ -700,8 +700,8 @@
                     description="Litres meters per second"
                     symbol-ascii="L/s"
                     symbol-utf8="dm³/s"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}" />        
+                    conversion0="{{{val}}}/1000"
+                    conversion="{{{val}}}*1000" />        
         </units>    
     </type>
     
@@ -739,19 +739,19 @@
                     conversion0="{{{val}}}"
                     conversion="{{{val}}}" />
             <unit id="1" 
+                    name="poiseuille" 
+                    description="Poiseuille"
+                    symbol-ascii="Pl"
+                    symbol-utf8="Pl"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}" />
+            <unit id="2" 
                     name="poise" 
                     description="poise"
                     symbol-ascii="P"
                     symbol-utf8="P"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/10" />         
-            <unit id="2" 
-                    name="poiseuille" 
-                    description="Poiseuille"
-                    symbol-ascii="PI"
-                    symbol-utf8="PI"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}" />        
+                    conversion0="{{{val}}}/10"
+                    conversion="{{{val}}}*10" />
         </units>    
     </type>
     
@@ -831,8 +831,22 @@
                     description="Mol per litre"
                     symbol-ascii="mol/L "
                     symbol-utf8="mol/L "
+                    conversion0="{{{val}}}*1000"
+                    conversion="{{{val}}}/1000" />
+            <unit id="2" 
+                    name="ppm" 
+                    description="Parts per million"
+                    symbol-ascii="ppm"
+                    symbol-utf8="ppm"
                     conversion0="{{{val}}}"
-                    conversion="{{{val}}}/1000" />        
+                    conversion="{{{val}}}" />
+            <unit id="3" 
+                    name="percent" 
+                    description="Percent"
+                    symbol-ascii="%"
+                    symbol-utf8="%"
+                    conversion0="{{{val}}}"
+                    conversion="{{{val}}}" />
         </units>    
     </type>
     
@@ -868,15 +882,15 @@
                     description="Degrees Celsius"
                     symbol-ascii="C"
                     symbol-utf8="°C"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}} + 273.15 "/>
+                    conversion0="{{{val}}} + 273.15"
+                    conversion="{{{val}}} - 273.15"/>
             <unit id="2" 
                     name="fahrenheit"
                     description="Degrees Fahrenheit"
                     symbol-ascii="F"
                     symbol-utf8="°F" 
-                    conversion0="{{{val}}}"
-                    conversion="({{{val}}} + 459.67) * 5/9"/>
+                    conversion0="({{{val}}} + 459.67) * 5/9"
+                    conversion="{{{val}}} * 9/5 - 459.67"/>
         </units>    
     </type>
     
@@ -906,15 +920,15 @@
                     description="Feet"
                     symbol-ascii="ft"
                     symbol-utf8="ft"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*0.3048" />
+                    conversion0="{{{val}}}*0.3048"
+                    conversion="{{{val}}}/0.3048" />
             <unit id="2" 
                     name="inch" 
                     description="Inch"
                     symbol-ascii="in"
                     symbol-utf8="in"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*0.0254" />                 
+                    conversion0="{{{val}}}*0.0254"
+                    conversion="{{{val}}}/0.0254" />                 
         </units>    
     </type>
     
@@ -932,22 +946,22 @@
                     description="1  are = 100 m2;"
                     symbol-ascii="a"
                     symbol-utf8="a"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*100" />        
+                    conversion0="{{{val}}}*100"
+                    conversion="{{{val}}}/100" />        
             <unit id="2" 
                     name="hectare" 
                     description="1 hectare = 100 ares = 10000 m2 = 0.01 km2"
                     symbol-ascii="ha"
                     symbol-utf8="ha"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*10000" />
+                    conversion0="{{{val}}}*10000"
+                    conversion="{{{val}}}/10000" />
             <unit id="3" 
                     name="square kilometer" 
                     description="Square kilometer"
                     symbol-ascii="km2"
                     symbol-utf8="km²"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}*1000000" />                
+                    conversion0="{{{val}}}*1000000"
+                    conversion="{{{val}}}/1000000" />                
         </units>    
     </type>
     
@@ -1090,8 +1104,8 @@
                     description="Rem"
                     symbol-ascii="rem"
                     symbol-utf8="rem"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/100"
+                    conversion0="{{{val}}}/100"
+                    conversion="{{{val}}}*100"
                     comment="" />              
         </units>    
     </type>
@@ -1111,8 +1125,8 @@
                     description="Röntgen"
                     symbol-ascii="R"
                     symbol-utf8="R"
-                    conversion0="{{{val}}}"
-                    conversion="{{{val}}}/(2.58*10^-4)"
+                    conversion0="{{{val}}}*2.58e-4"
+                    conversion="{{{val}}}/2.58e-4"
                     comment="" />              
         </units>    
     </type>
@@ -1134,7 +1148,7 @@
         <units>
             <unit id="0" 
                     name="VAr" 
-                    description="Reactive effect in kilo V*A"
+                    description="Reactive effect in V*A"
                     symbol-ascii="VAr"
                     symbol-utf8="VAr"
                     conversion0="{{{val}}}"
@@ -1145,16 +1159,16 @@
                     description="Reactive effect in kilo V*A"
                     symbol-ascii="kVAr"
                     symbol-utf8="kVAr"
-                    conversion0="{{{val}}}/1000"
-                    conversion="{{{val}}}*1000"
+                    conversion0="{{{val}}}*1000"
+                    conversion="{{{val}}}/1000"
                     comment="" /> 
-            <unit id="1" 
+            <unit id="2" 
                     name="MVAr" 
                     description="Reactive effect in mega V*A"
                     symbol-ascii="MVAr"
                     symbol-utf8="MVAr"
-                    conversion0="{{{val}}}/1000000"
-                    conversion="{{{val}}}*1000000"
+                    conversion0="{{{val}}}*1000000"
+                    conversion="{{{val}}}/1000000"
                     comment="" />                       
         </units>    
     </type>
@@ -1172,10 +1186,10 @@
             <unit id="1" 
                     name="MVArh" 
                     description="Reactive energy in mega V*A*h"
-                    symbol-ascii="kVArh"
-                    symbol-utf8="kVArh"
-                    conversion0="{{{val}}}/1000"
-                    conversion="{{{val}}}*1000"
+                    symbol-ascii="MVArh"
+                    symbol-utf8="MVArh"
+                    conversion0="{{{val}}}*1000"
+                    conversion="{{{val}}}/1000"
                     comment="" />                     
         </units>    
     </type>
