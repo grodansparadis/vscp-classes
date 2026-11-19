@@ -15,6 +15,7 @@ tagged, rename **Unreleased** to the version and date, and start a new
 - Measurement units: fixed names and symbols: bar and psi had the symbol Pa, farad C (now F), tesla A (now T), luminous flux unit 0 was named Ampere with symbol Φv (now lumen, lm), pressure unit 6 was named at (now cmH2O), MVArh had the symbol kVArh
 - Class 1080 (Timed weather forecast): fixed invalid XML and the name, renamed the file to class_1080_timed_weather_forecast.xml, has the same events as CLASS1.WEATHER_FORECAST (events="class_90_weather.xml", as class 95 itself uses them) and is published (added to list_class.xml)
 - Class 15 (data), signal quality units: conversions are `{{{val}}}` (were `val`)
+- New web editor (`python3 editor/app.py`, Python standard library only) for the class definitions: edit classes and their descriptions, create and delete classes (with own events or the events of another class), edit, add, copy and delete events with their XML content and descriptions, check the files for problems, run the generators to `generated/` and `dowork.sh`, and see the git changes. Edits keep the rest of each file unchanged. See editor/README.md
 - Fixed link (b07b694)
 
 ## v20250119171800 - 2025-01-19

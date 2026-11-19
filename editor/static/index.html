@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSCP Class Editor</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">VSCP class editor</div>
+  <nav class="tabs" id="tabs">
+    <a href="#/classes" data-tab="classes">Classes</a>
+    <a href="#/check" data-tab="check">Check <span class="count" id="checkCount"></span></a>
+    <a href="#/scripts" data-tab="scripts">Scripts</a>
+    <a href="#/changes" data-tab="changes">Changes <span class="count" id="changeCount"></span></a>
+  </nav>
+</header>
+
+<main id="view-classes" class="view layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <input id="classFilter" type="search" placeholder="Filter: id, token or name" autocomplete="off">
+      <button id="btnNewClass" class="primary">New class</button>
+    </div>
+    <ul id="classList" class="class-list"></ul>
+  </aside>
+  <section class="content" id="classContent">
+    <div class="empty">Select a class.</div>
+  </section>
+</main>
+
+<main id="view-check" class="view page" hidden>
+  <div class="page-head">
+    <h1>Check</h1>
+    <button id="btnCheck">Check again</button>
+  </div>
+  <p class="muted">Problems in <code>classes/</code>: class files missing from <code>list_class.xml</code>, invalid XML, duplicate ids or tokens, missing and orphaned descriptions.</p>
+  <table class="grid" id="checkTable"><thead><tr><th>Level</th><th>File</th><th>Problem</th></tr></thead><tbody></tbody></table>
+</main>
+
+<main id="view-scripts" class="view page" hidden>
+  <div class="page-head">
+    <h1>Scripts</h1>
+    <button id="btnRunAll" class="primary">Run all generators</button>
+  </div>
+  <p class="muted">The generators run from <code>script/</code> as <code>dowork.sh</code> runs them, and their output goes to <code>generated/</code>. Nothing is uploaded or copied to other projects.</p>
+  <table class="grid" id="presetTable"><thead><tr><th>Output</th><th>Script</th><th>Writes</th><th></th></tr></thead><tbody></tbody></table>
+
+  <h2>Run a script</h2>
+  <div class="form-row">
+    <label>Script <select id="scriptSelect"></select></label>
+    <label class="grow">Arguments <input id="scriptArgs" type="text" placeholder="for example: jsonp" autocomplete="off"></label>
+    <button id="btnRunScript">Run</button>
+  </div>
+  <p class="muted small">Arguments are split at spaces; use "double quotes" around an argument with spaces. The output is shown below and not saved.</p>
+
+  <h2>dowork.sh (publish)</h2>
+  <div class="warn-box">
+    <strong>Publishes everything.</strong> <code>dowork.sh</code> deletes <code>generated/*</code>, regenerates all files, uploads them with FTP and copies them into the neighbouring projects
+    (<code>../vscp</code>, <code>../vscp-firmware</code>, <code>../vscp-doc-spec</code>, <code>../node-vscp-class</code>, ...).
+  </div>
+  <form class="form-row" id="doworkForm" onsubmit="return false" autocomplete="off">
+    <label>FTP host <input id="dwHost" type="text" autocomplete="off"></label>
+    <label>User <input id="dwUser" type="text" autocomplete="off"></label>
+    <label>Password <input id="dwPass" type="password" autocomplete="new-password"></label>
+    <label class="check"><input id="dwSave" type="checkbox"> keep files in generated/ ("save")</label>
+    <button id="btnDowork" class="danger" type="button">Run dowork.sh</button>
+  </form>
+
+  <h2>Output</h2>
+  <div id="scriptOutput" class="output"><div class="muted">No script has run yet.</div></div>
+</main>
+
+<main id="view-changes" class="view page" hidden>
+  <div class="page-head">
+    <h1>Changes</h1>
+    <button id="btnChanges">Refresh</button>
+  </div>
+  <p class="muted">Files in <code>classes/</code> that differ from the last git commit. Select one to see the difference.</p>
+  <div class="changes">
+    <ul id="changeList" class="change-list"></ul>
+    <pre id="diffView" class="diff"></pre>
+  </div>
+</main>
+
+<dialog id="dlg">
+  <form method="dialog" id="dlgForm">
+    <h2 id="dlgTitle"></h2>
+    <div id="dlgBody"></div>
+    <p id="dlgError" class="error" hidden></p>
+    <div class="dlg-buttons">
+      <button value="cancel" formnovalidate id="dlgCancel">Cancel</button>
+      <button value="ok" class="primary" id="dlgOk">OK</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
