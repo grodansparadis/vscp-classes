@@ -14,6 +14,20 @@
   --warn-soft: #fff4d6;
   --ok: #1a7f37;
   --code-bg: #f3f4f6;
+  /* Header ink and the three VSCP levels: Level I (CAN, amber),
+     Level I over Level II (the bridge, teal), Level II (IP, violet) */
+  --ink: #1e2a44;
+  --ink-fg: #eef2f8;
+  --ink-muted: #a9b6cc;
+  --lvl1: #9c5800;
+  --lvl1-bar: #e89b1c;
+  --lvl1-soft: #fff1db;
+  --bridge: #0b7a70;
+  --bridge-bar: #17a596;
+  --bridge-soft: #ddf4f1;
+  --lvl2: #6a43c2;
+  --lvl2-bar: #8b66e0;
+  --lvl2-soft: #eee8fc;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   color-scheme: light;
 }
@@ -34,6 +48,18 @@
     --warn-soft: #3a2f12;
     --ok: #56d364;
     --code-bg: #12161b;
+    --ink: #18233b;
+    --ink-fg: #e8eef8;
+    --ink-muted: #9aa9c2;
+    --lvl1: #f2b04a;
+    --lvl1-bar: #e89b1c;
+    --lvl1-soft: #33260f;
+    --bridge: #4fd1c2;
+    --bridge-bar: #17a596;
+    --bridge-soft: #0e2d2a;
+    --lvl2: #b79bff;
+    --lvl2-bar: #8b66e0;
+    --lvl2-soft: #2a2145;
     color-scheme: dark;
   }
 }
@@ -41,6 +67,10 @@
   --bg: #0f1216; --panel: #171b21; --panel-2: #1e232b; --line: #2d343e; --fg: #e4e8ee; --muted: #94a0b0;
   --accent: #4c8dff; --accent-fg: #0b0e12; --accent-soft: #1a2a45; --danger: #ff6b6b; --danger-soft: #3a1c1c;
   --warn: #e3b341; --warn-soft: #3a2f12; --ok: #56d364; --code-bg: #12161b; color-scheme: dark;
+  --ink: #18233b; --ink-fg: #e8eef8; --ink-muted: #9aa9c2;
+  --lvl1: #f2b04a; --lvl1-bar: #e89b1c; --lvl1-soft: #33260f;
+  --bridge: #4fd1c2; --bridge-bar: #17a596; --bridge-soft: #0e2d2a;
+  --lvl2: #b79bff; --lvl2-bar: #8b66e0; --lvl2-soft: #2a2145;
 }
 
 * { box-sizing: border-box; }
@@ -292,3 +322,71 @@ dialog h2 { margin: 0 0 4px; }
   .attr-row { grid-template-columns: 1fr 1fr auto; }
   .content, .page { padding: 16px; }
 }
+
+/* ------------------------------------------------------------------
+   Colour by VSCP level. .lvl1 / .bridge / .lvl2 set --lvl, --lvl-bar and
+   --lvl-soft for everything inside.
+   ------------------------------------------------------------------ */
+.lvl1   { --lvl: var(--lvl1);   --lvl-bar: var(--lvl1-bar);   --lvl-soft: var(--lvl1-soft); }
+.bridge { --lvl: var(--bridge); --lvl-bar: var(--bridge-bar); --lvl-soft: var(--bridge-soft); }
+.lvl2   { --lvl: var(--lvl2);   --lvl-bar: var(--lvl2-bar);   --lvl-soft: var(--lvl2-soft); }
+
+/* Header: ink bar with the level stripe as its lower edge */
+.top {
+  position: relative;
+  background: var(--ink);
+  border-bottom: none;
+  color: var(--ink-fg);
+}
+.top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--lvl1-bar) 0 33.33%, var(--bridge-bar) 33.33% 66.66%, var(--lvl2-bar) 66.66% 100%);
+}
+.brand { color: var(--ink-fg); }
+.tabs a { color: var(--ink-muted); padding-bottom: 14px; }
+.tabs a:hover { color: var(--ink-fg); }
+.tabs a.active { color: var(--ink-fg); border-bottom-color: var(--ink-fg); }
+.top .count { background: rgba(255, 255, 255, .14); color: var(--ink-fg); }
+
+/* Class list */
+.class-list li.lvl1, .class-list li.bridge, .class-list li.lvl2 { border-left-color: var(--lvl-bar); }
+.class-list li[data-id] .cid { color: var(--lvl); font-weight: 600; }
+.class-list li.active { background: var(--lvl-soft, var(--accent-soft)); border-left-width: 5px; padding-left: 10px; }
+.class-list .group {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--fg);
+  border-left-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.class-list .group::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--lvl-bar);
+  flex: none;
+}
+
+/* The open class and its events */
+.content .class-head h1 .cidh {
+  color: var(--lvl, var(--muted));
+  background: var(--lvl-soft, transparent);
+  padding: 1px 8px;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+.content #typeTable td.num { color: var(--lvl, inherit); font-weight: 600; }
+.content #typeTable td.num .muted { font-weight: 400; }
+.content .type-editor .crumbs a { color: var(--lvl, var(--accent)); }
+.content .card { border-top: 3px solid var(--lvl-bar, var(--line)); }

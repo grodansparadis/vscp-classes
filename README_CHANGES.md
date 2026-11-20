@@ -7,6 +7,7 @@ tagged, rename **Unreleased** to the version and date, and start a new
 
 ## Unreleased
 
+- Editor: classes are coloured by VSCP level (Level I amber, Level I over Level II teal, Level II violet) in the class list, the open class and its events; the header shows the three levels as a stripe
 - Measurement units: units that can not be converted are marked `convertible="false"` (date/time formats, latitude, ppm/percent of molar concentration, the spectral radiance/irradiance per metre and per hertz units). The JSON, XML and SQLite output give `convertible` (new last column in the SQLite `vscp_unit` table)
 - New `make_vscphelper_units.py`: makes the measurement unit table `vscp-units.h` (scale and offset for each unit, checked to be linear and exact) and, with `json`, `vscp-units.json` with the conversion expressions. Run by `dowork.sh` (copied to vscp/src/vscp/common) and the editor
 - The generated JSON/JSONP (make_json.py) and XML (make_xml.py) give both conversions of each measurement unit: `conversion0` (unit to unit 0) and `conversion` (unit 0 to unit); before, only `conversion` was given. A missing conversion is given as `{{{val}}}` (was `val`)

@@ -191,6 +191,12 @@ async function loadClasses() {
   renderClassList();
 }
 
+// Colour class of a class id: Level I, Level I over Level II, Level II
+function levelClass(id) {
+  id = Number(id);
+  return id < 512 ? "lvl1" : id < 1024 ? "bridge" : "lvl2";
+}
+
 function classLabel(c) {
   return `${c.id} ${c.token}`;
 }
@@ -212,16 +218,17 @@ function renderClassList() {
     }
     const hay = `${c.id} ${hex(c.id, 2)} ${c.token} ${c.name} ${c.file}`.toLowerCase();
     if (f && !hay.includes(f)) continue;
-    const group = c.id < 512 ? "Level I" : c.id < 1024 ? "Level II (Level I over Level II)" : "Level II";
+    const group = c.id < 512 ? "Level I" : c.id < 1024 ? "Level I over Level II" : "Level II";
     if (group !== lastGroup && !f) {
       const g = document.createElement("li");
-      g.className = "group";
+      g.className = "group " + levelClass(c.id);
       g.textContent = group;
       ul.appendChild(g);
       lastGroup = group;
     }
     const li = document.createElement("li");
     li.dataset.id = c.id;
+    li.classList.add(levelClass(c.id));
     if (currentClass && currentClass.attrs.id == c.id) li.classList.add("active");
     let badges = "";
     if (c.events) badges += `<span class="badge" title="Uses the events of ${esc(c.events)}">→ ${esc(c.events.replace(/^class_(\d+)[._].*$/, "$1"))}</span>`;
@@ -264,6 +271,7 @@ async function showClass(id) {
     return;
   }
   markActiveClass();
+  content.className = "content " + levelClass(id);
   const c = currentClass;
   const a = c.attrs;
   const isLevel1 = Number(a.id) < 512;
@@ -477,6 +485,7 @@ async function showType(cid, tidOrNew) {
     return;
   }
   markActiveClass();
+  content.className = "content " + levelClass(cid);
   const c = currentClass;
   if (c.events_class) {
     navigate(tidOrNew === "new" ? `#/classes/${c.events_class.id}` : `#/classes/${c.events_class.id}/types/${tidOrNew}`);
