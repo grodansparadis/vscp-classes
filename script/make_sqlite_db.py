@@ -182,12 +182,13 @@ for vscp_class in order_list:
                     except:
                         conversion0 = "{{val}}"
 
+                    convertible = "0" if unit.attrib.get("convertible", "true").strip().lower() in ("false", "0", "no") else "1"
                     try:
                         comment = unit.attrib["comment"]
                     except:
                         comment = ""    
                     
-                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
+                    outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment,convertible) VALUES (" + \
                         type_root.attrib["id"] + "," + \
                         child.attrib["id"] + "," + \
                         unit.attrib["id"] + "," + \
@@ -197,7 +198,7 @@ for vscp_class in order_list:
                         "'" + conversion + "'," + \
                         "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
                         "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
-                        "'" + comment + "');"
+                        "'" + comment + "'," + convertible + ");"
                     print(outstr)
     else:
         classid = int(type_root.attrib["id"])
@@ -226,12 +227,13 @@ for vscp_class in order_list:
                 except:
                     conversion0 = "{{val}}"
 
+                convertible = "0" if unit.attrib.get("convertible", "true").strip().lower() in ("false", "0", "no") else "1"
                 try:
                     comment = unit.attrib["comment"]
                 except:
                     comment = ""    
                   
-                outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment) VALUES (" + \
+                outstr = "INSERT INTO vscp_unit (link_to_class,link_to_type,nunit,name,description,conversion0,conversion,symbolascii,symbolutf8,comment,convertible) VALUES (" + \
                     str(classid) + "," + \
                     child.attrib["id"] + "," + \
                     unit.attrib["id"] + "," + \
@@ -241,7 +243,7 @@ for vscp_class in order_list:
                     "'" + conversion + "'," + \
                     "'" + unit.attrib["symbol-ascii"].strip() + "'," + \
                     "'" + unit.attrib["symbol-utf8"].strip() + "'," + \
-                    "'" + comment + "');"
+                    "'" + comment + "'," + convertible + ");"
                 print(outstr)
 
 #  * * * RENDER * * *

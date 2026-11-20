@@ -66,8 +66,11 @@ The measurement class (10) has a **\<unit\>** token that is used to describe uni
 * **symbol-utf8** Symbol in UTF8 format
 * **conversion** Expression that converts a value in unit 0 to a value in this unit.
 * **conversion0** Expression that converts a value in this unit to a value in unit 0 (the inverse of **conversion**).
+* **convertible** `false` for a unit that can not be converted to or from unit 0 (for example latitude/longitude, ppm/percent of a molar concentration, or date/time formats). Its conversions are **{{{val}}}** and must not be used. Leave it out (or `true`) for all other units.
 
 The value is written as **{{{val}}}** ([mustache](https://github.com/janl/mustache.js/)). After the mustache expansion the expression is evaluated as JavaScript or with [math.js](https://mathjs.org/), so only numbers (also `1e-4` form), `+ - * /` and parentheses are used: not `^` (XOR in JavaScript), `pi` or other functions. Unit 0 and units that can not be converted (for example latitude/longitude) use **{{{val}}}** for both.
+
+All conversions must be linear (`a * value + b`): `script/make_vscphelper_units.py` stops with an error otherwise. It makes the unit table `vscp-units.h` for the vscp helper library (`vscp_convertMeasurementUnit()` and friends) and, with the argument `json`, `vscp-units.json` with the expressions for code that evaluates them at runtime. `dowork.sh` copies both to `vscp/src/vscp/common`.
 
 This is how this looks for the temperature measurement type
 

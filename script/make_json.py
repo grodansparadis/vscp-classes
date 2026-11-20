@@ -105,6 +105,7 @@ for vscp_class in order_list:
                     unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
                     unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
                     # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                    unitstr += "\"convertible\": " + ("false" if unit.attrib.get("convertible", "true").strip().lower() in ("false", "0", "no") else "true") + ","
                     unitstr += "\"conversion0\": \"" + \
                         unit.attrib.get("conversion0", "{{{val}}}") + "\","
                     unitstr += "\"conversion\": \"" + \
@@ -165,6 +166,7 @@ for vscp_class in order_list:
                     unitstr += "\"symbol-ascii\": \"" + unit.attrib["symbol-ascii"] + "\","
                     unitstr += "\"symbol-utf8\": \"" + unit.attrib["symbol-utf8"] + "\","    
                     # conversion0: this unit -> unit 0, conversion: unit 0 -> this unit
+                    unitstr += "\"convertible\": " + ("false" if unit.attrib.get("convertible", "true").strip().lower() in ("false", "0", "no") else "true") + ","
                     unitstr += "\"conversion0\": \"" + \
                         unit.attrib.get("conversion0", "{{{val}}}") + "\","
                     unitstr += "\"conversion\": \"" + \

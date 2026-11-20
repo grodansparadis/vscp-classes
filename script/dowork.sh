@@ -82,6 +82,26 @@ rm ../generated/vscp-hashtype.h
 rm ../generated/vscp-hashtype.h.md5
 fi
 
+# Generate measurement unit table (C header) and unit expressions (JSON) for vscphelper
+python3 make_vscphelper_units.py >../generated/vscp-units.h || exit 1
+python3 make_vscphelper_units.py json >../generated/vscp-units.json || exit 1
+cp ../generated/vscp-units.h ../../vscp/src/vscp/common/
+cp ../generated/vscp-units.json ../../vscp/src/vscp/common/
+md5sum ../generated/vscp-units.h >../generated/vscp-units.h.md5
+md5sum ../generated/vscp-units.json >../generated/vscp-units.json.md5
+echo "uploading vscp-units.h and vscp-units.json"
+curl -T ../generated/vscp-units.h ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp-units.h.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp-units.json ftp://"$2:$3"@$1/vscp.org/public_html/events/
+curl -T ../generated/vscp-units.json.md5 ftp://"$2:$3"@$1/vscp.org/public_html/events/
+if [ "$4" != "save" ]
+then
+rm ../generated/vscp-units.h
+rm ../generated/vscp-units.h.md5
+rm ../generated/vscp-units.json
+rm ../generated/vscp-units.json.md5
+fi
+
 # Generate class definition header for python3
 python3 make_python_class_header.py >../generated/vscp-class.py
 cp ../generated/vscp-class.py ../../pyvscpclasses
